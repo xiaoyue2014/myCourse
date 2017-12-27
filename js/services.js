@@ -6,29 +6,19 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: '永乐',
+    name: '老师',
     lastText: 'You on your way?',
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+    face: '../img/teacher.svg'
   }, {
     id: 1,
-    name: '开心果',
+    name: '学生',
     lastText: 'Hey, it\'s me',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    face: '../img/student.svg'
   }, {
     id: 2,
-    name: '小炜',
+    name: '家长',
     lastText: 'Did you get the ice cream?',
-    face: 'https://pbs.twimg.com/profile_images/491274378181488640/Tti0fFVJ.jpeg'
-  }, {
-    id: 3,
-    name: '美美',
-    lastText: 'I should buy a boat',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-  }, {
-    id: 4,
-    name: '年华',
-    lastText: 'Look at my mukluks!',
-    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
+    face: '../img/parents.svg'
   }];
 
   return {

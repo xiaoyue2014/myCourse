@@ -1,9 +1,34 @@
-<ion-view view-title="我的">
+<ion-view view-title="我的联系人" class="bgwhite">
   <ion-content>
+  	<div class="top">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper search col col-75">
+          <input type="text" placeholder="">
+        </label>
+        <button class="button button-small searchBtn col">
+          搜索
+        </button>
+      </div>      
+    </div>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        	我的
-    </ion-toggle>
+    	<ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+        <img ng-src="img/class.svg">
+        <h2>二年级一班</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
