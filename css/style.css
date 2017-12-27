@@ -1,12 +1,12 @@
 body{ font-family:"微软雅黑"; font-size:16px; color:#333;}
 a{ text-decoration: none; }
-img{ width:16px; height:16px; }
+img{ width:16px; height:16px; vertical-align: middle;}
 .pdl0{ padding-left:0; }
 .pdr0{ padding-right:0; }
-.bar.bar-positive{ background: #fff; border-bottom: 1px solid #cccccc;}
-.bar.bar-positive .title { font-size:18px; color:#111; height: 48px; line-height: 48px; text-align: center;}
-.bar .icon-return{ background: #fff; border:none; color:#999; font-size:16px;}
-.top{ background: #fff;margin: -10px;padding: 10px; padding-bottom: 0;}
+.bar.bar-positive{ background: #fff; border-bottom: 1px solid #cccccc; height: 60px;}
+.bar.bar-positive .title { font-size:18px; color:#111; text-align: center; line-height: 60px;}
+.bar .icon-return{ background: #fff; border:none; color:#999; font-size:16px;line-height: 48px;}
+.top{ background: #fff;margin:10px -10px;padding: 10px; padding-bottom: 0;}
 .top-nav{ padding:5px 5px 0 5px; }
 .top-nav li{ float:left; background: #DDDDDD; border-radius: 22px; margin-right: 15px; padding:5px 15px;}
 .top-nav li.active{color: #FFFFFF; background: #42a3f5;}
@@ -15,12 +15,11 @@ img{ width:16px; height:16px; }
 .searchBar{ margin-top:20px; padding-bottom: 20px; }
 .subject{ width:100%; height: 40px; border: 1px solid #cccccc; border-radius: 5px; padding-left:5px;}
 .subject select{ width:100%; max-width: 100%;}
-.search{ height: 40px; border: 1px solid #cccccc; border-radius: 5px; background: none;}
-
+.search{ width: 100%; height: 40px;border: 1px solid #cccccc; border-radius: 5px; background: none;}
 .clear{ clear: both; }
 
 .scroll-content{ background: #efeff4;}
-.content{ margin-top: 100px;}
+.content{ margin-top: 120px;}
 .content .data{ background: #fff; padding: 15px 15px 5px 15px; margin-bottom: 20px;}
 .content .data p{ line-height: 24px; }
 .content .data .time{ color:#999999; }
@@ -36,3 +35,11 @@ img{ width:16px; height:16px; }
 .modal{ min-height: 70%; bottom:0;top: auto;}
 .modal-backdrop-bg{ background: #333;opacity: 0.3;}
 .blue{ color:#42a3f5;}
+
+.bgwhite .scroll-content{ background: #fff; }
+.bgwhite .item{ border:none; }
+.searchBtn{ color: #fff; background: #42a3f4; border-radius: 5px; height: 40px; border:none;}
+.tags{ padding:10px;}
+.tags h5{ font-size: 18px; }
+.tags ul{}
+.tags ul li{ margin:10px; }
