@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="35" viewBox="0 0 36 35">
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36.187" viewBox="0 0 36 36.187">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -27,5 +27,13 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<image id="teacher" width="36" height="35" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAjCAMAAADL21gSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB3VBMVEX+n0H////+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0H+n0EAAAAgMyt2AAAAnXRSTlMAAAVXcXtybXWKtsjDllAR255gKNX9GaH+6oTEmjelb2mQjng+Cl8GPFyTGvGJTRThqAyvAgcO0uYdG96jUWJLYUpdjc7ZVK3NAwgzn8uIATHjPylJLjJa3CwQLXorZ04jZGhsgx8wRSU9ZbGbIPom2kTJhkE2mZE14laANH5j8mYcuPOuE/V5FbfAGOyBDaeycJSStcFuxheF7dDYquPd+QAAAAFiS0dEnp+yowsAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhDBMKBxmwLcwmAAAB3UlEQVQ4y4WT51cTURDFB1BAxIROlBJpoQhEMCKJQiABpAYSiiVUKRaKIoooJZQA0hFEBLz/q283LHlhX07uh53Z2d95b+fMXCK/wiNu3IyMir4Vczv2jkYphjFxjDYOnOLFUCwClCCCEgMZJImgaP/3ZPmZIoBSofMhd+8hLZ3lGQIoEzr9/azsnNw8MuRTAVAogIqAB1wbxSgRQKXQGTnoIcrUUPkjgEzlj6XcVJFHT1BpVkEWPE17ptdUVWusUTW1NntdPRpUUD6emxqNTc0trW0ObXtzq7UBHep/csJVwEJnV7eehZ4XL9GuhljTJa9eu3v7qH/APDgEvBHNbhgjo2Nv3xE11bref8C4cMAEpz+fgFsM2VGtpJOIE68K0RQ+XmaflIPU0DSSXVIc/YwZCgYR66nsy9dZ4BsFh2iuTVqW7z8oCGSZN0nBrc9ZkN8XzWpoyYNl/kwDPLZr0Moqu2VNTut8y73GCt51HjJsyIu7SfRzC9jeYZfJhd0qP7SnGGCfDqR4SFrFE78U6OjKJnaySWGZTUWRwwcdc2Yz0m/ghE0FPMXa4h3ppT/sCjrla0Nh9DfQt3OHQOZ0YM1CZ1BJd+19gs07pJzMhCF1TuOhoQuabPSE0L+M//EkPz0ORNt8AAAAAElFTkSuQmCC"/>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #00e05b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="parents" class="cls-1" d="M60,610s-36,.25-36,0c0-8.833,10-10,10-10,1.083,4.167,7,8.917,8,9,3.333-.583,9.167-8.75,9-9C60.583,601.417,60,610,60,610ZM46,597a8.022,8.022,0,0,0,0-2s6.75-8.75-1-14c0.167,0.167-6.083,7.25-9,8,0-.083,0,4.583,3,7-0.083-.083-10.25,5.417-11-4,0,0,2.583,2.25,3,1s-0.917-14.667,8-19c1.083-.167,6,0,6,0s7.417,4.083,8,10-1,10.167,3,8C56.083,592,56.417,598.5,46,597Z" transform="translate(-24 -573.938)"/>
 </svg>
