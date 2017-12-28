@@ -4,11 +4,31 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{chat.name}}">
+<ion-view view-title="资源详情">
   <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
+    <div class="content detail">
+      <div class="list card data">
+        <p><a  href="#/tab/collect/{{chat.id}}">{{chat.content}}</a></p>
+        <p class="time"><img src="img/time-icon.svg"> {{chat.time}}</p>
+        <p class="collection"><img src="img/tag.svg"> <a class="tags" ng-repeat="tag in chat.tags" href="">{{tag}}</a></p>
+        <div class="row top-line">
+          <div class="col col-33">
+            <a href="#/tab/edit" class="button button-outline button-positive">
+            编辑标签
+          </a>
+          </div>
+          <div class="col col-33">
+            <a href="#/tab/account" class="button button-outline button-positive">
+            分享
+          </a>
+          </div>
+          <div class="col col-33">
+            <a class="button button-outline button-positive">
+            删除
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

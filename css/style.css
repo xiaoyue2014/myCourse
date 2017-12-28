@@ -61,3 +61,7 @@ img{ width:16px; height:16px; vertical-align: middle;}
 }
 .accordion .icon{ float:right; color:#ccc;}
 .item.item-stable{ background: none; }
+
+.detail{ margin-top: 0; }
+.tags{ margin-right:10px; }
+.data a{ color:#262626; }

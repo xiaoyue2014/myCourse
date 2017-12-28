@@ -8,17 +8,23 @@ angular.module('starter.services', [])
     id: 0,
     name: '老师',
     lastText: 'You on your way?',
-    face: '../img/teacher.svg'
+    content: '2018中考语文总复习（安徽专版）名师课件：1.4 专题四 语文综合应用 （共122张PPT）',
+    time: '2017-12-26 17:21',
+    tags: ['收藏','语文试卷']
   }, {
     id: 1,
     name: '学生',
     lastText: 'Hey, it\'s me',
-    face: '../img/student.svg'
+    content: '2018中考语文总复习（安徽专版）名师课件：1.4 专题四 语文综合应用 （共122张PPT）',
+    time: '2017-12-26 17:21',
+    tags: ['收藏']
   }, {
     id: 2,
     name: '家长',
     lastText: 'Did you get the ice cream?',
-    face: '../img/parents.svg'
+    content: '2018中考语文总复习（安徽专版）名师课件：1.4 专题四 语文综合应用 （共122张PPT）',
+    time: '2017-12-26 17:21',
+    tags: ['收藏']
   }];
 
   return {
