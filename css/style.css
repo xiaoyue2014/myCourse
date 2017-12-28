@@ -65,3 +65,14 @@ img{ width:16px; height:16px; vertical-align: middle;}
 .detail{ margin-top: 0; }
 .tags{ margin-right:10px; }
 .data a{ color:#262626; }
+.download-h4{height: 30px; line-height: 30px;}
+.bdb{ border-bottom: 1px solid #ccc;}
+.download a.item{ padding:6px; color: #6e6e6e;}
+textarea.comment{border:1px solid #ccc;}
+.comment-person{ color:#353535; }
+.comment-time{ color:#949494;  padding-left:20px;}
+.comment-content{ color:#656565;padding-left:20px; }
+
+.collecting{ background: #ff9e40; text-align:center; color:#fff; padding:5px 50px; width:40%; margin:20px auto;}
+.icon-collect{ background: url(../img/collect.svg) center top no-repeat; }
+.icon-collected{ background: url(../img/collected.svg) center top no-repeat; }

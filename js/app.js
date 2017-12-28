@@ -101,8 +101,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/collect/:chatId',
       views: {
         'tab-collect': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+          templateUrl: 'templates/source-detail.html',
+          controller: 'sourceDetailCtrl'
         }
       }
     })

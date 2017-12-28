@@ -27,8 +27,18 @@ angular.module('starter.controllers', [])
 .controller('editCtrl', function($scope) {
 
 })
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+.controller('sourceDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
 })
 
 .controller('AccountCtrl', function($scope) {
