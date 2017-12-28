@@ -10,6 +10,8 @@ img{ width:16px; height:16px; vertical-align: middle;}
 .top-nav{ padding:5px 5px 0 5px; }
 .top-nav li{ float:left; background: #DDDDDD; border-radius: 22px; margin-right: 15px; padding:5px 15px;}
 .top-nav li.active{color: #FFFFFF; background: #42a3f5;}
+.top-nav li a{ color:#333;}
+.top-nav li.active a{color: #FFFFFF;}
 .pdlf10{ padding: 0 10px;}
 
 .searchBar{ margin-top:20px; padding-bottom: 20px; }
@@ -43,3 +45,19 @@ img{ width:16px; height:16px; vertical-align: middle;}
 .tags h5{ font-size: 18px; }
 .tags ul{}
 .tags ul li{ margin:10px; }
+.bgwhite .accordion-head{ border-bottom:1px solid #ccc; margin-top:-20px;}
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear; padding-left:45px;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.accordion .icon{ float:right; color:#ccc;}
+.item.item-stable{ background: none; }
