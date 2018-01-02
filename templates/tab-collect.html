@@ -9,7 +9,7 @@
           <div class="clear"></div>
       </ul>
       <div class="row">
-        <div class="col col-33 pdl0">
+        <div class="col col-33 pdl0" ng-controller="selectSubject">
           <label class="item item-input item-select subject" ng-click="modal.show()">
             <input type="search" placeholder="" ng-model="subject" value="{{subject}}" ng-init="subject='数学'">
           </label>
@@ -26,10 +26,10 @@
   </div>
   <ion-content class="padding">
     <div class="content">
-      <div class="list card data" ng-repeat="chat in chats">
-        <p><a  href="#/tab/collect/{{chat.id}}">{{chat.content}}</a></p>
-        <p class="time"><img src="img/time-icon.svg"> {{chat.time}}</p>
-        <p class="collection"><img src="img/tag.svg"> <a class="tags" ng-repeat="tag in chat.tags" href="">{{tag}}</a></p>
+      <div class="list card data" ng-repeat="c in cData">
+        <p><a  href="#/tab/collect/{{c.id}}">{{c.content}}</a></p>
+        <p class="time"><img src="img/time-icon.svg"> {{c.time}}</p>
+        <p class="collection"><img src="img/tag.svg"> <a class="tags" ng-repeat="tag in c.tags" href="">{{tag}}</a></p>
         <div class="row top-line">
           <div class="col col-33">
             <a href="#/tab/edit" class="button button-outline button-positive">

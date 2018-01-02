@@ -51,6 +51,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
+    .state('tab.sources', {
+      url: '/sources',
+      views: {
+        'tab-sources': {
+          templateUrl: 'templates/tab-sources.html',
+          controller: 'sourcesCtrl'
+        }
+      }
+    })
 
   .state('tab.collect', {
     url: '/collect',
@@ -79,15 +88,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-  .state('tab.sources', {
-      url: '/sources',
-      views: {
-        'tab-sources': {
-          templateUrl: 'templates/tab-sources.html',
-          controller: 'sourcesCtrl'
-        }
-      }
-    })
+
   .state('tab.edit', {
       url: '/edit',
       views: {
@@ -97,16 +98,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/collect/:chatId',
+    .state('tab.collect-detail', {
+      url: '/collect/:cDataId',
       views: {
         'tab-collect': {
-          templateUrl: 'templates/source-detail.html',
-          controller: 'sourceDetailCtrl'
+          templateUrl: 'templates/collect-detail.html',
+          controller: 'collectDetailCtrl'
         }
       }
     })
-
+.state('tab.errors-detail', {
+      url: '/errors/:eDataId',
+      views: {
+        'tab-errors': {
+          templateUrl: 'templates/errors-detail.html',
+          controller: 'errorsDetailCtrl'
+        }
+      }
+    })
+.state('tab.notes-detail', {
+      url: '/notes/:nDataId',
+      views: {
+        'tab-notes': {
+          templateUrl: 'templates/notes-detail.html',
+          controller: 'notesDetailCtrl'
+        }
+      }
+    })
   .state('tab.account', {
     url: '/account',
     views: {

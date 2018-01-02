@@ -2,9 +2,7 @@ angular.module('starter.services', [])
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
-  var chats = [{
+  var chats=[{
     id: 0,
     name: '老师',
     lastText: 'You on your way?',
@@ -26,7 +24,7 @@ angular.module('starter.services', [])
     time: '2017-12-26 17:21',
     tags: ['收藏']
   }];
-
+  // Some fake testing data
   return {
     all: function() {
       return chats;
