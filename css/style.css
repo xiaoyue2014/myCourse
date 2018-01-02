@@ -80,3 +80,8 @@ textarea.comment{border:1px solid #ccc;}
 .time img{ margin-top:-3px; margin-right: 5px;}
 .time .size,.time .times,.collection img{ margin-right:5px; }
 .time .times{ margin-left:15px; }
+.divide{ height:10px; border-bottom: 1px solid #ccc; }
+img.noteImg{ width:330px; height: 430px; margin-top: 10px;}
+img.errorImg{ width:350px; height: 134px; margin-bottom: 10px;}
+.rightAnswer{ color: #3c9ff4; }
+.tmjx p{ margin:0; color:#5e5e5e; }
