@@ -1,4 +1,9 @@
 angular.module('starter.controllers', [])
+.controller('headCtrl', function($scope,$ionicHistory) {
+  $scope.goback=function(){
+    $ionicHistory.goBack();
+  }
+})
 .controller('sourcesCtrl', function($scope) {})
 .controller('collectCtrl', function($scope, $ionicModal) {	
 	$scope.cData = [{
@@ -71,7 +76,18 @@ angular.module('starter.controllers', [])
 	  		$scope.modal.hide();
 	  }
 	})
-.controller('collectDetailCtrl', function($scope, $stateParams) {})
+.controller('collectDetailCtrl', function($scope, $stateParams) {
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+})
 .controller('errorsDetailCtrl', function($scope, $stateParams) {})
 .controller('notesDetailCtrl', function($scope, $stateParams) {})
 .controller('editCtrl', function($scope,$state) {
