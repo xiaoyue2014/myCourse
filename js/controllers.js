@@ -4,7 +4,11 @@ angular.module('starter.controllers', [])
     $ionicHistory.goBack();
   }
 })
-.controller('sourcesCtrl', function($scope) {})
+.controller('sourcesCtrl', function($scope) {
+  $scope.deleteTag=function($event){
+    console.log($event.target.getAttribute('data'));
+  }
+})
 .controller('collectCtrl', function($scope, $ionicModal) {	
 	$scope.cData = [{
     id: 0,

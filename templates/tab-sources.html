@@ -19,11 +19,11 @@
       <div class="tags">
         <h5><img src="img/my tag.svg"> 我的标签</h5>
         <ul class="top-nav">
-            <li>重点</li>
-            <li>难点</li>
-            <li>经典案例</li>
-            <li>考点</li>
-            <li>2018高考重难点</li>
+            <li class="tag" data="1" ng-click="deleteTag($event)">重点<a class="delete"><img src="img/error.svg"></a></li>
+            <li class="tag" data="2" ng-click="deleteTag($event)">难点<a class="delete hide"><img src="img/error.svg"></a></li>
+            <li class="tag" data="3" ng-click="deleteTag($event)">经典案例<a class="delete hide"><img src="img/error.svg"></a></li>
+            <li class="tag" data="4" ng-click="deleteTag($event)">考点<a class="delete hide"><img src="img/error.svg"></a></li>
+            <li class="tag" data="5" ng-click="deleteTag($event)">2018高考重难点<a class="delete hide"><img src="img/error.svg"></a></li>
             <div class="clear"></div>
         </ul>
       </div> 

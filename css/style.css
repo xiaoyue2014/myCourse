@@ -86,3 +86,7 @@ img.noteImg{ width:330px; height: 430px; margin-top: 10px;}
 img.errorImg{ width:350px; height: 134px; margin-bottom: 10px;}
 .rightAnswer{ color: #3c9ff4; }
 .tmjx p{ margin:0; color:#5e5e5e; }
+.tag{ position: relative; }
+.tag .delete{ width:20px; height: 20px; position: absolute; top:-10px; right: -10px; border:1px solid #41a1ed; background: #fff; border-radius:10px;}
+.tag .delete img{ width:12px; height:12px;margin-left: 3px;margin-bottom: 6px;}
+.hide{ display: none;}
