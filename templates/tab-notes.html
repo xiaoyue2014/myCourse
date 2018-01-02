@@ -24,8 +24,8 @@
     <div class="content">
       <div class="list card data" ng-repeat="n in nData">
         <p><a  href="#/tab/notes/{{n.id}}">{{n.content}}</a></p>
-        <p class="time"><img src="img/time-icon.svg"> {{n.time}}</p>
-        <p class="collection"><img src="img/tag.svg"> <a class="tags" ng-repeat="tag in n.tags" href="">{{tag}}</a></p>
+        <p class="time"><span class="size"><img src="img/file.svg">{{n.size}}</span><span class="times"><img src="img/time-icon.svg">{{n.time}}</span></p>
+        <p class="collection"><img src="img/tag.svg"><a class="tags" ng-repeat="tag in n.tags" href="">{{tag}}</a></p>
         <div class="row top-line">
           <div class="col col-33">
             <a href="#/tab/edit" class="button button-outline button-positive">

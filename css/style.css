@@ -22,7 +22,8 @@ img{ width:16px; height:16px; vertical-align: middle;}
 
 .scroll-content{ background: #efeff4;}
 .content{ margin-top: 100px;}
-.content .data{ background: #fff; padding: 15px 15px 5px 15px; margin-bottom: 20px;}
+.card{ margin:0; }
+.content .data{ background: #fff; padding: 15px 15px 5px 15px; margin-bottom: 10px;}
 .content .data p{ line-height: 24px; }
 .content .data .time{ color:#999999; }
 .content .data .collection a{ color:#333333;  background: #DDDDDD; border-radius: 22px; padding:5px 15px; }
@@ -76,3 +77,6 @@ textarea.comment{border:1px solid #ccc;}
 .collecting{ background: #ff9e40; text-align:center; color:#fff; padding:5px 50px; width:40%; margin:20px auto;}
 .icon-collect{ background: url(../img/collect.svg) center top no-repeat; }
 .icon-collected{ background: url(../img/collected.svg) center top no-repeat; }
+.time img{ margin-top:-3px; margin-right: 5px;}
+.time .size,.time .times,.collection img{ margin-right:5px; }
+.time .times{ margin-left:15px; }

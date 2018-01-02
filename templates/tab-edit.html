@@ -3,9 +3,9 @@
     <div class="top">
       <div class="item item-input-inset">
         <label class="item-input-wrapper search col col-75">
-          <input type="text" placeholder="语文试卷">
+          <input ng-model="addTag" type="text" placeholder="语文试卷">
         </label>
-        <button class="button button-small searchBtn col">
+        <button class="button button-small searchBtn col" ng-click="saveTag()">
           完成
         </button>
       </div>
