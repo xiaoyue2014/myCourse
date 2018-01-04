@@ -1,0 +1,107 @@
+<div class="CommonDialogPage sourceBookSelect">
+	<div class="Common_head">
+		<span class="head_title">教材选择</span>
+		<span class="closeBtn"></span>
+	</div>
+	<div class="Common_content">
+		<div class="search_area">
+			<ul class="search_criteria">
+				<li><label>课程名称</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+				<li>
+					<label>学段/年级/学科</label>
+					<div class="_li_rt">
+						<div class="list_cont">
+							<select class="small_select">
+								<option value="">小学</option>
+							</select>
+						</div>
+						<div class="list_cont">
+							<select class="small_select">
+								<option value="">一年级</option>
+							</select>
+						</div>
+						<div class="list_cont">
+							<select class="small_select">
+								<option value="">思想品德（社会）</option>
+							</select>
+						</div>
+					</div>
+				</li>
+				<li><label>出版社</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+			</ul>
+			<div class="button_box">
+				<button class="bg_color" type="button">搜索</button>
+				<a href="javascript:;">选择</a>
+			</div>
+		</div>
+		<div class="book_lists">
+			<table class="CommonShowTable" id="book_lists_table">
+				<tr>
+					<th><b class="selectAllBtn unChecked"></b></th><th>名称</th>
+					<th>学段</th><th>年级</th>
+					<th>学科</th><th>出版社</th>
+				</tr>
+				<tr>
+					<td><b class="selectBtn Checked"></b></td><td>一年级语文人教版一年级语文人教版一年级语文人教版</td>
+					<td>小学</td><td>一年级</td>
+					<td>语文语文语文</td><td>中国人民教育出版社中国人民教育出版社</td>
+				</tr>
+				<tr>
+					<td><b class="selectBtn unChecked"></b></td><td>一年级语文人教版一年级语文人教版一年级语文人教版</td>
+					<td>小学</td><td>一年级</td>
+					<td>语文语文语文</td><td>中国人民教育出版社中国人民教育出版社</td>
+				</tr>
+				<tr>
+					<td><b class="selectBtn unChecked"></b></td><td>一年级语文人教版一年级语文人教版一年级语文人教版</td>
+					<td>小学</td><td>一年级</td>
+					<td>语文语文语文</td><td>中国人民教育出版社中国人民教育出版社</td>
+				</tr>
+				<tr>
+					<td><b class="selectBtn unChecked"></b></td><td>一年级语文人教版一年级语文人教版一年级语文人教版</td>
+					<td>小学</td><td>一年级</td>
+					<td>语文语文语文</td><td>中国人民教育出版社中国人民教育出版社</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var tableListSelectFn=function(){
+		var selectBtnLength=$("#book_lists_table tr .selectBtn").length;
+		$("#book_lists_table tr .selectBtn").each(function(){
+			$(this).on('click',function(){
+				if ($(this).hasClass('Checked')) {
+					$(this).removeClass('Checked').addClass('unChecked');
+					if ($("#book_lists_table tr .unChecked").length!=selectBtnLength) {
+						$("#book_lists_table tr .selectAllBtn").removeClass('Checked').addClass('unChecked');
+					}
+				} else{
+					$(this).removeClass('unChecked').addClass('Checked');
+					if ($("#book_lists_table tr .Checked").length==selectBtnLength) {
+						$("#book_lists_table tr .selectAllBtn").removeClass('unChecked').addClass('Checked');
+					}
+				}
+			});
+		});
+		
+		
+		$("#book_lists_table tr .selectAllBtn").on('click',function(){
+			if ($(this).hasClass('Checked')) {
+				$(this).removeClass('Checked').addClass('unChecked');
+				$("#book_lists_table tr .selectBtn").each(function(){
+					$(this).removeClass('Checked').addClass('unChecked');
+				})
+			} else{
+				$(this).removeClass('unChecked').addClass('Checked');
+				$("#book_lists_table tr .selectBtn").each(function(){
+					$(this).removeClass('unChecked').addClass('Checked');
+				})
+			}
+		});
+		
+		
+	}
+	tableListSelectFn();
+</script>

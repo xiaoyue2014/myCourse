@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/dashboard/css/statistics.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--临时引用-->
+			<div class="SourceAmendDialog">
+				<div class="Dialog" id="Dialog"></div>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox ClassTestList">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">成绩分析</span>
+									<span class="span_2"></span>
+									<span class="span_text">班级报表</span>
+									<span class="span_2"></span>
+									<span class="span_text">七一班考试列表</span>
+								</div>
+								<div class="contentCenter">
+									<div class="search_area">
+										<ul class="search_criteria">
+											<li>
+												<label><b>学科</b></label>
+												<div class="_li_rt">
+													<div class="list_cont">
+														<select class="small_select">
+															<option value="">思想品德（社会）</option>
+														</select>
+													</div>
+												</div>
+											</li>
+											<li><label>考试名称</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+											<li><label>开始时间</label><div class="_li_rt"><div class="list_cont"><input type="date" /></div></div></li>
+											<li><label>结束时间</label><div class="_li_rt"><div class="list_cont"><input type="date" /></div></div></li>
+										</ul>
+										<div class="button_box">
+											<button class="bg_color" type="button">查询</button>
+											<!--<a href="coursesTeachMaterial.html">新建</a>-->
+										</div>
+									</div>
+									<div class="contentCenter_bt">
+										<table class="CommonShowTable">
+											<tr>
+												<th>考试名称</th><th>年级</th>
+												<th>班级</th><th>学科</th>
+												<th>考试时间</th><th class="FixedWidth2">操作</th>
+											</tr>
+											<tr>
+												<td>2017下学期期末考试</td><td>一年级</td>
+												<td>一班、二班</td><td>语文、数学、英语</td>
+												<td>2017/11/14</td><td><a title="查看班级报表" class="icon_enter" href="TABtableTwo.html"></a><a title="班级对比" class="icon_duibi" href="TABtable.html"></a></td>
+											</tr>
+											<tr>
+												<td>2017下学期期末考试</td><td>二年级</td>
+												<td>一班、二班</td><td>语文、数学、英语</td>
+												<td>2017/11/14</td><td><a title="查看班级报表" class="icon_enter" href="TABtableTwo.html"></a><a title="班级对比" class="icon_duibi" href="TABtable.html"></a></td>
+											</tr>
+											<tr>
+												<td>2017下学期期末考试</td><td>三年级</td>
+												<td>一班、二班</td><td>语文、数学、英语</td>
+												<td>2017/11/14</td><td><a title="查看班级报表" class="icon_enter" href="TABtableTwo.html"></a><a title="班级对比" class="icon_duibi" href="TABtable.html"></a></td>
+											</tr>
+											<tr>
+												<td>2017下学期期末考试</td><td>四年级</td>
+												<td>一班、二班</td><td>语文、数学、英语</td>
+												<td>2017/11/14</td><td><a title="查看班级报表" class="icon_enter" href="TABtableTwo.html"></a><a title="班级对比" class="icon_duibi" href="TABtable.html"></a></td>
+											</tr>
+											<tr>
+												<td>2017下学期期末考试</td><td>五年级</td>
+												<td>一班、二班</td><td>语文、数学、英语</td>
+												<td>2017/11/14</td><td><a title="查看班级报表" class="icon_enter" href="TABtableTwo.html"></a><a title="班级对比" class="icon_duibi" href="TABtable.html"></a></td>
+											</tr>
+										</table>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../../static/comm/js/modelCommon.js"></script>
+        <script src="../../../static/custom/dashboard/js/statisticsCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    
+			   
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

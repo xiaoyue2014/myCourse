@@ -1,0 +1,47 @@
+@import "../../common/Common.less";  
+
+.userCenterPc{
+    .MainCenter{ padding: 0 1.8%; width: 100%; .box-sizing; overflow: hidden;} 
+    .MainCenter_left{ background: #EEEEEE;  border-right: 2px solid white; overflow: hidden; width: 18%; float: left;
+        .user_message{ text-align: center; padding: 0.8rem 0.5rem 0.5rem; .box-sizing;
+                border-bottom: 1.5px solid white;
+            .user_photo{ .wh(2rem,2rem); border: 3px solid white; .round(50%); margin-bottom: 0.5rem;}
+        }
+        .message_lists{ .box-sizing; padding: 0.5rem 0; overflow: hidden;
+            li{ margin: 0.08rem 0; .box-sizing;
+                .parent_list{ background-color: rgba(212,212,212,0.9); color: #111; .wh_lh(100%,0.8rem); .box-sizing;
+                      display: inline-block; text-decoration: none; font-size: 0.4rem;
+                     .box-sizing; overflow: hidden; padding: 0 0.35rem;
+                    &.activeBorder{ border: 1.5px solid #0072CC;}
+                    span{ float: left; margin-left: 0.15rem;}
+                    i:first-child{ float: left; color: black;font-size: 0.45rem;} 
+                    i:last-child{ float: right; display: inline-block; font-size: 0.4rem; color: #777;}
+                }
+                .child_list{ display: none;
+                    dd{padding: 0.1rem 0.35rem 0.1rem 0.88rem; .box-sizing; overflow: hidden;
+                        margin-top: 0.05rem; position: relative;
+                        &.activedd{ background-color: rgba(212,212,212,0.7);
+                           a{ color: #111;}
+                           .left_arrow{ display: inline-block;}
+                        }
+                        a{ color: #555; font-size: 0.38rem;}
+                        .left_arrow{ display: none; .ltne(0.2rem,white); position: absolute; right: 0; top: 50%; margin-top: -0.2rem;}
+                    }
+                    dd:first-child{ margin-top: 0;}
+                    dd:hover{ background-color: rgba(212,212,212,0.7);
+                        a{ color: #111;}
+                        /*.left_arrow{ display: inline-block;}*/
+                    }
+                }
+            }
+        }
+    }
+    .MainCenter_right{ overflow: hidden; width: 82%; padding: 0.2rem; .box-sizing; float: right; 
+        /*.rt_content{
+            li{ display: none;
+               &.activeRtLi{ display: block;}
+            }
+        }*/    
+        
+    }
+}

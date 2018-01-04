@@ -1,0 +1,120 @@
+<div class="CommonDialogPage sharePagebox">
+	<div class="Common_head">
+		<span class="head_title">资源分享</span>
+		<span class="closeBtn"></span>
+	</div>
+	<div class="Common_content">
+		<div class="share_content_lt">
+			<div class="content_lt_a">
+				<span class="classtitle">分享类别</span>
+				<span class="classlist"><em class="classBtn personage Checked"></em><b>个人</b></span>
+				<span class="classlist"><em class="classBtn groups un_Checked"></em><b>群组</b></span>
+			</div>
+			<div class="content_lt_b">
+				<input type="search" placeholder="请输入名称" class="selectsearch" id="selectsearch" />
+				<div class="showlistbox">
+					<div class="showlistauto">
+						<ul class="showlist">
+							<li class="activeli"><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+							<li><a href="javascript:;">王瑶艳</a><span></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="share_content_rt">
+			<div class="content_rt_list">
+				<span>分享对象</span>
+				<div class="list_rt_box list_rt_boxOne">
+					<div class="list_rt_box_scroll">
+						<ul class="selected_box">
+							<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+							<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content_rt_list">
+				<span>有效期</span>
+				<div class="list_rt_box">
+					<dl class="selectTimeBox">
+						<dd><span class="periodTimeBtn radioChecked"></span><b>一周</b></dd>
+						<dd><span class="periodTimeBtn radioUnChecked"></span><b>一个月</b></dd>
+						<dd><span class="periodTimeBtn radioUnChecked"></span><b>三个月</b></dd>
+						<dd><span class="periodTimeBtn radioUnChecked"></span><b>半年</b></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="content_rt_list">
+				<span>留言</span>
+				<div class="list_rt_box">
+					<textarea class="leave_word"></textarea>
+				</div>
+			</div>
+			
+			<div class="content_rt_list">
+				<div class="list_rt_box">
+					<div class="button_box">
+						<button class="shareBtn" type="button">分享</button>
+						<button class="pagecloseBtn" type="button">返回</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	
+	//个人群组单选框选择
+	$(".content_lt_a .classBtn").each(function(){
+		$(this).click(function(){
+			if ($(this).hasClass('Checked')) {
+				$(this).parents('.classlist').siblings().find('.classBtn').removeClass('Checked').addClass('un_Checked');
+			} else{
+				$(this).removeClass('un_Checked').addClass('Checked');
+				$(this).parents('.classlist').siblings('.classlist').find('.classBtn').removeClass('Checked').addClass('un_Checked');
+			}
+		})
+	});
+	
+	//时间单选框
+	$(".selectTimeBox .periodTimeBtn").each(function(){
+		$(this).click(function(){
+			if ($(this).hasClass('radioChecked')) {
+				$(this).parents('dd').siblings().find('.periodTimeBtn').removeClass('radioChecked').addClass('radioUnChecked');
+			} else{
+				$(this).removeClass('radioUnChecked').addClass('radioChecked');
+				$(this).parents('dd').siblings('dd').find('.periodTimeBtn').removeClass('radioChecked').addClass('radioUnChecked');
+			}
+		})
+	})
+</script>

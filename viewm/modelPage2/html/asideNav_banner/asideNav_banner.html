@@ -1,0 +1,42 @@
+<div class="banner_AsideNav_content">
+	<div class="banner_box" id="banner_box">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+		        <div class="swiper-slide"><a href="javascript:;"><img src="../../img/RL_index/banner/banner_1.png"/></a></div>
+		        <div class="swiper-slide"><a href="javascript:;"><img src="../../img/RL_index/banner/banner_2.png"/></a></div>
+		        <div class="swiper-slide"><a href="javascript:;"><img src="../../img/RL_index/banner/banner_3.png"/></a></div>
+		        <div class="swiper-slide"><a href="javascript:;"><img src="../../img/RL_index/banner/banner_4.png"/></a></div>
+		        <div class="swiper-slide"><a href="javascript:;"><img src="../../img/RL_index/banner/banner_5.png"/></a></div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination "></div>
+		</div>
+	</div>
+	<div class="AsideNav_box" id="AsideNav_box">
+	
+	</div>
+</div>
+
+<script>
+	//轮播图鼠标移上停止切换,移出恢复切换封装
+	//swiperClaass为轮播图的类名，swiperFn的执行函数
+	var swiperStartStop=function(swiperClaass,swiperFn){
+		$(swiperClaass).mouseenter(function(){
+		    swiperFn.stopAutoplay();
+	    }).mouseleave(function(){
+	    	swiperFn.startAutoplay();
+	    });
+	}
+	
+	var swiperbig = new Swiper('.banner_box .swiper-container', {
+	    pagination: '.banner_box .swiper-pagination',
+	    paginationClickable: '.banner_box .swiper-pagination',
+	    autoplay : 2000,
+	    speed:1000,
+	    loop:true,
+	    spaceBetween: 300,
+	    autoplayDisableOnInteraction: false,
+	    effect: 'fade'
+	});
+	swiperStartStop('.banner_box .swiper-container',swiperbig);
+</script>

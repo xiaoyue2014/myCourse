@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>资源库模板</title>
+		<link rel="stylesheet" type="text/css" href="../../../component_module/Swiper/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/modelPage2.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp ContainerWarp_bg">
+			<div class="Con_Main userLogin">
+				<div class="MainContent">
+					<ul class="Login_ul">
+						<li class="login_li1"><img src="../img/login/logo.png"/></li>
+						<li class="login_li2"><label></label><input class="userNameInput" type="text" placeholder="请输入用户名" /></li>
+						<li class="login_li3"><label></label><input class="pwdInput" type="password" placeholder="请输入密码" /><span class="pwdShowChange pwdImg"></span></li>
+						<li class="login_li4">
+							<a class="rememberPwd" href="javascript:;"><span class="rememberPwdBtn selected"></span><em>记住密码</em></a>
+							<a class="forgetPwd" href="javascript:;">忘记密码？</a>
+						</li>
+						<li class="login_li5"><span class="loginButton">登录</span></li>
+						<li class="login_li6"><p></p><span>or</span><p></p></li>
+						<li class="login_li1">
+							<a class="QQ_Btn" href="javascript:;"><img src="../img/login/icon_QQ.png"/></a>
+							<a class="WX_Btn" href="javascript:;"><img src="../img/login/icon_weichat.png"/></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer2" id="footer2">
+				<p>Copyright ©2013-2017 Enable Educational Technology Co.,Ltd. All rights reserved</p>
+			</div>
+		</div>
+		
+		<script src="../../../component_module/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../../component_module/Swiper/swiper-3.4.2.min.js"></script>
+		<script src="../../common/RL_Common.js"></script>
+		<script type="text/javascript">
+			//登录操作
+			var loginHandle=function(){
+				//定义是否记住密码变量
+				var isfosPwd=false;
+				
+				//密码显示切换
+				$(".pwdShowChange").on('click',function(){
+					if ($(this).hasClass('pwdImg')) {
+						$(this).removeClass('pwdImg').addClass('pwdImg_on');
+						$(this).siblings('.pwdInput').attr({type:'text'});
+					} else{
+						$(this).removeClass('pwdImg_on').addClass('pwdImg');
+						$(this).siblings('.pwdInput').attr({type:'password'});
+					}
+				});
+				
+				//是否记住密码
+				$(".rememberPwdBtn").on('click',function(){
+					if ($(this).hasClass('selected')) {
+						$(this).removeClass('selected').addClass('selected_on');
+						isfosPwd=true;
+					} else{
+						$(this).removeClass('selected_on').addClass('selected');
+						isfosPwd=false;
+					}
+				});
+			}
+			loginHandle();
+		</script>
+	</body>
+</html>

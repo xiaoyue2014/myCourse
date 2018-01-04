@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>开放平台-常见问题</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../static/comm/css/comm.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../static/custom/openSite/css/openSite.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header" id="header"></div>
+			<div class="mainContent commonProblems">
+				<div class="contentCenter">
+					<div class="content_box">
+						<div class="content_tp">
+							<p class="contTitle">资源开放平台开发者常见问题</p>
+							<div class="searchBox"><i></i><input type="text" placeholder="问题搜索" /></div>
+						</div>
+						<div class="content_bt">
+							<dl>
+								<dt>资源开放平台能够提供哪些资源？</dt>
+								<dd>
+									<p>资源开放平台能够为开发者提供学科网数十年积累的优质教育资源。开发者可以通过API接口直接获取到海量的教育资源以完善自己的教育产品建设，从而达到合作、共赢。内容上，资源开放平台涵盖客户亟需的试题库、备课资料库、精品视频库等教育资源，其容量之大、种类之多、质量之高、更新之快、体系精细、独家授权的优势得天独厚。开发者还可通过系统对接等简易灵活的方式在教育资源开放平台上与33云实现数据级合作，各取所需，实现共赢。</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt>资源开放平台提供免费试用服务吗？</dt>
+								<dd>
+									<p>提供。用户网上注册，即可免费调用浏览类API一百次，免费试用试题十道，基础资源十份。</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt>如何使用资源开放平台提供的各种资源？</dt>
+								<dd>
+									<p>使用资源开放平台的API，具体使用方法请参考API文档。</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt>调用API出现HTTP Status 400错误，如下图所示，怎么办？</dt>
+								<dd>
+									<p>首先对照API文档，检查访问地址中是否缺了必填的参数“id”，缺了必须补上该参数，该参数的值可以为空值；如果有id参数，再检查在id前面是不是有空格符号，如果有，就删除该空格符号再刷新页面。</p>
+								</dd>
+							</dl>
+							
+							<dl>
+								<dt>.API返回数据为：{"data":[],"status":"ok"}，表示什么意思？</dt>
+								<dd>
+									<p>表示API访问正常，但是数据库中查询不到对应的数据。</p>
+								</dd>
+							</dl>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<!--<script src="../../static/comm/plugins/paging/page.js"></script>-->
+		<script src="../../static/custom/openSite/js/comm.js"></script>
+		
+		<script type="text/javascript">
+		(function($){
+			$(function(){
+			    //do anything
+			    
+		    })
+		})(jQuery);
+		</script>
+	</body>
+</html>

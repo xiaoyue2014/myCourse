@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/dashboard/css/statistics.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--临时引用-->
+			<div class="SourceAmendDialog">
+				<div class="Dialog" id="Dialog"></div>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox classhoursPage">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">课时分析</span>
+									<span class="span_2"></span>
+									<span class="span_text">班级报表</span>
+								</div>
+								<div class="contentCenter">
+									<div class="search_area">
+										<ul class="search_criteria">
+											<li><label>开始时间</label><div class="_li_rt"><div class="list_cont"><input type="date" /></div></div></li>
+											<li><label>结束时间</label><div class="_li_rt"><div class="list_cont"><input type="date" /></div></div></li>
+											<li class="list_half2">
+												<label><b>班级</b></label>
+												<div class="_li_rt">
+													<div class="list_cont bg_afterBox">
+														<select class="small_select">
+															<option value="">高一（1）班</option>
+															<option value="">高一（2）班</option>
+															<option value="">高一（4）班</option>
+														</select>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="button_box">
+											<button class="bg_color" type="button">查询</button>
+											<!--<a href="coursesTeachMaterial.html">新建</a>-->
+										</div>
+									</div>
+									<div class="contentCenter_bt">
+										<table class="CommonShowTable">
+											<tr>
+												<th><em>班级</em></th>
+												<th><em>课时次</em><b class="paixuBtn"></b></th><th><em>时长(小时)</em><b class="paixuBtn"></b></th>
+												<th><em>平均时长(分钟)</em><b class="paixuBtn"></b></th>
+												<th class="unique_th">
+													<p>课时分布(分钟)/课时次</p>
+													<div class="th_bt">
+														<a>0~10</a><a>11~20</a><a>21~30</a><a>31~45</a><a>≥45</a>
+													</div>
+												</th>
+												<th><em>操作</em></th>
+											</tr>
+											<tr>
+												<td>高一（2）班</td>
+												<td><a>20</a></td><td><a>1200</a></td>
+												<td><a>60</a></td>
+												<td class="unique_td"><div class="td_cont"><a>5</a><a>4</a><a>16</a><a>6</a><a>7</a></div></td>
+												<td><i class="icon_line lineChartBtn"></i><i class="icon_pie PieChartBtn"></i></td>
+											</tr>
+											<tr>
+												<td>高二（1）班</td>
+												<td><a>20</a></td><td><a>1200</a></td>
+												<td><a>60</a></td>
+												<td class="unique_td"><div class="td_cont"><a>5</a><a>4</a><a>16</a><a>6</a><a>7</a></div></td>
+												<td><i class="icon_line lineChartBtn"></i><i class="icon_pie PieChartBtn"></i></td>
+											</tr>
+											<tr>
+												<td>高三（5）班</td>
+												<td><a>20</a></td><td><a>1200</a></td>
+												<td><a>60</a></td>
+												<td class="unique_td"><div class="td_cont"><a>5</a><a>4</a><a>16</a><a>6</a><a>7</a></div></td>
+												<td><i class="icon_line lineChartBtn"></i><i class="icon_pie PieChartBtn"></i></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../../static/comm/plugins/echarts/AllEcharts.min.js"></script>
+        <script src="../../../static/comm/plugins/layer/layer.js"></script>
+        <script src="../../../static/comm/js/modelCommon.js"></script>
+        <script src="../../../static/custom/dashboard/js/statisticsCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    //排序按钮点击排序
+			    $(".paixuBtn").each(function(){
+			    	$(this).bind('click',function(){
+			    		if ($(this).hasClass('Rotate_180')) {
+			    			$(this).removeClass('Rotate_180');
+			    		}else{
+			    			$(this).addClass('Rotate_180');
+			    		}
+			    	})
+			    })
+			    
+			    //表格中图片按钮查看折线图
+			    $(".lineChartBtn").each(function(){
+			    	$(this).bind('click',function(){
+			    		$(".SourceAmendDialog").show();
+			    		$(".SourceAmendDialog .Dialog").load('../dailogPage/ChartModel.html',function(){
+			    			$.getScript('../../../static/custom/dashboard/js/lineChart.js');
+			    		});
+			    	})
+			    })
+			    
+			    //表格中图片按钮查看饼状图
+			    $(".PieChartBtn").each(function(){
+			    	$(this).bind('click',function(){
+			    		$(".SourceAmendDialog").show();
+			    		$(".SourceAmendDialog .Dialog").load('../dailogPage/ChartModel.html',function(){
+			    			$.getScript('../../../static/custom/dashboard/js/pieChart.js');
+			    		});
+			    	})
+			    })
+			    
+			    
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

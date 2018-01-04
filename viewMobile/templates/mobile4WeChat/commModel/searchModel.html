@@ -1,0 +1,138 @@
+<dl class="search_box">
+	<dt class="box_lt" id="selectChild">
+		<b><img src="../../../static/custom/familySchoolCommunication/img/icon_child.png"/></b>
+		<span id="childName">吴玉婷</span>
+		<i></i>
+	</dt>
+	<dd class="weui-search-bar box_rt" id="searchBar">
+		<form class="weui-search-bar__form">
+	        <div class="weui-search-bar__box">
+	            <i class="weui-icon-search"></i>
+	            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+	            <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+	        </div>
+	        <label class="weui-search-bar__label" id="searchText">
+	            <i class="weui-icon-search"></i>
+	            <span>搜索</span>
+	        </label>
+	    </form>
+	</dd>
+</dl>
+
+<ul class="searchResult" id="searchResult"></ul>
+
+<script type="text/javascript">
+	(function($){
+		$(function(){
+			//start
+			var childSelectFn=function(Arrays,callbackFn){
+				var $Arrays=new Array();
+		    	for (var i=0;i<Arrays.length;i++) {
+		    		var $gather={};
+		    		$gather.value="child-"+i;
+		    		$gather.label=Arrays[i];
+		    		$Arrays.push($gather);
+		    	}
+		    	//console.log($Arrays)
+		    	$('#selectChild').on('click', function () {
+			        weui.picker($Arrays, {
+			            onChange: function (result) {
+			                //console.log(result);
+			            },
+			            onConfirm: function (result) {
+			                //console.log(result);
+			                var childName=result[0].label;
+			                var childId=result[0].value;
+			                callbackFn(childName,childId);
+			            }
+			        });
+			    });
+		    }
+		    childSelectFn(['吴玉婷','吴天浩'],function(name,childId){ 
+                $("#childName").html(name);
+		    	console.log(childId+"/"+name);
+		    });
+		    
+		    
+		    //搜索
+			var searchFn=function(searchShowListFn){
+				var $searchBar = $('#searchBar'),
+		            $searchResult = $('#searchResult'),
+		            $searchText = $('#searchText'),
+		            $searchInput = $('#searchInput'),
+		            $searchClear = $('#searchClear'),
+		            $searchCancel = $('#searchCancel');
+		
+		        function hideSearchResult(){
+		            $searchResult.hide();
+		            $searchInput.val('');
+		        }
+		        function cancelSearch(){
+		            hideSearchResult();
+		            $searchBar.removeClass('weui-search-bar_focusing');
+		            $searchText.show();
+		        }
+		
+		        $searchText.on('click', function(){
+		            $searchBar.addClass('weui-search-bar_focusing');
+		            $searchInput.focus();
+		        });
+		        $searchInput
+		            .on('blur', function () {
+		                if(!this.value.length) cancelSearch();
+		            })
+		            .on('input', function(){
+		            	var $thisValue=this.value;
+		                if(this.value.length) {
+		                    $searchResult.show();
+		                    searchResultFn($searchResult,$thisValue,function(){
+		                    	$searchResult.find('li').each(function(){
+		                    		$(this).click(function(){
+		                    			$searchInput.val($(this).html());
+		                    			$searchResult.hide();
+		                    			searchShowListFn();
+		                    		})
+		                    	})
+		                    });
+		                } else {
+		                    $searchResult.hide();
+		                }
+		            })
+		        ;
+		        $searchClear.on('click', function(){
+		            hideSearchResult();
+		            $searchInput.focus();
+		        });
+		        $searchCancel.on('click', function(){
+		            cancelSearch();
+		            $searchInput.blur();
+		        });
+		        
+		        
+		        //输入时显示搜索结果
+		        function searchResultFn(searchResultBox,$thisValue,callbackFn){
+		        	$.ajax({
+		        		type:"get",
+		        		url:"../../../static/custom/familySchoolCommunication/js/searchResult.json",
+		        		async:true,
+		        		success:function(AjaxResult){
+		        			var html='';
+				        	for (var i in AjaxResult) {
+				        		if (AjaxResult[i].indexOf($thisValue)!=-1) {
+				        			searchResultBox.empty();
+				        			html+="<li>"+AjaxResult[i]+"</li>";
+				        		}
+				        	}
+				        	searchResultBox.append(html);
+				        	callbackFn();
+		        		}
+		        	});
+		        }
+			}
+			searchFn(function(){
+				alert('此处显示结果列表');
+			});
+		    //end    
+	    })
+	})(jQuery);		
+</script>

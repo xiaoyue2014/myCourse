@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../static/comm/css/comm.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../static/custom/resource/css/mobileMyCourses.css"/>
+	</head>
+	<body>
+		<div class="container coursesDetail">
+			<div class="header" id="header">
+				<div class="headerContent">
+					<div class="headerContent_tp">课程详情</div>
+					<!--<div class="headerContent_bt"></div>-->
+				</div>
+			</div>
+			<div class="mainContent mainContent3">
+				<div class="content">
+					<dl class="content_tp">
+						<dd class="courses_img"><img src="../../static/custom/resource/img/coursesImg.png"/></dd>
+						<dd class="courses_title">跟着乘风老手玩转高考语文+130不是梦</dd>
+						<dd class='info1'>
+							<span>小学</span><span>四年级</span><span>英语</span>
+						</dd>
+						<dd class='info2'><i class="iconfont icon-huiyijiangshi"></i><span>乘风</span></dd>
+						<dd class='info2'><i class="iconfont icon-shijian"></i><span>2017-11-22至2017-11-24</span></dd>
+						<dd class="commButton_box"><span class="clickBtn bg_ccc">已报名</span></dd>
+					</dl>
+					<div class="content_bt">
+						<h3 class='courses_mulu'>课程目录</h3>
+						<ul class='mulu_lists' id='mulu_lists'>
+							<li class='list_'>
+								<div class="list_title"><b class="icon_list"></b><p>诗歌鉴赏基本功——读懂与鉴赏</p><i class="iconfont icon-shouqi"></i></div>
+								<ol class="list_child">
+									<li>
+										<p class='list_child_tp'>诗歌鉴赏基本功——读懂</p>
+										<div class='list_child_bt'>
+											<a href="coursesPacks.html"><span>课程包1</span><b>开始学习</b></a>
+											<a href="coursesPacks.html"><span>课程包2</span><b>开始学习</b></a>
+										</div>
+									</li>
+									<li>
+										<p class='list_child_tp'>诗歌鉴赏基本功——鉴赏</p>
+										<div class='list_child_bt'>
+											<a href="coursesPacks.html"><span>课程包1</span><b>开始学习</b></a>
+										</div>
+									</li>
+								</ol>
+							</li>
+							<li class='list_'>
+								<div class="list_title"><b class="icon_list"></b><p>诗歌鉴赏基本功——读懂与鉴赏</p><i class="iconfont icon-shouqi"></i></div>
+								<ol class="list_child">
+									<li>
+										<p class='list_child_tp'>诗歌鉴赏基本功——读懂</p>
+										<div class='list_child_bt'>
+											<a href="coursesPacks.html"><span>课程包1</span><b>开始学习</b></a>
+											<a href="coursesPacks.html"><span>课程包2</span><b>开始学习</b></a>
+										</div>
+									</li>
+									<li>
+										<p class='list_child_tp'>诗歌鉴赏基本功——鉴赏</p>
+										<div class='list_child_bt'>
+											<a href="coursesPacks.html"><span>课程包1</span><b>开始学习</b></a>
+										</div>
+									</li>
+								</ol>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<!--<div class="footer" id="footer"></div>-->
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../static/comm/js/mobileComm.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+				    //课程目录的点击效果
+				    var muluFn=function(){
+				    	$("#mulu_lists .list_ .list_title").each(function(){
+				    		$(this).bind('click',function(){
+				    			if ($(this).find('i').hasClass('Rotate_180')) {
+				    				$(this).find('i').removeClass('Rotate_180');
+				    				$(this).siblings('.list_child').slideUp();
+				    			} else{
+				    				$(this).find('i').addClass('Rotate_180');
+				    				$(this).siblings('.list_child').slideDown();
+				    				$(this).parent('.list_').siblings('.list_').children('.list_title').find('i').removeClass('Rotate_180');
+				    				$(this).parent('.list_').siblings('.list_').children('.list_child').slideUp();
+				    			}
+				    		})
+				    	})
+				    }
+				    muluFn();
+				    //end    
+			    })
+			})(jQuery);		
+		</script>
+		
+	</body>
+</html>

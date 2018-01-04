@@ -1,0 +1,119 @@
+@import "index_ba.less";               
+
+.Rotate_180{ .rotate(180deg); display: inline-block;}      
+.Rotate_90{ .rotate(-90deg); display: inline-block;}
+.Rotate_90_{ .rotate(90deg); display: inline-block;}
+.Rotate_45{ .rotate(45deg); display: inline-block;}
+.Rotate_45_{ .rotate(-45deg); display: inline-block;}
+
+/*字体定义*/
+@fs12:12px;
+@fs14:14px;
+@fs15:15px;
+@fs16:16px;
+@fs18:18px;
+@fs20:20px;
+@fs24:24px;
+@blue1:#42a2f6;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@gray:#e1e1e1;
+@white:#fff;
+@blue2:#0997ff;
+@color8c:#8c8c8c;
+
+.Commonpadding{ padding: 0px; .box-sizing;}
+.Commonpadding2{ padding: 0 14px; .box-sizing;}
+.maxWidthCommon{ width: 100%; height: 100%; max-width: 1200px;overflow: hidden; margin: 0 auto; min-width: 1000px; position: relative;}
+a{ text-decoration: none !important;}  
+html,body{ width: 100; color: white; overflow-x: hidden; font-family: "微软雅黑"; overflow-y: auto;}   
+.mouseCSS{ width: 100%; height: 100%; -webkit-overflow-scrolling: touch; overflow-y: scroll; overflow-x: hidden;}
+
+.ContainerWarp{ font-size: 14px; color: #333; width: 100%; height: 100%; margin: 0 auto; background: white;
+    .header{ width: 100%; .box-sizing;}
+    .mainContent{ width: 100%; overflow: hidden;
+        .contentTop{ overflow: hidden; width: 100%; max-width: 1920px;
+            .contentTopMain{.maxWidthCommon; .wh(100%,300px); position: relative; overflow: hidden;
+                .banner_box{.wh(100%,300px); z-index: 1; overflow: hidden; position: absolute; top: 0; left: 0; right: 0;}
+                .showinfo_box{.maxWidthCommon; height: 0; overflow: visible; z-index: 2;}
+            }
+        }
+        .contentCenter{ width: 100%; overflow: hidden;} 
+    }
+    .footer{ width: 100%; .Commonpadding; height: 100px; border-top: 1px solid @gray; .box-sizing; padding-top: 30px; overflow: hidden; background: #f5f6f8;
+        .footer_cont{.maxWidthCommon;}
+        .footer_lt{ float: left; width: 36%; text-align: right;height: 40px;overflow: hidden; padding-right: 13px; .box-sizing;
+            &>a{ display: inline-block; height: 100%;
+                &>img{ height: 100%;}
+            }
+        }
+        .footer_rt{ float: right; width: 64%; padding-left: 13px; .box-sizing;
+            &>p{ font-size: 12px; text-align: left; color: #666; display: block; height: 20px; line-height: 20px;}
+        }
+    }
+}
+
+
+/*自定义样式*/
+/*下拉框右侧三角的样式*/  
+.bg_after(@top:6px,@right:8px,@url:'../img/icon_6.png'){
+    &:after{//通过样式选择器添加伪元素
+        content: '';//有content，伪元素才会显示出来
+        background: url(@url) 0 0 no-repeat;//通过伪元素的背景添加图片路径 ，no-repeat->不重复 center->居中表示
+        display: block;    //也可以是inline-bolck但是主要是block的特性才能设置宽高
+        width: 16px;    //宽
+        height: 16px;  //高
+        background-size: 16px 16px;//通过这个属性来设置图片的宽高
+        position: absolute; top: @top; right: @right;
+        z-index: 2;
+    } 
+}
+
+/*分页start*/
+.page_box{ overflow: hidden; padding-bottom: 10px; margin-top: 16px; position: relative;
+   .page_box_tips{ position: absolute; top: 0; left: 0; font-size: 14px;height: 29px; line-height: 29px;
+     //b{ color: #5bc0de; font-size: 12px;}
+   } 
+   .pageOne{ width: 100%; text-align: center; overflow: hidden; display: inline-block; /*float: right;*/
+    list-style: none;
+    }
+    .pageOne>li{
+        display: inline-block;
+        width: 32px;
+        height: 29px;
+        line-height: 29px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;;
+    }
+    .pageOne{
+        li:nth-of-type(1),li:nth-of-type(2),li:nth-last-child(1),li:nth-last-child(2){ width: auto; padding: 0 12px;}
+    }
+    .pageOne .pageItem{
+        border: 1px solid #8e8e8e;
+        margin: 4px; 
+         color: #404040;
+    }
+    .pageOne .pageItemActive{
+        border: 1px solid #8e8e8e;
+        margin: 4px;
+        background-color: #3781c6;
+        color:white;
+    }
+    .pageOne .pageItemActive:hover{
+        background-color: #4c9dd6;
+    }
+    .pageOne .pageItem:hover{
+        border: 1px solid #8e8e8e;
+        background-color: #4c9dd6;
+        color:white;
+    }
+    .pageOne .pageItemDisable{
+        border: 1px solid #8e8e8e;
+        margin: 4px;
+        background-color: #DDDDDD;
+    }  
+}
+

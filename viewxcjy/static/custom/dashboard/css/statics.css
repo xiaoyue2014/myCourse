@@ -1,0 +1,16 @@
+.mgt20{ margin-top: 20px;}
+.block{ border:1px solid #c2c2c2;}
+.block h3{ background: #f3f3f4; padding: 0;  margin: 0; height: 40px; line-height: 40px; font-size: 18px; text-align: center;}
+.top-nav{ position:relative;}
+.tab-content label{ height: 34px; line-height: 34px;}
+.form-inline .input-week{ width:50px; }
+.weeks{ position: relative; }
+.weeks table{ position: absolute;top: 33px;left: 0; z-index: 9999;}
+.weeks table,.weeks table tr,.weeks table tr td{ background: #ffffff; }
+.weeks table tr td:hover{ background: #31b0d5; cursor: pointer; }
+.weeks span{ position: absolute; right: 17px; top:6px; }
+p.course{ margin:0; height: 220px; line-height: 220px; text-align: center; display: block; font-size: 48px;color: #ff7f50;}
+.tab-content{ padding-top: 10px;}
+.nav-tabs.nav-justified{ width:25%; float: right;}
+.tab-pane .form-group{ margin-bottom: 0; }
+.form-inline{ min-height: 39px; }

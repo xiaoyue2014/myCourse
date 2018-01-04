@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育-帐号设置</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenter_Pc.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPcindex">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">慕容欣欣</span>
+							<img class="user_photo" src="img/touxaing.jpg"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<div class="main_nav_box">
+				<ul class="main_nav">
+					<li class="activeli"><a href="javascript:;">首页</a></li>
+					<li><a href="EncryptedSet.html">密保工具</a></li>
+					<li><a href="javascript:;">密码管理</a></li>
+					<li><a href="javascript:;">帐号关联</a></li>
+				</ul>
+			</div>
+			
+			<!--临时-->
+			<div class="loaddialogBox">
+				<div class="loadDiv1">
+					<div class="smallPage EncryptedReset">
+						<div class="small_head">
+							<span>重置密保问题</span>
+							<b><i class="iconfont icon-guanbi"></i></b>
+						</div>
+						<div class="small_content">
+							<p class="small_tips">为了保证您的帐户安全，重置密保问题前请先进行安全验证！</p>
+							<p class="select_title">验证方式：</p>
+							<div class="small_select">
+								<p class="valueBox"><em class="value_em">—请选择验证方式—</em><span class="selectBtn"><i class="iconfont icon-xiangshangjiantouarrowup"></i></span></p>
+								<div class="select_box">
+									<div class="box_auto">
+										<ul class="select_ul">
+											<li><a data-type="ty1" href="javascript:;">手机<span>15527158266</span></a></li>
+											<li><a data-type="ty2" href="javascript:;">密保问题</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<form class="Encryptedbox">
+								<div class="optionbox1">
+									<p class="tipsbox">手机号<em>（可更换手机号码）</em></p>
+									<div class="telbox"><input type="tel" placeholder="请输入手机号" maxlength="11" autocomplete="off" class="telInput" id="telInput" /></div>
+									<div class="yzmbox"><input type="text" placeholder="请输入验证码" class="yzmInput" id="yzmInput" /><span class="yzmClick yzmClick1">发送验证</span></div>
+									<button class="slSureBtn1">确定</button>
+								</div>
+								<div class="optionbox2">
+									<dl class="optionbox2_list">
+										<dt><span>问题1：</span><p>你的出生日期？</p></dt>
+										<dd><span>答案：</span><p><input placeholder="请填写答案" type="text" /></p></dd>
+									</dl>
+									<dl class="optionbox2_list">
+										<dt><span>问题2：</span><p>你的家庭地址？</p></dt>
+										<dd><span>答案：</span><p><input placeholder="请填写答案" type="text" /></p></dd>
+									</dl>
+									<dl class="optionbox2_list">
+										<dt><span>问题3：</span><p>你的爱好？</p></dt>
+										<dd><span>答案：</span><p><input placeholder="请填写答案" type="text" /></p></dd>
+									</dl>
+									<button class="slSureBtn2">确定</button>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<div class="loadDiv2">
+					<div class="smallPage email_dialog">
+						<div class="small_head">
+							<span>绑定邮箱</span>
+							<b><i class="iconfont icon-guanbi"></i></b>
+						</div>
+						<div class="small_content">
+							<div class="Encryptedbox">
+								<div class="optionbox1">
+									<p class="tipsbox">请输入要绑定得邮箱地址</em></p>
+									<div class="Mailbox"><input type="tel" placeholder="请输入邮箱" class="emailInput" id="emailInput" /></div>
+									<div class="yzmbox"><input type="text" placeholder="请输入验证码" class="yzmInput" id="yzmInput" /><span class="yzmClick yzmClick2">发送验证码</span></div>
+									<button class="slSureBtn1">确定</button>
+								</div>
+								<p class="small_tips">*&nbsp;你可使用此密保邮箱找回密码及登录</p>
+								<p class="small_tips">*&nbsp;请勿随意泄露邮箱地址，以防被不法分子利用，骗取帐号信息</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="MainCenter_left">
+						<dl class="user_message">
+							<dt>
+								<div class="user_photo_box">
+									<img class="user_photo" src='img/touxaing.jpg'/>
+									<a href="javascript:;">修改头像</a>
+								</div>
+								<div class="user_name_box">
+									<span class="user_names">慕容欣欣</span>
+									<a href="javascript:;">修改资料</a>
+								</div>
+							</dt>
+							<dd class="last_login">最近登录时间：<span>2017-09-01 12:20:12</span></dd>
+							<dd><a href="javascript:;">查看更多</a></dd>
+						</dl>
+						<div class="message_lists_box">
+							<h5>快速通道</h5>
+							<ol class="message_lists">
+								<li>
+									<a class="parent_list" href="javascript:;"><i class="iconfont icon-xiugaimima"></i><span>个人信息</span><i class="iconfont icon-left"></i></a>
+									<!--<dl class="child_list">
+										<dd class="activedd"><a href="javascript:;">list1</a><span class="left_arrow"></span></dd>
+										<dd><a href="javascript:;">list1</a><span class="left_arrow"></span></dd>
+										<dd><a href="javascript:;">list1</a><span class="left_arrow"></span></dd>
+									</dl>-->
+								</li>
+								<li>
+									<a class="parent_list" href="javascript:;"><i class="iconfont icon-shensugongju"></i><span>安全设置</span><i class="iconfont icon-left"></i></a>
+								</li>
+								<li>
+									<a class="parent_list" href="javascript:;"><i class="iconfont icon-shenfenrenzheng"></i><span>登录历史</span><i class="iconfont icon-left"></i></a>
+								</li>
+							</ol>
+						</div>
+						
+					</div>
+					<div class="MainCenter_right">
+						<div class="safety_box">
+							<div class="safety_score">
+								<h4>安全评分：</h4>
+								<div class="safety_progress_bar">
+									<div class="myProgressBar">
+										<div class="progress progress-striped">
+										    <div class="progress">
+											    <div class="progress-bar progress-bar-danger" role="progressbar"
+											         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+											         style="width: 30%;">
+											        <span class="sr-only">10% 完成（危险）</span>
+											    </div>
+											</div>
+										</div>
+									</div>
+									<div class="myProgressBar_nums">30分！</div>
+									<div class="reset_check"><a href="javascript:;">重新检测</a></div>
+								</div>
+							</div>
+							<p class="safety_tips">您的帐号存在极大的安全风险，建议立即优化以下<b>5</b>项：</p>
+							<ul class="safety_list">
+								<li class="activeI"><i class="iconfont icon-jinggao"></i><span>绑定密保手机，帐号安全一步到位</span><a href="javascript:;">立即绑定</a></li>
+								<li><i class="iconfont icon-jinggao"></i><span>绑定密保邮箱，提供安全保障</span><a href="javascript:;">立即绑定</a></li>
+								<li><i class="iconfont icon-jinggao"></i><span>密码强度过低，请修改密码</span><a href="javascript:;">立即修改</a></li>
+								<li><i class="iconfont icon-jinggao"></i><span>开启短信提醒，安全信息随时知道</span><a href="javascript:;">立即开启</a></li>
+							</ul>
+							<div class="complete_safety_box">
+								<div class="show_up"><a class="showListBtn" href="javascript:;"><span>展开完成项</span><i class="iconfont icon-gengduobt"></i></a></div>
+								<ol class="complete_safety_list">
+									<li><i class="iconfont icon-icon_sure"></i><span>绑定密保邮箱，安全保障更进一步啦！</span></li>
+									<li><i class="iconfont icon-icon_sure"></i><span>设置密保问题，多重信息保证帐号安全！</span></li>
+								</ol>
+							</div>
+						</div>
+						
+						<div class="login_history_box">
+							<h4>登录历史</h4>
+							<p class="login_tips">以下为您最近<span>0</span>次登录记录，若存在异常情况，请在核实后尽快<a href="javascript:;">修改密码</a></p>
+							<div class="div_table login_list">
+								<div class="div_tr_th">
+									<span>时间</span>
+									<span>IP</span>
+									<span>浏览器</span>
+									<span>登录方式</span>
+									<span>设备</span>
+								</div>
+								<div class="div_tr_td">
+									<span>2017-09-01</span>
+									<span>192.168.10.8080</span>
+									<span>谷歌浏览器</span>
+									<span>登录方式1</span>
+									<span>电脑</span>
+								</div>
+								<div class="div_tr_td">
+									<span>2017-09-01</span>
+									<span>192.168.10.8080</span>
+									<span>谷歌浏览器</span>
+									<span>登录方式1</span>
+									<span>电脑</span>
+								</div>
+								<div class="div_tr_td">
+									<span>2017-09-01</span>
+									<span>192.168.10.8080</span>
+									<span>谷歌浏览器</span>
+									<span>登录方式1</span>
+									<span>电脑</span>
+								</div>
+							</div>
+							
+						</div>
+						
+						<!--测试使用，要删除start-->
+						<span class="class_1">密保</span>
+						<span class="class_2">邮箱</span>
+						<!--测试使用，要删除end-->
+					</div>
+				</div>
+			    <!--底部-->
+				<div class="footer">
+					<p>Copyright © 2017 Enable-ETS Corporation. All Rights Reserved.&emsp;&emsp;&emsp;建议浏览器：IE9+、Google Chrome、Firefox</p>
+			    </div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/CommonUserCenter_Pc.js"></script>
+		<script>
+			//头像部分代码
+			$(".user_photo_box").mouseenter(function(){
+				$(".user_photo_box a").animate({bottom:'0px'},300);
+			}).mouseleave(function(){
+				$(".user_photo_box a").animate({bottom:'-30px'},300);
+			})
+			
+//			$(".parent_list").each(function(){
+//				var clickNums=0;
+//				$(this).click(function(){
+//					if (clickNums%2==0) {
+//						$(this).parent().find('.child_list').slideDown();
+//					}else{
+//						$(this).parent().find('.child_list').slideUp();
+//					}
+//					clickNums++;
+//				})
+//			})
+
+			//暂时
+			$(".class_1").click(function(){
+				$(".loaddialogBox").show();
+				$(".loadDiv1").show();
+			})
+			$(".class_2").click(function(){
+				$(".loaddialogBox").show();
+				$(".loadDiv2").show();
+			})
+			
+			//展开更多的点击事件
+			$(".showListBtn").click(function(){
+				if ($(".complete_safety_list").is(':hidden')) {
+					$(".complete_safety_list").slideDown();
+					$(this).find('i').addClass('Rotate_180');
+				} else{
+					$(".complete_safety_list").slideUp();
+					$(this).find('i').removeClass('Rotate_180');
+				}
+			})
+			
+			//密保页面的js
+			var EncryptedReset=function(){
+				//下拉按钮点击		
+				$(".selectBtn").click(function(){
+					if ($(this).find('i').hasClass('Rotate_180')) {
+						$(this).find('i').removeClass('Rotate_180');
+						$(".select_box").slideUp();
+					} else{
+						$(this).find('i').addClass('Rotate_180');
+						$(".select_box").slideDown();
+					}
+				})
+				
+				//验证类型选择
+				$(".select_ul li").each(function(){
+					$(this).click(function(){
+						var $value=$(this).find('a').html();
+						$(".value_em").html($value);
+						$('.selectBtn i').removeClass('Rotate_180');
+						$(".select_box").slideUp();
+						var $type=$(this).find('a').attr('data-type');
+						console.log($type);
+						switch($type)
+						{
+							case 'ty1':
+								$(".optionbox2").hide();
+							  	$(".optionbox1").show();
+							  	var $val=$(this).find('a').find('span').html();
+							  	$("#telInput").val($val);
+							  break;
+							case 'ty2':
+								$(".optionbox1").hide();
+							  	$(".optionbox2").show();
+							  break;
+							default:
+							  	$(".optionbox1").hide();
+							  	$(".optionbox2").hide();
+							  break;
+						}
+					})
+				});
+				
+				//手机号,邮箱输入验证
+				function yzTelEmail(InputId,clickBtn,truefalse,yztype,yztips){
+					var errorTips=$("<p class='errorTips'></p>");
+					$(InputId).focus(function(){
+						if ($(".errorTips").exist()==false) {
+							$(this).parent().append(errorTips);
+						}
+					}).bind('input propertychange',function(){
+						var thisVal=$(this).val();
+						//$(".errorTips").show();
+						if (!(yztype.test(thisVal))) {
+							$(".errorTips").html(yztips).css({'color':'red'});
+							truefalse=false;
+						} else{
+							$(".errorTips").html('').css({'color':'#40BB5F'});
+							truefalse=true;
+						}
+					}).blur(function(){
+						if (truefalse) {
+							$(".errorTips").remove();
+						} else{
+							$(".errorTips").html(yztips).css({'color':'red'})
+						}
+					})
+					
+					//点击发送验证码
+					$(clickBtn).bind('click',yzmSend);
+					function yzmSend(){
+						if (truefalse) {
+							//在此处发送验证码
+							
+							$(this).html("重新发送（<em class='timeNums'>59</em>）");
+							$(this).unbind('click').addClass('activeClick');
+							var that=$(this);
+							var Times=setInterval(function(){
+								$(".timeNums").html($(".timeNums").html()-1);
+								if ($(".timeNums").html()==0) {
+									clearInterval(Times);
+									that.html('发送验证码').removeClass('activeClick').bind('click',yzmSend);
+								}
+							},1000);
+						} else{
+							$(InputId).focus();
+							$(InputId).parent().append(errorTips);
+							$(".errorTips").html(yztips).css({'color':'red'});
+						}
+					}
+				}
+				//手机号,邮箱输入验证
+				var telyztype=/^1[34578]\d{9}$/;
+				var emailyztype=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+				yzTelEmail("#telInput",".yzmClick1",false,telyztype,'请输入正确手机号码');
+				yzTelEmail("#emailInput",".yzmClick2",false,emailyztype,'请输入正确的邮箱');
+			}
+			EncryptedReset();
+		</script>
+	</body>
+</html>

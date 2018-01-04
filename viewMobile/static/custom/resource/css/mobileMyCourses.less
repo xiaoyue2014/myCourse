@@ -1,0 +1,176 @@
+@import "../../../comm/css/comm.less";
+@import "../font/iconfont.css";       
+   
+
+@blue:#42a3f5;
+@gray:#e1e1e1;
+@white:#fff;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+.Rotate_180{ .rotate(180deg); display: inline-block;}
+/*点击按钮*/
+.commButton_box{
+    .clickBtn{ .wh_lh(auto,0.6rem); padding: 0 0.34rem; .round(0.28rem); text-align: center; display: inline-block; background: @blue; font-size: 0.24rem; color: white !important;}
+    .clickBtn2{ .wh_lh(auto,0.5rem); padding: 0 0.18rem; text-align: center; display: inline-block; background: @blue; font-size: 0.24rem; color: white !important;}
+}
+
+/*小图标*/
+.icon_list{ .bg_all('../img/icon_list.png');}
+
+/*课程列的样式*/
+.coursesListbox{ width: 100%; .padding_l_r;
+    &>.courses_List{ display: block; width: 100%; overflow: hidden; padding-top: 0.2rem; .box-sizing; .bg_white; margin-bottom: 0.2rem;
+        &:first-child{ margin-top: 0.2rem;}
+        .courses_List_tp{ .wh(100%,1rem); position: relative; padding: 0 0.2rem; .box-sizing;
+            &>dt{ position: absolute; top: 0; left: 0.2rem; .wh(1rem,1rem); z-index: 5; border: 1px solid @gray; .box-sizing;
+                &>img{ .wh(100%,100%);}  
+            }
+            &>dd{ padding-left:1.1rem; .box-sizing; .wh(100%,1rem); overflow: hidden; color: @black1; font-size: 0.32rem;
+                &>p{ line-height: 0.5rem;}
+            }
+        }
+        .courses_List_ct{ padding: 0.2rem 0.22rem; width: 100%; .box-sizing; font-size: 0.26rem; color: @black9; position: relative;
+            .info1>span{ margin-right: 30px;
+                &:last-child{ margin-right: 0;}
+            }
+            .info2{ overflow: hidden; margin-top: 0.2rem;
+                &>i{ float: left; font-size: 0.36rem; color: @black9; margin-right: 0.2rem;}
+                &>span{ float: left; margin-top: 0.045rem;}     
+            }
+            &.list_enter:after{ position: absolute; right: 0.1rem; bottom: 0.2rem; content: ''; display: inline-block;
+                 .wh(1.74rem,1.08rem); .bg_all('../img/icon_enrolled.png');
+            }
+        }
+        .courses_List_bt{ width: 100%; padding: 0.2rem; .box-sizing; overflow: hidden; border-top: 1px solid @gray;
+             &>span{ height: 0.6rem; line-height: 0.6rem;font-size: 0.26rem; color: @black9; display: inline-block; margin-right: 0.2rem; float: right;
+                &>b{ font-weight: normal;}
+             }
+             .clickBtn{ float: right;}
+        }
+    }
+}
+
+
+/*--我的-- 样式start*/
+.myselfPage .mainContent{ 
+    .mainContent_tp{ .bg_white; .wh(100%,2rem); padding: 0.4rem; .box-sizing; overflow: hidden;
+        dt,dd{ display: inline-block; float: left;}
+        dt>a{ .wh(1.2rem,1.2rem); .round(50%); display: inline-block; overflow: hidden;
+            &>img{ .wh(100%,100%);}
+        }
+        dd{ .wh_lh(auto,1.2rem); margin-left: 0.24rem;
+            &>b{ font-weight: normal; font-size: 0.48rem;}
+        }
+    }
+    .mainContent_bt{ border-bottom: 1px solid @gray; border-top: 1px solid @gray;
+        &>li{ .box-sizing; border-bottom: 1px solid @gray;
+            &>a{ .wh_lh(100%,0.88rem); padding: 0 0.4rem; .box-sizing; display: block; .bg_white; color: @black1;
+                &>i:first-child{ font-size: 0.36rem; float: left;} 
+                &>i:last-child{ font-size: 0.34rem; float: right;} 
+                &>span{ display: inline-block; font-size: 0.32rem; float: left; margin-left: 0.24rem;}
+            }
+            &:last-child{ border-bottom: 0; border-top: 1px solid @gray; margin-top: 0.2rem;
+                &>a{ color: #ff4b4b;} 
+            }
+        }
+    }
+}
+/*--我的-- 样式end*/
+  
+/*--课程-- 样式start*/ 
+.coursesPage .mainContent{
+                              
+}
+/*--课程-- 样式end*/
+
+/*--课程详情-- 样式start*/ 
+.coursesDetail .mainContent{  padding-left: 0.24rem; padding-right: 0.24rem;
+    .content{ width: 100%; padding: 0 0.2rem; .box-sizing;}
+    .content_tp{ margin: 0.24rem 0; background: white; position: relative; .box-sizing; padding: 3.5rem 0.2rem 0.2rem 0.2rem;
+        &>dd{ margin-top: 0.25rem; font-size: 0.3rem;}
+        .courses_img{ .Position_t_l(absolute,0,0); width: 100%; overflow: hidden; margin-top: 0;
+            &>img{ width: 100%; height: 3.5rem;}
+        }
+        .courses_title{ font-size: 0.32rem;}
+        .info1,.info2{ color: @black9;}
+        .info1>span{ margin-right: 30px;
+            &:last-child{ margin-right: 0;}
+        }
+        .info2{ overflow: hidden; margin-top: 0.2rem; width: 100%;
+                &>i{ float: left; font-size: 0.36rem; color: @black9; margin-right: 0.2rem;}
+                &>span{ float: left; margin-top: 0.02rem;}     
+            }
+        .commButton_box>.bg_ccc{ background: #CCCCCC;}
+    }
+    .content_bt{ width: 100%; overflow: hidden; margin-bottom: 0.3rem; .bg_white;
+        .courses_mulu{ font-size: 0.32rem; color: @black1; font-weight: normal; .wh_lh(100%,0.38rem); border-left: 4px solid @blue;
+                .padding_l_r2; margin: 0.3rem 0;
+        }
+        .mulu_lists{ overflow: hidden; width: 100%; border-top: 1px solid @gray; padding-bottom: 0.2rem;
+            .list_{ width: 100%; overflow: hidden; border-bottom: 1px solid @gray;
+                .list_title{ position: relative;.padding_l_r2; overflow: hidden; .wh(100%,0.88rem); color: @black3;
+                    &>b{ display: inline-block; float: left; .wh(16px,16px); margin: 0.26rem 0.15rem 0 0;}
+                    &>p{ float: left; width: 76%;.hideellipsis; margin-top: 0.29rem;}
+                    &>i{ float: right; color: @black3; margin-top: 0.29rem;}
+                }
+                .list_child{.padding_l_r2; border-top: 1px dashed @gray; display: none;
+                    &>li{ padding: 0.1rem 0; color: @black6; border-bottom: 1px dashed @gray; font-size: 0.24rem;
+                        &:last-child{ border-bottom: 0;}
+                        .list_child_tp{ .wh_lh(100%,0.7rem); .box-sizing; padding: 0 0.6rem; .bg_all('../img/icon_lubo.png',@x:0.15rem,@y:0.14rem,@w:0.34rem,@h:0.34rem);}
+                        .list_child_bt{
+                            &>a{ display: inline-block; font-size: 0.24rem; .wh_lh(100%,0.5rem); .box-sizing; padding: 0 0.6rem; color: @black6; padding-right: 80px; position: relative;
+                                &>b{ font-weight: normal; color: @blue; .wh_lh(80px,0.5rem); display: inline-block; position: absolute; top: 0;right: 0; text-align: right;}
+                                &>span{ display: inline-block; width: 100%;.hideellipsis;} 
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }                     
+}
+/*--课程详情-- 样式end*/
+
+/*--课程包-- 样式start*/ 
+.coursesPacks .mainContent{
+    .content{ width: 100%;}
+    .content>.content_tp{ margin: 4px 0; border-bottom: 1px solid @gray;
+        &>video{ width: 100%;}
+    }
+    .content>.content_bt{
+        .tab_head{ margin-bottom: 3px; .bg_white; overflow: hidden;
+            &>dd{ .wh(50%,36px); float: left; .box-sizing; text-align: center;
+                &:first-child{ border-right: 1px solid @gray;}
+                &>a{ display: inline-block; height: 36px; line-height: 36px; .box-sizing; color: @black9; font-size: 14px;
+                    &.active_a{ color: @black1; border-bottom: 2px solid @blue;}
+                }
+            }
+        }
+        .tab_cont{ .bg_white;
+            &>li{ display: none;
+                &.active_li{ display: block;}
+                &>.li_list{ .wh_lh(100%,36px); padding: 0 0.9rem 0 0.2rem; overflow: hidden; .box-sizing; position: relative; font-size: 14px; border-bottom: 1px solid @gray;
+                    &>b{ font-weight: normal; font-size: 11px; .box-sizing; .wh_lh(16px,16px); display: inline-block; border: 1px solid @blue;
+                         color: @blue; text-align: center; margin: 8px 5px 0 0; .round(50%); float: left;
+                    }
+                    &>span{ width: 65%; display: inline-block;.hideellipsis; float: left;}
+                    &>em{ float: right; font-style: normal; color: @black9;}
+                    &>a{ float: right; font-size: 0.3rem; position: absolute; top: 0px; right: 0.22rem; color: @black1;}
+                }
+            }
+        }
+    }
+}
+/*--课程包-- 样式end*/ 
+
+
+.coursesSearch .mainContent{ padding: 0 !important;
+    .search_box{ padding: 0.2rem 1.2rem 0.2rem 0.2rem; width: 100%; .box-sizing; border-bottom: 1px solid @gray; .bg_white; position: relative;
+        &>i{ position: absolute; left: 0.4rem; top: 0.35rem; font-size: 0.4rem; color: @black9;}
+        &>input{ .wh_lh(100%,0.7rem); outline: none; border: 1px solid @gray; .box-sizing; padding-left: 0.7rem;}
+        &>span{ position: absolute; right: 0.2rem; color: @black6; font-size: 0.32rem; top: 0.2rem; .wh_lh(1rem,0.7rem); display: inline-block; text-align: center;}
+    }
+}

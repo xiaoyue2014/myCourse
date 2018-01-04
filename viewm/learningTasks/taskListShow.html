@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>任务列表</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../common/Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/learntasksindex.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">慕容欣欣</span>
+							<img class="user_photo" src="img/touxiang.png"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_set.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_safety.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_systemout.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu">
+							<div class="Asidecontent">
+								<div class="Aside_show_btn">
+									<p class="AsideBtn_tp"><img class="AsideShowBtnImg" src="img/sidebar_icon/caidan.png"/></p>
+									<p class="AsideBtn_bt"></p>
+								</div>
+								
+								<ul class="Aside_list">
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_1"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的首页</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_2"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的资源管理</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_3"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源分享</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_4"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源审批</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									
+								</ul>
+								
+							</div>
+						</div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox tasksListShow">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的桌面</span>
+									<span class="span_2"></span>
+									<span class="span_text">学习管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">任务列表查看</span>
+								</div>
+								<div class="contentCenter">
+									<div class="tasklist_box">
+										<h4 class="tasklist_title">任务信息</h4>
+										<div class="tasklist_content">
+											<ul>
+												<li><b>任务名：</b><span>课后练习</span></li>
+												<li><b>科目：</b><span>语文</span></li>
+												<li><b>类别：</b><span>作业</span></li>
+												<li><b>发送者：</b><span>superadmin</span></li>
+												<li><b>发送时间：</b><span>2017/02/07</span></li>
+												<li><b>截止时间：</b><span>2017/08/08&emsp;12:22:44</span></li>
+												<li><b>资源：</b><span><a href="taskSourceLists.html">查看</a></span></li>
+											</ul>
+										</div>
+										
+									</div>
+									
+									<div class="tasklist_box">
+										<h4 class="tasklist_title">提交信息</h4>
+										<div class="tasklist_content">
+											<ul>
+												<li><b>提交者：</b><span>student</span></li>
+												<li><b>提交时间：</b><span>2017/08/08&emsp;12:22:44</span></li>
+											</ul>
+											<div class="file_list_box">
+												<b>资源：</b>
+												<span class="list_show_icon"><i class="iconfont icon-zhankai"></i></span>
+												<div class="file_list_rt">
+													<div class="file_details">
+														<dl class="li_rt_a">
+															<dd>
+																<span><i class="iconfont icon-wenjian1"></i></span>
+																<span class="small_file_names">文件名称1</span>
+																<a href="javascript:;"><i class="iconfont icon-xiazai"></i></a>
+																<em>大小：<b>400kb</b></em>
+															</dd>
+															<dd>
+																<span><i class="iconfont icon-wenjian1"></i></span>
+																<span>文件名称1</span>
+																<a href="javascript:;"><i class="iconfont icon-xiazai"></i></a>
+																<em>大小：<b>400kb</b></em>
+															</dd>
+														</dl>
+														<div class="li_rt_b">
+															<span>查看更多</span>
+															<i class="iconfont icon-zhankai"></i>
+														</div>
+														
+													</div>
+												</div>	
+											</div>
+										</div>
+										
+									</div>
+									
+									<div class="tasklist_box">
+										<h4 class="tasklist_title">批改信息</h4>
+										<div class="tasklist_content">
+											<ul>
+												<li><b>批改者：</b><span>teacher</span></li>
+												<li><b>分数：</b><span>80分</span></li>
+												<li><b>批改时间：</b><span>2017/08/08&emsp;12:22:44</span></li>
+												<li class="list_100"><b>批阅附件：</b><span>查看</span></li>
+												<li class="list_100"><b>评语：</b><span>基础知识点未掌握</span></li>
+											</ul>
+										</div>
+										
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer">
+					    <img class="footerImg" src='img/logo_sm.png'/>
+					    <p>Copyright 2017 Enable-ETS Corporation. All Rights Reserved.</p>
+					</div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../component_module/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+        <script src="../../component_module/paging/page.js"></script>
+        <script src="../common/modelCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    //文件列表的展开与收缩
+			    var fileListShowHide=function(){
+			    	$(document).ready(function(){
+			    		//点击资源名称显示资源文件
+			    		$(".file_details>.li_rt_b").each(function(){
+			    			$(this).click(function(){
+			    				if ($(this).find('i').hasClass('Rotate_180')) {
+			    					$(this).siblings(".li_rt_a").css({'height':'36px'});
+			    					$(this).find('i').removeClass('Rotate_180')
+			    				} else{
+			    					$(this).siblings(".li_rt_a").css({'height':'auto'});
+			    					$(this).find('i').addClass('Rotate_180')
+			    				}
+			    			});
+			    		})
+			    	})
+			    }
+			    fileListShowHide();
+			        
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

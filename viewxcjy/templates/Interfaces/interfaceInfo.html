@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/Interfaces/css/Interfaces.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox interfacesInfo">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">接口管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">接口信息展示</span>
+								</div>
+								<div class="contentCenter">
+									<div class="info_list">
+										<h4 class="info_list_tp">基本信息</h4>
+										<ul class="info_list_bt">
+											<li><label>接口名称：</label><span>docs_api_parameter</span></li>
+											<li><label>版本号：</label><span>v1.2</span></li>
+											<li><label>请求方式：</label><span>get</span></li>
+											<li><label>Rquest Content Type：</label><span>json</span></li>
+											<li><label>接口地址：</label><span>http://docs_api_parameter</span></li>
+											<li>
+												<label>接口说明：</label>
+												<a class="_li_rt">
+													<p>参见《接口安全规范》说明文档参见《接口安全规范》说明文档参见《接口安全规范》说明文档参见《接口安全规范》说明文档参见《接口安全规范》说明文档参见《接口安全规范》说明文档</p>
+													<div class="li_img">
+														<img src="../../static/custom/Interfaces/img/bigjf (1).jpg"/>
+														<img src="../../static/custom/Interfaces/img/bigjf (1).jpg"/>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+									
+									<div class="info_list">
+										<h4 class="info_list_tp">Headers</h4>
+										<div class="info_list_bt">
+											<table class="CommonShowTable backParameter"  style="width: 40%;">
+												<tr>
+													<th>参数名</th><th>参数说明</th>
+												</tr>
+												<tr>
+													<td>deployment_id</td><td>发布标识</td>
+												</tr>
+												<tr>
+													<td>project_id</td><td>项目主键标识</td>
+												</tr>
+												<tr>
+													<td>param_id</td><td>参数主键</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									
+									
+									<div class="info_list">
+										<h4 class="info_list_tp">接口参数</h4>
+										<div class="info_list_bt">
+											<table class="CommonShowTable parameter"  style="width: 80%;">
+												<tr>
+													<th>参数名</th><th>参数说明</th>
+													<th>Parameter Type</th><th>是否必须</th>
+													<th>Data Type</th>
+												</tr>
+												<tr>
+													<td>deployment_id</td><td>发布标识</td>
+													<td>body</td><td>是</td>
+													<td><a href="#Parame1">查询公开课Parame</a></td>
+												</tr>
+												<tr>
+													<td>project_id</td><td>项目主键标识</td>
+													<td>Query String</td><td></td>
+													<td>string</td>
+												</tr>
+												<tr>
+													<td>param_id</td><td>参数主键</td>
+													<td>Query String</td><td>是</td>
+													<td>string</td>
+												</tr>
+											</table>
+											<table id="Parame1" class="CommonShowTable parameter" style="width: 60%;">
+												<caption>查询公开课Parame<span>示例</span></caption>
+												<tr>
+													<th>参数名</th><th>参数说明</th>
+													<th>是否必须</th>
+													<th>Data Type</th>
+												</tr>
+												<tr>
+													<td>deployment_id</td><td>发布标识</td>
+													<td>是</td>
+													<td>查询公开课Parame</td>
+												</tr>
+												<tr>
+													<td>project_id</td><td>项目主键标识</td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>param_id</td><td>参数主键</td>
+													<td>是</td>
+													<td>课程选课</td>
+												</tr>
+											</table>
+											
+										</div>
+									</div>
+									
+									<div class="info_list">
+										<h4 class="info_list_tp">返回参数</h4>
+										<div class="info_list_bt">
+											<table class="CommonShowTable backParameter"  style="width: 60%;">
+												<tr>
+													<th>参数名</th><th>参数说明</th>
+													<th>Parameter Type</th><th>Data Type</th>
+												</tr>
+												<tr>
+													<td>status</td><td>返回状态：success表示成功，error表示失败</td>
+													<td></td><td></td>
+												</tr>
+												<tr>
+													<td>statusCode</td><td>错误/成功状态码</td>
+													<td></td><td></td>
+												</tr>
+												<tr>
+													<td>message</td><td>返回的消息：成功有可能返回空，失败则返回失败信息</td>
+													<td></td><td></td>
+												</tr>
+												<tr>
+													<td>data</td><td>业务数据</td>
+													<td></td><td><a href="#course1">课程选课</a></td>
+												</tr>
+											</table>
+											<table id="course1" class="CommonShowTable backParameter"  style="width: 60%;">
+												<caption>课程选课<span>示例</span></caption>
+												<tr>
+													<th>参数名</th><th>参数说明</th>
+													<th>Parameter Type</th><th>Data Type</th>
+												</tr>
+												<tr>
+													<td>status</td><td>返回状态：success表示成功，error表示失败</td>
+													<td></td><td></td>
+												</tr>
+												<tr>
+													<td>statusCode</td><td>错误/成功状态码</td>
+													<td></td><td></td>
+												</tr>
+												<tr>
+													<td>message</td><td>返回的消息：成功有可能返回空，失败则返回失败信息</td>
+													<td></td><td></td>
+												</tr>
+												<tr>
+													<td>data</td><td>业务数据</td>
+													<td></td><td></td>
+												</tr>
+											</table>
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../static/comm/js/modelCommon.js"></script>
+        <script src="../../static/custom/Interfaces/js/InterfacesCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			        
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

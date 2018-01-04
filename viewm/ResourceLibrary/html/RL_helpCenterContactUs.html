@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>资源库模板</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../common/RL_Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../css/ResourceLibrary.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header" id="header1"></div>
+			<div class="Con_Main RL_helpCenter RL_helpCenterContactUs">
+				<div class="MainContent">
+					<div class="MainContent_lt">
+						<ul class="asideNav_ul">
+							<li>
+								<a href="RL_helpCenter.html">常见问题</a>
+								<div class="asideNavchild_lists">
+									<a href="javascript:;">我是学生</a>
+									<a class="active_a" href="javascript:;">我是老师</a>
+									<a href="javascript:;">我是家长</a>
+									<a href="javascript:;">我是学校管理员</a>
+								</div>
+							</li>
+							<li><a href="RL_helpCenterFeedback.html">意见反馈</a></li>
+							<li class="activeli"><a href="RL_helpCenterContactUs.html">联系我们</a></li>
+						</ul>
+					</div>
+					<div class="MainContent_rt">
+						<div class="MainContent_center">
+							<div class="MainContent_center_tp">
+								<div class="center_tp_lt">我是老师</div>
+								<div class="center_tp_rt">
+									<!--<input class="searchinput"  placeholder="请输入关键字" type="text" id="" value="" />
+									<span class="search_Btn">搜索</span>-->
+								</div>
+							</div>
+							<div class="MainContent_center_bt">
+								<div class="addree_bigImg">
+									<img src="../img/helpCenter/icon_bigAddress.png"/>
+								</div>
+								<div class="addree_info">
+									<dl class="addree_info_list">
+										<dt><img src="../img/helpCenter/icon_address.png"/></dt>
+										<dd>
+											<p>公司地址</p>
+											<p>武汉市光谷国际广场B座20楼</p>
+											<p>邮政编码：443000</p>
+										</dd>
+									</dl>
+									<dl class="addree_info_list">
+										<dt><img src="../img/helpCenter/icon_tellphone.png"/></dt>
+										<dd>
+											<p>联系方式</p>
+											<p>电话：027-87107188-3201</p>
+											<p>传真：87107188</p>
+										</dd>
+									</dl>
+									<dl class="addree_info_list">
+										<dt><img src="../img/helpCenter/icon_email.png"/></dt>
+										<dd>
+											<p>三三邮箱</p>
+											<p>332074176@163.com</p>
+										</dd>
+									</dl>
+									<dl class="addree_info_list">
+										<dt><img src="../img/helpCenter/icon_QQ.png"/></dt>
+										<dd>
+											<p>QQ客服</p>
+											<p>客服小张：552439871</p>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../../component_module/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../common/RL_Common.js"></script>
+		<script>
+			 $(function(){
+			 	//问题类型的选择
+			 	$("#problemTypes>a").each(function(){
+			 		$(this).on('click',function(){
+			 			if (!$(this).hasClass('active_xz')) {
+			 				$(this).addClass("active_xz").siblings('a').removeClass('active_xz');
+			 			}
+			 		})
+			 	})
+			 	
+			 	
+			 })
+		</script>
+	</body>
+</html>

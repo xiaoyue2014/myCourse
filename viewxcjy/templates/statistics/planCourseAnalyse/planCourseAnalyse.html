@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href='../../../static/comm/plugins/bootstrap/css/bootstrap.css'>
+    <link rel="stylesheet" href='../../../static/comm/plugins/angular-ui-bootstrap/ui-bootstrap-csp.css'>
+    <link rel="stylesheet" href="../../../static/custom/dashboard/css/statics.css">
+    <script type="text/javascript" src="../../../static/comm/plugins/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../../../static/comm/plugins/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="../../../static/comm/plugins/echarts/AllEcharts.min.js"></script>
+    <script type="text/javascript" src="../../../static/custom/dashboard/js/staticsController.js"></script>
+    <script type="text/javascript" src="../../../static/custom/dashboard/js/echartController.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container mgt20" ng-controller="staticsController" style="padding-bottom:50px;">
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="block">
+                <h3>课程总数</h3>
+                <p class="course">155</p>
+            </div>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div class="block">
+                <h3>本周新增课程（按年级）</h3>
+                <div e-chart e-data="option1" style="width:450px;height:220px"></div>
+            </div>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div class="block">
+                <h3>本周新增课程（按科目）</h3>
+                <div e-chart e-data="option2" style="width:450px;height:220px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mgt20">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="block">
+                <h3>课程按年级学科柱状图</h3>
+                <div class="top-nav">
+                    <uib-tabset justified="true">
+                        <uib-tab heading="日">
+                            <div class="row">
+                                <div class="form-group col-md-3 col-md-offset-1">
+                                    <label class="col-md-4 control-label">开始日期</label>
+                                    <div class="input-group col-md-8">
+                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="date.datStart1" is-open="popup1.opened" ng-required="true" close-text="关闭"
+                                               clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label class="col-md-4 control-label">结束日期</label>
+                                    <div class="input-group col-md-8">
+                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="date.datEnd1" is-open="popup2.opened" ng-required="true" close-text="关闭"
+                                               clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-success" ng-click="apply()">查询</button>
+                            </div>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div>
+                        </uib-tab>
+                        <uib-tab heading="周">
+                            <form class="form-inline">
+                                <div class="form-group col-md-offset-4">
+                                    <select class="form-control sw" ng-model="selectedYear" ng-options="item for item in years">
+                                        <option value="">{{y}}</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">年</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">第</label>
+                                </div>
+                                <div class="form-group weeks">
+                                    <input type="text" class="form-control input-week" ng-model="weekNum" value="{{weekNum}}" ng-click="showWeeks()"><span ng-show="showCurrentWeek" ng-click="showWeeks()">{{w}}</span>
+                                    <table class="table table-bordered" ng-show="showWeeksTab">
+                                        <tbody>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(1)">1</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(2)">2</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(3)">3</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(4)">4</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(5)">5</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(6)">6</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(7)">7</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(8)">8</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(9)">9</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(10)">10</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(11)">11</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(12)">12</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(13)">13</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(14)">14</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(15)">15</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(16)">16</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(17)">17</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(18)">18</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(19)">19</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(20)">20</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(21)">21</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(22)">22</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(23)">23</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(24)">24</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(25)">25</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(26)">26</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(27)">27</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(28)">28</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(29)">29</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(30)">30</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(31)">31</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(32)">32</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(33)">33</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(34)">34</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(35)">35</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(36)">36</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(37)">37</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(38)">38</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(39)">39</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(40)">40</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(41)">41</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(42)">42</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(43)">43</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(44)">44</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(45)">45</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(46)">46</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(47)">47</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(48)">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(49)">49</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(50)">50</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(51)">51</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(52)">52</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">周</label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-success">查询</button>{{selectedYear}}/{{weekNum}}
+                                </div>
+                            </form>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div> 
+                        </uib-tab>
+                        <uib-tab heading="月">
+                            <form class="form-inline">
+                                <div class="form-group col-md-offset-4">
+                                    <select class="form-control sw" ng-model="selectedYear1" ng-options="item for item in years">
+                                        <option value="">{{y}}</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">年</label>
+                                </div>
+                                <div class="form-group">
+                                    <select  class="form-control sw" ng-init="selectedMonth='12'" ng-model="selectedMonth" ng-options="item for item in months"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">月</label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-success">查询</button>{{selectedYear1}}/{{selectedMonth}}
+                                </div>
+                            </form>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div>
+                        </uib-tab>
+                        <uib-tab heading="全部">
+                            <form class="form-inline"></form>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mgt20">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="block">
+                <h3>计划总数</h3>
+                <p class="course">155</p>
+            </div>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div class="block">
+                <h3>本周新增计划（按年级）</h3>
+                <div e-chart e-data="option1" style="width:450px;height:220px"></div>
+            </div>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div class="block">
+                <h3>本周新增计划（按科目）</h3>
+                <div e-chart e-data="option2" style="width:450px;height:220px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mgt20">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="block">
+                <h3>计划按年级学科柱状图</h3>
+                <div class="top-nav">
+                    <uib-tabset justified="true">
+                        <uib-tab heading="日">
+                            <div class="row">
+                                <div class="form-group col-md-3 col-md-offset-1">
+                                    <label class="col-md-4 control-label">开始日期</label>
+                                    <div class="input-group col-md-8">
+                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="datStart2" is-open="popup3.opened" ng-required="true" close-text="关闭"
+                                               clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="open3()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label class="col-md-4 control-label">结束日期</label>
+                                    <div class="input-group col-md-8">
+                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="datEnd2" is-open="popup4.opened" ng-required="true" close-text="关闭"
+                                               clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="open4()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-success" ng-click="apply()">查询</button>{{datStart2 | date:'yyyy/MM/dd'}}-{{datEnd2 | date:'yyyy/MM/dd'}}
+                            </div>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div>
+                        </uib-tab>
+                        <uib-tab heading="周">
+                            <form class="form-inline">
+                                <div class="form-group col-md-offset-4">
+                                    <select class="form-control sw" ng-model="selectedYear" ng-options="item for item in years">
+                                        <option value="">{{y}}</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">年</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">第</label>
+                                </div>
+                                <div class="form-group weeks">
+                                    <input type="text" class="form-control input-week" ng-model="weekNum" value="{{weekNum}}" ng-click="showWeeks()"><span ng-show="showCurrentWeek" ng-click="showWeeks()">{{w}}</span>
+                                    <table class="table table-bordered" ng-show="showWeeksTab">
+                                        <tbody>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(1)">1</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(2)">2</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(3)">3</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(4)">4</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(5)">5</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(6)">6</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(7)">7</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(8)">8</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(9)">9</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(10)">10</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(11)">11</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(12)">12</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(13)">13</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(14)">14</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(15)">15</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(16)">16</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(17)">17</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(18)">18</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(19)">19</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(20)">20</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(21)">21</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(22)">22</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(23)">23</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(24)">24</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(25)">25</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(26)">26</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(27)">27</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(28)">28</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(29)">29</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(30)">30</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(31)">31</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(32)">32</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(33)">33</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(34)">34</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(35)">35</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(36)">36</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(37)">37</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(38)">38</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(39)">39</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(40)">40</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(41)">41</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(42)">42</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(43)">43</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(44)">44</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(45)">45</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(46)">46</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(47)">47</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(48)">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td ng-model="weekNum" ng-click="selectWeek(49)">49</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(50)">50</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(51)">51</td>
+                                                <td ng-model="weekNum" ng-click="selectWeek(52)">52</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">周</label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-success">查询</button>
+                                </div>
+                            </form>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div> 
+                        </uib-tab>
+                        <uib-tab heading="月">
+                            <form class="form-inline">
+                                <div class="form-group col-md-offset-4">
+                                    <select class="form-control sw" ng-model="selectedYear1" ng-options="item for item in years">
+                                        <option value="">{{y}}</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">年</label>
+                                </div>
+                                <div class="form-group">
+                                    <select  class="form-control sw" ng-init="selectedMonth='12'" ng-model="selectedMonth" ng-options="item for item in months"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label slw">月</label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-success">查询</button>
+                                </div>
+                            </form>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div>
+                        </uib-tab>
+                        <uib-tab heading="全部">
+                            <form class="form-inline"></form>
+                            <div e-chart e-data="option3" style="width:1120px;height:300px"></div>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+@import "../../common/Common.less";    
+@import 'http://at.alicdn.com/t/font_420585_fp1neaktvgwuerk9.css';       
+
+.overflowellipsis{overflow:hidden;text-overflow:ellipsis; -o-text-overflow:ellipsis;
+     white-space:nowrap;}
+.colorfs1{ color: #404040; font-size: 14px;}
+.button1{ margin-right: 10px; background: #3781c6; font-size: 14px; color: white; padding: 5px 15px; outline: none; border: none;}
+
+
+//表格的公共样式
+.CommonShowTable,.sourceShowTable{ border-collapse: collapse; border: 1px solid #c2c2c2; width: 100%; .box-sizing;
+    tr{ border-bottom: 1px solid #c2c2c2; width: 100%; .box-sizing;
+        th,td{ padding: 8px 10px; .colorfs1;}
+        th,td{ border-right: 1px solid #c2c2c2; .box-sizing; font-weight: normal;}
+        td{&>a{.colorfs1; text-decoration: none;}}
+        td:last-child,td:last-child{ border-right: 0;}
+    }
+    /*tr:nth-child(2n+1){ background: #f3f3f4;}*/
+    tr:first-child{ background: #f3f3f4;}
+    tr:not(.table_nav):hover{ background: #f3f3f4;}
+    tr:last-child{ border-bottom: 0;}
+} 
+
+/*任务列表*/
+.tasksListPage .contentCenter{ font-size: 14px;; color: #404040;  width: 100%; .box-sizing; padding: 20px;
+    .actionAreaBox{ width: 100%; padding-bottom: 20px; border-bottom: 1px dashed #E1E1E1;
+        .actionAreaBox_tp{ overflow: hidden; width: 100%; margin-bottom: 15px;
+            .conditionslist{ float: left; overflow: hidden; margin-right: 50px; width: 250px; height: 30px;
+                dt,dd{ float: left; height: 30px; line-height: 30px;}
+                dt{ width: 60px; font-size: 14px; margin-right: 6px; text-align: right; color: #404040; font-weight: normal;}
+                dd{ width: 184px; 
+                    &>select{ width: 100%; border: 1px solid #E1E1E1; height: 30px; .select_jiantou_hide; outline: none; 
+                        .box-sizing; padding: 0 4%; .bg_all('../img/icon_6.png',96%,center,16px,16px);
+                    }
+                }
+            }
+            .conditionslist:last-child{ margin-right: 0;}
+        }
+        .actionAreaBox_bt{ width: 100%; overflow: hidden;
+            &>span{ float: left; .wh_lh(60px,30px); text-align: right; margin-right: 6px;}
+            &>input{ float: left; outline: none; .box-sizing; padding: 0 5px; border: 1px solid #E0E1E1; .wh_lh(300px,30px);}
+            &>button{ float: left; outline: none; color: white; text-align: center; border: none; .wh(76px,30px); background: #3781c6; margin: 0 15px;}
+            &>a{ float: left; text-decoration: none; background: #EEEEEE; color: #404040;
+                 border: 1px solid #E1E1E1; .box-sizing; display: inline-block; .wh_lh(80px,30px); text-align: center;}  
+            &>a:hover{ color: black; border-color: black;}
+        }
+    }
+    .tasksListShow{ padding: 20px 0;
+        .CommonShowTable{
+            tr{
+                td{
+                    &>i{ font-size: 17px; color: #333;}
+                    span{ margin-right: 5px;}
+                    span:last-child{ margin-right: 0;}
+                }
+                td:last-child{
+                    i{ margin-right: 5px;}
+                    i:nth-of-type(1){ color: #337ab7;}
+                    i:nth-of-type(2){ color: #398439;}
+                    i:nth-of-type(3){ color: #269abc;}
+                    i:last-child{ margin-right: 0; color: #d58512;}
+                }
+                th:nth-of-type(1){ width: 20%;}
+                th:nth-of-type(4){ width: 12%;}
+                th:nth-of-type(5){ width: 7%;}
+                th:nth-of-type(6){ width: 10%;}
+                th:nth-of-type(2),th:nth-of-type(3){ width: 10%;}
+                th:nth-of-type(7){ width: 15%;}
+                th:nth-of-type(8){ width: 16%;}
+            }
+        }
+    }
+}
+
+/*新增任务*/
+.addNewTask .contentCenter{ font-size: 14px;; color: #404040;  width: 100%; .box-sizing; padding: 20px;
+    .task_info_box{
+        .h4common{font-weight: normal; padding: 8px 15px; .box-sizing; font-size: 15px; color: #404040; width: 100px; border: 1px solid #E0E1E1;
+         border-bottom: 0; background: #337ab7; color: white;}
+        .task_info_tp{
+            &>h4{ .h4common;}
+            .task_info_tp_list{ border: 1px solid #E0E1E1; padding: 15px 15px; .box-sizing; overflow: hidden;
+                &>li{ margin-bottom: 10px; padding-left: 88px;; position: relative; font-size: 14px; color: #404040; width: 100%;
+                    &>label{ .wh_lh(80px,30px); position: absolute; top: 0; left: 0; text-align: right; margin-right: 6px; float: left; font-weight: normal;}
+                    .li_rt{ height: 30px; position: relative;
+                        &>input{ border: 1px solid #E1E1E1; .wh_lh(260px,30px); padding: 0 5px; .box-sizing; outline: none; margin-right: 10px;}
+                        &>input:last-child{ margin-right: 0;}
+                        &>span{ float: left; .wh(16px,16px); background-size: 100% 100%; display: inline-block; margin-top: 7px;
+                            &.check{ .bg_all('../img/select_on.png');}
+                            &.un_check{ .bg_all('../img/select.png');}
+                        }
+                        &>b{ float: left; margin: 5px 25px 0 8px; font-weight: normal; font-size: 14px; color: #404040;}
+                        &>select{float: left;.wh_lh(160px,30px); border: 1px solid #E1E1E1; height: 30px; .select_jiantou_hide; outline: none; 
+                            .box-sizing; padding: 0 20px 0 6px; .bg_all('../img/icon_6.png',96%,center,16px,16px);
+                        }
+                        &>textarea{ .wh(360px,80px); resize: none; outline: none; border: 1px solid #E1E1E1; padding: 5px; .box-sizing;}
+                        .selectBtn{ margin-left: 10px; float: left; margin-top: -1px;
+                            i{ font-size: 22px; color: black;}
+                        }
+                    }
+                }
+                li:last-child{ margin-bottom: 0;
+                    .li_rt{
+                        &>textarea{ float: left;}
+                    }
+                }
+                li:last-child,li:nth-last-of-type(2){ height: 80px;}
+                .litype2{ display: inline-block; width: auto;}
+                .timeli{
+                    input{ width: 160px;}
+                }
+            }
+        }
+        .task_info_bt{ margin-top: 15px;
+             &>h4{ .h4common;}
+             .task_info_bt_list{ border: 1px solid #E0E1E1; padding: 10px 15px; .box-sizing; overflow: hidden; 
+                 .button_box{ overflow: hidden; margin-bottom: 10px;
+                    &>a{ float: left; display: inline-block; text-decoration: none; padding: 3px 12px; color: #404040; background: white; font-size: 13px; outline: none; border: 1px solid #E1E1E1; margin-right: 8px;
+                        i{ font-size: 15px; color: #111; margin-left: 5px;}
+                    }
+                    &>a:hover{ color: black; border-color: #333;
+                        i{ color: black;}
+                    }
+                 }
+                 .sourceList{
+                     table{
+                         tr{
+                             td:last-child{ i{ font-size: 16px; color: #EC971F;}}
+                         }
+                         tr:not(:first-child):hover{ background: #EEE9E0;}
+                     }
+                 }
+             }
+        }
+        .button_box_all{ overflow: hidden; text-align: center; margin-top: 20px;
+            &>button{ padding: 8px 40px; outline: none; border: none; color: white;}
+            button:nth-of-type(1){ background: #204d74; margin-right: 5px;}
+            button:nth-of-type(2){ background: #398439;}
+        }
+    }
+}
+
+.new_task_box{ width: 100%; height: 100%; overflow: hidden; font-size: 14px; color: #404040; .box-sizing;
+    .task_nav{ overflow: hidden; border: 1px solid #E0E1E1;
+        li{ float: left; overflow: hidden; border-right: 1px solid #E1E1E1; text-align: center; padding: 0 30px; height: 36px; margin-right: 8px;
+            &.activeli{ background: #E0E0E0;}
+            span,em{ float: left; display: inline-block; font-style: normal;}
+            em{ height: 36px; line-height: 36px; font-size: 16px;}
+            span{ .wh(16px,16px); margin-top: 12px; margin-right: 8px;
+                &.checked{.bg_all('../img/select_on.png');}
+                &.un_checked{.bg_all('../img/select.png');}
+            }
+        }
+        li:not(:first-child){ margin-right: 20px;}
+        
+    }
+    .new_task_conten{overflow: hidden; width: 100%; .box-sizing; border: 1px solid #E0E1E1; border-top: 0;
+        .waitingforselect{ float: left; .box-sizing; border-right: 1px solid #E0E1E1; width: 49.9%;
+            .search_box{ height: 36px; border-bottom: 1px solid #E0E1E1; padding: 3px 30px;
+                 .box-sizing; .bg_all('../img/search_icon.png',5px,center,24px,24px);
+                input{ .wh(100%,100%); outline: none; border: none;}
+            }
+            .treeBox{.box_overHide(@h:310px);
+                .treeID{ width: 100%; padding: 10px; .box-sizing;}
+            }
+        }
+        .selected_list_box{ float: right; width: 50%;
+            .selected_title{ line-height: 36px; height: 36px; padding: 0 10px; .box-sizing; border-bottom: 1px solid #E0E1E1;}
+            .selectedList{.box_overHide(@h:310px);
+                .list_ul{
+                    li{ padding: 5px 10px; .box-sizing; overflow: hidden;
+                        &>span{ float: left;}
+                        &>i{ float: right; margin-right: 2%; color: red; font-size: 16px;}
+                    }
+                    li:hover{ background: #3875D7; color: white;
+                        i{ color: white;}
+                    }
+                }
+            }
+        }
+    }
+    .button_box_all{ height: 40px; padding: 5px; .box-sizing; text-align: center;
+        &>button{ outline: none; border: none; padding: 5px 30px; color: white; margin-top: 6px;}
+        &>button:nth-of-type(1){ background: #5cb85c; margin-right: 8px;}
+        &>button:nth-of-type(1):hover{ background: #3DB13D;}
+        &>button:nth-of-type(2){ background: #5bc0de;}
+        &>button:nth-of-type(2):hover{ background: #41B1D2;}
+    }
+}
+
+
+/*任务列表展示start*/
+.tasksListShow .contentCenter{ font-size: 14px;; color: #404040;  width: 100%; .box-sizing; padding: 20px;
+    .h4common{font-weight: normal; padding: 8px 15px; .box-sizing; font-size: 15px; color: #404040; width: 100px; border: 1px solid #E0E1E1;
+         border-bottom: 0; background: #337ab7; color: white;}
+    .tasklist_box{ margin-bottom: 15px;
+        &:last-child{ margin-bottom: 0;}
+        .tasklist_title{ .h4common;}
+        .tasklist_content{ border: 1px solid #E0E1E1; padding: 10px 10px; .box-sizing; overflow: hidden;}
+        .tasklist_content{ width: 100%;
+            @h_30:30px;
+            @h_36:36px;
+            &>ul{ overflow: hidden;
+                &>.list_100{ width: 100%;}
+                &>.list_50{ width: 50%;}
+            }
+            &>ul>li{ float: left;.wh_lh(33.3%,@h_30);
+                &>b{ font-weight: normal; display: inline-block; width: 76px; text-align: right;}
+                &>span{ color: #666;
+                    &>a{ color: #337ab7; text-decoration: none;}
+                }
+            }
+            .file_list_box{ overflow: hidden; position: relative; width: 100%;
+                &>b,.file_list{ display: inline-block; height: @h_36;}
+                &>b,&>span{ font-weight: normal; line-height: @h_36;}
+                &>b{.Position_t_l(absolute,0,0); display: inline-block; width: 76px; text-align: right;}
+                &>.list_show_icon{.Position_t_l(absolute,0,70%); display: none;
+                    &:hover{}
+                    &>i{ color: #337ab7; font-size: 15px;}
+                }
+                .file_list_rt{ width: 100%; padding-left: 76px; .box-sizing;}
+                .file_list_rt>.file_details{ overflow: hidden; width:100%; padding-right: 10px; .box-sizing;
+                    b{ font-weight: normal;}
+                    em{ font-style: normal;}
+                    .li_rt_b{ .wh_lh(120px,@h_36); overflow: hidden; .small_hand;
+                        &>i{ float: left; font-size: 15px; color: #549BD7; margin: 0 8px;}
+                        &>span{ float: left;margin-left: 15px;}
+                        &>em{ font-style: normal; float: right;}
+                    }
+                    .li_rt_a{ float: left; padding-left: 20px; height: @h_36; width: 60%; .box-sizing; overflow: hidden;
+                        &>dd{ border-bottom: 1px dashed #E1E1E1; overflow: hidden; .wh_lh(100%,@h_36);
+                            &>span{ float: left; margin-right: 10px;
+                                &>i{ color: #D1CD4E; font-size: 18px;}  
+                            }
+                            &>em,&>a>i{ float: right;}
+                            &>a>i{  font-size: 15px; color: #549BD7; margin-left: 8px;}
+                        }
+                    }
+                }
+             }  
+        }
+    }
+}
+/*任务列表展示end*/
+
+/*任务资源列表start*/
+.taskSourceLists .contentCenter{ font-size: 14px;; color: #404040;  width: 100%; .box-sizing; padding: 20px;
+    .sourceList_content{ padding:0 10px; .box-sizing; border: 1px solid #E0E1E1; margin-bottom: 10px;
+        &:last-child{ margin-bottom: 0;}
+        .content_desc{ padding: 14px 20px; border-bottom: 1px solid #e0e1e1; .box-sizing; font-size: 14px; color: #404040;
+            dt{ margin-bottom: 6px; font-size: 16px; color: #222;}
+        }
+        .detail_list_box{ margin-top: 8px; .box-sizing; 
+            li{ overflow: hidden; .wh_lh(100%,52px); font-size: 14px; color: #696969;
+                padding: 0 20px; .box-sizing; border-bottom: 1px dashed #E1E1E1;
+                .list_iconbg,.list_titles{ float: left;}
+                .list_iconbg{ .wh(24px,24px); margin-top: 14px; display: inline-block; background: url(../img/details/wenjian.png) no-repeat; background-size: 100% 100%;}
+                .list_titles{ margin-left: 14px;}
+                .list_download{ float: right; overflow: hidden;
+                    &>em{ float: left; margin-right: 15px; font-style: normal; font-size: 14px; color: #868686;
+                        &>b{ font-weight: normal;}
+                    }
+                    &>a{ float: left; .wh(16px,16px); margin-top: 17px; display: inline-block; background: url(../img/details/icon1.png) no-repeat; background-size: 100% 100%;}
+                    &>b{ float: left; font-weight: normal; margin-left: 6px;}
+                }
+            }
+            li:hover{ background: #f3f3f4;}
+            li:last-child{ border-bottom: 0;}
+        }
+    }
+}    
+/*任务资源列表end*/

@@ -1,0 +1,98 @@
+body{ font-family:"微软雅黑"; font-size:16px; color:#333;}
+a{ text-decoration: none; }
+img{ width:16px; height:16px; vertical-align: middle;}
+.pdl0{ padding-left:0; }
+.pdr0{ padding-right:0; }
+.bar.bar-positive{ background: #fff; border-bottom: 1px solid #cccccc; height: 44px;}
+.bar.bar-positive .title { font-size:18px; color:#111; text-align: center; line-height: 44px;}
+.bar .icon-return,.bar-positive .button:hover,.bar-positive .button,.bar-positive .button.active, .bar-positive .button.activated{ 
+	box-shadow:none;background: #fff; border:none; color:#999; font-size:16px;line-height: 34px;}
+.top{ background: #fff;margin:-10px;padding: 10px; padding-bottom: 0;}
+.top-nav{ padding:5px 5px 0 5px; }
+.top-nav li{ float:left; background: #DDDDDD; border-radius: 22px; margin-right: 15px; padding:5px 15px;}
+.top-nav li.active{color: #FFFFFF; background: #42a3f5;}
+.top-nav li a{ color:#333;}
+.top-nav li.active a{color: #FFFFFF;}
+.pdlf10{ padding: 0 10px;}
+
+.searchBar{ margin-top:20px; padding-bottom: 20px; }
+.subject{ width:100%; height: 40px; border: 1px solid #cccccc; border-radius: 5px; padding-left:5px;}
+.subject select{ width:100%; max-width: 100%;}
+.search{ width: 100%; height: 40px;border: 1px solid #cccccc; border-radius: 5px; background: none;}
+.clear{ clear: both; }
+
+.scroll-content{ background: #efeff4;}
+.content{ margin-top: 100px;}
+.card{ margin:0; }
+.content .data{ background: #fff; padding: 15px 15px 5px 15px; margin-bottom: 10px;}
+.content .data p{ line-height: 24px; }
+.content .data .time{ color:#999999; }
+.content .data .collection a{ color:#333333;  background: #DDDDDD; border-radius: 22px; padding:5px 15px; }
+.top-line{border-top: 1px solid #cccccc;}
+.top-line .button.button-positive.button-outline{ border-color: #42a3f5; color: #42a3f5; border-radius: 15px;min-height: 30px; line-height: 30px;min-width: 90px;}
+
+.subjects .item{ text-align: center; border-left:none; border-right:none;}
+.subjects .bdt0{border-top: none;}
+.subjects .item:last-child{border-bottom: none;}
+.pd20{ padding:10px 20px; }
+.subjects{ background: #fff; }
+.modal{ min-height: 70%; bottom:0;top: auto;}
+.modal-backdrop-bg{ background: #333;opacity: 0.3;}
+.blue{ color:#42a3f5;}
+
+.bgwhite .scroll-content{ background: #fff; }
+.bgwhite .item{ border:none; }
+.searchBtn{ color: #fff; background: #42a3f4; border-radius: 5px; height: 40px; border:none;}
+.tags{ padding:10px;}
+.tags h5{ font-size: 18px; }
+.tags ul{}
+.tags ul li{ margin:10px; }
+.bgwhite .accordion-head{ border-bottom:1px solid #ccc;}
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear; padding-left:45px;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.accordion .icon{ float:right; color:#ccc;}
+.item.item-stable{ background: none; }
+
+.detail{ margin-top: 0; }
+.tags{ margin-right:10px; }
+.data a{ color:#262626; }
+.download-h4{height: 30px; line-height: 30px;}
+.bdb{ border-bottom: 1px solid #ccc;}
+.download a.item{ padding:6px; color: #6e6e6e;}
+textarea.comment{border:1px solid #ccc;}
+.comment-person{ color:#353535; }
+.comment-time{ color:#949494;  padding-left:20px;}
+.comment-content{ color:#656565;padding-left:20px; }
+
+.collecting{ background: #ff9e40; text-align:center; color:#fff; padding:5px 50px; width:40%; margin:20px auto;}
+.collecting p{ white-space:nowrap; }
+.icon-collect{ background: url(../img/collect.svg) center top no-repeat; }
+.icon-collected{ background: url(../img/collected.svg) center top no-repeat; }
+.time img{ margin-top:-3px; margin-right: 5px;}
+.time .size,.time .times,.collection img{ margin-right:5px; }
+.time .times{ margin-left:15px; }
+.divide{ height:10px; border-bottom: 1px solid #ccc; }
+img.noteImg{ width:330px; height: 430px; margin-top: 10px;}
+img.errorImg{ width:350px; height: 134px; margin-bottom: 10px;}
+.rightAnswer{ color: #3c9ff4; }
+.tmjx p{ margin:0; color:#5e5e5e; }
+.tag{ position: relative; }
+.tag .delete{ width:20px; height: 20px; position: absolute; top:-10px; right: -10px; border:1px solid #41a1ed; background: #fff; border-radius:10px;}
+.tag .delete img{ width:12px; height:12px;margin-left: 3px;margin-bottom: 6px;}
+.hide{ display: none;}
+.checked .hide{ display: block;}
+.textareaLabel{ padding-top:0; margin-top:-10px;}
+.textareaLabel textarea{ width:95%; }
+.bar .search{ line-height: 40px; }
+.bar .search img{ margin-top: -3px; }

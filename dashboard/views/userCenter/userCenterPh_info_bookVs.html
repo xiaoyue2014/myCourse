@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalabel=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenterPh.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPh_info_bookVs">
+			<div class="header_phone">
+				<a href="userCenterPh_info.html"><i class="iconfont icon-left"></i></a>
+				<span>教材版本</span>
+			</div>
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="add_Box"><h4>教材相关信息</h4><a href="userCenterPh_info_bookList_add.html">新增<i class="iconfont icon-xinzeng"></i></a></div>
+					<div class="book_info_box">
+						<dl data-id = "list1" class="book_info_list">
+							<dd><b>学习阶段：</b><span>小学</span></dd>
+							<dd><b>学习年级：</b><span>一年级</span></dd>
+							<dd><b>科目名称：</b><span>语文</span></dd>
+							<dd><b>教材版本：</b><span>人教A版</span></dd>
+							<dd><a href="userCenterPh_info_bookList_add.html">修改</a><a class="removeListBtn" href="javascript:;">删除</a></dd>
+						</dl>
+						<dl data-id = "list2" class="book_info_list">
+							<dd><b>学习阶段：</b><span>小学</span></dd>
+							<dd><b>学习年级：</b><span>一年级</span></dd>
+							<dd><b>科目名称：</b><span>语文</span></dd>
+							<dd><b>教材版本：</b><span>人教A版</span></dd>
+							<dd><a href="userCenterPh_info_bookList_add.html">修改</a><a class="removeListBtn" href="javascript:;">删除</a></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/userCenterPh.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			        //删除按钮所执行的函数
+			        $(".removeListBtn").each(function(){
+			        	$(this).click(function(){
+			        		var that=$(this);
+			        		var listId=$(this).parents(".book_info_list").attr('data-id');
+			        		console.log(listId);
+			        		//暂无接口,做的删除效果
+			        		that.parents(".book_info_list").empty().remove();
+//			        		$.ajax({
+//			        			type:"get",
+//			        			url:'url?Id='+listId,
+//			        			async:true,
+//			        			success:function(result){
+//			        				//根据返回值删除对应的版本列表
+//			        				that.parents(".book_info_list").empty().remove();
+//			        			},
+//			        			error:function(){
+//			        				alert('暂时无法删除')
+//			        			}
+//			        		});
+			        	})
+			        });
+			
+			    })
+			})(jQuery);
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,230 @@
+@import "comm.less";     
+
+/*@gray:#e1e1e1;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black7:#777;
+@black9:#999;
+@white:#fff;
+@gray1:#f5f6f8;
+@blue1:#40c2fc;
+
+@fs18:18px;
+@fs16:16px;
+@fs14:14px;
+@fs12:12px;
+.bg_white{ background: white;}*/
+.w100_bs{ width: 100%; .box-sizing;}
+
+/*通用样式start*/
+
+/*智能终端所有通道start*/
+.smartDeviceAll .contentCenter{
+    .contentBox{
+        .modelList{ width: 100%; .box-sizing; margin-bottom: 10px;
+            .modelTitle{ .box-sizing; width: 100%;
+                p{ border-left: 3px solid @blue1; padding-left: 10px; .box-sizing; .wh_lh(100%,26px); font-size: @fs16;}
+            }
+            .modelContent{ width: 100%; overflow: hidden;
+                &>li{ padding: 10px; .box-sizing; float: left; 
+                    &>a{ display: inline-block; border: 1px solid @gray; .box-sizing; .wh(100%,100%); color: @black3; font-size: @fs14; text-align: center;
+                        &>p{ .wh_lh(100%,20px); margin-top: 10px;}
+                    }
+                }
+            }
+        }
+    }
+}
+/*智能终端所有通道end*/
+
+/*智能终端子通道start*/
+.smartDeviceList .contentCenter{ 
+    .contentBox{  
+        .contentBox_tp{ .wh(100%,40px); position: relative; padding: 0 80px 0 10px;.fscolor; border: 1px solid @gray; .box-sizing;
+            .selectList{ .wh_lh(160px,30px); display: inline-block; color: @black6; margin-top: 5px; .box-sizing; border-bottom: 1px solid @blue1;
+                i{ float: right; .wh(7px,4px); display: inline-block; .bg_all('../img/icon_zhankai.png'); margin: 13px 5px 0 0;}
+            }
+            .reloadBtn{ position: absolute; top: 0; right: 0; text-align: center; .wh_lh(70px,40px); border-left: 1px solid @gray; .box-sizing;
+                &>i{ .wh(16px,16px); display: inline-block; margin: 12px 5px 0 10px; .bg_all('../img/icon_reload.png'); float: left;}
+                &>b{ font-weight: normal; float: left;.fscolor;}
+            }
+            .select_ol{ display: none; position: absolute; background: white; left: 10px; top: 34px;  width: 160px; overflow: hidden; border: 1px solid @blue1;
+                     .box-sizing; .bg_white; padding: 0 15px; z-index: 100;
+                &>li{ .wh_lh(100%,40px);
+                    &>a{ .fscolor;}
+                }     
+            }
+        }
+        .contentBox_bt{ border: 1px solid @gray; .box-sizing; border-top: 0;
+            .LightListsBox{ width: 100%; overflow: hidden;
+                .LightList{ color:@black6; font-size: 14px;}
+            }
+            .TempWetnessBox{ width: 100%; .box-sizing; border-top: 0; overflow: hidden;
+                &>li{ margin-bottom: 10px; overflow: hidden;.bg_white;
+                    .echartsList{ width: 100%; overflow: hidden;}
+                }
+            }
+        }
+    }
+}
+/*智能终端子通道end*/    
+
+/*通用样式end*/
+
+
+/*pc端显示start*/
+@media screen and (min-width: 769px) {
+    body { font-size: 16px;}
+    .ContainerWarp{
+        .header{
+            .content .content_rt .userBox .systemCloseBtn{ display: block;}
+        }
+        .mainContent .contentCenter{ width: 96%; margin: 0 auto;}
+        .footer{ display: block;}
+    }
+    
+    /*智能终端所有通道start*/
+    .smartDeviceAll .contentCenter .contentBox .modelList{
+        .modelContent{
+            &>li{ width: 160px;
+                &:first-child{ margin-left: -10px;}
+                &:hover>a{ border: 1px solid @blue1;}
+                &>a{ padding: 15px 0;}
+            }
+        }
+    }
+    /*智能终端所有通道end*/
+   
+   /*智能终端子通道start*/
+    .smartDeviceList .contentCenter{
+        .contentBox .contentBox_bt{ padding: 10px; .w100_bs; min-height: 180px;
+            .LightListsBox .LightList{ .w100_bs; border-bottom: 1px solid @gray; overflow: hidden;
+                &:first-child{ font-weight: bold;
+                    &>dt{ font-weight: bold;}
+                    &>dd{ padding: 0;}
+                }
+                &>dt,&>dd{ float: left; text-align: center;}
+                &>dt{ .wh_lh(13%,40px); font-weight: normal;}
+                &>dd{ .wh_lh(29%,40px); padding: 8px 0; .box-sizing; 
+                    &>i{ .wh(24px,24px); display: inline-block; font-size: 0;
+                        &.L_on{.bg_all("../img/icon_L_on.png");}
+                        &.L_off{.bg_all("../img/icon_L_off.png");}
+                    }
+                }
+            }
+            .TempWetnessBox{
+                .sortable-ghost{ background: @gray;}
+                &>li{ width: 48%;
+                    &:nth-child(2n+1){ float: left;}
+                    &:nth-child(2n+2){ float: right;}
+                    .echartsList{ height: 300px;}
+                }
+            }
+        }
+    }
+    /*智能终端子通道end*/
+}
+/*pc端显示end*/
+
+/*平板端显示start*/
+@media screen and (min-width:451px) and (max-width:768px) {
+    body { font-size: 14px;}
+    .ContainerWarp{
+        .header .content .content_rt .userBox .systemCloseBtn{ display: none;}  
+        .mainContent .contentCenter{
+            .small_nav{ padding: 0 10px;}
+        }
+        .footer{ display: none;}
+    }
+    /*智能终端所有通道start*/
+    .smartDeviceAll .contentCenter .contentBox{
+        .modelList{
+            .modelTitle{ padding: 0 10px;}
+            .modelContent{
+                &>li{ width: 33.33%;
+                    &>a{ padding: 25px 0;}
+                }
+            }
+        }
+    }
+    /*智能终端所有通道end*/
+    
+    /*智能终端子通道start*/
+    .smartDeviceList .contentCenter{
+        .contentBox{ padding: 0 10px;
+            .contentBox_bt{ padding: 10px; .w100_bs; min-height: 180px;
+                .LightListsBox .LightList{ .w100_bs; border-bottom: 1px solid @gray; overflow: hidden;
+                    &:first-child{ font-weight: bold;
+                        &>dt{ font-weight: bold;}
+                        &>dd{ padding: 0;}
+                    }
+                    &>dt,&>dd{ float: left; text-align: center;}
+                    &>dt{ .wh_lh(16%,40px); font-weight: normal;}
+                    &>dd{ .wh_lh(28%,40px); padding: 8px 0; .box-sizing; 
+                        &>i{ .wh(24px,24px); display: inline-block; font-size: 0;
+                            &.L_on{.bg_all("../img/icon_L_on.png");}
+                            &.L_off{.bg_all("../img/icon_L_off.png");}
+                        }
+                    }
+                }
+                .TempWetnessBox{
+                    &>li{ width: 100%;
+                        .echartsList{ height: 280px;}
+                    }
+                }
+            }
+        }
+    }
+    /*智能终端子通道end*/
+}
+/*平板端显示end*/
+
+/*手机端显示start*/
+@media screen and (max-width: 450px) {
+    body { font-size: 14px;}
+    .ContainerWarp{
+        .header .content .content_rt .userBox .systemCloseBtn{ display: none;}
+        .mainContent .contentCenter{
+            .small_nav{ padding: 0 10px;}
+        }
+        .footer{ display: none;}
+    }
+    /*智能终端所有通道start*/
+    .smartDeviceAll .contentCenter .contentBox{
+        .modelList{
+            .modelTitle{ padding: 0 10px;}
+            .modelContent{
+                &>li{ width: 50%;
+                    &>a{ padding: 20px 0;}
+                }
+            }
+        }
+    }
+    /*智能终端所有通道end*/
+   
+   /*智能终端子通道start*/
+    .smartDeviceList .contentCenter{
+        .contentBox{ padding: 0 10px;
+            .contentBox_bt{ border: 0;
+                .LightListsBox .LightList{ .w100_bs; overflow: hidden; padding-top: 5px; border-left: 1px solid @gray; border-right: 1px solid @gray;
+                    &:first-child{ display: none;}
+                    &>dt{ font-weight: bold; .wh_lh(100%,40px); padding: 0 10px; border-top: 1px solid @gray; border-bottom: 1px solid @gray; .box-sizing;}
+                    &>dd{ .wh_lh(33.33%,60px); border-bottom: 1px solid @gray; text-align: center; .box-sizing; float: left;
+                        i{ .wh_lh(30px,30px); font-style: normal; display: inline-block; .round(50%); text-align: center; color: white;
+                            &.L_on{ background: #f1de09;}
+                            &.L_off{ background: #C0C0C0;}
+                        }
+                    }
+                }
+                .TempWetnessBox{
+                    &>li{ width: 100%;
+                        .echartsList{ height: 300px;}
+                    }
+                }
+            }
+        }
+    }
+    /*智能终端子通道end*/
+}
+/*手机端显示end*/

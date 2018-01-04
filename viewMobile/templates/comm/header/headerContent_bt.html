@@ -1,0 +1,68 @@
+<div class="select_box" id="selectConditions">
+	<dl class="select_tp">
+		<dd><a href="javascript:;">学段</a></dd>
+		<dd><a href="javascript:;">年级</a></dd>
+		<dd><a href="javascript:;">学科</a></dd>
+	</dl>
+	<ol class="select_bt">
+		<li>
+			<div class="box_auto">
+				<a href="javascript:;">小学</a>
+				<a href="javascript:;">初中</a>
+				<a href="javascript:;">高中</a>
+			</div>
+		</li>
+		<li>
+			<div class="box_auto">
+				<a href="javascript:;">一年级</a>
+				<a href="javascript:;">二年级</a>
+				<a href="javascript:;">三年级</a>
+				<a href="javascript:;">四年级</a>
+				<a href="javascript:;">五年级</a>
+				<a href="javascript:;">六年级</a>
+			</div>
+		</li>
+		<li>
+			<div class="box_auto">
+				<a href="javascript:;">数学</a>
+				<a href="javascript:;">语文</a>
+				<a href="javascript:;">英语</a>
+				<a href="javascript:;">生物</a>
+				<a href="javascript:;">历史</a>
+				<a href="javascript:;">地理</a>
+				<a href="javascript:;">思想品德（政治）</a>
+				<a href="javascript:;">化学</a>
+				<a href="javascript:;">思想品德（政治）</a>
+				<a href="javascript:;">化学</a>
+				<a href="javascript:;">思想品德（政治）</a>
+				<a href="javascript:;">化学</a>
+			</div>
+		</li>
+	</ol>
+</div>
+
+<script>
+	var SelectCondition=function(){
+		$("#selectConditions .select_tp dd a").each(function(){
+			$(this).bind('click',function(){
+				var $thisIndex=$(this).parent('dd').index();
+				//console.log($thisIndex);
+				$("#selectConditions .select_bt li").eq($thisIndex).slideDown();
+				$("#selectConditions .select_bt li").eq($thisIndex).siblings().slideUp();
+			});
+		});
+		
+		$("#selectConditions .select_bt li").each(function(){
+			var $liIndex=$(this).index();
+			$(this).find('.box_auto a').each(function(){
+				$(this).bind('click',function(){
+					var $ahtml=$(this).html();
+					$("#selectConditions .select_tp dd a").eq($liIndex).html($ahtml);
+					$(this).addClass('acitve_a').siblings('a').removeClass('acitve_a');
+					$(this).parent('.box_auto').parent('li').slideUp();
+				});
+			});
+		})
+	}
+	SelectCondition();
+</script>

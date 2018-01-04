@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创App</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.poppicker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.picker.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_app.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4App.css"/>
+	</head>
+	<body>
+		<div class="Container searchPage">
+			<header id="header" class="mui-bar mui-bar-nav header">
+				<h1 class="mui-title">查找更多</h1>
+				<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+			</header>
+			<div class="mainContent">
+				<form class="search_cont">
+					<ol class="selectTime">
+						<li><label>开始日期：</label><input id="startTime" readonly value="2017-11-07" /></li>
+						<li><label>结束日期：</label><input id="endTime" readonly value="2017-12-07" /></li>
+					</ol>
+					<dl class="selectStatus">
+						<dt>状态：</dt>
+						<dd id="statusSelect">
+							<a href="javascript:;"><i class="icon_radio_on"></i><span>全部</span></a>
+							<a href="javascript:;"><i class="icon_radio"></i><span>已完成</span></a>
+							<a href="javascript:;"><i class="icon_radio"></i><span>未完成</span></a>
+						</dd>
+					</dl>
+					<div class="BtnBox">
+						<button type="reset">重置</button>
+						<button type="submit">确定</button>
+					</div>
+				</form>
+			</div>
+			<div class="nav_bottom" id="nav_bottom"></div>
+		</div>
+		
+		<script type="text/javascript" src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script type="text/javascript" src="../../../static/comm/plugins/mui/js/mui.min.js"></script>
+		<script src="../../../static/comm/plugins/mui/js/mui.poppicker.min.js"></script>
+		<script src="../../../static/comm/plugins/mui/js/mui.picker.min.js"></script>
+		<script src="../../../static/custom/familySchoolCommunication/js/commModelApp.js"></script>
+		<script>
+			(function($){
+				$(function(){
+					var statusSelectFn=function(){
+						$("#statusSelect>a>i").each(function(){
+							$(this).bind('touchstart',function(){
+								if ($(this).hasClass('icon_radio')) {
+									$(this).addClass('icon_radio_on');
+									$(this).parent('a').siblings().find('i').removeClass('icon_radio_on').addClass('icon_radio');
+								}
+							});
+						})
+					}
+					
+
+					var searchFn=function(){
+						//状态选择
+						statusSelectFn();
+						//时间选择
+						var $Date=new Date,
+						    dateY=$Date.getFullYear(),
+						    dateM=$Date.getMonth()+1,
+						    dateD=$Date.getDate();
+						var dtpicker = new mui.DtPicker({
+						    type: "date",//设置日历初始视图模式 
+						    beginDate: new Date(1949, 10, 01),//设置开始日期 
+						    endDate: new Date(dateY, dateM, dateD),//设置结束日期 
+						    labels: ['年', '月', '日'] //设置默认标签区域提示语 'Year', 'Mon', 'Day', 'Hour', 'min'
+						});
+						$("#startTime,#endTime").bind('touchstart',function(){
+							var $that=$(this);
+							dtpicker.show(function(e) {
+							    //console.log(e);
+								$that.val(e.value);
+								dtpicker.hide();
+							}) 
+						});
+					}
+					searchFn();
+					
+			    })
+			})(jQuery);	
+		</script>
+	</body>
+</html>
+

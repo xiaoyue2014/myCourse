@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/weui/weui.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_wx.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4WeChat.css"/>
+	</head>
+	<body>
+		<div class="container info_show">
+			<!--<div class="header" id="header"></div>-->
+			<div class="mainContent mainContent3">
+				
+				<div class="Content_info_list">
+					<div class="weui-cell">
+		                <div class="weui-cell__bd"><p>账号</p></div>
+		                <div class="weui-cell__ft">15523547854</div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__bd"><p>姓名</p></div>
+		                <div class="weui-cell__ft">吴玉婷家长</div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__bd"><p>电话</p></div>
+		                <div class="weui-cell__ft">15527158669</div>
+		            </div>
+				</div>
+				<div class="Content_info_list">
+		            <div class="weui-cell">
+		                <div class="weui-cell__bd"><p>邮箱</p></div>
+		                <div class="weui-cell__ft">15527158669@163.com</div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__bd"><p>注册时间</p></div>
+		                <div class="weui-cell__ft">2017-09-02</div>
+		            </div>
+				</div>
+				<div class="weui-cells Content_info_list">
+		            <a class="weui-cell weui-cell_access" href="../children/children_info.html">
+		                <div class="weui-cell__hd"><img src="../../../static/custom/familySchoolCommunication/img/icon_child.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+		                <div class="weui-cell__bd">
+		                    <p>吴玉婷</p>
+		                </div>
+		                <div class="weui-cell__ft"></div>
+		            </a>
+		            <a class="weui-cell weui-cell_access" href="../children/children_info.html">
+		                <div class="weui-cell__hd"><img src="../../../static/custom/familySchoolCommunication/img/icon_child.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+		                <div class="weui-cell__bd">
+		                    <p>吴天浩</p>
+		                </div>
+		                <div class="weui-cell__ft"></div>
+		            </a>
+		        </div>
+				
+				<a href="javascript:;" class="relieveAuthorization" id="relieveAuthorization">解除授权</a>
+				<!--<div style="display: none;">
+				    <div class="weui-mask"></div>
+				    <div class="weui-dialog">
+				        <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>
+				        <div class="weui-dialog__bd">弹窗内容，告知当前页面信息等</div>
+				        <div class="weui-dialog__ft">
+				            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+				        </div>
+				    </div>
+				</div>-->
+			</div>
+			<!--<div class="footer" id="footer"></div>-->
+			
+		</div>
+		
+		<script src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../../static/comm/plugins/weui/weui.min.js"></script>
+		<script src="../../../static/comm/plugins/weui/weuiDialog.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+				    $('#relieveAuthorization').click(function(){
+				    	var that=$(this);
+				    	weuiDialogFn({
+							btnNums:'2', //弹窗按钮
+							//btnText1:'确定', //弹窗按钮1文字
+							//btnText2:'取消', //弹窗按钮2文字
+							title:'', //弹窗标题
+							msg:'是否解除相关信息绑定？' //弹窗内容
+							
+						},function(fn){
+							//回调操作
+							that.html('绑定相关信息')
+							
+							//回调函数
+							fn();
+						}); 
+					}); 
+				    //end    
+			    })
+			})(jQuery);		
+		</script>
+		
+	</body>
+</html>

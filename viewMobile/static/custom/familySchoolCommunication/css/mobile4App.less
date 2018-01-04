@@ -1,0 +1,402 @@
+@import "../../../comm/css/comm_app.less"; 
+
+/*颜色定义*/
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@colorddd:#dddddd;
+@white:#fff;
+@gray:#e1e1e1;
+@blue1:#42a3f5;
+@yellow:#febf00;
+@bgcolor:#efeff4;
+/*字体大小定义*/
+@fontSizeBig:0.48rem;
+@fontSizeNomalx:0.4rem;
+@fontSizeNomalm:0.38rem;
+@fontSizeNomals:0.34rem;
+@fontSizeNomal:0.32rem;
+@fontSizeSmall:0.28rem;
+@fontSizeSmall_:0.22rem; 
+.Rotate_180{ .rotate(180deg); display: inline-block;}
+
+
+/*父母孩子相关信息start*/
+.infoShowPage .mainContent{
+    .child_info{ overflow: hidden; padding: 0.4rem 15px; width: 100%; .box-sizing; position: relative; .bg_white; margin-bottom: 10px;
+        &>dt{ position: absolute; left: 15px; top: 0.4rem; .wh(1.2rem,1.2rem); .round(50%); overflow: hidden;
+            &>img{ .wh(100%,100%);}
+        }
+        &>dd{ padding-left: 1.4rem; .box-sizing; .wh_lh(100%,1.2rem); font-size: @fontSizeBig;}
+    }
+    .info_show1{ width: 100%; margin-bottom: 10px;
+        &>li{ .bg_white; width: 100%; padding-left: 15px; .box-sizing;
+            &:last-child>a{ border-bottom: 0;}
+            &>a{ display: block; .wh_lh(100%,52px); position: relative; font-size: @fontSizeNomal; color: @black1; 
+                    .box-sizing; padding-right: 60%; border-bottom: 1px solid @gray;
+                &>.list_rt{ .wh_lh(60%,52px); position: absolute; top: 0; right: 15px; color: @black9; display: inline-block; text-align: right;}
+            }
+        }
+    }
+    .child_lists{ margin: 10px 0;
+        &>h4{ font-weight: normal; .wh_lh(100%,52px); padding: 0 15px; .box-sizing; .bg_white; font-size: @fontSizeNomal;}
+        .mui-table-view{
+            .mui-table-view-cell{ padding-right: 0;}
+            .mui-navigate-right{ margin: 0; padding: 0;
+                &>img{ float: left; .wh(30px,30px);}
+                &>span{ float: left; display: inline-block; .wh_lh(auto,30px); margin-left: 10px;}
+            }
+        }
+    }
+    .relieveAuthorization{ width: 100%; display: block; margin-bottom: 20px; .box-sizing; padding: 14px 0; .bg_white; text-align: center; font-size: @fontSizeNomal; color: red;}
+} 
+/*父母孩子相关信息end*/
+
+/*通知、提醒通道start*/
+.ChannelsPage .mainContent{  
+    .Channels_Box{ width: 100%; overflow: hidden; padding: 15px; .box-sizing;
+        &>li{ width: 48%; .bg_white; margin-bottom: 15px;
+            &:nth-child(2n+1){ float: left;} 
+            &:nth-child(2n+2){ float: right;}
+            &>a{ display: block; overflow: hidden; text-align: center; .box-sizing; padding: 0.72rem 10px;
+                &>img{ .wh(1.2rem,1.2rem);}
+                &>span{ display: block; width: 100%; font-size: @fontSizeNomal; color: @black3;}
+            }
+        }
+    }
+}
+/*通知、提醒通道end*/
+
+/*作业、联络簿、成绩单start*/
+.lists_page{
+    .conditionalModel{ position: absolute; top: 40px; z-index: 100; left: 0; width: 100%;
+        .select_lists{ padding: 0; height: 40px; width: 100%; .bg_white; border-bottom: 1px solid @gray;
+            &>.list_{ border-right: 1px solid @gray; display: inline-block; .box-sizing; .wh_lh(25%,40px); 
+                     font-size: @fontSizeNomals; color: @black3; padding: 0 3%; float: left;
+                &>i{display: inline-block; .wh(24px,24px); float: left; margin: 8px 0 0 0;}
+                &>span{ float: right; display: inline !important;}
+                &>.list_1{ .bg_all('../img/icon_day.png');}
+                &>.list_2{ .bg_all('../img/icon_week.png');}
+                &>.list_3{ .bg_all('../img/icon_mouth.png');}
+                &>.list_4{ .bg_all('../img/icon_saixuan.png');}     
+            }
+            &>.list_:last-child{ border-right: 0;}
+        }
+    }
+    .mainContent{ padding-top: 80px;
+        .content_lists{ padding: 10px 15px; width: 100%; .box-sizing;
+            .list_a{ .bg_white; padding: 10px; .box-sizing; display: block; position: relative; margin-bottom: 10px;
+                &:last-child{ margin-bottom: 0;}
+                .list_lt{ .wh(60px,60px); .round(50%); position: absolute; top: 10px; left: 10px;
+                    &>img{ .wh(100%,100%);}
+                }
+                .list_rt{ font-size: @fontSizeSmall; overflow: hidden; color: @black9; .wh(100%,60px); padding-left: 70px; .box-sizing;
+                    .list_title{ font-size: @fontSizeNomal; color: @black3; .wh_lh(100%,22px);}
+                    .list_desc{ width: 100%;.hideellipsis; .wh_lh(100%,19px);}
+                    .date_box{ .wh_lh(100%,19px);
+                        &>span{ margin-right: 10px;
+                            &:last-child{ margin-right: 0; vertical-align: bottom;}
+                        }
+                    }
+                    
+                }
+                .icon_bg{ position: relative; padding-right: 1.4rem;
+                    &:after{ content: ''; display: inline-block; .wh(1.3rem,0.8rem); .bg_all('../img/icon_signature.png');
+                        position: absolute; right: 0; bottom: 0;
+                    }
+                }
+            }
+        }
+    
+    }   
+    
+}
+/*作业、联络簿、成绩单start*/   
+ 
+/*成绩报表start*/
+.searchListPage{
+    .search_box{.Position_t_l(absolute,40px,0); .wh(100%,50px); background: @bgcolor; z-index: 10; overflow: hidden; padding:10px 15px 10px 145px; .box-sizing;
+        .box_lt{.Position_t_l(absolute,10px,15px); .wh_lh(120px,34px); .bg_white; .round(4px); overflow: hidden;
+            &>b{ .wh(22px,22px); display: inline-block; .round(50%); float: left; margin: 5px 5px 0 5px;
+                &>img{ .wh(100%,100%);}
+            }
+            &>span{ float: left; font-size: 14px; display: inline-block; overflow: hidden; width: 58px;}
+            &>i{ display: inline-block; .wh(16px,16px); float: left; .bg_all('../img/icon_zhankai.png'); margin: 8px 5px 0 5px;}
+        }
+        .box_rt{
+            .mui-placeholder{ font-size: 14px;}
+            &>input{.wh_lh(100%,34px); font-size: 14px; .bg_white; padding: 0 5px 0 30px; outline: none; .box-sizing; .round(4px); border: none;}
+        }
+    }
+    .mainContent{ padding-top: 95px;
+        .content_lists2 .list_a{ border-bottom: 0 !important; margin-bottom: 15px;.box-shadow-round;
+            &:last-child{ margin-bottom: 0;}
+        }
+        .content_lists{ padding: 0 15px 10px 15px; width: 100%; .box-sizing;
+            .list_a{ .bg_white; display: block; width: 100%; padding: 10px; .box-sizing; font-size: @fontSizeNomal;
+                     color: @black9; border-bottom: 1px solid @gray;
+                &:last-child{ border-bottom: 0;}     
+                b{ font-weight: normal; display: inline-block;}
+                .list_title{ color: @black1; font-size: @fontSizeNomalm;.hideellipsis;}
+                .list_tag{ width: 100%;
+                    &>b{ height: 20px; line-height: 20px; margin-top: 8px; font-size: @fontSizeSmall; padding: 0 14px; .round(9px); background: @colorddd; color: white; margin-right: 15px;}
+                }
+                .list_info{ margin-top: 8px; overflow: hidden;
+                    &>b{ float: left; height: 20px; line-height: 20px; padding-left: 20px; margin-right: 15px;
+                        &:last-child{ margin-right: 0;}
+                        &.icon_person{ .bg_all('../img/icon_person.png',@x:0px,@y:2px,@w:16px,@h:16px);}
+                        &.icon_time{ .bg_all('../img/icon_time.png',@x:0px,@y:2px,@w:16px,@h:16px);}
+                    }
+                    &>span{ float: right; height: 20px; line-height: 20px; display: inline-block;
+                        &>em{ font-style: normal;}
+                    }
+                }
+                .list_Time{ margin: 8px 0; overflow: hidden;
+                    &>li{ width: 100%; overflow: hidden;
+                        &>label,&>span{ float: left; font-size: @fontSizeSmall; color: @black9;}
+                    }
+                }
+                .list_bottom{ padding-top: 8px; border-top: 1px solid @yellow; width: 100%; overflow: hidden;
+                    &>a{ display: inline-block; text-align: center; font-size: @fontSizeNomal; .round(16px); color: white; .wh_lh(40%,30px);
+                        &.hrefBtn1{ float: left; margin-left: 6%; background: #ffbd00;}
+                        &.hrefBtn2{ float: right; margin-right: 6%; background: #42a5f7;}
+                    }
+                }
+            }
+        }
+    }
+}
+/*成绩报表end*/
+
+/*作业、联络簿、成绩详情start*/
+.pageDetails .mainContent{
+    .detailBox{ width: 100%; padding: 10px 15px; .box-sizing;
+        .teacher_info{ .bg_white; padding: 10px; width: 100%; .box-sizing; position: relative;
+            &>dt{ .wh(70px,70px); position: absolute; top: 10px; left: 10px;
+                &>img{ .wh(100%,100%);}
+            }
+            &>dd{ padding-left: 85px; .box-sizing; width: 100%;
+                .teacher_name{ font-size: @fontSizeNomalx; color: @black1;}
+                .teacher_name,.date_box{ .wh_lh(100%,35px);}
+                .date_box>span{ font-size: @fontSizeNomal; color: @black9; margin-right: 15px;
+                    &:last-child{ margin-right: 0;}
+                }
+            }
+        }
+        .detail_info{ .bg_white; font-size: @fontSizeNomal; padding: 10px;
+            &>dt{ color: @black3; font-weight: 600;}
+            &>dd{
+                &>p{ color: @black6; margin: 5px 0;}
+                &>span{ color: @black9;}
+            }
+        }
+    }
+    .content_model{ margin-top: 10px; .box-sizing; font-size: @fontSizeNomal; padding: 0 15px;
+            &:last-child{ margin-bottom: 15px;}
+        &>h5{ padding: 10px; color: #f7c055; width: 100%; .box-sizing; overflow: hidden; .bg_white;}
+        .mui-table-view{ margin-top: 0; .bg_white;
+            .mui-table-view-cell .mui-navigate-right{ color: @black6; padding: 10px; overflow: hidden;
+                &>img{ width: 18px; margin-right: 6px; margin-bottom: -2px; float: left;}
+                &>p{.hideellipsis; width: 65%; float: left;}
+            }
+        }
+    }
+    .content_model{ 
+        .signature_box{ .bg_white; padding: 15px 15px 5px 15px; .box-sizing; border-top: 1px solid @gray; position: relative;
+            .signatureArea{ .box-sizing; .wh(100%,220px); border: 1px solid @gray; background: #efeff4;}
+            .removeSignature{ font-size: 0.24rem; padding: 3px 6px; display: inline-block; margin-top: 5px;
+                 color: #3e9cec;/* background: #3e9cec;  position: absolute; top: 15px; right: 15px;*/
+            }
+        } 
+        .messageBox{ .wh(100%,200px); outline: none; border: 1px solid @gray; resize: none; padding: 5px; .box-sizing;}
+        .BtnBox{ padding-bottom: 10px; .bg_white;}  
+        .submitBtn{ display: block; background: #42A3F5; font-size: @fontSizeNomal; .wh_lh(100%,0.6rem); .round(0.3rem); 
+            color: white; text-align: center;
+        }
+    }
+}
+/*作业、联络簿、成绩详情end*/
+
+/*学习计划详情start*/
+.studyPlanDetails .mainContent .content{ width: 100%; padding: 15px 15px; .box-sizing;
+    .content_tp{.box-shadow-round; .bg_white; padding: 10px; .box-sizing;width: 100%;
+        .content_tp_a{ display: block; width: 100%; font-size: @fontSizeNomal; padding-bottom: 10px;
+                 color: @black9; border-bottom: 1px solid @gray;
+            b{ font-weight: normal; display: inline-block;}
+            .list_title{ color: @yellow; font-size: @fontSizeNomalm;.hideellipsis;}
+            .list_tag{ width: 100%;
+                &>b{ height: 20px; line-height: 20px; margin-top: 8px; padding: 0 14px; .round(9px); background: @colorddd; color: white; margin-right: 15px;}
+            }
+            .lsit_info{ margin-top: 8px; overflow: hidden;
+                &>b{ float: left; height: 20px; line-height: 20px;}
+                &>span{ float: right; height: 20px; line-height: 20px; display: inline-block;
+                    &>em{ font-style: normal;}
+                }
+            }
+        }
+        .content_tp_b{
+            &>h5{ margin: 10px 0; font-size: @fontSizeNomalm; color: @black3; font-weight: normal;}
+            .plan_lists{ .wh(100%,90px); overflow: hidden;
+                &>li{ font-size: @fontSizeNomal; color: @black9; .hideellipsis; .wh_lh(100%,30px);
+                     list-style-type: decimal; list-style-position: inside;
+                }
+            }
+            .showMore{ width: 100%; text-align: center; display: none;
+                .showMoreBtn{ color: @blue1; .wh_lh(100%,26px);
+                    &>em{ font-style: normal; font-size: 13px;}
+                    .btnIcon{ display: inline-block; margin-bottom: -3px; margin-left: 5px; .wh(16px,16px); .bg_all('../img/icon_down.png');}
+                }
+            }
+        }
+    }
+    .content_bt{.box-shadow-round; .bg_white; .box-sizing;width: 100%; margin-top: 15px; padding-bottom: 15px;
+        &>h5{ color: @yellow; font-size: @fontSizeNomal; padding: 0.18rem 10px; .box-sizing; border-bottom: 1px solid @gray;}
+        .mulu_lists{ width: 100%; padding-left: 10px; .box-sizing;
+            &>dd{ border-bottom: 1px solid @gray;
+                .list_head{.wh_lh(100%,36px); position: relative; .box-sizing; .hideellipsis; padding: 0 1.6rem 0 20px; font-size: @fontSizeNomal;
+                        .bg_all('../img/icon_quan.png',@x:0,@y:9px,@w:16px,@h:16px);
+                    &>a{ display: inline-block; .wh_lh(50px,22px); .round(12px); text-align: center;
+                         border: 1px solid @blue1; position: absolute; top: 6px; right: 11px; font-size: 12px;
+                    }
+                }
+                .list_cont{ width: 100%; .box-sizing; font-size: @fontSizeSmall; color: @black9; padding: 0 1.6rem 5px 0; position: relative;
+                    &:after{ content: ''; position: absolute; display: inline-block; right: 10px; bottom: 5px;
+                         .bg_all('../img/icon_accomplish.png'); .wh(1.3rem,0.8rem); z-index: 2;
+                    }
+                    &>li{ padding: 0 0 0 20px; .wh_lh(100%,26px); .box-sizing; position: relative;
+                        &:after{ content: '•'; font-size: 24px; .Position_t_l(absolute,-2px,4.5px); display: inline; z-index: 2;}
+                    }
+                }
+            }
+        }
+    }
+}
+/*学习计划详情end*/
+
+/*学习计划--课程详情start*/
+.coursesDetails .mainContent .content{ padding: 10px 15px; .box-sizing;
+    .content_tp{ .bg_white; margin-bottom: 15px; padding: 3px 10px; .box-sizing; color: @black9; 
+        &>h2{ padding: 5px 0px; .box-sizing; color: @yellow; font-size: @fontSizeNomalm; font-weight: normal;}
+    }
+    .content_bt{
+        .content_model{ .bg_white; font-size: @fontSizeNomal;
+            &>h5{ padding: 10px; color: #f7c055; width: 100%; .box-sizing; overflow: hidden;}
+            .mui-table-view{ margin-top: 0; .bg_white;
+                .mui-table-view-cell .mui-navigate-right{ color: @black6; padding: 10px; overflow: hidden;
+                    &>img{ width: 18px; margin-right: 6px; margin-bottom: -2px; float: left;}
+                    &>p{.hideellipsis; width: 65%; float: left; margin-top: -1px;}
+                }
+            }
+        }
+    }
+}
+/*学习计划--课程详情end*/
+
+/*学习计划--课程详情--视频页start*/
+.coursesDetailsVideo .mainContent{
+    .content{ width: 100%; overflow: hidden; .bg_white;
+        video{ .wh(100%,200px);}
+        .video_title{ margin: 8px 0; font-size: @fontSizeNomal; color: @black3; padding: 0 15px; .box-sizing;}
+    }
+}
+/*学习计划--课程详情--视频页end*/
+
+/*课程表start*/
+.Timetable{
+    .weekSelectBox{ .Position_t_l(absolute,40px,0); .wh(100%,40px); border-bottom: 1px solid @gray; z-index: 10; .bg_white;
+             overflow: hidden; padding: 0 15px; .box-sizing;
+        .weekPrev,.weekNext{ float: left; .wh_lh(30%,40px); .box-sizing; position: relative;
+            &>a{ font-size: 14px; color: @black3;}
+            &>i{.wh(13px,23px); display: inline-block; position: absolute; top: 8.5px;}
+        }
+        .weekCenter{ float: left; .wh(40%,40px); text-align: center; position: relative;
+            &>span{ display: inline-block; .wh_lh(100%,20px); position: absolute; left: 0; top: 1px; font-size: 16px; color: @black3;}
+            .total_week{ top: 19px; font-size: 12px; color: @black9;}
+            &:after{ content: ''; display: inline-block; position: absolute; top: 13px; right: 10%; .wh(16px,16px);.bg_all('../img/icon_zhankai.png');}
+        }
+        .weekPrev{ text-align: left; padding-left: 20px;
+            &>i{ .bg_all('../img/icon_jiantL.png'); left: 0;}
+        }
+        .weekNext{ text-align: right; padding-right: 20px;
+            &>i{ .bg_all('../img/icon_jiantR.png'); right: 0;}
+        }
+    }
+    .mainContent{ padding-top: 80px;
+        .weekcont{ .bg_white; margin-bottom: 10px;
+            .childrenName{ .wh_lh(100%,40px); color: @black3; font-size: @fontSizeNomal; padding-left: 8px; 
+                    font-weight: normal; border-left: 5px solid @blue1; .box-sizing;
+            }
+            .weekList{ width: 100%;
+                &>li{ width: 100%; overflow: hidden; position: relative; .box-sizing;
+                    &:first-child{ background: #cee7ff;
+                        &>.list_child{ color: white; font-size: 11px !important; padding: 0.1rem 4px;
+                            &:nth-of-type(1){}
+                            &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6){ background: @blue1;}
+                            &:nth-of-type(7),&:nth-of-type(8){ background: @yellow;}
+                        }
+                        
+                    }
+                    &>.list_child{ display: inline-block; width: 13%; padding: 0.2rem 2px; .box-sizing; float: left; color: @black3;
+                            text-align: center; color: @black1; font-size: 13px !important;
+                        &:first-child{ width: 9%;}
+                    }
+                }
+            }
+        }
+    }
+}
+/*课程表end*/
+
+/*搜索页start*/
+.searchPage .mainContent{  
+    .search_cont{ padding: 15px 15px; .box-sizing; width: 100%; font-size: 14px; color: @black3;
+        .selectTime{ .bg_white; padding: 10px; width: 100%; .box-sizing;
+            &>li{ position: relative; width: 100%; height: 36px; .box-sizing; padding: 5px 0px 5px 75px; margin-bottom: 5px;
+                &>label{.Position_t_l(absolute,0,0); .wh_lh(70px,40px);}
+                &>input{ display: inline-block; outline: none; .wh_lh(100%,30px); border: 1px solid @gray; .round(3px); .box-sizing;
+                    padding: 0 8px;
+                }
+            }    
+        }
+        .selectStatus{ .bg_white; padding: 10px 10px 10px 50px; width: 100%; .box-sizing; position: relative; border-top: 1px solid @gray;
+            &>dt{ position: absolute; left: 10px; top: 10; .wh_lh(50px,30px);}
+            &>dd{ width: 100%; overflow: hidden;
+                &>a{ float: left; margin-left: 12px; font-size: 14px; color: @black6; overflow: hidden; line-height: 30px; display: inline-block; height: 30px;
+                    &>i{ display: inline-block; .wh(20px,20px); margin: 5px 4px 0 0; float: left;
+                        &.icon_radio{.bg_all('../img/icon_radio.png');}
+                        &.icon_radio_on{.bg_all('../img/icon_radio_on.png');}
+                    }
+                    &>span{ float: left;}
+                }
+            }
+        }
+        .BtnBox{ text-align: center; .bg_white; padding-bottom: 10px;
+            &>button{ padding: 6px 30px; .round(12px); border: 1px solid @gray; font-size: 15px; 
+                &:last-child{ background: @yellow; color: white; margin-left: 15px; border-color: @yellow;}
+            }
+        }
+    }
+}
+/*搜素页面end*/
+
+/*登录页面start*/
+.loginPage .login_cont{ position: absolute; top: 18%; left: 0; .wh(100%,auto); overflow: hidden; padding: 0 15px; .box-sizing;
+    .login_cont_tp{ text-align: center; padding: 0 25%; .box-sizing; width: 100%;
+        img{ width: 100%; max-width: 280px;}
+    }
+    .login_cont_ct{ margin: 20% 0 18% 0; padding: 0 10%;
+        &>li{ padding-left: 36px; width: 100%; .box-sizing; border-bottom: 1px solid @gray; margin-bottom: 15px;
+            &:first-child{ .bg_all('../img/icon_user.png',@x:8px,@y:8px,@w:20px,@h:20px);}
+            &:last-child{ .bg_all('../img/icon_pwd.png',@x:8px,@y:8px,@w:20px,@h:20px);}
+            &>input{ outline: none; border: none; .wh_lh(100%,36px); margin-bottom: 0; background: rgba(0,0,0,0);}
+        }
+    }
+    .login_cont_bt{ padding: 0 10%; width: 100%; text-align: center; .box-sizing;
+        &>dt>a{ display: inline-block; background: #ffbd00; color: white; .round(18px); .wh_lh(100%,36px); font-size: 16px;}
+        &>dd{ margin-top: 0.3rem;
+            a{ font-size: 14px; color: @black9;}
+        }
+    }
+}
+/*登录页面end*/

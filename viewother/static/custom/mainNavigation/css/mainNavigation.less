@@ -1,0 +1,57 @@
+@import "../../../comm/css/index_ba.less";
+
+@blue1:#1274c9;
+.bg_blue{ background: @blue1;}
+.Rotate_180{ .rotate(180deg); display: inline-block;} 
+
+.main{ width: 1120px; max-width: 1120px; margin: 0 auto;
+        .header{ width: 100%;
+        .header_tp{ .wh(100%,60px);
+            &>.logoImg{ height: 40px; float: left; margin: 10px 0 0 26px;}
+            &>.header_tp_rt{ .wh(auto,60px); display: inline-block; float: right; position: relative;
+                &>.headUser{ .small_hand; color: #646464; float: right; .wh(auto,60px); .box-sizing; display: inline-block; padding: 10px 15px 10px 0;
+                    &>.userImg{ .wh(36px,36px); float: left; margin: 2px 10px 0 2px;}
+                    &>.userName{ float: left; font-size: 16px; display: inline-block; line-height: 40px; height: 40px;}
+                }
+                &>.handLists{ display: none; position: absolute; z-index: 50; top: 60px; right: 50px; background: white; font-size: 14px;.box-shadow-round;
+                    &:after{ content: ''; .ttne(8px,white); position: absolute; top: -8px; right: 55%;}
+                    &>li{ padding: 5px 12px; width: 70px;
+                        &>a{ color: #999; font-size: 14px;}
+                    }
+                    
+                }
+                &:hover .handLists{ display: block;}
+            }
+        }
+        .header_bt{ .wh(100%,50px); position: relative;}
+        .navigate{ .wh(100%,50px); border-bottom: 3px solid @blue1; .box-sizing;
+            &>dt,&>dd{ float: left; .wh(16%,47px); text-align: center; background: #173b58;
+                &>a{ font-size: 16px; .wh_lh(100%,47px); display: inline-block; color: white; .box-sizing;
+                    &>span{ float: left;}
+                }
+            }
+            &>dt>a{ padding-left: 18%;
+                &>i{ .wh(32px,32px); display: inline-block; margin: 7.5px 5px 0 0; float: left; .bg_all('../img/headerNav/icon_arrow.png');}
+            }
+            &>dd{ margin-left: 0.8%;
+                &.active_dd{.bg_blue;}
+                &>a{ padding-left: 25.5%;
+                    &>img{ .wh(40px,35px); float: left; margin: 6.5px 3px 0 0;}
+                }
+            }
+        }
+        .asideNav{ position: absolute; top: 50px; left: 0; width: 16%; .bg_blue; padding-bottom: 3px; display: none;
+            &>li{ .wh(100%,46px); padding: 0 3px; .box-sizing; overflow: hidden;
+                &>a{ .wh_lh(100%,46px); padding-left: 18%; .box-sizing; display: inline-block; font-size: 16px; color: white;
+                    &.active_a{ color: @blue1; background: white;}
+                    &>img{ float: left; .wh(30px,30px); overflow: hidden; margin: 8px 5px 0 0;}
+                }
+            }
+        }
+    }
+    .container{.box-sizing; width: 100%;
+        .subTitleBar{ background: #f2f6ff; .wh_lh(100%,40px); padding: 0 85px 0 15px; font-size: 14px; .box-sizing; position: relative; color: #666; border-bottom: 1px solid #e1e1e1;
+            .setBtn{ display: inline-block; position: absolute; top: 7px; right: 15px; font-size: 12px; color: white; text-align: center; .wh_lh(60px,26px); background: #80bceb; .round(4px);}
+        }
+    } 
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>主体导航</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/mainNavigation/css/mainNavigation.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<dl class="header">
+				<div class="header_tp">
+					<img class="logoImg" src="http://33.xcenable.com/customization/files/bg_logo.png"/>
+					<div class="header_tp_rt">
+						<a class="headUser">
+							<img class="userImg" src="../../static/custom/mainNavigation/img/icon_user.png"/>
+							<span class="userName">慕容欣欣</span>
+						</a>
+						<ol class="handLists">
+							<li><a href="javascript:;">个人设置</a></li>
+							<li><a href="javascript:;">账号安全</a></li>
+							<li><a href="javascript:;">退出系统</a></li>
+						</ol>
+					</div>
+				</div>
+				<div class="header_bt">
+					<dl class="navigate" id="navigate">
+						<dt><a href="javascript:;"><i></i><span>系统总览</span></a></dt>
+						<dd class="active_dd"><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/headerNav/menu1.png"/><span>备课</span></a></dd>
+						<dd><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/headerNav/menu2.png"/><span>授课</span></a></dd>
+						<dd><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/headerNav/menu3.png"/><span>评测</span></a></dd>
+						<dd><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/headerNav/menu4.png"/><span>辅导</span></a></dd>
+						<dd><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/headerNav/menu5.png"/><span>班务</span></a></dd>
+					</dl>
+					<ol class="asideNav" id="asideNav">
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_1.png" alt="导航图片" />资源管理</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_2.png" alt="导航图片" />作业管理</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_3.png" alt="导航图片" />评测管理</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_4.png" alt="导航图片" />课堂管理</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_5.png" alt="导航图片" />合作探究</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_6.png" alt="导航图片" />自主学习</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_7.png" alt="导航图片" />适性辅导</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_8.png" alt="导航图片" />奖章激励</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_9.png" alt="导航图片" />校务行政</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_10.png" alt="导航图片" />空间管理</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_11.png" alt="导航图片" />家校联系</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_12.png" alt="导航图片" />教学管理</a></li>
+						<li><a href="javascript:;"><img src="../../static/custom/mainNavigation/img/navlists/icon_13.png" alt="导航图片" />财务管理</a></li>
+					</ol>
+				</div>	
+			</dl>
+			<div class="container">
+				<div class="subTitleBar">备课常用功能<a class="setBtn" href="javascript:;">设置</a></div>
+				<div class="content">
+					主体内容
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script type="text/javascript">
+			var headerFn=function(){
+				$("#navigate dd").each(function(){
+					//横向导航栏
+					$(this).bind('click',function(){
+						if (!$(this).hasClass('active_dd')) {
+							$(this).addClass('active_dd').siblings().removeClass('active_dd');
+						}
+					});
+				});
+				
+				//竖向导航栏展开
+				$("#navigate dt").bind('click',function(){
+					if ($(this).find('i').hasClass('Rotate_180')) {
+						$(this).find('i').removeClass('Rotate_180');
+						$("#asideNav").slideUp();
+						$(this).css({"background":"#173b58"});
+					}else{
+						$(this).find('i').addClass('Rotate_180');
+						$("#asideNav").slideDown();
+						$(this).css({"background":"#1274c9"});
+					}
+				});
+				//竖向导航栏展开子栏目操作
+				$("#asideNav li a").each(function(){
+					$(this).bind('click',function(){
+						var $Index=$(this).parent('li').index();
+						var $imgUrl=$(this).find('img').attr('src');
+						var $imgUrl_on=$imgUrl.split('.png')[0]+'_on.png';
+						var otherImgLength=$(this).parent('li').siblings().find('a').find('img');
+						//console.log($Index);
+						if (!$(this).hasClass('active_a')) {
+							$(this).addClass('active_a');
+							$(this).find('img').attr({src:$imgUrl_on});
+							$(this).parent('li').siblings().find('a').removeClass('active_a');
+							$("#asideNav li").not($("#asideNav li").eq($Index)).each(function(){
+								var imgurl=$(this).find("a>img").attr('src');
+								if (imgurl.indexOf('_on.png')!=-1) {
+									imgurl=imgurl.split('_on.png')[0]+'.png';
+									$(this).find("a>img").attr({src:imgurl});
+									//console.log(imgurl);
+								}
+							})
+						}
+					})
+				});
+			}
+			$(document).ready(function(){
+				headerFn();
+			})
+		</script>
+	</body>
+</html>

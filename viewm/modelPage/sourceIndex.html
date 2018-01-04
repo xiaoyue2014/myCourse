@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../common/Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/modelindex.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">张三丰</span>
+							<img class="user_photo" src="img/touxiang.png"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_set.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_safety.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_systemout.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu">
+							<div class="Asidecontent">
+								<div class="Aside_show_btn">
+									<p class="AsideBtn_tp"><img class="AsideShowBtnImg" src="img/sidebar_icon/caidan.png"/></p>
+									<p class="AsideBtn_bt"></p>
+								</div>
+								
+								<ul class="Aside_list">
+									<li class="Aside_list_li activesiderLi">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_1"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的首页</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_2"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的资源管理</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_3"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源分享</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_4"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源审批</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									
+								</ul>
+								
+							</div>
+						</div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox sourceIndex">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的桌面</span>
+									<span class="span_2"></span>
+									<span class="span_text">资源管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">我的资源</span>
+								</div>
+								<div class="contentCenter">
+									<dl class="select_area">
+										<dd>
+											<span>来源</span>
+											<ul class="select_box">
+												<li class="activeLi"><a href="javascript:;">学创资源</a></li>
+												<li><a href="javascript:;">校本资源</a></li>
+											</ul>
+										</dd>
+										<dd>
+											<span>学段</span>
+											<ul class="select_box">
+												<li class="activeLi"><a href="javascript:;">全部</a></li>
+												<li><a href="javascript:;">小学</a></li>
+												<li><a href="javascript:;">初中</a></li>
+												<li><a href="javascript:;">高中</a></li>
+											</ul>
+										</dd>
+										<dd>
+											<span>年级</span>
+											<ul class="select_box">
+												<li class="activeLi"><a href="javascript:;">全部</a></li>
+												<li><a href="javascript:;">一年级</a></li>
+												<li><a href="javascript:;">二年级</a></li>
+												<li><a href="javascript:;">三年级</a></li>
+												<li><a href="javascript:;">四年级</a></li>
+												<li><a href="javascript:;">五年级</a></li>
+												<li><a href="javascript:;">六年级</a></li>
+											</ul>
+										</dd>
+										<dd>
+											<span>学科</span>
+											<ul class="select_box">
+												<li class="activeLi"><a href="javascript:;">全部</a></li>
+												<li><a href="javascript:;">语文</a></li>
+												<li><a href="javascript:;">数学</a></li>
+												<li><a href="javascript:;">英语</a></li>
+												<li><a href="javascript:;">体育与健康</a></li>
+												<li><a href="javascript:;">英语</a></li>
+												<li><a href="javascript:;">体育与健康</a></li>
+												<li><a href="javascript:;">英语</a></li>
+											</ul>
+											<!--<a class="moreBtn">更多</a>-->
+										</dd>
+										
+										<dd>
+											<span>教材版本</span>
+											<ul class="select_box">
+												<li class="activeLi"><a href="javascript:;">全部</a></li>
+											</ul>
+										</dd>
+										
+									</dl>
+									<div class="content_center">
+										<!--<div class="search_box">
+											<input type="search" placeholder="输入搜索关键字" class="searchinput" id="searchinput" value="" /><button type="button" class="searchBtn">搜索</button>
+										</div>-->
+										<div class="content_box">
+											<div class="content_box_lt">
+												<h5>教材目录</h5>
+												<div class="tree_box_warp">
+													<div class="tree_box">
+														<div class="tree_auto">
+															<div class="tree_id">
+																<ul>
+																	<li>1</li>
+																	<li>2</li>
+																	<li>3</li>
+																	<li>4</li>
+																	<li>5</li>
+																	<li>6</li>
+																	<li>7</li>
+																	<li>8</li>
+																	<li>9</li>
+																	<li>10</li>
+																	<li>11</li>
+																	<li>12</li>
+																	<li>13</li>
+																	<li>14</li>
+																	<li>15</li>
+																	<li>16</li>
+																	<li>17</li>
+																	<li>18</li>
+																	<li>19</li>
+																	<li>20</li>
+																	<li>21</li>
+																	<li>22</li>
+																	<li>23</li>
+																	<li>24</li>
+																	<li>25</li>
+																	<li>26</li>
+																	<li>27</li>
+																	<li>28</li>
+																	<li>29</li>
+																	<li>30</li>
+																	<li>31</li>
+																	<li>32</li>
+																	<li>33</li>
+																	<li>34</li>
+																	<li>35</li>
+																	<li>36</li>
+																	<li>37</li>
+																	<li>38</li>
+																	<li>39</li>
+																	<li>40</li>
+																	<li>41</li>
+																	<li>42</li>
+																	<li>43</li>
+																	<li>44</li>
+																	<li>45</li>
+																	<li>46</li>
+																	<li>47</li>
+																	<li>48</li>
+																	<li>49</li>
+																	<li>50</li>
+																</ul>
+															
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="content_box_rt">
+												<div class="content_box_rt_main">
+													<!--<ul class="content_nav">
+														<li class="activeLi"><a href="javascript:;">全部</a></li>
+														<li><a href="javascript:;">教材</a></li>
+														<li><a href="javascript:;">学习工具</a></li>
+														<li><a href="javascript:;">课程</a></li>
+														<li><a href="javascript:;">作业</a></li>
+														<li><a href="javascript:;">试卷</a></li>
+														<li><a href="javascript:;">试题</a></li>
+														<li><a href="javascript:;">微课</a></li>
+													</ul>-->
+													<div class="content_nav_search">
+														<ul class="content_nav">
+															<li class="activeLi"><a href="javascript:;">最新上传</a></li>
+															<li><a href="javascript:;">最多下载</a></li>
+															<li><a href="javascript:;">最多点赞</a></li>
+														</ul>
+														<div class="search_box">
+															<button type="button" class="searchBtn">搜索</button>
+															<input type="search" placeholder="列表中搜索..." class="searchinput" id="searchinput" value="" />
+															<span class="Total_tips">共<b>123,545,621</b>个资源</span>
+														</div>
+													</div>
+													<div class="content_list_box">
+														<p class="list_tips"><b>全部</b>中共有<em>10000</em>条记录</p>
+														<dl class="lists">
+															<dt>
+																<a href="javascript:;">《雪地里的小画家》</a>
+															</dt>
+															<dd>
+																<p>《雪地里的小画家》是义务教育课程标准实验教科书（北师大）语文一年级上册第十六单元《冬天》中的一篇主体课文。本课是一篇富有儿童情趣的诗歌。作者以生动活泼的儿童语言，讲述了一群小画家在雪地上画画的故事。激发了学生热爱大自然、亲近大自然的思想感情。</p>
+															</dd>
+															<dd>
+																<span><b>上传者：</b><em>superadmin</em></span>
+																<span><b>上传时间：</b><em>2017-08-30</em></span>
+																<span><b>浏览次数：</b><em>2</em></span>
+															</dd>
+														</dl>
+														<dl class="lists">
+															<dt>
+																<a href="javascript:;">《雪地里的小画家》</a>
+															</dt>
+															<dd>
+																<p>《雪地里的小画家》是义务教育课程标准实验教科书（北师大）语文一年级上册第十六单元《冬天》中的一篇主体课文。本课是一篇富有儿童情趣的诗歌。作者以生动活泼的儿童语言，讲述了一群小画家在雪地上画画的故事。激发了学生热爱大自然、亲近大自然的思想感情。</p>
+															</dd>
+															<dd>
+																<span><b>上传者：</b><em>superadmin</em></span>
+																<span><b>上传时间：</b><em>2017-08-30</em></span>
+																<span><b>浏览次数：</b><em>2</em></span>
+															</dd>
+														</dl>
+													</div>
+													
+													<!--分页-->
+													<div class="page_box">
+														<!--<div class="page_box_tips">共<b>100</b>条记录,当前是第<span class="pageNum">1</span>页,每页10条</div>-->
+														<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<!--<div class="footer">
+					    <img class="footerImg" src='img/logo_sm.png'/>
+					    <p>Copyright 2017 Enable-ETS Corporation. All Rights Reserved.</p>
+					</div>-->
+					<div class="footer" id="footer">
+						<div class="footer_lt">
+							<a href="javascript:;"><img src="img/xclogo.png"/></a>
+						</div>
+						<div class="footer_rt">
+							<p>学创教育科技有限公司&emsp;&emsp;地址：武汉市光谷国际广场B座20楼&emsp;&emsp;电话：+86-027-87107188</p>
+							<p>Copyright ©2013-2017 Enable Educational Technology Co.,Ltd. All rights reserved</p>
+						</div>
+					</div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../component_module/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+        <script src="../../component_module/paging/page.js"></script>
+        <script src="../common/modelCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    var paging = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+			    
+			        
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

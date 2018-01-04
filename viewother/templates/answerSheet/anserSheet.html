@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>答题卡模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/answerSheet/css/answerSheet.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="asideHandBox">
+				<a href="javascript:;"><img src="../../static/custom/answerSheet/img/icon_top.png"/></a>
+				<a href="javascript:;"><img src="../../static/custom/answerSheet/img/icon_print.png"/></a>
+				<a href="javascript:;"><img src="../../static/custom/answerSheet/img/icon_baocun.png"/></a>
+			</div>
+			<div class="sheetContent">
+				<!--正方形显示当前页码-->
+				<ul class="pageNum">
+					<li><b></b></li>
+				</ul>
+				<div class="icon_smalltransverse icon_smalltransverse1"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse2"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse3"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse4"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse5"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse6"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse7"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse8"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse9"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse10"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse11"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse12"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse13"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse14"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse15"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse16"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse17"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse18"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse19"><b></b></div>
+				<div class="icon_smalltransverse icon_smalltransverse20"><b></b></div>
+				
+				<div class="icon_smalldirection icon_smalldirection1"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection2"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection3"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection4"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection5"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection6"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection7"><b></b></div>
+				<div class="icon_smalldirection icon_smalldirection8"><b></b></div>
+				
+				<div class="icon_standardbig1"></div>
+				<div class="icon_standardbig2"></div>
+				<div class="icon_standardbig3"></div>
+				<div class="icon_standardbig4"></div>
+				<!--<div class="icon_standardbig5"></div>-->
+				<!--<div class="icon_standardbig6"></div>-->
+				<div class="icon_standardBox">
+					<!--<a class="icon_standard icon_standard1" href="javascript:;"></a>-->
+					<!--<a class="icon_standard icon_standard2" href="javascript:;"></a>-->
+					<a class="icon_standard icon_standard3" href="javascript:;"></a>
+					<a class="icon_standard icon_standard4" href="javascript:;"></a>
+					<a class="icon_standard icon_standard5" href="javascript:;"></a>
+					<a class="icon_standard icon_standard6" href="javascript:;"></a>
+				</div>
+				<div class="sheet_header">
+					<div class="sheet_header_lt">
+						<h1 class="sheet_title">考试专用答题卡</h1>
+						<dl class="sheet_userInfo">
+							<dd><label>姓名：</label><input type="text" /></dd>
+							<dd><label>班级：</label><input type="text" /></dd>
+							<dd><label>学号：</label><input type="text" /></dd>
+						</dl>
+					</div>
+					<div class="sheet_header_rt">
+						<a class="imgdiv" href="javascript:;">
+							<!--<img src="../../static/custom/answerSheet/img/code.jpg"/>-->
+							此处贴二维码
+						</a>
+					</div>
+				</div>
+				<div class="sheet_tipsbox">
+					<div class="cont_lt">
+						<ul>
+							<li>答题前请将姓名、班级、学号填写清楚。保持答卷清洁、完整。</li>
+							<li>客观题答题，必须使用2B铅笔填涂，修改时用橡皮擦干净。 </li>
+							<li>主观题答题，必须使用黑色签字笔书写。</li>
+							<li>必须在题号对应的答题区域内作答，超出答题区域书写无效。 </li>
+							<!--<li>保持答卷清洁、完整。</li>-->
+						</ul>
+					</div>
+					<div class="cont_rt">
+						<!--<div class="tips_list">填涂要求</div>-->
+						<div class="tips_list">
+							<label>正确：</label>
+							<div class="_list_rt">
+								<span class="scrawledStyle1"></span>
+							</div>
+						</div>
+						<div class="tips_list">
+							<label>错误：</label>
+							<div class="_list_rt">
+								<span class="scrawledStyle2">●</span>
+								<span class="scrawledStyle3">√</span>
+								<span class="scrawledStyle4">■</span>
+								<span class="scrawledStyle5">/</span>
+							</div>
+						</div>
+						<div class="tips_list LackOfTest">
+							<label>缺考(考官填涂)：</label>
+							<div class="_list_rt">
+								<span class="scrawledStyle6"></span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="Singletopic">
+					<div class="letopic_list letopic_list1">
+						<dl class="_list _list1">
+							<dt>1</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>2</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>3</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>4</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>5</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>	
+					<div class="letopic_list letopic_list2">
+						<dl class="_list _list1">
+							<dt>6</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>7</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>8</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>9</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>10</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>
+					<div class="letopic_list letopic_list3">
+						<dl class="_list _list1">
+							<dt>11</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>12</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>13</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>14</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>15</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>
+					<div class="letopic_list letopic_list4">
+						<dl class="_list _list1">
+							<dt>16</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>17</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>18</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>19</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>20</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>
+					
+				</div>
+				<div class="MultipleChoice">
+					<div class="letopic_list letopic_list1">
+						<dl class="_list _list1">
+							<dt>21</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>22</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>23</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>24</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>25</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>	
+					<div class="letopic_list letopic_list2">
+						<dl class="_list _list1">
+							<dt>26</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>27</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>28</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>29</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>30</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>
+					<div class="letopic_list letopic_list3">
+						<dl class="_list _list1">
+							<dt>31</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>32</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>33</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>34</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>35</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>
+					<div class="letopic_list letopic_list4">
+						<dl class="_list _list1">
+							<dt>36</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list2">
+							<dt>37</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list3">
+							<dt>38</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list4">
+							<dt>39</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+						<dl class="_list _list5">
+							<dt>40</dt>
+							<dd>[<b>A</b>]</dd>
+							<dd>[<b>B</b>]</dd>
+							<dd>[<b>C</b>]</dd>
+							<dd>[<b>D</b>]</dd>
+						</dl>
+					</div>
+					
+				</div>
+				<div class="FillsUpTheTopic">
+					<dl>
+						<dt>
+							<span>41.</span>
+							<div class="_list_rt"><p></p></div>
+						</dt>
+						<dt>
+							<span>42.</span>
+							<div class="_list_rt"><p></p></div>
+						</dt>
+						<dt>
+							<span>43.</span>
+							<div class="_list_rt"><p></p></div>
+						</dt>
+						<dt>
+							<span>44.</span>
+							<div class="_list_rt"><p></p></div>
+						</dt>
+						<dt>
+							<span>45.</span>
+							<div class="_list_rt"><p></p></div>
+						</dt>
+					</dl>
+				</div>
+				<div class="answeredClearly answeredClearly1">
+					<span>46.</span>
+					<div class="answerArea"></div>
+				</div>
+				
+			</div>
+			<div class="sheetContent">
+				<ul class="pageNum">
+					<li><b></b></li>
+					<li><b></b></li>
+				</ul>
+				<div class="icon_standardbig1"></div>
+				<div class="icon_standardbig2"></div>
+				<div class="icon_standardbig3"></div>
+				<div class="icon_standardbig4"></div>
+				<div class="icon_standardBox">
+					<a class="icon_standard icon_standard7" href="javascript:;"></a>
+					<a class="icon_standard icon_standard8" href="javascript:;"></a>
+					<a class="icon_standard icon_standard9" href="javascript:;"></a>
+					<a class="icon_standard icon_standard10" href="javascript:;"></a>
+				</div>
+				<div class="sheet_header">
+					<div class="sheet_header_lt">
+						<h1 class="sheet_title">考试专用答题卡</h1>
+						<dl class="sheet_userInfo">
+							<dd><label>姓名：</label><input type="text" /></dd>
+							<dd><label>班级：</label><input type="text" /></dd>
+							<dd><label>学号：</label><input type="text" /></dd>
+						</dl>
+					</div>
+					<div class="sheet_header_rt">
+						<a class="imgdiv" href="javascript:;"><img src="../../static/custom/answerSheet/img/code.jpg"/></a>
+					</div>
+				</div>
+				<div class="answeredClearly answeredClearly2">
+					<span>47.</span>
+					<div class="answerArea"></div>
+				</div>
+				<div class="answeredClearly answeredClearly3">
+					<span>48.</span>
+					<div class="answerArea"></div>
+				</div>
+				<div class="answeredClearly answeredClearly4">
+					<span>49.</span>
+					<div class="answerArea"></div>
+				</div>
+				<div class="answeredClearly answeredClearly5">
+					<span>50.</span>
+					<div class="answerArea"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

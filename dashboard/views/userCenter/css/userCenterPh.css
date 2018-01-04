@@ -1,0 +1,1529 @@
+@import 'http://at.alicdn.com/t/font_357669_ww7pebymp2bxd2t9.css';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+img {
+  border: none;
+}
+p {
+  margin-bottom: 0;
+}
+body,
+a,
+input,
+select,
+button {
+  font-family: "Microsoft Yahei", "Droid Sans Fallback", "Arial", "Helvetica", "sans-serif", "宋体";
+  font-size: 14px;
+  outline: none;
+  color: #666;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*去除获取焦点时半透明背景*/
+}
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #428bca;
+}
+a:hover {
+  text-decoration: none;
+}
+table {
+  text-align: center;
+  vertical-align: middle;
+}
+th {
+  text-align: center;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 1441px) {
+  html {
+    font-size: 43px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 41px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 39px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 38px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 37px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 33px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 31px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  html {
+    font-size: 30px;
+  }
+}
+.text_no_select {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.box-shadow-round {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.self_flex_content { /*定义父元素*/
+  display: box;/*（伸缩盒最老版本）*/
+  display: -webkit-box;/* iOS 6-, Safari 3.1-6 */
+  display: -webkit-flex;/* Chrome */
+  display: -moz-box;/* Firefox 19 */
+  display: -ms-flexbox;
+  display: flex;/*flex容器*/
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+/*去掉input默认上下箭头*/
+.input_jiantou_hide input::-webkit-outer-spin-button,
+.input_jiantou_hide input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.input_jiantou_hide input[type="number"] {
+  -moz-appearance: textfield;
+}
+.select_jiantou_hide {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.AnimationRotate360 {
+  -webkit-animation: Rotating 1s linear infinite;
+  -moz-animation: Rotating 1s linear infinite;
+  -ms-animation: Rotating 1s linear infinite;
+  animation: Rotating 1s linear infinite;
+}
+@keyframes Rotating {
+  from {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes Rotating {
+  from {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-moz-keyframes Rotating {
+  from {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-o-keyframes Rotating {
+  from {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-ms-keyframes Rotating {
+  from {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+/*头部用户名处动画*/
+@-webkit-keyframes userBoxRotate {
+  0 {
+    margin-top: -1rem;
+  }
+  20% {
+    margin-top: 0.6rem;
+  }
+  40% {
+    margin-top: 0.2rem;
+  }
+  60% {
+    margin-top: 0.6rem;
+  }
+  80% {
+    margin-top: 0.4rem;
+  }
+  100% {
+    margin-top: 0.6rem;
+  }
+}
+@-o-keyframes userBoxRotate {
+  0 {
+    margin-top: -1rem;
+  }
+  20% {
+    margin-top: 0.6rem;
+  }
+  40% {
+    margin-top: 0.2rem;
+  }
+  60% {
+    margin-top: 0.6rem;
+  }
+  80% {
+    margin-top: 0.4rem;
+  }
+  100% {
+    margin-top: 0.6rem;
+  }
+}
+@-moz-keyframes userBoxRotate {
+  0 {
+    margin-top: -1rem;
+  }
+  20% {
+    margin-top: 0.6rem;
+  }
+  40% {
+    margin-top: 0.2rem;
+  }
+  60% {
+    margin-top: 0.6rem;
+  }
+  80% {
+    margin-top: 0.4rem;
+  }
+  100% {
+    margin-top: 0.6rem;
+  }
+}
+@keyframes userBoxRotate {
+  0 {
+    margin-top: -1rem;
+  }
+  20% {
+    margin-top: 0.6rem;
+  }
+  40% {
+    margin-top: 0.2rem;
+  }
+  60% {
+    margin-top: 0.6rem;
+  }
+  80% {
+    margin-top: 0.4rem;
+  }
+  100% {
+    margin-top: 0.6rem;
+  }
+}
+.bgcolor3d_1 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4096ee+0,3b82dd+49,2a559e+100 */
+  background: #4096ee;/* Old browsers */
+  background: -moz-linear-gradient(top, #4096ee 0%, #3b82dd 49%, #2a559e 100%);/* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4096ee 0%, #3b82dd 49%, #2a559e 100%);/* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4096ee 0%, #3b82dd 49%, #2a559e 100%);/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4096ee', endColorstr='#2a559e', GradientType=0);/* IE6-9 */
+}
+.bgcolor3d_2 { /*渐变色*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3590ea+0,c7d7e8+100 */
+  background: #3590ea;/* Old browsers */
+  background: -moz-linear-gradient(top, #3590ea 0%, #c7d7e8 100%);/* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #3590ea 0%, #c7d7e8 100%);/* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #3590ea 0%, #c7d7e8 100%);/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3590ea', endColorstr='#c7d7e8', GradientType=0);/* IE6-9 */
+}
+.bgcolor3d_2 { /*无渐变*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+0,4096ee+100 */
+  background: #7abcff;/* Old browsers */
+  background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 0%, #4096ee 100%);/* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 0%, #4096ee 100%);/* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #7abcff 0%, #60abf8 0%, #4096ee 100%);/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0);/* IE6-9 */
+}
+.bgcolor3d_3 {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b9bcb7+0,dfe5d7+60,fcfff4+100 */
+  background: #b9bcb7;/* Old browsers */
+  background: -moz-linear-gradient(top, #b9bcb7 0%, #dfe5d7 60%, #fcfff4 100%);/* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #b9bcb7 0%, #dfe5d7 60%, #fcfff4 100%);/* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #b9bcb7 0%, #dfe5d7 60%, #fcfff4 100%);/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b9bcb7', endColorstr='#fcfff4', GradientType=0);/* IE6-9 */
+}
+.cursor {
+  cursor: pointer;
+}
+.Rotate_180 {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  display: inline-block;
+}
+.Rotate_90 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  display: inline-block;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.mouseCSS {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/*公共模块*/
+.ContainerMain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  max-width: 1440;
+  margin: 0 auto;
+}
+/*公共头部*/
+.ContainerMain .header {
+  /*.bgcolor3d_1;*/ background: #207ed6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 1%;
+  width: 100%;
+  z-index: 11;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+.ContainerMain .header .header_logo {
+  height: 1.5rem;
+  display: inline-block;
+  width: 16%;
+  float: left;
+}
+.ContainerMain .header .header_user_box,
+.ContainerMain .header .header_nav {
+  height: 1.5rem;
+  width: 42%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ContainerMain .header .logo_img {
+  height: 0.9rem;
+  margin-top: 0.3rem;
+  z-index: 15;
+}
+.ContainerMain .header .header_logo {
+  width: 39%;
+  padding-left: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ContainerMain .header .header_user_box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 5px;
+  width: 60%;
+}
+.ContainerMain .header .user_box {
+  cursor: pointer;
+  float: right;
+  display: block;
+  height: 100%;
+  position: relative;
+  padding-top: 0.4rem;
+  font-size: 0.35rem;
+  color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ContainerMain .header .user_box .user_top {
+  overflow: hidden;
+  height: 100%;
+}
+.ContainerMain .header .user_box .user_names,
+.ContainerMain .header .user_box .span_icon_pc,
+.ContainerMain .header .user_box .span_icon_iphone,
+.ContainerMain .header .user_box .user_out,
+.ContainerMain .header .user_box .touxiang {
+  float: left;
+}
+.ContainerMain .header .user_box .user_names {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  margin-right: 0.05rem;
+  color: white;
+}
+.ContainerMain .header .user_box .daosanjiao {
+  display: none;
+  border-top: 0.2rem solid white;
+  border-left: 0.2rem solid transparent;
+  border-right: 0.2rem solid transparent;
+  margin-top: 0.2rem;
+}
+.ContainerMain .header .user_box .user_out {
+  display: none;
+}
+.ContainerMain .header .user_box .touxiang {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50% !important;
+  margin-left: 0.15rem;
+  margin-right: 0.09rem;
+}
+.ContainerMain .header .user_box .span_icon_pc,
+.ContainerMain .header .user_box .span_icon_iphone {
+  margin-top: 0.06rem;
+}
+.ContainerMain .header .user_box .span_icon_pc i,
+.ContainerMain .header .user_box .span_icon_iphone i {
+  color: white;
+  font-size: 0.45rem;
+}
+.ContainerMain .header .user_box .span_icon_iphone {
+  display: none;
+}
+.ContainerMain .header .user_box .shezhiNav {
+  width: 3.5rem;
+  display: none;
+  position: absolute;
+  top: 99.99%;
+  left: -0.8rem;
+  z-index: 10;
+  background: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding: 0.2rem 0;
+}
+.ContainerMain .header .user_box .shezhiNav .user_box_triangle {
+  position: absolute;
+  left: 80%;
+  bottom: 100%;
+  border-bottom: 0.2rem solid white;
+  border-left: 0.2rem solid transparent;
+  border-right: 0.2rem solid transparent;
+}
+.ContainerMain .header .user_box .shezhiNav li {
+  background: white;
+  overflow: hidden;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0.1rem;
+}
+.ContainerMain .header .user_box .shezhiNav li.activeli {
+  background: #E3E3E3;
+}
+.ContainerMain .header .user_box .shezhiNav li i,
+.ContainerMain .header .user_box .shezhiNav li a {
+  float: left;
+}
+.ContainerMain .header .user_box .shezhiNav li i {
+  font-size: 0.5rem;
+  margin: 0 0.3rem 0 0.4rem;
+  color: black;
+}
+.ContainerMain .header .user_box .shezhiNav li a {
+  font-size: 0.3rem;
+  color: #333;
+}
+.ContainerMain .header .user_box .shezhiNav li:last-child {
+  margin-bottom: 0.1rem;
+}
+.ContainerMain .header .user_box:hover {
+  background: #336ca6;
+}
+.ContainerMain .header .user_box:hover .span_icon_pc i {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  display: inline-block;
+}
+.ContainerMain .header .system_out {
+  cursor: pointer;
+  float: right;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  padding: 0.4rem;
+  font-size: 0.35rem;
+  color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ContainerMain .header .system_out i {
+  margin-top: 0.06rem;
+  font-size: 0.5rem;
+}
+.ContainerMain .header .system_out:hover {
+  background: #336ca6;
+}
+.ContainerMain .Aside {
+  width: 1.8rem;
+  font-size: 0.4rem;
+  position: absolute;
+  top: 30%;
+  left: -1.8rem;
+  z-index: 20;
+}
+.ContainerMain .Aside.aside_active {
+  left: 0;
+}
+.ContainerMain .Aside .aside_btn {
+  background-color: rgba(12, 106, 212, 0.6);
+  color: white;
+  height: 1rem;
+  line-height: 1rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 1.8rem;
+  margin-top: -0.5rem;
+  width: 0.5rem;
+  text-align: center;
+  font-size: 0.2rem;
+}
+.ContainerMain .Aside .aside_btn.aside_btn_active {
+  /*.rotate(180deg);*/ display: none;
+}
+.ContainerMain .Aside .aside_list {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.1rem;
+  color: white;
+  font-size: 0.3rem;
+  max-width: 1.8rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  overflow: hidden;
+}
+.ContainerMain .Aside .aside_list li {
+  margin-bottom: 0.1rem;
+}
+.ContainerMain .Aside .aside_list li:last-child {
+  margin-bottom: 0;
+}
+.ContainerMain .Con_Main {
+  padding-top: 1.6rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ContainerMain .Con_Main .MainCenter {
+  width: 100%;
+  overflow: hidden;
+}
+.ContainerMain .footer {
+  background: #f2f2f2;
+  border-top: 1px solid #8bb6cd;
+  text-align: center;
+  padding: 0.2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  color: #999;
+}
+.ContainerMain .footer p {
+  color: #444;
+  font-size: 0.3rem;
+}
+.ContainerMain .footer p span {
+  color: #67809F;
+}
+html,
+body {
+  max-width: 768px !important;
+  margin: 0 auto;
+}
+/*个人中心子页面的公共头部*/
+.header_phone {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0.15rem;
+  background: #0072CC;
+  left: 0;
+  overflow: hidden;
+  text-align: center;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  position: absolute;
+  top: 0;
+}
+.header_phone a {
+  position: absolute;
+  left: 0.2rem;
+  top: 0rem;
+}
+.header_phone a i {
+  font-size: 0.65rem;
+  color: white;
+}
+.header_phone span {
+  font-size: 0.5rem;
+  color: white;
+}
+.userCenterPh {
+  max-width: 768px;
+  margin: 0 auto;
+}
+.userCenterPh .Con_Main {
+  padding-top: 0;
+}
+.userCenterPh .MainCenter_top {
+  background-image: url(../img/bg_phone.png);
+  background-size: 100% 100%;
+  padding: 0.8rem 0.5rem 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1.5px solid white;
+}
+.userCenterPh .MainCenter_top dt {
+  text-align: center;
+}
+.userCenterPh .MainCenter_top dt .user_photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+.userCenterPh .MainCenter_top dd {
+  width: 52%;
+  padding-left: 0.45rem;
+  font-size: 0.45rem;
+  margin: 0 auto;
+  color: white;
+  margin-top: 0.2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} /*dd:nth-of-type(1){ color: #00abd8;}
+        dd:nth-of-type(2){ color: #f2572d;}*/
+.userCenterPh .MainCenter_bottom {
+  padding: 0.15rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh .MainCenter_bottom li {
+  padding: 0.2rem 0.15rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.userCenterPh .MainCenter_bottom li i {
+  font-size: 0.6rem;
+  color: black;
+}
+.userCenterPh .MainCenter_bottom li a {
+  overflow: hidden;
+  padding: 0.12rem 0;
+  display: inline-block;
+  color: black;
+  font-size: 0.45rem;
+  border-bottom: 1px solid #E2E2E2;
+  width: 90%;
+  float: right;
+}
+.userCenterPh .MainCenter_bottom li a i {
+  color: #777;
+  float: right;
+  font-size: 0.4rem;
+}
+.userCenterPh .MainCenter_bottom li a em {
+  color: #777;
+  float: right;
+  font-style: normal;
+  font-size: 0.45rem;
+}
+.userCenterPh .MainCenter_bottom li:nth-of-type(1) .iColor {
+  color: #f2572d;
+}
+.userCenterPh .MainCenter_bottom li:nth-of-type(2) .iColor {
+  color: #0092c7;
+}
+.userCenterPh .MainCenter_bottom li:nth-of-type(3) .iColor {
+  color: #efc028;
+}
+.userCenterPh .MainCenter_bottom li:nth-of-type(4) .iColor {
+  color: red;
+}
+.userCenterPh .MainCenter_bottom li:nth-of-type(5) .iColor {
+  color: #008972;
+}
+.userCenterPh_info .Con_Main {
+  padding-top: 1.21rem;
+  background: url(../img/bg_photo.jpg);
+  background-size: 100% 100%;
+}
+.userCenterPh_info .user_info_list {
+  padding: 0.15rem;
+}
+.userCenterPh_info .user_info_list li {
+  padding: 0.2rem 0.15rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.userCenterPh_info .user_info_list li i {
+  font-size: 0.63rem;
+  color: black;
+}
+.userCenterPh_info .user_info_list li a {
+  overflow: hidden;
+  padding: 0.12rem 0;
+  display: inline-block;
+  color: black;
+  font-size: 0.45rem;
+  border-bottom: 1px dotted #E2E2E2;
+  width: 90%;
+  float: right;
+}
+.userCenterPh_info .user_info_list li a i {
+  color: #777;
+  float: right;
+  font-size: 0.4rem;
+}
+.userCenterPh_info .user_info_list li:nth-of-type(1) .iColor {
+  color: #f2572d;
+}
+.userCenterPh_info .user_info_list li:nth-of-type(2) .iColor {
+  color: #0092c7;
+}
+.userCenterPh_info .user_info_list li:nth-of-type(3) .iColor {
+  color: #efc028;
+}
+.userCenterPh_info .user_info_list li:nth-of-type(4) .iColor {
+  color: #2996E5;
+}
+.userCenterPh_info .user_info_list li:nth-of-type(5) .iColor {
+  color: #29E537;
+}
+.userCenterPh_info_photo .Con_Main {
+  padding-top: 1.21rem;
+  background: url(../img/bg_photo.jpg);
+  background-size: 100% 100%;
+}
+.userCenterPh_info_photo .photo_set {
+  width: 100%;
+  height: 100%;
+}
+.userCenterPh_info_photo .photo_set p {
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.userCenterPh_info_photo .photo_set p .userPhoto {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.userCenterPh_info_photo .photo_set .set_Btn {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+.userCenterPh_info_photo .photo_set .set_Btn button {
+  color: white;
+  padding: 0.2rem 0.3rem;
+  outline: none;
+  border: 0;
+}
+.userCenterPh_info_photo .photo_set .set_Btn button:nth-of-type(1) {
+  background: #0092C7;
+  margin-right: 0.3rem;
+}
+.userCenterPh_info_photo .photo_set .set_Btn button:nth-of-type(2) {
+  background: #31B0D5;
+}
+.userCenterPh_info_photo .photo_set .system_photo {
+  width: 96%;
+  padding: 0.09rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.5rem auto 0;
+  overflow: hidden;
+  border: 2px solid white;
+}
+.userCenterPh_info_photo .photo_set .system_photo li {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  padding: 0.18rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh_info_photo .photo_set .system_photo li img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1.5px solid white;
+}
+/*个人基本信息*/
+/*修改密码页面*/
+.userCenterPh_info_mes .Con_Main,
+.userCenterPh_safe_pwd .Con_Main {
+  padding-top: 1.21rem;
+  background: url(../img/bg_photo.jpg);
+  background-size: 100% 100%;
+}
+.userCenterPh_info_mes .mes_set,
+.userCenterPh_safe_pwd .mes_set {
+  padding: 0 0.3rem;
+  margin-top: 0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh_info_mes .mes_set ul li,
+.userCenterPh_safe_pwd .mes_set ul li {
+  padding: 0.15rem 0;
+  overflow: hidden;
+  font-size: 0.45rem;
+}
+.userCenterPh_info_mes .mes_set ul li label:nth-of-type(1),
+.userCenterPh_safe_pwd .mes_set ul li label:nth-of-type(1) {
+  color: #222;
+  line-height: 1rem;
+  height: 1rem;
+  text-align: center;
+  float: left;
+  width: 20%;
+}
+.userCenterPh_info_mes .mes_set ul li input,
+.userCenterPh_safe_pwd .mes_set ul li input,
+.userCenterPh_info_mes .mes_set ul li .sex_radio,
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio,
+.userCenterPh_info_mes .mes_set ul li textarea,
+.userCenterPh_safe_pwd .mes_set ul li textarea {
+  height: 1rem;
+  line-height: 1rem;
+  float: left;
+  width: 79%;
+}
+.userCenterPh_info_mes .mes_set ul li input,
+.userCenterPh_safe_pwd .mes_set ul li input {
+  text-indent: 0.1rem;
+  outline: none;
+}
+.userCenterPh_info_mes .mes_set ul li .sex_radio,
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio {
+  overflow: hidden;
+}
+.userCenterPh_info_mes .mes_set ul li .sex_radio input,
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio input {
+  width: auto;
+  float: none;
+}
+.userCenterPh_info_mes .mes_set ul li .sex_radio em,
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio em {
+  display: inline-block;
+  font-style: normal;
+}
+.userCenterPh_info_mes .mes_set ul li .sex_radio input,
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio input,
+.userCenterPh_info_mes .mes_set ul li .sex_radio em,
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio em {
+  line-height: 1rem;
+  float: left;
+  height: 1rem;
+}
+.userCenterPh_info_mes .mes_set ul li .sex_radio input:nth-of-type(1),
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio input:nth-of-type(1) {
+  margin-left: 0.4rem;
+}
+.userCenterPh_info_mes .mes_set ul li .sex_radio em:nth-of-type(1),
+.userCenterPh_safe_pwd .mes_set ul li .sex_radio em:nth-of-type(1) {
+  margin-right: 0.4rem;
+}
+.userCenterPh_info_mes .mes_set ul li textarea,
+.userCenterPh_safe_pwd .mes_set ul li textarea {
+  min-height: 1.5rem;
+  outline: none;
+}
+.userCenterPh_info_mes .mes_set ul li button,
+.userCenterPh_safe_pwd .mes_set ul li button {
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.15rem 0.4rem;
+}
+.userCenterPh_info_mes .mes_set ul li button:nth-of-type(1),
+.userCenterPh_safe_pwd .mes_set ul li button:nth-of-type(1) {
+  margin-left: 20%;
+  background: #008972;
+}
+.userCenterPh_info_mes .mes_set ul li button:nth-of-type(2),
+.userCenterPh_safe_pwd .mes_set ul li button:nth-of-type(2) {
+  margin-left: 0.2rem;
+  background: #5BC0DE;
+}
+.userCenterPh_info_mes .mes_set ul li:last-child,
+.userCenterPh_safe_pwd .mes_set ul li:last-child {
+  padding-top: 0.5rem;
+  border-top: 1px solid #E2E2E2;
+  margin-top: 0.5rem;
+}
+.userCenterPh_safe_pwd .mes_set ul li label:nth-of-type(1) {
+  width: 25%;
+}
+.userCenterPh_safe_pwd .mes_set ul li input {
+  width: 75%;
+}
+.userCenterPh_safe_pwd .mes_set ul li button:nth-of-type(1) {
+  width: 80%;
+  padding: 0.25rem 0;
+  margin-left: 0;
+}
+.userCenterPh_safe_pwd .mes_set ul li:last-child {
+  text-align: center;
+  border-top: 0;
+}
+/*教材版本信息*/
+/*新增或修改教材版本信息*/
+/*第三方绑定*/
+/*登录日志*/
+/*管理授权*/
+.userCenterPh_info_bookVs .Con_Main,
+.userCenterPh_safe_otherID .Con_Main,
+.userCenterPh_safe_loginrecord .Con_Main,
+.userCenterPh_safe_impower .Con_Main {
+  padding-top: 1.21rem;
+  background: url(../img/bg_photo.jpg);
+  background-size: 100% 100%;
+}
+.userCenterPh_info_bookVs .MainCenter,
+.userCenterPh_safe_otherID .MainCenter,
+.userCenterPh_safe_loginrecord .MainCenter,
+.userCenterPh_safe_impower .MainCenter {
+  padding: 0.2rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh_info_bookVs .add_Box,
+.userCenterPh_safe_otherID .add_Box,
+.userCenterPh_safe_loginrecord .add_Box,
+.userCenterPh_safe_impower .add_Box {
+  overflow: hidden;
+  margin: 0.2rem 0;
+}
+.userCenterPh_info_bookVs .add_Box h4,
+.userCenterPh_safe_otherID .add_Box h4,
+.userCenterPh_safe_loginrecord .add_Box h4,
+.userCenterPh_safe_impower .add_Box h4,
+.userCenterPh_info_bookVs .add_Box a,
+.userCenterPh_safe_otherID .add_Box a,
+.userCenterPh_safe_loginrecord .add_Box a,
+.userCenterPh_safe_impower .add_Box a {
+  display: inline-block;
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+.userCenterPh_info_bookVs .add_Box a,
+.userCenterPh_safe_otherID .add_Box a,
+.userCenterPh_safe_loginrecord .add_Box a,
+.userCenterPh_safe_impower .add_Box a {
+  float: right;
+  background: #24a560;
+  outline: none;
+  color: white;
+  border: 0;
+  padding: 0rem 0.3rem;
+  font-size: 0.45rem;
+}
+.userCenterPh_info_bookVs .add_Box a i,
+.userCenterPh_safe_otherID .add_Box a i,
+.userCenterPh_safe_loginrecord .add_Box a i,
+.userCenterPh_safe_impower .add_Box a i {
+  font-size: 0.4rem;
+  margin-left: 0.2rem;
+}
+.userCenterPh_info_bookVs .add_Box h4,
+.userCenterPh_safe_otherID .add_Box h4,
+.userCenterPh_safe_loginrecord .add_Box h4,
+.userCenterPh_safe_impower .add_Box h4 {
+  margin-left: 0.15rem;
+  font-weight: bold;
+  float: left;
+  font-size: 0.48rem;
+}
+.userCenterPh_info_bookVs .book_info_list,
+.userCenterPh_safe_otherID .book_info_list,
+.userCenterPh_safe_loginrecord .book_info_list,
+.userCenterPh_safe_impower .book_info_list {
+  /*.box-shadow-round; background: #ffffff;*/ border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border: 2px solid white;
+}
+.userCenterPh_info_bookVs .book_info_list,
+.userCenterPh_safe_otherID .book_info_list,
+.userCenterPh_safe_loginrecord .book_info_list,
+.userCenterPh_safe_impower .book_info_list,
+.userCenterPh_info_bookVs .book_info_add,
+.userCenterPh_safe_otherID .book_info_add,
+.userCenterPh_safe_loginrecord .book_info_add,
+.userCenterPh_safe_impower .book_info_add {
+  overflow: hidden;
+  padding: 0.3rem;
+  margin-top: 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh_info_bookVs .book_info_list dd,
+.userCenterPh_safe_otherID .book_info_list dd,
+.userCenterPh_safe_loginrecord .book_info_list dd,
+.userCenterPh_safe_impower .book_info_list dd,
+.userCenterPh_info_bookVs .book_info_add dd,
+.userCenterPh_safe_otherID .book_info_add dd,
+.userCenterPh_safe_loginrecord .book_info_add dd,
+.userCenterPh_safe_impower .book_info_add dd {
+  font-size: 0.45rem;
+  color: black;
+  overflow: hidden;
+  margin-bottom: 0.12rem;
+}
+.userCenterPh_info_bookVs .book_info_list dd b,
+.userCenterPh_safe_otherID .book_info_list dd b,
+.userCenterPh_safe_loginrecord .book_info_list dd b,
+.userCenterPh_safe_impower .book_info_list dd b,
+.userCenterPh_info_bookVs .book_info_add dd b,
+.userCenterPh_safe_otherID .book_info_add dd b,
+.userCenterPh_safe_loginrecord .book_info_add dd b,
+.userCenterPh_safe_impower .book_info_add dd b,
+.userCenterPh_info_bookVs .book_info_list dd span,
+.userCenterPh_safe_otherID .book_info_list dd span,
+.userCenterPh_safe_loginrecord .book_info_list dd span,
+.userCenterPh_safe_impower .book_info_list dd span,
+.userCenterPh_info_bookVs .book_info_add dd span,
+.userCenterPh_safe_otherID .book_info_add dd span,
+.userCenterPh_safe_loginrecord .book_info_add dd span,
+.userCenterPh_safe_impower .book_info_add dd span {
+  display: inline-block;
+}
+.userCenterPh_info_bookVs .book_info_list dd b,
+.userCenterPh_safe_otherID .book_info_list dd b,
+.userCenterPh_safe_loginrecord .book_info_list dd b,
+.userCenterPh_safe_impower .book_info_list dd b,
+.userCenterPh_info_bookVs .book_info_add dd b,
+.userCenterPh_safe_otherID .book_info_add dd b,
+.userCenterPh_safe_loginrecord .book_info_add dd b,
+.userCenterPh_safe_impower .book_info_add dd b {
+  width: 30%;
+  font-weight: normal;
+  float: left;
+  text-align: left;
+}
+.userCenterPh_info_bookVs .book_info_list dd span,
+.userCenterPh_safe_otherID .book_info_list dd span,
+.userCenterPh_safe_loginrecord .book_info_list dd span,
+.userCenterPh_safe_impower .book_info_list dd span,
+.userCenterPh_info_bookVs .book_info_add dd span,
+.userCenterPh_safe_otherID .book_info_add dd span,
+.userCenterPh_safe_loginrecord .book_info_add dd span,
+.userCenterPh_safe_impower .book_info_add dd span {
+  color: #333;
+  width: 70%;
+  float: right;
+}
+.userCenterPh_info_bookVs .book_info_list dd span input,
+.userCenterPh_safe_otherID .book_info_list dd span input,
+.userCenterPh_safe_loginrecord .book_info_list dd span input,
+.userCenterPh_safe_impower .book_info_list dd span input,
+.userCenterPh_info_bookVs .book_info_add dd span input,
+.userCenterPh_safe_otherID .book_info_add dd span input,
+.userCenterPh_safe_loginrecord .book_info_add dd span input,
+.userCenterPh_safe_impower .book_info_add dd span input {
+  text-indent: 0.15rem;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+.userCenterPh_info_bookVs .book_info_list dd a,
+.userCenterPh_safe_otherID .book_info_list dd a,
+.userCenterPh_safe_loginrecord .book_info_list dd a,
+.userCenterPh_safe_impower .book_info_list dd a,
+.userCenterPh_info_bookVs .book_info_add dd a,
+.userCenterPh_safe_otherID .book_info_add dd a,
+.userCenterPh_safe_loginrecord .book_info_add dd a,
+.userCenterPh_safe_impower .book_info_add dd a,
+.userCenterPh_info_bookVs .book_info_list dd button,
+.userCenterPh_safe_otherID .book_info_list dd button,
+.userCenterPh_safe_loginrecord .book_info_list dd button,
+.userCenterPh_safe_impower .book_info_list dd button,
+.userCenterPh_info_bookVs .book_info_add dd button,
+.userCenterPh_safe_otherID .book_info_add dd button,
+.userCenterPh_safe_loginrecord .book_info_add dd button,
+.userCenterPh_safe_impower .book_info_add dd button {
+  width: 1.6rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  font-size: 0.4rem;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  outline: none;
+  border: 0;
+}
+.userCenterPh_info_bookVs .book_info_list dd a,
+.userCenterPh_safe_otherID .book_info_list dd a,
+.userCenterPh_safe_loginrecord .book_info_list dd a,
+.userCenterPh_safe_impower .book_info_list dd a,
+.userCenterPh_info_bookVs .book_info_add dd a,
+.userCenterPh_safe_otherID .book_info_add dd a,
+.userCenterPh_safe_loginrecord .book_info_add dd a,
+.userCenterPh_safe_impower .book_info_add dd a {
+  width: auto;
+  padding: 0 0.3rem;
+}
+.userCenterPh_info_bookVs .book_info_list dd a:first-child,
+.userCenterPh_safe_otherID .book_info_list dd a:first-child,
+.userCenterPh_safe_loginrecord .book_info_list dd a:first-child,
+.userCenterPh_safe_impower .book_info_list dd a:first-child,
+.userCenterPh_info_bookVs .book_info_add dd a:first-child,
+.userCenterPh_safe_otherID .book_info_add dd a:first-child,
+.userCenterPh_safe_loginrecord .book_info_add dd a:first-child,
+.userCenterPh_safe_impower .book_info_add dd a:first-child,
+.userCenterPh_info_bookVs .book_info_list dd button:first-child,
+.userCenterPh_safe_otherID .book_info_list dd button:first-child,
+.userCenterPh_safe_loginrecord .book_info_list dd button:first-child,
+.userCenterPh_safe_impower .book_info_list dd button:first-child,
+.userCenterPh_info_bookVs .book_info_add dd button:first-child,
+.userCenterPh_safe_otherID .book_info_add dd button:first-child,
+.userCenterPh_safe_loginrecord .book_info_add dd button:first-child,
+.userCenterPh_safe_impower .book_info_add dd button:first-child {
+  background: #337ab7;
+}
+.userCenterPh_info_bookVs .book_info_list dd a:last-child,
+.userCenterPh_safe_otherID .book_info_list dd a:last-child,
+.userCenterPh_safe_loginrecord .book_info_list dd a:last-child,
+.userCenterPh_safe_impower .book_info_list dd a:last-child,
+.userCenterPh_info_bookVs .book_info_add dd a:last-child,
+.userCenterPh_safe_otherID .book_info_add dd a:last-child,
+.userCenterPh_safe_loginrecord .book_info_add dd a:last-child,
+.userCenterPh_safe_impower .book_info_add dd a:last-child,
+.userCenterPh_info_bookVs .book_info_list dd button:last-child,
+.userCenterPh_safe_otherID .book_info_list dd button:last-child,
+.userCenterPh_safe_loginrecord .book_info_list dd button:last-child,
+.userCenterPh_safe_impower .book_info_list dd button:last-child,
+.userCenterPh_info_bookVs .book_info_add dd button:last-child,
+.userCenterPh_safe_otherID .book_info_add dd button:last-child,
+.userCenterPh_safe_loginrecord .book_info_add dd button:last-child,
+.userCenterPh_safe_impower .book_info_add dd button:last-child {
+  background: #5bc0de;
+  margin-left: 0.2rem;
+}
+.userCenterPh_info_bookVs .book_info_list dd:last-child,
+.userCenterPh_safe_otherID .book_info_list dd:last-child,
+.userCenterPh_safe_loginrecord .book_info_list dd:last-child,
+.userCenterPh_safe_impower .book_info_list dd:last-child,
+.userCenterPh_info_bookVs .book_info_add dd:last-child,
+.userCenterPh_safe_otherID .book_info_add dd:last-child,
+.userCenterPh_safe_loginrecord .book_info_add dd:last-child,
+.userCenterPh_safe_impower .book_info_add dd:last-child {
+  padding-top: 0.2rem;
+  margin-top: 0.2rem;
+  border-top: 1px solid #E2E2E2;
+  margin-bottom: 0;
+  width: 100%;
+}
+.userCenterPh_info_bookVs .book_info_add dd,
+.userCenterPh_safe_otherID .book_info_add dd,
+.userCenterPh_safe_loginrecord .book_info_add dd,
+.userCenterPh_safe_impower .book_info_add dd {
+  margin-bottom: 0.35rem;
+}
+.userCenterPh_info_bookVs .book_info_add dd b,
+.userCenterPh_safe_otherID .book_info_add dd b,
+.userCenterPh_safe_loginrecord .book_info_add dd b,
+.userCenterPh_safe_impower .book_info_add dd b {
+  font-size: 0.48rem;
+}
+.userCenterPh_info_bookVs .book_info_add dd b,
+.userCenterPh_safe_otherID .book_info_add dd b,
+.userCenterPh_safe_loginrecord .book_info_add dd b,
+.userCenterPh_safe_impower .book_info_add dd b,
+.userCenterPh_info_bookVs .book_info_add dd span,
+.userCenterPh_safe_otherID .book_info_add dd span,
+.userCenterPh_safe_loginrecord .book_info_add dd span,
+.userCenterPh_safe_impower .book_info_add dd span {
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+.userCenterPh_info_bookVs .book_info_add dd span,
+.userCenterPh_safe_otherID .book_info_add dd span,
+.userCenterPh_safe_loginrecord .book_info_add dd span,
+.userCenterPh_safe_impower .book_info_add dd span {
+  border: 1px solid #999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh_info_bookVs .book_info_add dd span input,
+.userCenterPh_safe_otherID .book_info_add dd span input,
+.userCenterPh_safe_loginrecord .book_info_add dd span input,
+.userCenterPh_safe_impower .book_info_add dd span input {
+  border: none;
+  color: #333;
+  background: rgba(255, 255, 255, 0);
+}
+.userCenterPh_info_bookVs .book_info_add dd:last-child,
+.userCenterPh_safe_otherID .book_info_add dd:last-child,
+.userCenterPh_safe_loginrecord .book_info_add dd:last-child,
+.userCenterPh_safe_impower .book_info_add dd:last-child {
+  text-align: center;
+  padding-top: 0.4rem;
+  margin-top: 0.4rem;
+}
+.userCenterPh_info_bookVs .book_info_add dd:last-child button,
+.userCenterPh_safe_otherID .book_info_add dd:last-child button,
+.userCenterPh_safe_loginrecord .book_info_add dd:last-child button,
+.userCenterPh_safe_impower .book_info_add dd:last-child button {
+  width: 1.8rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+/*登录日志*/
+.userCenterPh_safe_loginrecord .book_info_list dd:last-child {
+  padding-top: 0rem;
+  margin-top: 0rem;
+  border-top: none;
+  margin-bottom: 0;
+  width: 100%;
+}
+/*设置密保页*/
+/*清除密保页*/
+.userCenterPh_safe_pwdProtect .Con_Main,
+.userCenterPh_safe_pwdProtectReset .Con_Main {
+  padding-top: 1.21rem;
+  background: url(../img/bg_photo.jpg);
+  background-size: 100% 100%;
+}
+.userCenterPh_safe_pwdProtect .question_pwd,
+.userCenterPh_safe_pwdProtectReset .question_pwd {
+  padding: 0 0.3rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box {
+  padding-top: 0.5rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list {
+  border-bottom: 1px solid white;
+  padding-top: 0.3rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dt,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dt,
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dd,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dd {
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dt label,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dt label,
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dd label,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dd label,
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dt input,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dt input,
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dd input,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dd input {
+  font-weight: normal;
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dt label,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dt label,
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dd label,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dd label {
+  font-size: 0.48rem;
+  float: left;
+  width: 20%;
+  color: black;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dt input,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dt input,
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list dd input,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dd input {
+  font-size: 0.44rem;
+  float: right;
+  width: 80%;
+  color: #333;
+  outline: none;
+  text-indent: 0.15rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .question_box .question_list:last-child,
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list:last-child {
+  border-bottom: 0;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .sureBtn,
+.userCenterPh_safe_pwdProtectReset .question_pwd .sureBtn,
+.userCenterPh_safe_pwdProtect .question_pwd .addQuestionBtn,
+.userCenterPh_safe_pwdProtectReset .question_pwd .addQuestionBtn {
+  display: inline-block;
+  font-size: 0.45rem;
+  outline: none;
+  border: none;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .addQuestionBtn,
+.userCenterPh_safe_pwdProtectReset .question_pwd .addQuestionBtn {
+  color: #0072CC;
+  float: left;
+  display: inline-block;
+  width: 3rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .addQuestionBtn i,
+.userCenterPh_safe_pwdProtectReset .question_pwd .addQuestionBtn i {
+  margin-left: 0.15rem;
+  font-size: 0.45rem;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .sureBtn,
+.userCenterPh_safe_pwdProtectReset .question_pwd .sureBtn {
+  width: 80%;
+  height: 1rem;
+  line-height: 1rem;
+  color: white;
+  background: #008972;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .span_warp,
+.userCenterPh_safe_pwdProtectReset .question_pwd .span_warp {
+  margin-top: 0.2rem;
+  overflow: hidden;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .span_warp .tips,
+.userCenterPh_safe_pwdProtectReset .question_pwd .span_warp .tips {
+  display: none;
+  font-size: 0.4rem;
+  color: red;
+  float: right;
+  font-style: normal;
+}
+.userCenterPh_safe_pwdProtect .question_pwd .button_warp,
+.userCenterPh_safe_pwdProtectReset .question_pwd .button_warp {
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.userCenterPh_safe_pwdProtect .pwdProtect_tips,
+.userCenterPh_safe_pwdProtectReset .pwdProtect_tips {
+  padding: 0.8rem 0.3rem 0.3rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.userCenterPh_safe_pwdProtect .pwdProtect_tips ul,
+.userCenterPh_safe_pwdProtectReset .pwdProtect_tips ul {
+  border: 2px solid #FFFFFF;
+  padding: 0.2rem;
+}
+.userCenterPh_safe_pwdProtect .pwdProtect_tips ul li,
+.userCenterPh_safe_pwdProtectReset .pwdProtect_tips ul li {
+  list-style: circle;
+  list-style-position: inside;
+  margin-top: 0.2rem;
+}
+.userCenterPh_safe_pwdProtect .pwdProtect_tips ul li p,
+.userCenterPh_safe_pwdProtectReset .pwdProtect_tips ul li p {
+  display: inline-block;
+  color: #000;
+}
+.userCenterPh_safe_pwdProtect .pwdProtect_tips ul li p:last-child,
+.userCenterPh_safe_pwdProtectReset .pwdProtect_tips ul li p:last-child {
+  color: #333;
+}
+/*清除密保页*/
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list dt input {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.userCenterPh_safe_pwdProtectReset .question_pwd .question_box .question_list:first-child {
+  border-top: 1px solid white;
+}
+.userCenterPh_safe_pwdProtectReset .question_pwd .cleartips {
+  color: #5bc0de;
+  margin-top: 0.3rem;
+  font-size: 0.4rem;
+  text-indent: 0.6rem;
+}
+/*# sourceMappingURL=userCenterPh.css.map */

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="../../static/comm/plugins/ionic/css/ionic.css" rel="stylesheet">
+    <link href="../../static/custom/mySource/css/style.css" rel="stylesheet">
+    <script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+    <script src="../../static/comm/plugins/ionic/js/ionic.bundle.js"></script>
+    <script src="../../static/custom/mySource/js/app.js"></script>
+    <script src="../../static/custom/mySource/js/controllers.js"></script>
+    <script src="../../static/custom/mySource/js/services.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-nav-bar ng-controller="headCtrl">
+      <ion-nav-back-button class="button-clear">
+        <button class="button icon icon-return" ng-click="goback()"><img src="../../static/custom/mySource/img/return.svg"> 返回</button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

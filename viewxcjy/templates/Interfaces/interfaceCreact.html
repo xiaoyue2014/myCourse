@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/Interfaces/css/Interfaces.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox interfaceCreact">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">接口管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">创建接口</span>
+								</div>
+								<div class="contentCenter">
+									<!--接口基本信息-->
+									<div class="creactInfoList">
+										<h4 class="creactInfoList_tp">接口基本信息</h4>
+										<div class="creactInfoList_bt">
+											<ul class="baseInfo">
+												<li><label>接口名称：</label><div class="_li_rt"><input type="text" /></div></li>
+												<li class="li_diffrent"><label>版本号：</label><div class="_li_rt"><input type="text" /></div></li>
+												<li>
+													<label>请求方式：</label>
+													<div class="_li_rt">
+														<div class="selectcont">
+															<select>
+																<option value="">get</option>
+																<option value="">post</option>
+															</select>
+														</div>
+													</div>
+												</li>
+												<li class="li_diffrent">
+													<label>Rquest Content Type：</label>
+													<div class="_li_rt">
+														<div class="selectcont">
+															<select>
+																<option value="">json</option>
+																<option value="">application</option>
+															</select>
+														</div>
+													</div>
+												</li>
+												<li><label>接口地址：</label><div class="_li_rt"><input type="text" /></div></li>
+												<li class="last_list">
+													<label>接口说明：</label>
+													<div class="_li_rt">
+														<textarea></textarea>
+														<div class="uploadImg">
+															<a class="unloadBtn" href="javascript:;"></a>
+															<ul class="loadedImg">
+																<li><img src="../../static/custom/Interfaces/img/bigjf (1).jpg"/></li>
+																<li><img src="../../static/custom/Interfaces/img/bigjf (2).jpg"/></li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!--Headers参数添加-->
+									<div class="creactInfoList HeadersInfo">
+										<h4 class="creactInfoList_tp">Headers参数添加</h4>
+										<div class="creactInfoList_bt">
+											<div class="lists_nav">
+												<span>参数名</span><span>参数说明</span>
+											</div>
+											<ul class="Info_ul">
+												<li class="info_li">
+													<input type="text" placeholder="请填写参数名" />
+													<input type="text" placeholder="请填写参数" />
+													<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!--接口参数添加-->
+									<div class="creactInfoList portParameter">
+										<h4 class="creactInfoList_tp">接口参数添加</h4>
+										<div class="creactInfoList_bt">
+											<div class="lists_nav">
+												<span>参数名</span><span>参数说明</span><span>Parameter Type</span>
+												<span>是否必须</span><span>Data Type</span>
+											</div>
+											<ul class="Info_ul">
+												<li class="info_li">
+													<input type="text" placeholder="请填写参数名" />
+													<input type="text" placeholder="请填写参数值" />
+													<input type="text" placeholder="请填写参数值" />
+													<div class="list_select">
+														<div class="select_box">
+															<select>
+																<option value="">是</option>
+																<option value="">否</option>
+															</select>
+														</div>
+													</div>
+													<div class="list_select">
+														<div class="select_box">
+															<select>
+																<option value="">自定义</option>
+																<option value="">string</option>
+															</select>
+														</div>
+														<p class="select_result">查询公开课Parame查询公开课Parame查询公开课Parame</p>
+													</div>
+													<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+												</li>
+												<li class="info_li">
+													<input type="text" placeholder="请填写参数名" />
+													<input type="text" placeholder="请填写参数值" />
+													<input type="text" placeholder="请填写参数值" />
+													<div class="list_select">
+														<div class="select_box">
+															<select>
+																<option value="">是</option>
+																<option value="">否</option>
+															</select>
+														</div>
+													</div>
+													<div class="list_select">
+														<!--下面行内样式仅供参数，使用时去掉-->
+														<div class="select_box" style="display: none;">
+															<select>
+																<option value="">自定义</option>
+																<option value="">string</option>
+															</select>
+														</div>
+														<p class="select_result" style="display: block;">查询公开课Parame查询公开课Parame查询公开课Parame</p>
+													</div>
+													<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+													
+												</li>
+											</ul>
+											
+											<!--<div class="Info_ul_child">
+												<span class="Info_ul_child_title">查询公开课Parame</span>
+												<div class="lists_nav">
+													<span>参数名</span><span>参数说明</span>
+													<span>是否必须</span><span>Data Type</span>
+												</div>
+												<ul class="Info_ul_child_list">
+													<li class="info_li">
+														<input type="text" placeholder="请填写参数名" />
+														<input type="text" placeholder="请填写参数值" />
+														<div class="list_select">
+															<div class="select_box">
+																<select>
+																	<option value="">是</option>
+																	<option value="">否</option>
+																</select>
+															</div>
+														</div>
+														<div class="list_select">
+															<div class="select_box">
+																<select>
+																	<option value="">查询公开课Parame</option>
+																	<option value="">string</option>
+																</select>
+															</div>
+														</div>
+														<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+													</li>
+												</ul>
+											</div>-->
+											
+										</div>
+									</div>
+									<!--返回参数添加-->
+									<div class="creactInfoList backParameter">
+										<h4 class="creactInfoList_tp">返回参数添加</h4>
+										<div class="creactInfoList_bt">
+											<div class="lists_nav">
+												<span>参数名</span><span>参数说明</span>
+												<span>Parameter Type</span><span>Data Type</span>
+											</div>
+											<ul class="Info_ul">
+												<li class="info_li">
+													<input type="text" placeholder="请填写参数名" />
+													<input type="text" placeholder="请填写参数值" />
+													<input type="text" placeholder="请填写参数值" />
+													<div class="list_select">
+														<div class="select_box">
+															<select>
+																<option value="">自定义</option>
+																<option value="">string</option>
+															</select>
+														</div>
+														<p class="select_result">查询公开课Parame查询公开课Parame查询公开课Parame</p>
+													</div>
+													<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+												</li>
+												<li class="info_li">
+													<input type="text" placeholder="请填写参数名" />
+													<input type="text" placeholder="请填写参数值" />
+													<input type="text" placeholder="请填写参数值" />
+													<div class="list_select">
+														<div class="select_box" style="display: none;">
+															<select>
+																<option value="">自定义</option>
+																<option value="">string</option>
+															</select>
+														</div>
+														<p class="select_result" style="display: block;">查询公开课Parame查询公开课Parame查询公开课Parame</p>
+													</div>
+													<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+												</li>
+											</ul>
+											
+											<!--<div class="Info_ul_child">
+												<span class="Info_ul_child_title">查询公开课Parame</span>
+												<div class="lists_nav">
+													<span>参数名</span><span>参数说明</span>
+													<span>Parameter Type</span><span>Data Type</span>
+												</div>
+												<ul class="Info_ul_child_list">
+													<li class="info_li">
+														<input type="text" placeholder="请填写参数名" />
+														<input type="text" placeholder="请填写参数值" />
+														<input type="text" placeholder="请填写参数值" />
+														<div class="list_select">
+															<div class="select_box">
+																<select>
+																	<option value="">查询公开课Parame</option>
+																	<option value="">string</option>
+																</select>
+															</div>
+														</div>
+														<i class="addParamsBtn"></i><i class='removeParamsBtn'></i><i class="jt_top"></i><i class="jt_bottom"></i><span class="tips"></span>
+													</li>
+												</ul>
+											</div>-->
+										</div>
+									</div>
+									
+									<div class="button_box">
+										<button type="button">保存</button>
+										<button type="button">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../static/comm/js/modelCommon.js"></script>
+        <script src="../../static/custom/Interfaces/js/InterfacesCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

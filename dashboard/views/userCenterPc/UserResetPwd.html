@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育-帐号设置</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenter_Pc.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain UserResetPwd">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">慕容欣欣</span>
+							<img class="user_photo" src="img/touxaing.jpg"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<div class="main_nav_box">
+				<ul class="main_nav">
+					<li><a href="javascript:;">首页</a></li>
+					<li><a href="javascript:;">密保工具</a></li>
+					<li class="activeli"><a href="javascript:;">密码管理</a></li>
+					<li><a href="javascript:;">帐号关联</a></li>
+				</ul>
+			</div>
+			
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="small_nav">
+						<p><span>密码管理</span></p>
+						<p><i class="iconfont icon-xiangyou"></i><span class="activesp">修改密码</span></p>
+					</div>
+					<div class="ResetPwd_box">
+						<p class="safety_tips"><i class="iconfont icon-xiaolian"></i><span>经检测你的密码处于安全状态，请放心操作！</span></p>
+						<form class="resetpwd_from" id="resetpwd_from">
+							<!--邮箱这一排为测试-->
+							<div class="inputDiv">
+								<span>邮箱：</span>
+								<p class="validatorTipsBox"><input type="text" name="Email" id="Emial" placeholder="请输入邮箱地址" /></p>
+							</div>
+							<div class="inputDiv">
+								<span>新密码：</span>
+								<p class="validatorTipsBox"><input type="text" name="Password" id="Password" placeholder="请输入新密码" /></p>
+							</div>
+							<div class="inputDiv">
+								<span>确认新密码：</span>
+								<p class="validatorTipsBox"><input type="text" name="confirm_password" id="confirm_password" placeholder="请输入新密码" /></p>
+							</div>
+							<div class="button_box">
+								<button class="button_sure" type="submit">确定</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			    <!--底部-->
+				<div class="footer">
+					<p>Copyright © 2017 Enable-ETS Corporation. All Rights Reserved.&emsp;&emsp;&emsp;建议浏览器：IE9+、Google Chrome、Firefox</p>
+			    </div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/jqueryValidate/jquery.validate.js"></script>
+		<script src="js/CommonUserCenter_Pc.js"></script>
+		<script>
+			$(document).ready(function(){
+			  	// 在这里写你的代码...
+				$("#resetpwd_from").validate({
+				        rules: {
+						   Email: {
+						    required: true,
+						    email: true,
+						    maxlength:20
+						   },
+						   Password: {
+						    required: true,
+						    minlength: 5
+						   },
+						   confirm_password: {
+						    required: true,
+						    minlength: 5,
+						    equalTo: "#Password"
+						   }
+					   },
+				        messages: {
+						   Email: {
+						    required: "请输入Email地址",
+						    email: "请输入正确的email地址"
+						   },
+						   Password: {
+						    required: "请输入密码",
+						    minlength: "密码不能小于{0}个字 符"
+						   },
+						   confirm_password: {
+						    required: "请输入确认密码",
+						    minlength: "确认密码不能小于5个字符",
+						    equalTo: "两次输入密码不一致不一致"
+						   }
+					   },
+					   errorElement:'label',
+					   errorClass:'errorTips_bt', //errorTips_bt
+				       errorPlacement: function(error, element) {
+							if (element.is(":radio")){
+								error.appendTo(element.parent());
+							}else if (element.is(":checkbox")){
+								error.appendTo(element.parent());
+							}else{
+								//var $span=$("<span class='tipsanjiao'></span>")
+								//error.append($span);
+								error.appendTo(element.parent('.validatorTipsBox'));
+							}	
+						},
+						// specifying a submitHandler prevents the default submit, good for the demo
+						submitHandler: function() {
+							alert("submitted!");
+						},
+						// set this class to error-labels to indicate valid fields
+						success: function(error_Element) {
+							// set &nbsp; as text for IE
+							error_Element.remove();
+							//$(".tipsanjiao").hide();
+						},
+						highlight: function(element, errorClass) {
+							$(element).parent().next().find("." + errorClass).removeClass("checked");
+						}
+	    		});
+			});
+		</script>
+	</body>
+</html>

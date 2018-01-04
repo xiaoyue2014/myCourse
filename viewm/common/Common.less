@@ -1,0 +1,255 @@
+@import "index_ba.less";      
+
+.Rotate_180{ .rotate(180deg); display: inline-block;}      
+.Rotate_90{ .rotate(-90deg); display: inline-block;}
+.Rotate_45{ .rotate(45deg); display: inline-block;}  
+html,body{ .wh(100%,100%); color: white; overflow-x: hidden; font-family: "微软雅黑"; overflow-y: auto;}   
+.mouseCSS{ width: 100%; height: 100%; -webkit-overflow-scrolling: touch; overflow-y: scroll; overflow-x: hidden;}
+
+/*搭建主体框架的样式*/
+.ContainerWarp{color: black; background: white; .wh(100%,100%);
+        overflow: auto; margin: 0 auto; .Position_t_l(relative,0,0); .box-sizing;
+   /*头部部分*/     
+   .header{ width: 100%; overflow-x: hidden; height: 60px;
+              .Position_t_l(absolute,0,0); z-index: 100;
+   }
+   .ConMain{ .Position_t_l(absolute,0,0); .wh(100%,100%); z-index: 1; background: white;
+       .MainAuto{ overflow-x: hidden; overflow-y: auto; .box-sizing; padding-top: 60px; .wh(100%,100%); position: relative;
+           .MainBox{ overflow:hidden;
+               /*侧边菜单栏*/
+               .AsideMenu{.Position_t_l(absolute,60px,0); z-index: 50;
+                     width: 4.16%; float: left;
+                    .Asidecontent{}
+               }
+               /*主体部分*/
+               .MainContent{ background: white; width: 100%; padding-left: 4.16%; .box-sizing; float: right;
+                   .ContentBox{ position: relative; width: 100%;
+                        .contentNav{/*主体部分小导航栏*/}
+                        .contentCenter{/*主体部分主要内容区*/}
+                   }  
+               }
+           }
+           /*底部部分*/
+           .footer{ font-size: 0.12px; padding: 10px 0;}
+           
+       }
+   }
+}
+
+/*框架公共部分内容样式*/
+.ContainerWarp{
+    .header{ background: white; overflow: hidden; padding: 0 20px; .box-sizing;
+              border-bottom: 1px solid #e1e1e1;
+        .header_lt{ .wh(50%,60px); float: left;
+            img{ height: 32px; margin-top: 14px;}
+        }
+        .header_rt{ .wh(50%,60px); float: right; overflow: hidden;
+            .system_out{ float: right; .wh(6.6%,60px); text-align: right;
+                img,span{.wh(24px,24px); margin-top: 18px; display: inline-block;}
+                span{ background: url(../img/icon_2.png); background-size: 100% 100%;
+                  &.clickactive{ background-size: 100% 100%; background: url(../img/icon_2_click.png);}
+                }
+                span:hover{ background: url(../img/icon_2_hover.png); background-size: 100% 100%;}
+            }
+            .user_box{ float: right; .wh(21.6%,60px); position: relative; color: #696969;
+                .user_box_tp{ .wh_lh(100%,60px); overflow: hidden;
+                   img,span{ display: inline-block; float: right;}
+                   .user_photo{.wh(30px,30px); .round(50%); margin-top: 15px;}
+                   .user_name{ margin: 0 8px; font-size: 14px;}
+                   .nav_status{.wh(16px,16px); margin-top: 22px;}
+                }
+            }
+            .user_box:hover{
+                .user_name{ color: #4c9dd6;}
+                .nav_status{ .Rotate_180;}
+            }
+            .user_box_bt{ display: none; background: white; font-size: 14px; position: fixed; top: 59px; right: 3.5%;
+                       .box-shadow-round; z-index: 101; background: white; 
+                .shezhiNav{ padding: 5px 0; .box-sizing;
+                    .user_box_triangle{ position: absolute; left: 70%; bottom: 100%; .ttne(10px,white);}
+                    li{ overflow: hidden; margin-bottom: 2px; .wh_lh(120px,32px); padding-left: 20px; .box-sizing;
+                        &.activeli{ background: #e0e0e0;
+                             a{ color: white;}
+                        }
+                       img{ float: left; .wh(16px,16px); margin-right: 6px; margin-top: 8px;} 
+                       a{ text-decoration: none; float: left; font-size: 14px; color: #696969;}
+                    }
+                    li:hover{ background: #e0e0e0;
+                         a{ color: white;}
+                    } 
+                }       
+                
+            }
+        }
+    }
+    .ConMain{
+        .MainAuto{
+            .MainBox{
+                .AsideMenu{ .box-sizing;
+                    .Asidecontent{ 
+                        .Aside_show_btn{ overflow: hidden;  .box-sizing; .wh_lh(100%,40px); border-bottom: 1px solid #E1E1E1;
+                           .AsideBtn_tp{ float: left; width: 100%; text-align: center;}
+                           .AsideBtn_bt{ float: right; width: 0;}
+                           img{ .wh(16px,16px);}
+                        }
+                        .Aside_list{ padding: 10px 0; .box-sizing; 
+                            .Aside_list_li{ position: relative; z-index: 50;
+                                .list_parent{ .wh(100%,44px); overflow: hidden; display: block;
+                                    .list_icon{ float: left; .wh_lh(100%,44px); text-align: center;
+                                         &>img{ .wh(16px,16px); }
+                                         &>span{ display: inline-block; .wh(16px,16px); margin-top: 14px;
+                                             
+                                         }
+                                         .bg_1{background: url(../img/sidebar_icon/source_icon1.png) no-repeat;
+                                             background-size: 100% 100%;
+                                         }
+                                         .bg_2{background: url(../img/sidebar_icon/source_icon2.png) no-repeat;
+                                             background-size: 100% 100%;
+                                         }
+                                         .bg_3{background: url(../img/sidebar_icon/source_icon3.png) no-repeat;
+                                             background-size: 100% 100%;
+                                         }
+                                         .bg_4{background: url(../img/sidebar_icon/source_icon4.png) no-repeat;
+                                             background-size: 100% 100%;
+                                         }
+                                         .bg_5{background: url(../img/sidebar_icon/source_icon5.png) no-repeat;
+                                             background-size: 100% 100%;
+                                         }
+                                    }
+                                    .list_name_right{ float: right; font-size: 0px; .wh_lh(0%,44px); padding-right: 16px; .box-sizing; z-index: 50; overflow: hidden;
+                                        span{ color: #666;}
+                                        .triangle{ display: none; .ltne(8px,white); position: absolute; top: 50%;right: -2px; margin-top: -8px; z-index: 60;}
+                                    }
+                                }
+                                .Aside_list_child{ display: none; z-index: 50; background: white; border: 1px solid #3781c6; .box-sizing; width: 150px; overflow: hidden; .Position_t_l(absolute,0,100%);
+                                      dl{ padding-left: 10px; .box-sizing; width: 100%; padding-top: 6px; padding-bottom: 6px;
+                                          dd{ padding: 0 8px; .wh_lh(100%,30px); .box-sizing;
+                                              a{ color: #404040; font-size: 14px;}
+                                          }
+                                          dd:hover{ a{color: #3781c6;}}
+                                      }
+                                }
+                            }
+                            .Aside_list_li:hover,.activesiderLi{ /*background: #3781c6;*/background: #509be2;
+                                .list_parent{
+                                    .list_icon{
+                                        .bg_1{ background: url(../img/sidebar_icon/source_icon1_on.png) no-repeat;
+                                             background-size: 100% 100%;
+                                        }
+                                        .bg_2{ background: url(../img/sidebar_icon/source_icon2_on.png) no-repeat;
+                                             background-size: 100% 100%;
+                                        }
+                                        .bg_3{ background: url(../img/sidebar_icon/source_icon3_on.png) no-repeat;
+                                             background-size: 100% 100%;
+                                        }
+                                        .bg_4{ background: url(../img/sidebar_icon/source_icon4_on.png) no-repeat;
+                                             background-size: 100% 100%;
+                                        }
+                                        .bg_5{ background: url(../img/sidebar_icon/source_icon5_on.png) no-repeat;
+                                             background-size: 100% 100%;
+                                        }
+                                    }
+                                    .list_name_right{
+                                        span{ color: white;}
+                                        .triangle{ display: block;}
+                                    }
+                                }
+                                .Aside_list_child{ display: block;} 
+                            }
+                            .activesiderLi{background: #3781c6;
+                                .Aside_list_child{ display: none;}
+                            }
+                        }
+                    }
+                }
+                .MainContent{ 
+                    .ContentBox{  border-left: 1px solid #E1E1E1; 
+                        .contentNav{ overflow: hidden; .wh_lh(100%,40px); border-bottom: 1px solid #E1E1E1; padding: 0 10px; .box-sizing;
+                            span{ display: inline-block; float: left;}
+                            .span_1,.span_2{ margin-right: 6px; background-size: 100% 100%;}
+                            .span_1{ background: url(../img/icon_1.png) no-repeat; margin-top: 12px; .wh(16px,16px);}
+                            .span_2{ background: url(../img/arrow.png) no-repeat; background-size: 100% 100%; margin-top: 16px; .wh(5px,7px); margin-left: 8px; margin-right: 8px;}
+                            .span_text{ font-size: 14px; color: #868686;}
+                            .span_text:last-child{ color: #404040;}
+                        }
+                        .contentCenter{ width: 100%; .box-sizing;
+                            
+                        }
+                    }
+                }
+            }
+            .footer{ padding: 16px 0; .box-sizing; text-align: center; border-top: 1px solid #E1E1E1;
+                &>img{ display: inline-block; .wh(82px,24px); margin-right: 20px;}
+                &>p{ display: inline-block; color: #404040; font-size: 12px;}
+            }
+            #footer{ width: 100%; height: 100px; .box-sizing; padding-top: 30px; overflow: hidden; background: #f5f6f8;
+                .footer_lt{ float: left; width: 38%; text-align: right;height: 40px;overflow: hidden; padding-right: 13px; .box-sizing;
+                    &>a{ display: inline-block; height: 100%;
+                        &>img{ height: 100%;}
+                    }
+                }
+                .footer_rt{ float: right; width: 62%; padding-left: 13px; .box-sizing;
+                    &>p{ font-size: 12px; text-align: left; color: #666; display: block; height: 20px; line-height: 20px;}
+                }
+            }
+        }
+    }
+}
+
+
+.SourceAmend_dialog{
+    .contentNav{ overflow: hidden; .wh_lh(100%,40px); border-bottom: 1px solid #E1E1E1; padding: 0 10px; .box-sizing;
+        span{ display: inline-block; float: left;}
+        .span_1,.span_2{ margin-right: 6px; background-size: 100% 100%;}
+        .span_1{ background: url(../img/icon_1.png) no-repeat; margin-top: 12px; .wh(16px,16px);}
+        .span_2{ background: url(../img/arrow.png) no-repeat; background-size: 100% 100%; margin-top: 16px; .wh(5px,7px); margin-left: 8px; margin-right: 8px;}
+        .span_text{ font-size: 14px; color: #868686;}
+        .span_text:last-child{ color: #404040;}
+    }
+}
+
+/*分页start*/
+.page_box{ overflow: hidden; padding-bottom: 10px; margin-top: 16px;
+   .page_box_tips{ position: absolute; top: 0; left: 0; font-size: 14px;height: 29px; line-height: 29px;
+     //b{ color: #5bc0de; font-size: 12px;}
+   } 
+   .pageOne{ width: 100%; text-align: right; overflow: hidden; display: inline-block; /*float: right;*/
+    list-style: none;
+    }
+    .pageOne>li{
+        display: inline-block;
+        width: 32px;
+        height: 29px;
+        line-height: 29px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;;
+    }
+    .pageOne{
+        li:nth-of-type(1),li:nth-of-type(2),li:nth-last-child(1),li:nth-last-child(2){ width: auto; padding: 0 12px;}
+    }
+    .pageOne .pageItem{
+        border: 1px solid #8e8e8e;
+        margin: 4px; 
+         color: #404040;
+    }
+    .pageOne .pageItemActive{
+        border: 1px solid #8e8e8e;
+        margin: 4px;
+        background-color: #3781c6;
+        color:white;
+    }
+    .pageOne .pageItemActive:hover{
+        background-color: #4c9dd6;
+    }
+    .pageOne .pageItem:hover{
+        border: 1px solid #8e8e8e;
+        background-color: #4c9dd6;
+        color:white;
+    }
+    .pageOne .pageItemDisable{
+        border: 1px solid #8e8e8e;
+        margin: 4px;
+        background-color: #DDDDDD;
+    }  
+}

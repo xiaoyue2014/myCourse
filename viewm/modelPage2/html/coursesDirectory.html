@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>资源库模板</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../common/RL_Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../css/myCourses.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header3" id="header3"></div>
+			
+			<div class="Con_Main coursesDirectory">
+				<div class="contentNav">
+					<span class="span_1"></span>
+					<a href="coursesIndex.html" class="span_text">我的课程</a>
+					<span class="span_2"></span>
+					<a class="span_text">教材目录</a>
+					<span class="span_2"></span>
+					<a class="span_text">教材</a>
+					<span class="span_2"></span>
+					<a class="span_text">目录</a>
+				</div>
+				<div class="contentCenter">
+					<dl class="contentCenter_tp"></dl>
+					<div class="contentCenter_main">
+						<div class="contentCenter_main_lt">
+							<h4>教材目录</h4>
+							<div class="tree_box">
+								<div class="box_auto">
+									<div class="tree_content">
+										<p>1</p>
+										<p>2</p>
+										<p>3</p>
+										<p>4</p>
+										<p>5</p>
+										<p>6</p>
+										<p>7</p>
+										<p>8</p>
+										<p>9</p>
+										<p>10</p>
+										<p>11</p>
+										<p>12</p>
+										<p>13</p>
+										<p>14</p>
+										<p>15</p>
+										<p>16</p>
+										<p>17</p>
+										<p>18</p>
+										<p>19</p>
+										<p>20</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="contentCenter_main_rt">
+							<div class="contentCenter_main_rt_box">
+								<ul class="ul_conditions">
+									<li>
+										<label>目录名称</label>
+										<div class="_list_rt"><div class="_list_rt_cont"><input type="text" /></div></div>
+									</li>
+									<li>
+										<label>标签</label>
+										<div class="_list_rt"><div class="_list_rt_cont"><input type="text" /></div></div>
+									</li>
+									<li>
+										<label>相关网址</label>
+										<div class="_list_rt"><div class="_list_rt_cont"><input type="text" /></div></div>
+									</li>
+									<li>
+										<label>描述</label>
+										<div class="_list_rt"><div class="_list_rt_cont"><input type="text" /></div></div>
+									</li>
+								</ul>
+								<div class="sourceSelectBox">
+									<label>资源选择</label>
+									<div class="_list_rt">
+										<div class="_list_rt_cont">
+											<a class="unloadBtn" href="javascript:;">本地上传</a>
+											<a class="libraryBtn" href="javascript:;">资源库</a>
+										</div>
+									</div>
+								</div>
+								<div class="button_box">
+									<a href="javscript:;">预览</a>
+									<a href="javscript:;">保存</a>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				
+			</div>		
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../../component_module/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../common/RL_Common.js"></script>
+		<script>
+			$(function() {
+				$(document).ready(function(){
+					$(".contentCenter .contentCenter_tp").load('dailogPage/bookInfoShow.html');
+				})
+			})
+		</script>
+	</body>
+</html>

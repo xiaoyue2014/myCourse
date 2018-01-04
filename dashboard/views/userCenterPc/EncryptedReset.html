@@ -1,0 +1,145 @@
+<div class="smallPage EncryptedReset">
+	<div class="small_head">
+		<span>重置密保问题</span>
+		<b><i class="iconfont icon-guanbi"></i></b>
+	</div>
+	<div class="small_content">
+		<p class="small_tips">为了保证您的帐户安全，重置密保问题前请先进行安全验证！</p>
+		<p class="select_title">验证方式：</p>
+		<div class="small_select">
+			<p class="valueBox"><em class="value_em">—请选择验证方式—</em><span class="selectBtn"><i class="iconfont icon-xiangshangjiantouarrowup"></i></span></p>
+			<div class="select_box">
+				<div class="box_auto">
+					<ul class="select_ul">
+						<li><a data-type="ty1" href="javascript:;">手机<span>15527158266</span></a></li>
+						<li><a data-type="ty2" href="javascript:;">密保问题</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<form class="Encryptedbox">
+			<div class="optionbox1">
+				<p class="tipsbox">手机号<em>（可更换手机号码）</em></p>
+				<div class="telbox"><input type="tel" placeholder="请输入手机号" class="telInput" id="telInput" /></div>
+				<div class="yzmbox"><input type="text" placeholder="请输入验证码" class="yzmInput" id="yzmInput" /><span class="yzmClick">发送验证码</span></div>
+				<button class="slSureBtn1">确定</button>
+			</div>
+			<div class="optionbox2">
+				<dl class="optionbox2_list">
+					<dt><span>问题1：</span><p>你的出生日期？</p></dt>
+					<dd><span>答案：</span><p><input placeholder="请填写答案" type="text" /></p></dd>
+				</dl>
+				<dl class="optionbox2_list">
+					<dt><span>问题2：</span><p>你的家庭地址？</p></dt>
+					<dd><span>答案：</span><p><input placeholder="请填写答案" type="text" /></p></dd>
+				</dl>
+				<dl class="optionbox2_list">
+					<dt><span>问题3：</span><p>你的爱好？</p></dt>
+					<dd><span>答案：</span><p><input placeholder="请填写答案" type="text" /></p></dd>
+				</dl>
+				<button class="slSureBtn2">确定</button>
+			</div>
+			
+		</form>
+	</div>
+</div>
+
+<script>
+	//密保页面的js
+	var EncryptedReset=function(){
+		//下拉按钮点击		
+		$(".selectBtn").click(function(){
+			if ($(this).find('i').hasClass('Rotate_180')) {
+				$(this).find('i').removeClass('Rotate_180');
+				$(".select_box").slideUp();
+			} else{
+				$(this).find('i').addClass('Rotate_180');
+				$(".select_box").slideDown();
+			}
+		})
+		
+		//验证类型选择
+		$(".select_ul li").each(function(){
+			$(this).click(function(){
+				var $value=$(this).find('a').html();
+				$(".value_em").html($value);
+				$('.selectBtn i').removeClass('Rotate_180');
+				$(".select_box").slideUp();
+				var $type=$(this).find('a').attr('data-type');
+				console.log($type);
+				switch($type)
+				{
+					case 'ty1':
+						$(".optionbox2").hide();
+					  	$(".optionbox1").show();
+					  	var $val=$(this).find('a').find('span').html();
+					  	$("#telInput").val($val);
+					  break;
+					case 'ty2':
+						$(".optionbox1").hide();
+					  	$(".optionbox2").show();
+					  break;
+					default:
+					  	$(".optionbox1").hide();
+					  	$(".optionbox2").hide();
+					  break;
+				}
+			})
+		});
+		
+		//手机号,邮箱输入验证
+		function yzTelEmail(InputId,clickBtn,truefalse,yztype,yztips){
+			var errorTips=$("<p class='errorTips'></p>");
+			$(InputId).focus(function(){
+				if ($(".errorTips").exist()==false) {
+					$(this).parent().append(errorTips);
+				}
+			}).bind('input propertychange',function(){
+				var thisVal=$(this).val();
+				//$(".errorTips").show();
+				if (!(yztype.test(thisVal))) {
+					$(".errorTips").html(yztips).css({'color':'red'});
+					truefalse=false;
+				} else{
+					$(".errorTips").html('').css({'color':'#40BB5F'});
+					truefalse=true;
+				}
+			}).blur(function(){
+				if (truefalse) {
+					$(".errorTips").remove();
+				} else{
+					$(".errorTips").html(yztips).css({'color':'red'})
+				}
+			})
+			
+			//点击发送验证码
+			$(clickBtn).bind('click',yzmSend);
+			function yzmSend(){
+				if (truefalse) {
+					//在此处发送验证码
+					
+					$(this).html("重新发送（<em class='timeNums'>59</em>）");
+					$(this).unbind('click');
+					var that=$(this);
+					var Times=setInterval(function(){
+						$(".timeNums").html($(".timeNums").html()-1);
+						if ($(".timeNums").html()==0) {
+							clearInterval(Times);
+							that.html('发送验证码').bind('click',yzmSend);
+						}
+					},1000);
+				} else{
+					$(InputId).focus();
+					$(InputId).parent().append(errorTips);
+					$(".errorTips").html(yztips).css({'color':'red'});
+				}
+			}
+		}
+		//手机号,邮箱输入验证
+		var telyztype=/^1[34578]\d{9}$/;
+		var emailyztype=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+		yzTelEmail("#telInput",".yzmClick1",false,telyztype,'请输入正确手机号码');
+		yzTelEmail("#emailInput",".yzmClick2",false,emailyztype,'请输入正确的邮箱');
+	}
+	EncryptedReset();
+</script>

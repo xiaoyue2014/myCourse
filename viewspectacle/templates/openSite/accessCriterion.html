@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>开放平台-接入规范</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../static/comm/css/comm.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../static/custom/openSite/css/openSite.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header" id="header"></div>
+			<div class="mainContent accessCriterion">
+				<div class="contentCenter">
+					<div class="content_box">
+						<ol id="listasideNav" class="content_lt">
+							<li class="active_li">
+								<a href="javascript:;">电子身份一网通</a><i class="Rotate_90 list_zk"></i>
+								<div class="list_cont">
+									<a class="active_a" href="javascript:;">获取登录信息</a>
+									<a href="javascript:;">获取登录者学校信息</a>
+								</div>
+							</li>
+							<li><a href="javascript:;">智慧校务</a></li>
+							<li><a href="javascript:;">智慧学习</a></li>
+							<li><a href="javascript:;">智慧教学</a></li>
+							<li><a href="javascript:;">智慧资源</a></li>
+							<li><a href="javascript:;">智慧教室</a></li>
+							<li><a href="javascript:;">智慧终端</a></li>
+						</ol>
+						<!--类名.MinHeightBox定义最小高-->
+						<div id="listcontent" class="MinHeightBox content_rt">
+							<div id="pagecontent" class="pagecontent"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<!--<script src="../../static/comm/plugins/paging/page.js"></script>-->
+		<script src="../../static/custom/openSite/js/comm.js"></script>
+		
+		<script type="text/javascript">
+		(function($){
+			$(function(){
+			    //do anything
+				var handclickFn=function(){
+					//左侧三角形展开
+				    $("#listasideNav li .list_zk").each(function(){
+				    	$(this).bind('click',function(){
+				    		if ($(this).hasClass('Rotate_90')) {
+				    			$(this).removeClass('Rotate_90');
+				    			$(this).parent('li').find('.list_cont').slideUp();
+				    		}else{
+				    			$(this).addClass('Rotate_90');
+				    			$(this).parent('li').find('.list_cont').slideDown();
+				    		}
+				    	})
+				    });
+				    //每个列表子栏目点击
+				    $("#listasideNav li .list_cont>a").each(function(){
+				    	$(this).bind('click',function(){
+				    		if (!$(this).hasClass('active_a')) {
+					    		$(this).addClass('active_a').siblings().removeClass('active_a');
+					    	}
+				    		importContentFn($(this).index());
+				    	})
+				    })
+				    //每个列表栏目点击
+				    $("#listasideNav li").each(function(){
+				    	$(this).bind('click',function(){
+				    		if (!$(this).hasClass('active_li')) {
+				    			$(this).addClass('active_li').siblings().removeClass('active_li');
+				    			$(this).siblings('li').find('.list_zk').removeClass('Rotate_90');
+				    			$(this).siblings('li').find('.list_cont').slideUp();
+				    		}
+				    	})
+				    })
+				}
+				
+				var importContentFn=function($index){
+					if ($("#pagecontent").exist()) {
+						$("#pagecontent").empty();
+						if ($index==0) {
+							$("#pagecontent").load('./modelcont/accessInfo.html');
+						}else if($index==1){
+							$("#pagecontent").load('./login.html');//例子，要删除
+						}
+					}
+				}
+				
+				$(document).ready(function(){
+					handclickFn();
+					//引入主体部分
+					importContentFn(0);
+				});
+		    })
+		})(jQuery);
+		</script>
+	</body>
+</html>

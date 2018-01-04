@@ -1,0 +1,42 @@
+@import 'index_ba.less';
+
+/*媒体查询*/ 
+@media screen and (min-width:641px){html{font-size:86px;}}
+.re(640px);
+.re(600px);
+.re(568px);
+.re(533px);
+.re(435px);
+.re(414px);
+.re(411px);
+.re(384px);
+.re(375px);
+.re(360px);
+.re(320px);  
+
+html,body{ width: 100%; height: 100%; max-width: 640px; overflow: hidden; margin: 0 auto; font-family: "Microsoft Yahei"; position: relative;}
+
+/*通用样式*/
+.ScollCssZero{ position: absolute; top: 0; left: 0;bottom: 0; right: 0; width: 100%; height: 100%;
+              box-sizing: border-box; -webkit-overflow-scrolling: touch; overflow-y: auto; overflow-x: hidden;}
+.ColorFS1{ font-size: 0.28rem; color: #111111;}
+.bg_white{ background: white;}
+.padding_l_r{ padding: 0 0.24rem 0 0.24rem; .box-sizing;}
+.padding_l_r2{ padding: 0 0.2rem 0 0.2rem; .box-sizing;}
+
+.container {position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: 1; .wh(100%,100%);}
+.container{
+    .header{ .Position_t_l(absolute,0,0); z-index: 30;.wh(100%,0.9rem);
+        &>.headerContent{ border-bottom: 1px solid #ccc; .wh(100%,100%); color: #111; .box-sizing;.bg_white;
+            &>.headerContent_tp{ .wh_lh(100%,0.88rem); text-align: center; font-size: 0.32rem;
+                &>.search_a{ position: absolute; top: 0; right: 0.24rem; .wh_lh(1rem,0.9rem); text-align: right;
+                    &>i{ font-size: 0.44rem; color: #111;}
+                }
+            }
+        }
+    }
+    .mainContent{ padding: 0.9rem 0 0;.ColorFS1;.ScollCssZero; background: #efeff4; .box-sizing;
+        &.mainContent2{ padding: 1.76rem 0 0.98rem 0;}
+        &.mainContent3{ padding: 0rem 0 0 0}
+    }
+} 

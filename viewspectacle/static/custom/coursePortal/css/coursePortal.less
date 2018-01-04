@@ -1,0 +1,116 @@
+@import "../../../comm/css/comm.less";   
+/*头部的样式start*/
+.ContainerWarp{
+    @h80:80px;
+    .header{ overflow: hidden; height: @h80; border-bottom: 1px solid @gray; 
+        .header_cont{.maxWidthCommon;
+            &>.header_lt{ float: left; .wh(35%,@h80);
+                &>img{ height: 38px; margin: 21px 0 0 0px;}
+            }
+            &>.header_rt{ float: right; .wh(65%,@h80);
+                @h40:40px;
+                &>.header_rt_load,&>.header_rt_search{font-size: @fs14; color: @black3; float: right; margin-top: 20px; height: @h40; display: inline-block;}
+                &>.header_rt_load{ margin-left: 40px;line-height: @h40;
+                    &>i,&>span{ float: left;}
+                    &>i{ .wh(18px,30px); display: inline-block; .bg_all('../../../comm/img/icon_shouji.png'); margin: 5px 8px 0 0;}
+                }
+                &>.header_rt_search{ overflow: hidden;
+                    &>span,&>input{ height: @h40; display: inline-block; float: left;}
+                    &>.searchTitle{ line-height: @h40; padding: 0 20px; border: 1px solid @gray; border-right: 0; .box-sizing;}
+                    &>input{ width: 240px; line-height: @h40; outline: none; border: 1px solid @gray; .box-sizing; padding: 0 5px;}
+                    &>.searchBtn{ width: @h40; background: @blue1; text-align: center;
+                        &>i{ .bg_all('../../../comm/img/icon_search_white.png'); .wh(16px,16px); display: inline-block; margin-top: 12px;}
+                    }
+                }
+            }
+        }
+    }
+}    
+/*头部的样式end*/
+
+
+/*字体定义*/
+/*@fs12:12px;
+@fs14:14px;
+@fs16:16px;
+@fs18:18px;
+@fs20:20px;
+@fs24:24px;
+@blue1:#42a2f6;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@gray:#e1e1e1;*/
+
+.ContainerWarp .contentTop{ background: #147ee8; 
+    .contentTopMain{
+        .banner_box{ 
+            &>img{ width: 100%; vertical-align: bottom;}
+        }
+        .showinfo_box .showinfo_box_cont{ .wh(220px,260px); background: white; .round(5px); position: absolute;
+                top: 20px; right: 20px; z-index: 10; padding: 18px; .box-sizing;
+            .list_info1{ position: relative; .wh(100%,40px); padding-left: 50px; .box-sizing;
+                &>dt{ .Position_t_l(absolute,0,0); .wh(40px,40px);
+                    &>img{ height: 40px;}
+                }
+                &>dd{ .wh_lh(100%,40px);
+                    &>.systemOut{ float: right; color: @black9;}
+                }
+            }
+            .list_info2{ .wh_lh(100%,50px); border-bottom: 1px solid @gray; font-size: @fs16; color: @black1; .box-sizing;}      
+            .list_info3{ .wh(100%,90px); padding: 10px 0; overflow: hidden; .box-sizing;
+                &>li{ width: 33.33%; float: left; color: @black1; text-align: center;
+                    &:last-child>p{ border: 0;}
+                    &>span{ .wh_lh(100%,30px); display: inline-block;}
+                    &>p{ .wh_lh(100%,40px); overflow: hidden; font-weight: bold; border-right: 1px solid @gray; .box-sizing;}
+                }
+            }
+            .list_info4{ display: inline-block; margin-top: 5px; .wh_lh(100%,40px); text-align: center; background: @blue1; color: white; font-size: @fs16;}
+        }
+    }
+}
+.coursePortalindex .contentCenter{.maxWidthCommon;
+    @h70:70px;      
+    .contentCenter_tp{ height: @h70; border-bottom: 1px solid @gray; /*border-top: 1px solid @gray;*/ .box-sizing;
+        .contentCenter_tp_cont{ overflow: visible;
+            .tab_a{ float: left; font-size: 14px; color: @black9; display: inline-block; margin-right: 15px; height: @h70; line-height: @h70;
+                &.tab_a_on{ color: red;}
+            }
+            .select_subject{ display: inline-block; position: relative; height: @h70; line-height: @h70; float: right; font-size: 14px; color: @black3;
+                &>span,&>i{ float: left;}
+                &>i{ display: inline-block; .wh(16px,16px);.bg_all('../../../comm/img/icon_zk_blue.png'); margin: 27px 0 0 10px;}
+                .subject_lists{ display: none; position: absolute; z-index: 10; top: 60px; right: 0; .box-sizing; width: 240px;
+                     border: 1px solid @blue1; background: #fff;
+                    &:after{ position: absolute; content: ''; top: -7px; right: 15px; display: inline-block; .wh(11px,7px); .bg_all('../../../comm/img/icon_sanjiao.png')} 
+                    &>li{ padding: 0 10px; float: left; height: 26px; line-height: 26px;
+                        &.active_li>a{ color: @blue1;}
+                        &>a{ color: @black6; font-size: 14px;}
+                    }
+                }
+            }
+        }
+    }
+    .contentCenter_bt{.maxWidthCommon; min-height: 300px;
+        .courseListBox{ width: 100%; padding: 5px; .box-sizing; overflow: hidden; background: white;
+            .courseList{ width: 20%; overflow: hidden; padding: 8px; .box-sizing; float: left; margin-top: 10px;
+                &:hover{.box-shadow-round; .small_hand;}  
+                &.list_apply{ position: relative;
+                    &:after{ content: ''; position: absolute; right: 8px; top: 8px; z-index: 5; display: inline-block; .wh(71px,71px);
+                     .bg_all('../img/courselistImg/icon_apply.png');
+                    }
+                }
+                &>dt>img{ width: 100%;}   
+                &>dd{ font-size: 14px; color: @black3;
+                    &>p{ height: 60px; overflow: hidden;}
+                    &>.list_tips{ margin-top: 20px; font-size: 12px; color: #a0a0a0; overflow: hidden;
+                        .list_tips_lt{ float: left;
+                            &>b{ font-weight: normal;} 
+                        }
+                        .list_tips_rt{ float: right;}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@import "../../../comm/css/index_ba.less";
+@import "http://at.alicdn.com/t/font_507800_d7lb78odn0gxecdi.css";
+
+@gray:#e1e1e1;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black7:#777;
+@black9:#999;
+@white:#fff;
+@gray1:#f5f6f8;
+@blue1:#40c2fc;
+
+@fs18:18px;
+@fs16:16px;
+@fs14:14px;
+@fs12:12px;
+.bg_white{ background: white;}
+.fscolor{ font-size: @fs14; color: @black3;}
+
+@h60:60px;
+@h61:61px;
+.Rotate_180{ .rotate(180deg); display: inline-block;} 
+
+/*通用样式start*/
+.commw{ margin: 0 auto; width: 100%; max-width: 2700px; min-width: 300px;}
+.tblr0{ top: 0; right: 0; left: 0; bottom: 0;}
+html,body{ width: 100%; font-family: "微软雅黑";.tblr0; overflow: hidden;}   
+.mouseCSS{ width: 100%; height: 100%; -webkit-overflow-scrolling: touch; overflow-y: auto; overflow-x: hidden;}
+.ContainerWarp{ .wh(100%,100%); position: relative;.bg_white;
+    .header{ position: absolute; top: 0; left: 0; right: 0; .wh(100%,@h61); z-index: 50;.bg_white;border-bottom: 1px solid @gray; .box-sizing; 
+        .content{ .wh(100%,@h60);.commw;
+            .content_lt{ .wh(50%,@h60); float: left;
+                &>img{ margin: 11px 0 0 10px; height: 38px;}
+            }
+            .content_rt{ .wh(50%,@h60); float: right;
+                .userBox{ float: right; .wh_lh(auto,@h60); overflow: hidden; margin-right: 10px;
+                    &>.userPhoto,&>.userName,&>.systemCloseBtn{ float: left;}
+                    &>.userPhoto{ .wh(39px,39px); .round(50%); margin-top: 10.5px;}
+                    &>.userName{ font-size: 14px; color: @black1; margin-left: 8px;}
+                    &>.systemCloseBtn{ display: none; .wh(16px,16px); margin-left: 12px; margin-top: 22px; display: inline-block; .bg_all('../../../comm/img/icon_kaiguan.png');}
+                }
+            }
+        }
+    }
+    .mainContent{.mouseCSS; padding: @h61 0 0 0; .box-sizing; position: relative;
+        .contentCenter{.commw; padding: 8px 0; .box-sizing;
+            .small_nav{ .box-sizing; margin-bottom: 8px; width: 100%;
+                p{ border-left: 3px solid @blue1; padding-left: 10px; .box-sizing; margin-bottom: 8px; .wh_lh(100%,26px); font-size: @fs16;}
+            }
+            .contentBox{ width: 100%; .fscolor;}
+        }
+    }
+    .footer{ display: none;.bg_white; overflow: hidden; border-top: 1px solid @gray; .box-sizing; background: @gray1;
+        .content{.commw; min-width: 800px; height: 100px; overflow: hidden; padding: 30px 0 30px 27%; .box-sizing;
+            .content_lt,.content_rt{ .wh(auto,@h60); display: inline-block; float: left;}
+            .content_lt{
+                &>img{ height: 40px;}
+            }
+            .content_rt{ font-size: @fs12; color: @black7; margin-left: 20px; overflow: hidden;
+                &>li{ line-height: 20px; height: 20px;}
+            }
+        }
+    }
+}
+
+/*通用样式end*/
+
+

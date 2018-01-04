@@ -1,0 +1,337 @@
+@import "../../../comm/css/comm.less";   
+/*头部的样式start*/
+.ContainerWarp{ 
+    @h72:72px;
+    .header{ overflow: hidden; height: @h72; border-bottom: 1px solid @gray; 
+        .header_cont{.maxWidthCommon;
+            @h40:40px;
+            &>.header_lt{ float: left; .wh(18%,@h72);
+                &>img{ height: 38px; margin: 17px 0 0 15px;}
+            }
+            &>.header_ct{ float: left; .wh(64%,@h72); text-align: center;
+                .header_nav{ display: inline-block; height: 100%; padding-top: 16px; .box-sizing;
+                    &>li{ float: left; padding: 0 25px; display: inline-block; height: @h40; line-height: @h40;
+                        &>a{ font-size: @fs16; color: @black1; height: 100%; display: inline-block; .box-sizing;
+                            &:hover{ border-bottom: 3px solid @blue2;}
+                        }
+                        &.active_li>a{border-bottom: 3px solid @blue2;} 
+                    }
+                }
+            }
+            &>.header_rt{ float: right; .wh(18%,@h72); overflow: hidden;
+                &>a{ float: right; display: inline-block; .wh_lh(auto,28px); .round(13px); .box-sizing; padding: 0 20px;
+                     font-size: @fs14; color: white; margin-top: 22px; margin-right: 15px;
+                    &:first-child{ background: @blue2;}
+                    &:last-child{ background: #39b56e;}
+                }
+            }
+        }
+    }
+    .mainContent .contentCenter{.maxWidthCommon; background: @white;}
+}    
+/*头部的样式end*/
+
+
+/*字体定义*/ 
+/*@fs12:12px;
+@fs14:14px;
+@fs16:16px;
+@fs18:18px;
+@fs20:20px;
+@fs24:24px;
+@blue1:#42a2f6;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@gray:#e1e1e1;*/
+
+/*登录注册页面样式start*/
+.loginAndregister .contentCenter{
+    .content_box{ width: 80%; margin: 0 auto; text-align: center;
+        @h50:50px;
+        .content_tp{ margin-top: 20px; .wh_lh(100%,@h50); border-bottom: 1px solid @gray; .box-sizing;
+            &>a{ display: inline-block; height: @h50; position: relative; padding: 0 14px; font-size: @fs18; color: @black3;
+                &.acitive_a{color: @blue2;
+                    &:after{ content: ''; z-index: 5; display: inline-block; .wh(15px,8px); position: absolute; bottom: 0; left: 50%;
+                         margin-left: -7.5px; .bg_all('../img/icon/icon_sjx.jpg');
+                    }
+                }
+            }
+        }
+        .loginContent_bt{ padding-top: 50px;
+            @h50_1:50px;
+            &>dl{ width: 46%; margin: 0 auto;
+                &>dt,&>dd{ .box-sizing; margin-bottom: 20px; font-size: @fs16; color: @black3; position: relative; overflow: hidden;}
+                &>.dl_dt1,&>.dl_dd1{ padding-left: 120px;.wh(100%,@h50_1); border: 1px solid @gray;
+                    &>label{ .wh_lh(70px,@h50_1); position: absolute; top: 0; left: 50px;}
+                    &>input{ outline: none; border: none; .wh_lh(100%,48px);}
+                }
+                &>.dl_dt1{ .bg_all('../img/icon/icon_user.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                &>.dl_dd1{ .bg_all('../img/icon/icon_pwd.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                &>.dl_dd2{ overflow: hidden;
+                    &>a{ float: right; font-size: 14px; color: @black6; display: inline-block; line-height: 20px; height: 20px;}
+                    &>span{ float: left; display: inline-block; line-height: 20px; height: 20px; font-size: 14px; overflow: hidden;
+                        &>i{ .wh(20px,20px); display: inline-block; float: left;
+                            &.icon_choice{ .bg_all('../img/icon/icon_choice.png');}
+                            &.icon_choice_on{ .bg_all('../img/icon/icon_choice_on.png');}
+                        }
+                        &>em{font-style: normal; margin-left: 10px; float: left; color: @black6;}
+                    }
+                }
+                &>dd>.loginBtn{ .wh_lh(144px,40px); margin-top: 30px; display: inline-block; color: white; font-size: @fs16; background: @blue2; .round(20px); text-align: center;}
+            }
+        }
+        .registerContent_ct{ width: 100%; overflow: hidden; color: @black6; font-size: @fs14; text-align: left; padding-top: 44px; .box-sizing;
+            .content_bt_lt{ width: 28%; float: left;
+                &>li{ .wh(100%,90px); position: relative;
+                    &>p{ .wh_lh(100%,50px);
+                        &>i{.wh_lh(25px,25px); .round(50%); color: @white; text-align: center; font-style: normal; display: inline-block;
+                                margin-right: 10px; background: #8c8c8c;
+                        }
+                    }
+                    &:before,&:after{ content: ''; display: inline-block; border-left: 1px dashed @gray; width: 1px; position: absolute; left: 12.5px; z-index: 5;}
+                    &:after{ height: 51.5px; top: 37.5px;}
+                    &:before{ height: 10.5px; top: 1px;}
+                    &.active_li>p>i{ background: @blue2;}
+                    &:first-child:before{display: none;}
+                    &:last-child:after{ display: none;}
+                }
+            }
+            .content_ct_rt{ width: 71%; float: right;
+                &>dl{ width: 64%;
+                    @h50_2:50px; 
+                    &>dd{ .box-sizing; margin-bottom: 20px; font-size: @fs16; color: @black3; position: relative; overflow: hidden;
+                             padding-left: 130px;.wh(100%,@h50_2); border: 1px solid @gray;
+                        &>label{ .wh_lh(80px,@h50_2); position: absolute; top: 0; left: 50px;}
+                        &>input{ outline: none; border: none; .wh_lh(100%,48px);}
+                    }
+                    &>dt{
+                        &:last-child{ text-align: center;}
+                        &>.sureBtn{ .wh_lh(144px,40px); margin: 30px 0 30px 0; display: inline-block; color: white; font-size: @fs16; background: @blue2; .round(20px); text-align: center;}
+                    }
+                }
+                &>.register_step1{
+                    &>.dl_dd1{ .bg_all('../img/icon/icon_phone.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                    &>.dl_dd2{ .bg_all('../img/icon/icon_yz.png',@w:16px,@h:16px,@x:20px,@y:17px); padding-right: 120px; overflow: visible;
+                        &>input{ .wh_lh(100%,46px);}
+                        &>.yzmbox{ .wh(120px,50px); background: @white; position: absolute; z-index: 5; 
+                                right: 0; top: -1px; padding-left: 10px; .box-sizing; border-left: 1px solid @gray;
+                            .yzmBtn{ .wh_lh(100%,50px); display: inline-block; text-align: center; border: 1px solid @gray; .box-sizing; border-right: 0;}    
+                        }
+                    }
+                    &>.dl_dd3,&>.dl_dd4{ .bg_all('../img/icon/icon_pwd.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                    &>dt{
+                        &>span{ display: inline-block; line-height: 20px; height: 20px; font-size: 14px; overflow: hidden;
+                            &>i{ .wh(20px,20px); display: inline-block; float: left;
+                                &.icon_choice{ .bg_all('../img/icon/icon_choice.png');}
+                                &.icon_choice_on{ .bg_all('../img/icon/icon_choice_on.png');}
+                            }
+                            &>em{font-style: normal; margin-left: 10px; float: left; color: @black6;}
+                        }
+                    }
+                }
+                &>.register_step2{ position: relative; display: none;
+                    &>em{ position: absolute; left: -25px; color: red;}
+                    &>em:nth-of-type(1){ top: 18px;}
+                    &>em:nth-of-type(2){ top: 88px;}
+                    &>em:nth-of-type(3){ top: 158px;}
+                    &>em:nth-of-type(4){ top: 228px;}
+                    &>dd{ padding-left: 150px;
+                        &>label{ width: 100px;}
+                        &:after{ content: '*'; color: red; position: absolute; left: -20px; top: 20px; z-index: 10;}
+                    }
+                    &>.dl_dd1{ .bg_all('../img/icon/icon_company.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                    &>.dl_dd2{ .bg_all('../img/icon/icon_user.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                    &>.dl_dd3{ .bg_all('../img/icon/icon_telephone.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                    &>.dl_dd4{ .bg_all('../img/icon/icon_url.png',@w:16px,@h:16px,@x:20px,@y:17px);}
+                }
+                &>.register_step3{ width: 64%; margin-top: 50px; display: none;
+                    &>p{ text-align: center; font-size: 14px; color: @black6;
+                        &>i{ display: inline-block; .wh(60px,60px); .bg_all('../img/icon/icon_sucess.png');}
+                        &>a{ color: @blue2;}
+                    }
+                }
+                
+            }
+        }
+    }
+}
+/*登录注册页面样式end*/
+
+/*主页面样式start*/
+.homePage .contentCenter{
+    .content_box>img{ width: 100%;}
+}
+/*主页面样式end*/
+
+/*平台概述页面样式start*/ 
+.platformOutline .contentCenter{
+    .content_box{ overflow: hidden; position: relative; padding-left: 200px; width: 100%; .box-sizing; background: #F5F6F8;
+                    border-left: 1px solid @gray; border-right: 1px solid @gray;
+        .content_lt{ .Position_t_l(absolute,0,0); width: 200px; z-index: 2;
+            &>li{ .wh_lh(100%,46px); list-style-position: inside; list-style-type: disc; padding: 0 20px; .box-sizing;
+                &.active_li{ background: @white;}
+                &>a{ font-size: @fs14; color: @black3;}
+            }
+        }
+        .content_rt{ width: 100%; background: @white; .box-sizing; border-left: 1px solid @gray; padding: 20px;
+            &>li{ color:@black3; 
+                &:nth-of-type(1){
+                    &>.list_desc{ padding: 0 10px; .box-sizing;
+                        &>p{ margin-top: 20px; line-height: 28px;}
+                    }
+                }
+                &:nth-of-type(2){ display: none;
+                    &>.list_desc dl{ border: 1px solid @gray; .box-sizing; margin-top: 15px;
+                        &>dt{ .wh_lh(100%,40px); padding: 0 10px; .box-sizing; border-bottom: 1px solid @gray;
+                            &>span{ margin-right: 15px;
+                                &:first-child{ margin-right: 5px;}
+                            }
+                        }
+                        &>dd{ width: 100%; padding: 10px; .box-sizing;}
+                    }
+                }
+                &>.list_title{ font-weight: normal; font-size: @fs16; padding: 0 10px; .box-sizing;}
+                &>.list_desc{ font-size: 14px;}
+            }
+        }
+    }
+}
+/*平台概述页面样式end*/
+
+/*接入流程页面样式start*/
+.accessProcesses .contentCenter{
+    .content_box{ width: 82%; margin: 0 auto; font-size: @fs14; color: @black3; padding: 20px; .box-sizing;
+        &>.content_tp{
+            &>p{ font-size: @fs16; margin-bottom: 10px;}
+            &>ol{ overflow: hidden; padding: 0 10px; .box-sizing;
+                &>li{  width: 25%; padding-right: 50px; float: left; .box-sizing;  position: relative;
+                    &:after{ content: ''; display: inline-block; .wh(23px,17px);.bg_all('../img/icon/icon_bigjt.png');
+                        position: absolute; top: 23.5px; right: 16.5px;
+                    }
+                    &:last-child:after{ display: none;}
+                    &>span{ .wh_lh(100%,70px); display: inline-block; border: 1px solid @gray; .box-sizing; padding: 0 15px;}
+                    &:nth-of-type(3)>span{ line-height: initial; padding-top: 15px;}
+                }
+            }
+        }
+        &>.content_bt{ padding: 0 10px; .box-sizing; margin-top: 30px;
+            &>dl{ margin-bottom: 25px;
+                dt{ color: @blue1; .wh_lh(100%,30px);
+                    &>i{ font-style: normal; margin: 3px 10px 0 0; .wh_lh(24px,24px); .round(50%); background: @blue2; display: inline-block;
+                         color: @white; font-size: 12px; text-align: center; float: left;
+                    }
+                    &>span{float: left;}
+                }
+                &>dd{ padding: 0 34px; .box-sizing;
+                    &>p{ margin-bottom: 8px;}
+                    &>img{ margin-bottom: 10px;}
+                }
+            }
+        }
+    }
+}
+/*接入流程页面样式end*/
+
+
+/*接入规范页面样式start*/
+.accessCriterion .contentCenter{
+    .content_box{ overflow: hidden; position: relative; padding-left: 200px; width: 100%; .box-sizing; background: #F5F6F8;
+                    border-left: 1px solid @gray; border-right: 1px solid @gray;
+        .content_lt{ .Position_t_l(absolute,0,0); width: 200px; z-index: 2;
+            &>li{ width: 100%; position: relative; overflow: hidden;
+                &:after{ .wh(5px,5px); .round(50%); content: ''; background: @black1; position: absolute; top: 20px; left: 15px; display: inline-block;}
+                &.active_li{ background: @white;}
+                &>a{ font-size: @fs14; color: @black3; display: inline-block; padding: 0 30px 0 30px; .wh_lh(100%,46px); .box-sizing;}
+                &>.list_zk{ display: inline-block; .ltne(5px,#000); position: absolute; top: 18px; right: 15px;}
+                &>.list_cont{
+                    &>a{ display: inline-block; .wh_lh(100%,40px); color: @black3; border-left: 3px solid @white; padding-left: 30px; .box-sizing;
+                        &.active_a{ border-left: 3px solid @blue2; color: @blue2; .box-sizing;}
+                    }
+                }
+            }
+        }
+        .content_rt{ width: 100%; background: @white; .box-sizing; border-left: 1px solid @gray; padding: 20px;}
+    }
+}
+/*接入规范页面样式end*/
+
+/*接入规范--接口信息展示start*/
+.portInfoList{ margin-top: 10px; 
+    .list_title{ .wh_lh(100%,40px); overflow: hidden;
+        &>i{ .wh(27px,27px); .bg_all('../img/icon/icon_zk1.png'); display: inline-block; float: left; margin: 6.5px 5px 0 0;}
+        &>span{ float: left;}
+    }
+    .list_cont{ display: none; overflow: hidden;
+        &.active_show{ display: block;}
+    }
+    .list_cont .info_list{ margin: 10px 0 15px 0;
+        &:last-child{ margin-bottom: 0;} 
+        &:extend(.fscolor);
+        .info_list_tp{ background: @blue2; padding: 5px 20px; display: inline-block; font-size: @fs15; font-weight: normal; color: @white;}
+        .info_list_bt{ width: 100%; .box-sizing; padding: 10px; border: 1px solid @gray; overflow: hidden;
+            &>li{ width: 50%; float: left; overflow: hidden; .box-sizing; padding: 4px 0;
+                &:last-child{ width: 100%; position: relative; padding-left: 70px; .box-sizing;
+                    &>label{ .Position_t_l(absolute,4px,0); width: 70px;}
+                    &>._li_rt{ display: inline-block; width: 100%;
+                        p{ width: 70%;.hideellipsis;}
+                        &>.li_img{ overflow: hidden; width: 100%;
+                            &>img{ max-width: 200px; margin: 8px 10px 0 0;}
+                        }
+                    }
+                }
+                &>label,&>span{ float: left;}
+            }
+            .CommonShowTable{ margin-bottom: 10px;
+                &:last-child{ margin-bottom: 0;}
+                &>caption{ text-align: left; font-size: @fs15;
+                    &>span{ margin-left: 5px; padding: 0 5px; border-left: 1px solid #ccc;}
+                }
+                tr>td>a{ .wh(auto,auto); color: @blue2;}
+                tr:first-child th{ font-weight: bold;}
+            }
+        }
+    }
+} 
+/*接入规范--接口信息展示end*/
+
+/*常见问题页面样式satrt*/
+.commonProblems .contentCenter{  
+    .content_box{ width: 82%; margin: 0 auto; font-size: @fs14; color: @black3; .box-sizing;
+        .content_tp{ overflow: hidden; margin: 25px 0 20px 0;
+            .contTitle{ .wh_lh(63%,36px); font-size: @fs16; float: left; padding-left: 10px; .box-sizing;}
+            .searchBox{.inputPlaceholder; .wh(37%,36px); float: right; font-size: @fs14; .box-sizing; padding-left: 40px; 
+                    border: 1px solid @gray; overflow: hidden; position: relative;
+                &>input{ .wh_lh(100%,34px); outline: none; border: none;}
+                &>i{ .wh(24px,24px); display: inline-block; position: absolute; top: 5px; left: 8px; .bg_all('../img/icon/search_icon.png');}
+            }
+        }
+        .content_bt{
+            &>dl{  border: 1px solid @gray; .box-sizing; padding: 20px; margin-bottom: 15px; overflow: hidden;
+                &>dt,&>dd{ position: relative; padding-left: 30px; .box-sizing;
+                    &:before{content: ''; display: inline-block; position: absolute; top: 8px; left: 0; .wh(20px,20px);}
+                }
+                &>dt{ margin-bottom: 5px; .wh_lh(100%,36px);
+                    &:before{ .bg_all('../img/icon/icon_quesition.png');}
+                }
+                &>dd{ width: 100%; padding-top: 6px;
+                    &>p{ line-height: 25px;}
+                    &:before{ .bg_all('../img/icon/icon_answer.png');}
+                }
+            }
+        }
+    }
+}
+/*常见问题页面样式end*/
+
+
+/*联系我们页面样式end*/
+.contactUs .contentCenter{
+    .content_box{ width: 82%; margin: 0 auto; font-size: @fs14; color: @black3; .box-sizing;
+        .contTitle{ .wh_lh(100%,36px); font-size: @fs16; padding-left: 5%; margin: 20px 0 0px 0; font-weight: normal;}
+        .info_list>li{ border-bottom: 1px solid @gray; list-style-position: inside; list-style-type: disc; .wh_lh(100%,40px); padding-left: 5%; .box-sizing;}
+    }
+}
+/*联系我们页面样式end*/
+

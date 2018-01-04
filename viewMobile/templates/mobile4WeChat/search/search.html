@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/weui/weui.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_wx.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4WeChat.css"/>
+	</head>
+	<body>
+		<div class="container searchPage">
+			<!--<div class="header" id="header"></div>-->
+			<div class="mainContent mainContent3">
+				<form class="search_cont">
+					<ol class="selectTime">
+						<li><label>开始日期：</label><input id="startTime" readonly value="2017-11-07" /></li>
+						<li><label>结束日期：</label><input id="endTime" readonly value="2017-12-07" /></li>
+					</ol>
+					<dl class="selectStatus">
+						<dt>状态：</dt>
+						<dd id="statusSelect">
+							<a href="javascript:;"><i class="icon_radio_on"></i><span>全部</span></a>
+							<a href="javascript:;"><i class="icon_radio"></i><span>已完成</span></a>
+							<a href="javascript:;"><i class="icon_radio"></i><span>未完成</span></a>
+						</dd>
+					</dl>
+					<div class="BtnBox">
+						<button type="reset">重置</button>
+						<button type="submit">确定</button>
+					</div>
+				</form>
+			</div>
+			<!--<div class="footer" id="footer"></div>-->
+		</div>
+		
+		<script src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../../static/comm/plugins/weui/weui.min.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+				    var statusSelectFn=function(){
+						$("#statusSelect>a>i").each(function(){
+							$(this).bind('touchstart',function(){
+								if ($(this).hasClass('icon_radio')) {
+									$(this).addClass('icon_radio_on');
+									$(this).parent('a').siblings().find('i').removeClass('icon_radio_on').addClass('icon_radio');
+								}
+							});
+						})
+					};
+					var TimeSelectFn=function($startTiem,$endTiem,callback){
+						var $Date=new Date,
+						    dateY=$Date.getFullYear(),
+						    dateM=$Date.getMonth()+1,
+						    dateD=$Date.getDate();
+						weui.datePicker({
+						    start: $startTiem,
+						    end: $endTiem,
+						    defaultValue: [dateY, dateM, dateD],
+						    onChange: function(result){
+						        //console.log(result);
+						    },
+						    onConfirm: function(result){
+						        //console.log(result);
+						        var dateTime=result[0].value+"-"+result[1].value+"-"+result[2].value;
+						        callback(dateTime);
+						    },
+						    id: 'datePicker'
+						});
+					}
+					
+				    var searchFn=function(){
+				    	statusSelectFn();
+				    	$("#startTime,#endTime").bind('click',function(){
+							var $that=$(this);
+							TimeSelectFn(1949,2050,function($value){ //第一个参数开始年份，第二个参数结束年份，第三为回调函数设置选中日期
+								$that.val($value);
+							});
+						});
+				    }
+				    searchFn();
+				    //end    
+			    })
+			})(jQuery);		
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/resourcesPage.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain resourcesShare">
+			<!--头部-->
+			<div class="header">
+				<a href="javascript:;" class="header_logo"><img class="logo_img" src="img/logo_black.png"/></a>
+			    <!--<ul class="header_nav">
+			    	<li><a href="javascript:;">首页</a></li>
+			    	<li class="resourcesLi"><a href="javascript:;"><span>资源</span><i class="iconfont icon-xiangxia"></i></a></li>
+			    	<li><a href="javascript:;">我的空间</a></li>
+			    </ul>-->
+                <div class="header_user_box">
+                	<div class="system_out"><i class="iconfont icon-tuichuxitong1"></i></div>
+                	<div class="user_box">
+            			<div class="user_top">
+            				<a class="is_iphone" href="javascript:;">
+            					<img class="touxiang" src='img/touxaing.jpg' />
+		                		<span class="user_names"></span>
+		                		<span class="span_icon_pc"><i class="iconfont icon-xiangxia1"></i></span>
+		                		<span class="span_icon_iphone"><i class="iconfont icon-gengduo"></i></span>
+            				</a>
+            			</div>
+                		<ul class="shezhiNav">
+                			<div class="user_box_triangle"></div>
+                			<li><i class="iconfont icon-guanli"></i><a href="javascript:;">个人设置</a></li>
+                			<li><i class="iconfont icon-zhanghaoanquan"></i><a href="javascript:;">账号安全</a></li>
+                			<li><i class="iconfont icon-tuichuxitong1"></i><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+                		</ul>
+                	</div>
+                </div>
+			</div>
+						
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="MainCenter_top">
+						<h4 class="source_title">资源分享</h4>
+						
+						<div class="source_file_list">
+							<p>分享的资源：</p>
+							<div class="list">
+								<span>寒门的愁思.doc</span>
+								<span>背影.doc</span>
+								<span>文言文.doc</span>
+							</div>
+						</div>
+					</div>
+					<div class="MainCenter_bottom">
+						<div class="share_control">
+							<form action="" method="post">
+								<div class="select_classes">
+									<span>请选择分享类别:</span>
+									<ul class="select_category">
+										<li class="activeLi"><i class="iconfont icon-geren"></i><span>个人</span></li>
+										<li><i class="iconfont icon-2"></i><span>群组</span></li>
+										<li><i class="iconfont icon-xuexiao1"></i><span>学校</span></li>
+									</ul>
+								</div>
+								<div class="share_list">
+									<p>分享给：</p>
+									<textarea id="shareSureList"></textarea>
+								</div>
+								<div class="share_livetime">
+									<p>分享有效期：</p>
+									<div class="livetime_select">
+										<input name="time" type="radio" checked id="" value="一周" />一周
+										<input name="time" type="radio" id="" value="一个月" />一个月
+										<input name="time" type="radio" id="" value="三个月" />三个月
+										<input name="time" type="radio" id="" value="半年" />半年
+									</div>
+								</div>
+								<div class="share_leaveword">
+									<p>留言：</p>
+									<textarea name=""></textarea>
+								</div>
+								<div class="button_warp">
+									<button type="submit"/>分享</button>
+									<button type="reset"/>重置</button>
+								</div>
+							</form>
+						</div>
+						<div class="share_select">
+							<h5 class="select_type">选择类别：<span></span></h5>
+							<div class="select_box">
+								<div class="select_box_lt">
+									<h6>选择列表：</h6>
+									<div class="select_search">
+										<input type="search" name="" placeholder="查找" id="searchList" value="" />
+									</div>
+									<div class="loadShareList_warp">
+										<ul class="loadShareList">
+											<!--<li><span>王妙</span><i class='iconfont icon-gougou_1'></i></li>-->
+										</ul>
+									</div>
+								</div>
+								<div class="select_box_rt">
+									<h6>已选列表：</h6>
+									<div class="select_Btn">
+										<span class="select_sure">确定</span><span class="clear_empty">清空</span>
+									</div>
+									<div class="selectShareList_warp">
+										<ol class="selectShareList">
+											<!--<li><span>杨博文</span><i class='iconfont icon-guanbi'></i></li>-->
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--底部-->
+				<div class="footer">
+					<p>Copyright © 2017 Enable-ETS Corporation. All Rights Reserved.&emsp;&emsp;&emsp;建议浏览器：IE9+、Google Chrome、Firefox</p>
+			    </div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/resourcePage.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			    	//do anything
+			    	var shareSelect=function(Url){
+			    		//初始化就加载个人的列表
+			    		function AjaxShareList(){
+			    			$.ajax({
+			    				type:"get",
+			    				url:Url,
+			    				async:true,
+			    				success:function(data){
+			    					//console.log(data.personage);
+			    					var shareList=JSON.stringify(data);
+			    					localStorage.setItem('shareList',shareList);
+			    				},
+			    				error:function(){
+			    					alert('网络故障，请稍后重试');
+			    				}
+			    			});
+			    		}
+			    		AjaxShareList();
+			    		
+			    		//加载分享列表
+			    		function loadingShareList(tyeps){
+			    			var lists=JSON.parse(localStorage.getItem('shareList'));
+			    			$(".loadShareList").empty();
+			    			$(".selectShareList").empty();
+			    			//定义一个接收数据的
+			    			var showlist=[];
+			    			switch (tyeps){
+			    				case 'personage':  //个人
+			    				    showlist=lists.personage;
+			    				    $(".select_type span").html('个人');
+			    					break;
+			    				case 'groups': //群组
+			    				    showlist=lists.groups;
+			    				    $(".select_type span").html('群组');
+			    					break;
+			    				case 'school': //学校
+			    				    showlist=lists.school;
+			    				    $(".select_type span").html('学校');
+			    					break;
+			    				default:
+			    					break;
+			    			}
+			    			//console.log(showlist);
+			    			for (var i=0;i<showlist.length;i++) {
+			    				var $li=$("<li data-id='id"+i+"'><span>"+showlist[i]+"</span><i class='iconfont icon-gougou_1'></i></li>");
+			    				$(".loadShareList").append($li);
+			    			}
+			    			//展示列表的每一项点击效果
+			    			$(".loadShareList li").each(function(){
+			    				$(this).bind('click',function(){
+			    					if (!$(this).hasClass('activesure')) {
+			    						$(this).addClass('activesure');
+			    						var thisValue=$(this).find('span').html();
+			    						var thisId=$(this).attr('data-id');
+			    						var $selectLi=$("<li data-id='"+thisId+"'><span>"+thisValue+"</span><i class='iconfont icon-guanbi'></i></li>");
+			    						$(".selectShareList").append($selectLi);
+			    						selectLiclcik();
+			    					    clearList();
+			    					} else{
+			    						$(this).removeClass('activesure');
+			    						var thisId=$(this).attr('data-id');
+			    						var $selectLiID=$(".selectShareList li").attr('data-id');
+			    						$(".selectShareList li").each(function(){
+			    							if ($(this).attr('data-id')==thisId) {
+			    								$(".selectShareList li").eq($(this).index()).remove();
+			    							}
+			    						})
+			    					}
+			    				});
+			    			});
+			    			
+			    			//选择以后的列表每一项'x'的点击效果
+			    			function selectLiclcik(){
+			    				$(".selectShareList li i").each(function(){
+				    				$(this).bind('click',function(){
+				    					$(this).parents('li').remove();
+				    					var thisID=$(this).parents('li').attr('data-id');
+				    					$(".loadShareList li").each(function(){
+			    							if ($(this).attr('data-id')==thisID) {
+			    								$(".loadShareList li").eq($(this).index()).removeClass('activesure');
+			    							}
+			    						})
+				    				})
+				    			});
+			    			}
+			    			
+			    			//input里数值每一次改变都执行的函数
+			    			$("#searchList").bind('input propertychange',function(){
+			    				var $value=$(this).val();
+			    				//console.log($value);
+			    				var searchIndex=[];
+			    				var loadShareListli=$(".loadShareList li");
+			    				for (var i=0;i<loadShareListli.length;i++) {
+			    					var listliValue=loadShareListli.eq(i).find('span').html()
+				    				if (listliValue.indexOf($value)!=-1) {
+				    					searchIndex.push(i);
+				    				};
+				    			}
+			    				//console.log(searchIndex);
+			    				if (searchIndex.length>0) {
+			    					loadShareListli.hide();
+			    					for (var i=0;i<searchIndex.length;i++) {
+			    						loadShareListli.eq(searchIndex[i]).show();
+					    			}
+			    				}
+			    			});
+			    			
+			    			//选择以后点击确定时所执行
+			    			$(".select_sure").bind('click',function(){
+			    				var sureValue='';
+			    				var selectlist=$(".selectShareList li");
+			    				if (selectlist.length>0) {
+			    					for (var i=0;i<selectlist.length;i++) {
+				    					var listvalues=selectlist.eq(i).find('span').html();
+				    					sureValue=sureValue+(listvalues+'，');
+				    				}
+			    					sureValue = sureValue.substring(0, sureValue.length - 1);  
+			    					$("#shareSureList").val(sureValue);
+			    				}
+			    				
+			    			});
+			    			
+			    			//选择以后清空所执行的效果
+			    			function clearList(){
+			    				$(".clear_empty").bind('click',function(){
+				    				var ThisID=[];
+				    				var selectShareli=$(".selectShareList li");
+				    				if (selectShareli.length>0) {
+				    					for(var i=0;i<selectShareli.length;i++){
+					    					var liID=selectShareli.eq(i).attr('data-id');
+					    					ThisID.push(liID);
+					    				}
+				    					for (var j=0;j<ThisID.length;j++) {
+				    						$(".loadShareList li").each(function(){
+				    							if ($(this).attr('data-id')==ThisID[j]) {
+				    								$(".loadShareList li").eq($(this).index()).removeClass('activesure');
+				    							}
+				    						})
+				    					}
+				    					$(".selectShareList").empty();
+				    				}
+				    			});
+			    			}
+			    			
+			    			
+			    		}
+			    		loadingShareList('personage');
+			    		
+			    		//选择类别时所执行的函数
+			    		$(".select_category li").each(function(){
+			    			$(this).bind('click',function(){
+			    				var Index=$(this).index();
+			    				$(this).addClass('activeLi').siblings().removeClass('activeLi');
+			    				switch (Index){
+			    					case 0:
+			    					    loadingShareList('personage');
+			    						break;
+			    					case 1:
+			    					    loadingShareList('groups');
+			    						break;
+			    					case 2:
+			    					    loadingShareList('school');
+			    						break;	
+			    					default:
+			    						break;
+			    				}
+			    			})
+			    		})
+			    		
+			    	}
+			    	shareSelect("js/shareobject.json");
+			    	
+    
+			    })
+			})(jQuery);	    
+		</script>
+	</body>
+</html>

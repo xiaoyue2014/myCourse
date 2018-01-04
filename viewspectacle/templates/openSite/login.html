@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>开放平台-登录</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../static/comm/css/comm.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../static/custom/openSite/css/openSite.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header" id="header"></div>
+			<div class="mainContent loginAndregister">
+				<div class="contentCenter">
+					<div class="content_box">
+						<div class="content_tp"><a class="acitive_a" href="javascript:;">登录</a><a href="register.html">注册</a></div>
+						<div class="loginContent_bt">
+							<dl>
+								<dt class="dl_dt1"><label>用户名：</label><input type="text" /></dt>
+								<dd class="dl_dd1"><label>密&emsp;码：</label><input type="password" /></dd>
+								<dd class="dl_dd2"><span><i class="icon_choice agreedBtn"></i><em>记住密码</em></span><a href="javascript:;">忘记密码</a></dd>
+								<dd><a class="loginBtn" href="javascript:;">登录</a></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<!--<script src="../../static/comm/plugins/paging/page.js"></script>-->
+		<script src="../../static/custom/openSite/js/comm.js"></script>
+		
+		<script type="text/javascript">
+		(function($){
+			$(function(){
+			    //do anything
+			    var agreedFn=function(){
+			    	//记住密码
+			    	$(".agreedBtn").bind('click',function(){
+			    		if ($(this).hasClass('icon_choice')) {
+			    			$(this).addClass('icon_choice_on').removeClass('icon_choice');
+			    		} else{
+			    			$(this).addClass('icon_choice').removeClass('icon_choice_on');
+			    		}
+			    	})
+			    }
+			    agreedFn();
+		    })
+		})(jQuery);
+		</script>
+	</body>
+</html>

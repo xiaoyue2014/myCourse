@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/weui/weui.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_wx.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4WeChat.css"/>
+	</head>
+	<body>
+		<div class="container pageDetails">
+			<!--<div class="header" id="header"></div>-->
+			<div class="mainContent mainContent3">
+				<div class="detailBox">
+					<div class="weui-cell">
+		                <div class="weui-cell__hd">
+		                    <img src="../../../static/custom/familySchoolCommunication/img/listImg2.jpg" alt="照片">
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <p class="teacher_name">王老师</p>
+		                    <p class="date_box"><span class="date_ymd">2017-11-22</span><span class="date_hms">15:20:35</span></p>
+		                </div>
+		            </div>
+		            
+		            <dl class="detail_info">
+		            	<dt>秋季运动会通知：</dt>
+		            	<dd>
+		            		<p>一年一度的秋季运动会也如期而至。为培养德、智、体、美、劳全面发展的理工学子，拓展、丰富大家的课余生活。</p>
+		            	</dd>
+		            </dl>
+				</div>
+				
+				<div class="content_model">
+					<h5>附件</h5>
+					<div class="weui-cells">
+			            <a class="weui-cell weui-cell_access" href="javascript:;">
+			                <div class="weui-cell__hd"><img src="../../../static/custom/familySchoolCommunication/img/icon_shijuan.png"></div>
+			                <div class="weui-cell__bd">
+			                    <p>cell习题第一节</p>
+			                </div>
+			                <div class="weui-cell__ft"></div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="javascript:;">
+			                <div class="weui-cell__hd"><img src="../../../static/custom/familySchoolCommunication/img/icon_video.png"></div>
+			                <div class="weui-cell__bd">
+			                    <p>cell习题第二节</p>
+			                </div>
+			                <div class="weui-cell__ft"></div>
+			            </a>
+			        </div>
+				</div>
+				
+				<div class="content_model">
+					<h5>签名</h5>
+					<div class="signature_box">
+						<div class="signatureArea" id="signatureArea"></div>
+						<!--<textarea class="messageBox"></textarea>-->
+						<span class="removeSignature" id="removeSignature">清空签名</span>
+					</div>
+					
+					<div class="BtnBox"><a class="submitBtn" id="submitBtn" href="javascript:;">签名确认</a></div>
+					
+				</div>
+			</div>
+			<!--<div class="footer" id="footer"></div>-->
+		</div>
+		
+		<script src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../../static/comm/plugins/weui/weui.min.js"></script>
+		<script src="../../../static/comm/plugins/jSignature/jSignature.min.noconflict.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+						var $signatureFn=function(){
+							/*初始化插件*/
+							var $signature = $("#signatureArea").jSignature({
+				                width: "100%", //签名画布的宽
+				                height: "220px",//签名画布的高
+				                color:'black', //签名颜色
+				                signatureLine: true,
+				                lineWidth:'2' ,//签名字的粗细
+				                underLine: false //签名下划线是否存在；false不存在
+				            });
+				     		/*重置插件*/
+				        	$signature.jSignature('reset')
+				        	
+				        	/*清空签名*/
+				        	$("#removeSignature").bind('click',function(){
+							 	$signature.jSignature('reset');
+							});
+							
+							/*提交签名的路径*/
+							var Img = new Image();
+							$("#submitBtn").bind('click',function(){
+								//datapair 
+								var datapair = $signature.jSignature('getData', 'image');    
+								//console.log(datapair);
+								//图片展示
+				                Img.src = "data:" + datapair[0] + "," + datapair[1];
+				                //将数据显示页面上
+				                $(Img).appendTo($(".mainContent")); 
+							});
+						}
+				        
+				      	$(document).ready(function(){
+				      		$signatureFn();
+				      	});
+				       
+						 
+						 
+						 
+				    //end    
+			    })
+			})(jQuery);		
+		</script>
+		
+	</body>
+</html>

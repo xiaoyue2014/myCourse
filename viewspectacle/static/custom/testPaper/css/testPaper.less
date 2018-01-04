@@ -1,0 +1,93 @@
+/**组卷less文件创建于2017-12-29，马润*/
+    
+@import "../../../comm/css/comm.less"; 
+
+@blue3:#1274c9;
+/*头部的样式start*/
+.ContainerWarp{
+    .fixBox{ display: inline-block; position: fixed; right: 18px; bottom: 20%;
+        &>dd{ .wh(50px,50px); overflow: hidden; margin-bottom: 4px; background: @gray;
+            &:last-child{ margin-bottom: 0;}
+            &>i{ .wh(32px,32px); float: left; margin: 9px 0 0 9px; display: inline-block; .bg_all('../../../comm/img/icon_backtop.png');}
+        }
+    } 
+    .header{  width: 100%; height: 165px; border-bottom: 1px solid @gray; 
+        .header_cont{ width: 100%; height: 165px;
+            @h115:115px;
+            &>.header_cont_tp{.maxWidthCommon; height: @h115; overflow: visible;
+                &>.header_lt{ float: left; .wh(28%,@h115);
+                    &>img{ height: 54px; margin: 30.5px 0 0 10px;}
+                }
+                @h40:40px;
+                &>.header_ct{ float: left; .wh(44%,@h115); font-size: @fs14; color: @black3;
+                    .searchBox{ .wh(90%,@h40); margin: 37.5px auto 0 auto; border: 2px solid @blue3; position: relative; 
+                            padding: 5px 60px 5px 70px; .box-sizing; .inputPlaceholder;
+                        &>span{ display: inline-block;}
+                        &>.selectType{ .wh_lh(70px,26px); .small_hand; border-right: 1px solid @gray; padding: 0 16px 0 5px; overflow: hidden; .box-sizing; .Position_t_l(absolute,5px,0);
+                            &:after{ content: ''; display: inline-block; position: absolute; top: 11px; right: 5px; .btne(5px,@black1);}
+                            &.selectTypeAfterChange:after{.Rotate_45;}
+                        }
+                        &>.searchBtn{ .small_hand; .wh(60px,36px); overflow: hidden; background: @blue3; position: absolute; top: 0px; right: 0;
+                            &>i{ .wh(21px,21px); float: left; margin: 8px 0 0 19.5px; display: inline-block; .bg_all('../img/icon/icon_sousuo.png');}
+                        }
+                        &>input{ .wh_lh(100%,26px); outline: none; border: none; padding: 0 5px; .box-sizing;}
+                        &>.selectLists{ position: absolute; top: 38px; left: -2px; width: 70px; background: white; border: 1px solid #ccc;
+                                 .box-sizing; z-index: 5; display: none;
+                            &>li{ .wh_lh(100%,30px); .small_hand; font-size: @fs14; padding: 0 3px; border-bottom: 1px solid @gray; .box-sizing;
+                                &:last-child{ border-bottom: 0;}
+                            }
+                        }
+                    }
+                }
+                &>.header_rt{ float: right; .wh(28%,@h115); overflow: hidden; padding: 37.5px 0; .box-sizing;
+                    &>.userBox{ float: right;  overflow: hidden; height: @h40; line-height: @h40; display: inline-block; margin: 0 0 0 20px;
+                        &>a{ float: left; display: inline-block; overflow: hidden; color: @black3; .small_hand;
+                            .userPhoto{ float: left;}
+                            .userName{ float: left; font-size: @fs16; margin-left: 5px; display: inline-block; font-weight: normal; .wh_lh(60px,40px); overflow: hidden;}
+                        }
+                        .systemOut{ float: left; margin: 0 10px 0 10px; color: @blue3; .small_hand;}
+                    }
+                    &>.shoppingCart{ float: right;}
+                }
+            }
+            .shoppingCart{ display: inline-block; .wh_lh(100px,40px); padding: 0 5px 0 36px; font-size: @fs14; color: @black3; border: 1px solid @gray;
+                     .round(3px); .box-sizing; position: relative; background: white;
+                &:after{ content: ''; position: absolute; top: 12px; left: 7px; .wh(19px,16px); display: inline-block; .bg_all('../img/icon/icon_shopping.png');}     
+                &>b{ font-weight: normal; .round(50%); font-size: @fs12; text-align: center; display: inline-block; background: red;
+                     color: @white; .wh_lh(20px,20px); position: absolute; top: -10px; right: -10px; z-index: 5;
+                }
+            }
+            @h50:50px;
+            &>.header_cont_bt{ .wh(100%,@h50); background: @blue3; position: relative;
+                &>.cont_bt{.maxWidthCommon; padding-right: 130px; .box-sizing;
+                    .shoppingCart{ position: absolute; top: 5px; right: 10px; display: none;}
+                    .header_nav{  width: 100%; overflow: hidden;
+                        &>li{ display: inline-block; .wh_lh(12%,50px); text-align: center; float: left;
+                            &:hover,&.active_li{ background: #2d92e9;}
+                            &>a{ color: @white; font-size: @fs16;}
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    .mainContent .contentCenter{.maxWidthCommon; background: @white;}
+}    
+/*头部的样式end*/
+
+
+/*字体定义*/ 
+/*@fs12:12px;
+@fs14:14px;
+@fs16:16px;
+@fs18:18px;
+@fs20:20px;
+@fs24:24px;
+@blue1:#42a2f6;
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@gray:#e1e1e1;*/ 

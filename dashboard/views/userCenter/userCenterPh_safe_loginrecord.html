@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalabel=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenterPh.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPh_safe_loginrecord">
+			<div class="header_phone">
+				<a href="userCenterPh_safe.html"><i class="iconfont icon-left"></i></a>
+				<span>登录日志</span>
+			</div>
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="book_info_box">
+						<dl data-id = "list1" class="book_info_list">
+							<dd><b>登录编号：</b><span>1</span></dd>
+							<dd><b>登录IP：</b><span>192.168.120.191</span></dd>
+							<dd><b>登录时间：</b><span>2017-08-28 10:23:50</span></dd>
+						</dl>
+						<dl data-id = "list1" class="book_info_list">
+							<dd><b>登录编号：</b><span>2</span></dd>
+							<dd><b>登录IP：</b><span>192.168.120.191</span></dd>
+							<dd><b>登录时间：</b><span>2017-08-28 10:23:50</span></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/userCenterPh.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			        //删除按钮所执行的函数
+			        $(".removeListBtn").each(function(){
+			        	$(this).click(function(){
+			        		var that=$(this);
+			        		var listId=$(this).parents(".book_info_list").attr('data-id');
+			        		console.log(listId);
+			        		//暂无接口,做的删除效果
+			        		that.parents(".book_info_list").empty().remove();
+//			        		$.ajax({
+//			        			type:"get",
+//			        			url:'url?Id='+listId,
+//			        			async:true,
+//			        			success:function(result){
+//			        				//根据返回值删除对应的版本列表
+//			        				that.parents(".book_info_list").empty().remove();
+//			        			},
+//			        			error:function(){
+//			        				alert('暂时无法删除')
+//			        			}
+//			        		});
+			        	})
+			        });
+			
+			    })
+			})(jQuery);
+		</script>
+		
+	</body>
+</html>

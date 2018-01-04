@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/resourcesPage.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain resourcesShareList">
+			<!--头部-->
+			<div class="header">
+				<a href="javascript:;" class="header_logo"><img class="logo_img" src="img/logo_black.png"/></a>
+			    <!--<ul class="header_nav">
+			    	<li><a href="javascript:;">首页</a></li>
+			    	<li class="resourcesLi"><a href="javascript:;"><span>资源</span><i class="iconfont icon-xiangxia"></i></a></li>
+			    	<li><a href="javascript:;">我的空间</a></li>
+			    </ul>-->
+                <div class="header_user_box">
+                	<div class="system_out"><i class="iconfont icon-tuichuxitong1"></i></div>
+                	<div class="user_box">
+            			<div class="user_top">
+            				<a class="is_iphone" href="javascript:;">
+            					<img class="touxiang" src='img/touxaing.jpg' />
+		                		<span class="user_names"></span>
+		                		<span class="span_icon_pc"><i class="iconfont icon-xiangxia1"></i></span>
+		                		<span class="span_icon_iphone"><i class="iconfont icon-gengduo"></i></span>
+            				</a>
+            			</div>
+                		<ul class="shezhiNav">
+                			<div class="user_box_triangle"></div>
+                			<li><i class="iconfont icon-guanli"></i><a href="javascript:;">个人设置</a></li>
+                			<li><i class="iconfont icon-zhanghaoanquan"></i><a href="javascript:;">账号安全</a></li>
+                			<li><i class="iconfont icon-tuichuxitong1"></i><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+                		</ul>
+                	</div>
+                </div>
+			</div>
+						
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<h4 class="source_title">资源分享列表展示</h4>
+					<div class="showList_box">
+						<div class="share_type">
+							<a class="Aacitve" href="javascript:;">我的分享</a>
+							<a href="javascript:;">分享给我</a>
+						</div>
+						<ul class="share_content">
+							<li class="activeshow">
+								<table class="shareForOther">
+									<tr>
+										<th>资源名</th>
+										<th>分享类别</th>
+										<th>分享明细</th>
+										<th>分享时间</th>
+										<th>分享有效期</th>
+									</tr>
+									<tr>
+										<td><a href="javascript:;">语文教材</a></td>
+										<td>个人</td>
+										<td>杨博文，王妙，时婷婷，刘书睿，付栩萌</td>
+										<td>2016-02-25</td>
+										<td>一个月</td>
+									</tr>
+									<tr>
+										<td><a href="javascript:;">生物测试题</a></td>
+										<td>群组</td>
+										<td>学创教育武汉群</td>
+										<td>2017-02-25</td>
+										<td>一个月</td>
+									</tr>
+									<tr>
+										<td><a href="javascript:;">数学重点知识整理</a></td>
+										<td>个人</td>
+										<td>四川中学</td>
+										<td>2017-08-25</td>
+										<td>半年</td>
+									</tr>
+								</table>
+							</li>
+							<li>
+								<table class="shareForme">
+									<tr>
+										<th>资源名</th>
+										<th>分享者</th>
+										<th>分享时间</th>
+										<th>分享有效期</th>
+									</tr>
+									<tr>
+										<td><a href="javascript:;">语文教材</a></td>
+										<td>时婷婷</td>
+										<td>2016-02-25</td>
+										<td>一个月</td>
+									</tr>
+									<tr>
+										<td><a href="javascript:;">生物测试题</a></td>
+										<td>刘书睿</td>
+										<td>2017-02-25</td>
+										<td>一个月</td>
+									</tr>
+									<tr>
+										<td><a href="javascript:;">数学重点知识整理</a></td>
+										<td>付栩萌</td>
+										<td>2017-08-25</td>
+										<td>半年</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+			    <!--底部-->
+				<div class="footer">
+					<p>Copyright © 2017 Enable-ETS Corporation. All Rights Reserved.&emsp;&emsp;&emsp;建议浏览器：IE9+、Google Chrome、Firefox</p>
+			    </div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/resourcePage.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			        
+			        var tableNav=function(){
+			        	$(".share_type a").bind('click',function(){
+			        		var $Index=$(this).index();
+			        		$(this).addClass('Aacitve').siblings().removeClass('Aacitve');
+			        		$(".share_content li").eq($Index).addClass('activeshow').siblings().removeClass('activeshow');
+			        	})
+			        }
+			        tableNav();
+			        
+			    })
+			})(jQuery);	
+		</script>
+	</body>
+</html>

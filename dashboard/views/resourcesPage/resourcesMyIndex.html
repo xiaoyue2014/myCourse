@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/resourcesPage.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain resourcesMyIndex">
+			<!--头部-->
+			<div class="header">
+				<a href="javascript:;" class="header_logo"><img class="logo_img" src="img/logo_black.png"/></a>
+			    <!--<ul class="header_nav">
+			    	<li><a href="javascript:;">首页</a></li>
+			    	<li class="resourcesLi"><a href="javascript:;"><span>资源</span><i class="iconfont icon-xiangxia"></i></a></li>
+			    	<li><a href="javascript:;">我的空间</a></li>
+			    </ul>-->
+                <div class="header_user_box">
+                	<div class="system_out"><i class="iconfont icon-tuichuxitong1"></i></div>
+                	<div class="user_box">
+            			<div class="user_top">
+            				<a class="is_iphone" href="javascript:;">
+            					<img class="touxiang" src='img/touxaing.jpg' />
+		                		<span class="user_names"></span>
+		                		<span class="span_icon_pc"><i class="iconfont icon-xiangxia1"></i></span>
+		                		<span class="span_icon_iphone"><i class="iconfont icon-gengduo"></i></span>
+            				</a>
+            			</div>
+                		<ul class="shezhiNav">
+                			<div class="user_box_triangle"></div>
+                			<li><i class="iconfont icon-guanli"></i><a href="javascript:;">个人设置</a></li>
+                			<li><i class="iconfont icon-zhanghaoanquan"></i><a href="javascript:;">账号安全</a></li>
+                			<li><i class="iconfont icon-tuichuxitong1"></i><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+                		</ul>
+                	</div>
+                </div>
+			</div>
+						
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="selected_box">
+						<ul class="selection_criteria">
+							<li class="criteria_list">
+								<span>资源类型：</span>
+								<p>
+									<a class="Aactive" href="javascript:;">全部</a>
+									<a href="javascript:;">教材</a>
+									<a href="javascript:;">学习工具</a>
+									<a href="javascript:;">课程</a>
+									<a href="javascript:;">作业</a>
+									<a href="javascript:;">试卷</a>
+									<a href="javascript:;">试题</a>
+									<a href="javascript:;">微课</a>
+								</p>
+							</li>
+							
+							<li class="criteria_list">
+								<span>学段/年级/年级：</span>
+								<p>
+									<a class="Aactive" href="javascript:;">小学</a>
+									<a href="javascript:;">初中</a>
+									<a href="javascript:;">高中</a>
+								</p>
+							</li>
+						</ul>
+						<!--<div class="The_selected">
+							<span class="selected_list"></span>
+						</div>-->
+						<div class='search_box'>
+							<span>关键词：</span><input type="search" name="" id="" value="" /><button class="searchbtn">搜索</button>
+						</div>
+					</div>
+					
+					<div class="MainCenter_bottom">
+						<div class="Btn_box">
+							<a class="mannyremove" href="javascript:;">批量删除</a>
+							<a class="addnew" href="javascript:;">新增</a>
+						</div>
+						<div class="sourcelist_box">
+							<table id="list_table">
+								<tr>
+									<th><input type="checkbox" id="inputall" /></th>
+									<th>资源名称</th>
+									<th>资源类型</th>
+									<th>资源描述</th>
+									<th>上传者</th>
+									<th>上传时间</th>
+									<th>操作</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="" /></td>
+									<td><p>为你打开一扇门为你打开一扇门</p></td>
+									<td><p>教材教材教材教材教材教材教材教材教材教材教材教材</p></td>
+									<td><p>课文作者：赵丽宏 为你打开一扇门 课文作者：赵丽宏 为你打开一扇门课文作者：赵丽宏 为你打开一扇门</p></td>
+									<td>superadmin</td>
+									<td>2017-08-3</td>
+									<td><i class="iconfont icon-xiugai"></i><i class="iconfont icon-chuyidong"></i><i class="iconfont icon-shangchuan"></i></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="" /></td>
+									<td><p>为你打开一扇门</p></td>
+									<td><p>教材</p></td>
+									<td><p>课文作者：赵丽宏 为你打开一扇门 </p></td>
+									<td>superadmin</td>
+									<td>2017-08-3</td>
+									<td><i class="iconfont icon-xiugai"></i><i class="iconfont icon-chuyidong"></i></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="" /></td>
+									<td><p>为你打开一扇门</p></td>
+									<td><p>教材</p></td>
+									<td><p>课文作者：赵丽宏 为你打开一扇门 </p></td>
+									<td>superadmin</td>
+									<td>2017-08-3</td>
+									<td><i class="iconfont icon-xiugai"></i><i class="iconfont icon-chuyidong"></i></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="" /></td>
+									<td><p>为你打开一扇门</p></td>
+									<td><p>教材</p></td>
+									<td><p>课文作者：赵丽宏 为你打开一扇门 </p></td>
+									<td>superadmin</td>
+									<td>2017-08-3</td>
+									<td><i class="iconfont icon-xiugai"></i><i class="iconfont icon-chuyidong"></i></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+				</div>
+			    <!--底部-->
+				<div class="footer">
+					<p>Copyright © 2017 Enable-ETS Corporation. All Rights Reserved.&emsp;&emsp;&emsp;建议浏览器：IE9+、Google Chrome、Firefox</p>
+			    </div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/resourcePage.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			    	
+			    	//头部条件筛选部分视图效果变化
+			    	function listViewChange(class1,classactive){
+			    		$(class1).each(function(){
+			    			$(this).click(function(){
+			    				$(this).addClass(classactive).siblings().removeClass(classactive);
+			    			})
+			    		})
+			    	}
+			    	//头部条件筛选部分视图效果变化
+			    	listViewChange('.criteria_list p a','Aactive');
+			    	
+			        //全选功能
+			        $("#inputall").click(function(){   
+					    if(this.checked){   
+					        $("#list_table :checkbox").prop("checked", true);  
+					    }else{   
+						$("#list_table :checkbox").prop("checked", false);
+					    }   
+					});
+			    })
+			})(jQuery);	
+		</script>
+	</body>
+</html>

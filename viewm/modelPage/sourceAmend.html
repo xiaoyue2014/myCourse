@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../common/Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/modelindex.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">张三丰</span>
+							<img class="user_photo" src="img/touxiang.png"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<!--暂时引入分享页-->
+			<div class="knowledgeselectbox">
+				<div class="knowledgeselect" id="knowledgeselect"></div>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu">
+							<div class="Asidecontent">
+								<div class="Aside_show_btn">
+									<p class="AsideBtn_tp"><img class="AsideShowBtnImg" src="img/sidebar_icon/caidan.png"/></p>
+									<p class="AsideBtn_bt"></p>
+								</div>
+								
+								<ul class="Aside_list">
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_1"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的首页</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_2"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的资源管理</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_3"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源分享</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_4"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源审批</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									
+								</ul>
+								
+							</div>
+						</div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox sourceAmend">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的桌面</span>
+									<span class="span_2"></span>
+									<span class="span_text">资源管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">资源修改</span>
+								</div>
+								<div class="contentCenter">
+									<ul class="AmendBox">
+										<li class="Amend_list_1">
+											<span class="list_Title"><em>*</em><b>文件</b></span>
+											<div class="file_box_warp">
+												<ul class="file_box">
+													<li><a href='javascript:;'>video-0111.mp4<span class="removefileBtn"></span></a></li>
+													<li><a href='javascript:;'>video-0111.mp4<span class="removefileBtn"></span></a></li>
+													
+												</ul>
+											</div>
+											<span class="addfileBtn">新增</span>
+											<em class="tips">最多上传五个文件，文件小于100M</em>
+										</li>
+										<li class="Amend_list_2">
+											<span class="list_Title"><em>*</em><b>资源名称</b></span>
+											<div class="list_content"><input type="text" class="file_name" id="" value="" /></div>
+										</li>
+										<li class="Amend_list_2">
+											<span class="list_Title"><em>*</em><b>资源类型</b></span>
+											<div class="list_content file_class_box">
+												<select class="file_class" name="">
+													<option value="学习工具1">学习工具1</option>
+													<option value="学习工具2">学习工具2</option>
+													<option value="学习工具3">学习工具3</option>
+												</select>
+											</div>
+										</li>
+										<li class="Amend_list_2">
+											<span class="list_Title"><em class="opacity0">*</em><b>学段/年级/科目</b></span>
+											<div class="list_content">
+												<div class="file_subject_box">
+													<div class="file_subject_list">
+														<select class="file_class" name="">
+															<option value="小学">小学</option>
+															<option value="初中">初中</option>
+															<option value="高中">高中</option>
+														</select>
+													</div>
+													<div class="file_subject_list">
+														<select class="file_class" name="">
+															<option value="">一年级</option>
+															<option value="">二年级</option>
+															<option value="">三年级</option>
+														</select>
+													</div>
+													<div class="file_subject_list">
+														<select class="file_class" name="">
+															<option value="">语文</option>
+															<option value="">数学</option>
+															<option value="">英语</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="Amend_list_2 Amend_list_4">
+											<span class="list_Title"><em class="opacity0">*</em><b>知识点</b></span>
+											<div class="list_content">
+												<div class="file_knowledge_box">
+													<div class="file_knowledge">
+														<div class="box_auto">
+															<ul class="list_box">
+																<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+																<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+																
+															</ul>
+														</div>
+													</div>
+												</div>
+												<!--<input type="text" class="file_knowledge" id="" value="" />-->
+												<span class="knowledgeSelectBtn">选择</span>
+											</div>	
+										</li>
+										<li class="Amend_list_3">
+											<span class="list_Title"><em class="opacity0">*</em><b>资源描述</b></span>
+											<div class="list_content">
+												<textarea class="file_desc"></textarea>
+											</div>
+										</li>
+										
+										<li class="Amend_list_1">
+											<span class="list_Title"></span>
+											<div class="Btn_box list_content">
+												<button class="shareBtn" type="button">保存</button>
+												<button class="pagecloseBtn" type="button">返回</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer">
+					    <img class="footerImg" src='img/logo_sm.png'/>
+					    <p>Copyright 2017 Enable-ETS Corporation. All Rights Reserved.</p>
+					</div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../component_module/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+        <script src="../../component_module/paging/page.js"></script>
+        <script src="../common/modelCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    function file_boxli_exist(){
+			    	//console.log($(".file_box li").length)
+			    	if ($(".file_box li").length>0) {
+			         	$(".addfileBtn").css({'margin-left':'-4.9%'});
+			         	$(".file_box_warp").css({"width":'50%'});
+				    }else{
+				    	$(".addfileBtn").css({'margin-left':'0'});
+			         	$(".file_box_warp").css({"width":'0'});
+				    }
+			    }
+			    file_boxli_exist();
+			    
+			    //临时代码,要删除
+			    $(".knowledgeselectbox").hide()
+			    $("#knowledgeselect").load('knowledgeSelect.html');
+			    $(".knowledgeSelectBtn").click(function(){
+			    	$(".knowledgeselectbox").show();
+			    })
+			        
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

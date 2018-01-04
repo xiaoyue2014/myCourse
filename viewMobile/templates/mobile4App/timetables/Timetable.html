@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创App</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.poppicker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.picker.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_app.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4App.css"/>
+	</head>
+	<body>
+		<div class="Container Timetable">
+			<header id="header" class="mui-bar mui-bar-nav header">
+				<h1 class="mui-title">课程表</h1>
+				<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+			</header>
+			<div class="weekSelectBox">
+				<div class="weekPrev"><i></i><a href="Javascript:;">上一周</a></div>
+				<div class="weekCenter" id="weekSelectShow">
+					<span class="selectedWeek" id="selectedWeek">第6周</span>
+					<span class="total_week" id="total_week">共4周</span>
+				</div>
+				<div class="weekNext"><i></i><a href="Javascript:;">下一周</a></div>
+			</div>
+			<div class="mainContent">
+				<div class="weekcont">
+					<h4 class="childrenName">吴雨婷</h4>
+					<ul class="weekList">
+						<li>
+							<a class="list_child"></a>
+							<a class="list_child">星期一<br />11-01</a>
+				            <a class="list_child">星期二<br />11-02</a>
+				            <a class="list_child">星期三<br />11-03</a>
+				            <a class="list_child">星期四<br />11-04</a>
+				            <a class="list_child">星期五<br />11-05</a>
+				            <a class="list_child">星期六<br />11-06</a>
+				            <a class="list_child">星期日<br />11-07</a>
+						</li>
+						<li>
+							<a class="list_child">1</a>
+							<a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">2</a>
+							<a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">3</a>
+							<a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">4</a>
+							<a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">5</a>
+							<a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">6</a>
+							<a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">7</a>
+							<a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+					</ul>
+				</div>
+				<div class="weekcont">
+					<h4 class="childrenName">吴天浩</h4>
+					<ul class="weekList">
+						<li>
+							<a class="list_child"></a>
+							<a class="list_child">星期一<br />11-01</a>
+				            <a class="list_child">星期二<br />11-02</a>
+				            <a class="list_child">星期三<br />11-03</a>
+				            <a class="list_child">星期四<br />11-04</a>
+				            <a class="list_child">星期五<br />11-05</a>
+				            <a class="list_child">星期六<br />11-06</a>
+				            <a class="list_child">星期日<br />11-07</a>
+						</li>
+						<li>
+							<a class="list_child">1</a>
+							<a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">语文</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">2</a>
+							<a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">数学</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">3</a>
+							<a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">英语</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">4</a>
+							<a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">生物</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">5</a>
+							<a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">历史</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">6</a>
+							<a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">思想品德</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+						<li>
+							<a class="list_child">7</a>
+							<a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">音乐</a>
+				            <a class="list_child">--</a>
+				            <a class="list_child">--</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav_bottom" id="nav_bottom"></div>
+		</div>
+		
+		<script type="text/javascript" src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script type="text/javascript" src="../../../static/comm/plugins/mui/js/mui.min.js"></script>
+		<script src="../../../static/comm/plugins/mui/js/mui.poppicker.min.js"></script>
+		<script src="../../../static/comm/plugins/mui/js/mui.picker.min.js"></script>
+		<script src="../../../static/custom/familySchoolCommunication/js/commModelApp.js"></script>
+		<script>
+			(function($){
+				$(function(){
+					//start
+				    var weekSelectFn=function(weekNum,callbackFn){
+				    	var $Arrays=new Array();
+				    	$("#total_week").html("共"+weekNum+"周");
+				    	for (var i=1;i<weekNum+1;i++) {
+				    		var $gather={};
+				    		$gather.text="第"+i+"周";
+				    		$gather.value=i;
+				    		$Arrays.push($gather);
+				    	}
+				    	//console.log($Arrays)
+				    	
+				    	var picker = new mui.PopPicker();
+						picker.setData($Arrays);
+						//picker.pickers[0].setSelectedIndex(4, 2000);
+						picker.pickers[0].setSelectedValue('fourth', 2000);
+						$("#weekSelectShow").bind('click',function(){
+				    		picker.show(function(SelectedItem) {
+								//console.log(SelectedItem[0].text);
+								var $text=SelectedItem[0].text,
+									$value=SelectedItem[0].value;
+								$("#weekSelectShow>#selectedWeek").html($text);
+								picker.hide();
+								callbackFn($value);
+							});
+			    		})
+				    }
+				    weekSelectFn(24,function(text){ /**第一个参数为周数，第二个参数为选择第几周以后的回调函数,其中num为选择的第num周*/
+				    	console.log(text);
+				    	//根据num选择第几周,切换课程表
+				    });
+				    //end    
+			    })
+			})(jQuery);	
+		</script>
+	</body>
+</html>

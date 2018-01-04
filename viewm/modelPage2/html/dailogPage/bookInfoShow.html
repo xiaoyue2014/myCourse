@@ -1,0 +1,91 @@
+<dt>
+	<div class="dt_tp">
+		<img class="big_fm" alt="大封面图" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm6.png"/>
+	</div>
+	<div class="dt_bt">
+		<span class="prev_change"></span>
+		<div class="small_fm_hide">
+			<ul class="small_fm_box">
+				<li><img class="small_fm" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm6.png" alt="小封面图" /></li>
+				<li><img class="small_fm" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm5.png" alt="小封面图" /></li>
+				<li><img class="small_fm" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm4.png" alt="小封面图" /></li>
+				<li><img class="small_fm" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm3.png" alt="小封面图" /></li>
+				<li><img class="small_fm" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm2.png" alt="小封面图" /></li>
+				<li><img class="small_fm" src="http://og42u3hva.bkt.clouddn.com/book/fm/fm1.png" alt="小封面图" /></li>
+			</ul>
+		</div>
+		<span class="next_change"></span>
+	</div>
+</dt>
+<dd>
+	<div class="dd_tp">
+		<h4>美术基础</h4>
+		<ol class="book_info_1">
+			<li><b>课程简称：</b><p>美术</p></li>
+			<li><b>课程编码：</b><p>222222155</p></li>
+			<li class="list_li"><b>课程简介：</b><p>简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情简介详情</p></li>
+		</ol>
+	</div>
+	<div class="dd_bt">
+		<ol class="book_info_2">
+			<li>
+				<b>教材名称：</b>
+				<p>美术入门基础</p>
+			</li>
+			<li>
+				<b>册别：</b>
+				<p>全册</p>
+			</li>
+			<li>
+				<b>学段/年级/科目：</b>
+				<p>小学/三年级/美术</p>
+			</li>
+			<li>
+				<b>出版社：</b>
+				<p>中国人民教育出版社</p>
+			</li>
+			<li>
+				<b>版次：</b>
+				<p>第二版</p>
+			</li>
+			<li>
+				<b>印刷时间：</b>
+				<p>2017年10月</p>
+			</li>
+		</ol>
+	</div>
+</dd>
+
+<script>
+	$(function() {
+		//do anything
+		//封面图展示
+		var fmShowImg=function(){
+			function imgSrcChange(){
+				$(".small_fm_box>li>img").each(function(){
+					$(this).on('click',function(){
+						var $imgSrc=$(this).attr('src');
+						$(".big_fm").attr({src:$imgSrc});
+					});
+				});
+			}
+			imgSrcChange();
+			//点击向左按钮
+			$(".prev_change").on('click',function(){
+				var lifirst=$(".small_fm_box li").last().clone();
+				$(".small_fm_box li").last().remove();
+				$(".small_fm_box").prepend(lifirst);
+				imgSrcChange();
+			})
+			$(".next_change").on('click',function(){
+				var lifirst=$(".small_fm_box li").eq(0).clone();
+				$(".small_fm_box li").eq(0).remove();
+				$(".small_fm_box").append(lifirst);
+				imgSrcChange();
+			})
+		}
+		fmShowImg();
+	});
+	
+</script>
+						

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/projectManage/css/projectManage.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox projectAmend">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">项目管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">项目修改</span>
+								</div>
+								<div class="contentCenter">
+									<div class="contentCenter_tp">
+										<span id="addproject" class="addproject"><i class="i_shouqi"></i></span>
+										<div class="search_area">
+											<ul class="search_criteria">
+												<li><label>项目名称</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+												<li class="list_h_diffrent"><label>项目说明</label><div class="_li_rt"><div class="list_cont"><textarea></textarea></div></div></li>
+											</ul>
+											<div class="button_box">
+												<button class="bg_color" type="button">保存</button>
+												<!--<a href="./projectAmend.html">新建</a>-->
+											</div>
+										</div>
+										
+									</div>	
+									<div class="contentCenter_bt">
+										<!--收起树的按钮-->
+										<span class="asideopen" id="asideopen"><i></i></span>
+										<div class="contentCenter_bt_lt">
+											<h4><i class="icon_mulu"></i>目录<i class="contAsideBtn"></i></h4>
+											<div class="tree_box">
+												<div class="box_auto">
+													<ul style="padding: 10px; box-sizing: border-box;">
+														<li>1</li>
+														<li>2</li>
+														<li>3</li>
+														<li>4</li>
+														<li>5</li>
+														<li>6</li>
+														<li>7</li>
+														<li>8</li>
+														<li>9</li>
+														<li>10</li>
+														<li>11</li>
+														<li>12</li>
+														<li>13</li>
+														<li>14</li>
+														<li>15</li>
+														<li>16</li>
+														<li>17</li>
+														<li>18</li>
+														<li>19</li>
+														<li>20</li>
+														<li>21</li>
+														<li>22</li>
+														<li>23</li>
+														<li>24</li>
+														<li>25</li>
+														<li>26</li>
+														<li>27</li>
+														<li>28</li>
+														<li>29</li>
+														<li>30</li>
+														<li>31</li>
+														<li>32</li>
+														<li>33</li>
+														<li>34</li>
+														<li>35</li>
+														<li>36</li>
+														<li>37</li>
+														<li>38</li>
+														<li>39</li>
+														<li>40</li>
+														<li>41</li>
+														<li>42</li>
+														<li>43</li>
+														<li>44</li>
+														<li>45</li>
+														<li>46</li>
+														<li>47</li>
+														<li>48</li>
+														<li>49</li>
+														<li>50</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="rightcont contentCenter_bt_rt">
+											<h4>项目修改</h4>
+											<table class="CommonShowTable">
+												<tr>
+													<th>名称</th><th>创建时间</th>
+													<th>创建者</th><th>状态</th>
+													<th class="FixedWidth3">操作</th>
+												</tr>
+												<tr>
+													<td>project-1-1</td><td>2017-01-04</td>
+													<td>超级管理员</td><td>发布</td>
+													<td><i title="发布" class="icon_fabu"></i><i title="修改" class="icon_xiugai"></i></td>
+												</tr>
+												<tr>
+													<td>project-1-1</td><td>2017-01-04</td>
+													<td>超级管理员</td><td>发布</td>
+													<td><i title="发布" class="icon_fabu"></i><i title="修改" class="icon_xiugai"></i></td>
+												</tr>
+												<tr>
+													<td>project-1-1</td><td>2017-01-04</td>
+													<td>超级管理员</td><td>发布</td>
+													<td><i title="发布" class="icon_fabu"></i><i title="修改" class="icon_xiugai"></i></td>
+												</tr>
+											</table>
+											<!--分页-->
+											<div class="page_box">
+												<div class="page_box_tips">共<b>100</b>条记录,当前是第<span class="pageNum">1</span>页,每页10条</div>
+												<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../static/comm/plugins/paging/page.js"></script>
+        <script src="../../static/comm/js/modelCommon.js"></script>
+        <script src="../../static/custom/projectManage/js/projectManage.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    //分页
+				var paging = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数    
+			   	
+			   	/*页面变化按钮的操作*/
+			    var asidetreeFn=function(){
+			    	$(".contAsideBtn").bind("click",function(){
+			    		$(".contentCenter_bt_lt").animate({'width':'0','fontSize':'0'},500);
+			    		$(".contentCenter_bt").animate({'padding-left':'0'},500,function(){
+			    			$("#asideopen").show();
+			    		});
+			    	});
+			    	
+			    	$("#asideopen").bind("click",function(){
+			    		$(this).hide();
+			    		$(".contentCenter_bt_lt").animate({'width':'300px','fontSize':'14px'},500);
+			    		$(".contentCenter_bt").animate({'padding-left':'320px'},500);
+			    	});
+			    	
+			    	/*展开项目信息栏的操作*/
+			    	$("#addproject").bind('click',function(){
+			    		if ($(this).find('i').hasClass('i_shouqi')) {
+			    			$(this).find('i').removeClass('i_shouqi').addClass('i_zhankai');
+			    			$(this).addClass('bg_blue');
+			    			$(".search_area").slideUp();
+			    		}else{
+			    			$(this).find('i').removeClass('i_zhankai').addClass('i_shouqi');
+			    			$(this).removeClass('bg_blue');
+			    			$(".search_area").slideDown();
+			    		}
+			    	});
+			    }
+			    asidetreeFn();
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

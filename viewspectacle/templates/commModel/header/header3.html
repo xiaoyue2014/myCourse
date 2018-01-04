@@ -1,0 +1,77 @@
+<div class="header_cont">
+	<div class="header_cont_tp">
+		<div class="header_lt">
+			<img src="../../../static/comm/img/logo2.png"/>
+		</div>
+		<div class="header_ct">
+			<div class="searchBox" id="searchBox">
+				<span id="selectType" class="selectType">试卷</span><!--此处最多三个字-->
+				<input type="text" placeholder="请输入关键字" />
+				<span class="searchBtn"><i></i></span>
+			</div>
+		</div>
+		<div class="header_rt">
+			<div class="userBox">
+				<a href="javascript:;"><img class="userPhoto" src="../../../static/custom/testPaper/img/userPhoto.png"/><b class="userName">张晓月下</b></a>
+				<span class="systemOut">退出</span>
+			</div>
+			<!--在导航栏又有个购物车-->
+			<a href="javascript:;" class="shoppingCart"><span>试题篮</span><b>0</b></a>
+		</div>
+	</div>
+	<div class="header_cont_bt">
+		<div class="cont_bt">
+			<ol class="header_nav">
+				<li class="active_li"><a href="javascript:;">首页</a></li>
+				<li><a href="javascript:;">手动组卷</a></li>
+				<li><a href="javascript:;">智能组卷</a></li>
+				<li><a href="javascript:;">试卷库</a></li>
+				<li><a href="javascript:;">试题库</a></li>
+				<li><a href="javascript:;">我的组卷</a></li>
+				<li><a href="javascript:;">我的收藏</a></li>
+				<li><a href="javascript:;">帮助</a></li>
+			</ol>
+			<!--在导航栏又有个购物车-->
+			<a href="javascript:;" class="shoppingCart"><span>试题篮</span><b>0</b></a>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+(function($){
+	$(function(){
+	    //do anything
+	    var selectValue=["试题","试卷","知识点"];
+	    var headerFn=function($Arrays){
+	    	//头部搜索框内下拉框点击
+	    	var $ul=$("<ul class='selectLists'></ul>");
+	    	for (var i in $Arrays) {
+	    		var $li=$("<li>"+$Arrays[i]+"</li>");
+	    		$ul.append($li);
+	    	}
+	    	$("#searchBox").append($ul);
+	    	var clickNums=0;
+	    	$("#selectType").bind('click',function(){
+	    		if (!$(this).hasClass('selectTypeAfterChange')) {
+	    			$(this).addClass('selectTypeAfterChange')
+	    			$(".selectLists").slideDown();
+	    		}else{
+	    			$(this).removeClass('selectTypeAfterChange')
+	    			$(".selectLists").slideUp();
+	    		}
+	    		clickNums++;
+	    	});
+	    	$(".selectLists li").each(function(){
+	    		$(this).bind("click",function(){
+	    			$("#selectType").html($(this).html());
+	    			$("#selectType").removeClass('selectTypeAfterChange');
+	    			$(".selectLists").slideUp();
+	    			clickNums++;
+	    		});
+	    	});
+	    }
+	    headerFn(selectValue);
+    })
+})(jQuery);
+</script>

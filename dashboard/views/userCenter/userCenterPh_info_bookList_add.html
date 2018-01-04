@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalabel=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/weui/weui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenterPh.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPh_info_bookVs">
+			<div class="header_phone">
+				<a href="userCenterPh_info_bookVs.html"><i class="iconfont icon-left"></i></a>
+				<span>新增教材信息</span>
+			</div>
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<div class="book_info_box">
+						<form class="book_info_add" action="" method="post">
+							<dl>
+								<dd><b>学习阶段：</b><span><input type="text" placeholder="-请选择学习阶段-" readonly id="LearningPhase" /></span></dd>
+								<dd><b>学习年级：</b><span><input type="text" placeholder="-请选择年级-" readonly id="" /></span></dd>
+								<dd><b>科目名称：</b><span><input type="text" placeholder="-请选择科目-" readonly id="" /></span></dd>
+								<dd><b>教材版本：</b><span><input type="text" placeholder="-请选择版本-" readonly id="" /></span></dd>
+								<dd><button type="submit">确定</button><button type="reset">重置</button></dd>
+							</dl>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/weui/weui.min.js"></script>
+		<script src="js/userCenterPh.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+					$('#LearningPhase').on('click', function (event) {
+						var that=$(this);
+			    	 	event.stopPropagation();
+				        weui.picker([{
+				            label: '排序：',
+				            disabled: true,
+				            value: -1
+				        },{
+				            label: '小学',
+				            value: {'id':0,'name':'小学'}
+				        }, {
+				            label: '初中',
+				            value: {'id':1,'name':'初中'}
+				        }, {
+				            label: '高中',
+				            value: {'id':2,'name':'高中'}
+				        },{
+				            label: '大学',
+				            value: {'id':3,'name':'大学'}
+				        }], {
+				            onChange: function (result) {
+				                //console.log(result[0].name);
+				            },
+				            onConfirm: function (result) {
+				                console.log(result[0].name);
+				                that.val(result[0].name);
+				            }
+				        });
+				    });
+				    
+			    })
+			})(jQuery);
+		</script>
+		
+	</body>
+</html>

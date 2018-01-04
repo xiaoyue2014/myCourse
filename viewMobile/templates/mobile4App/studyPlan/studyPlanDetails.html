@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创App</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.poppicker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.picker.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_app.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4App.css"/>
+	</head>
+	<body>
+		<div class="Container studyPlanDetails">
+			<header id="header" class="mui-bar mui-bar-nav header">
+				<h1 class="mui-title">学习计划详情</h1>
+				<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+			</header>
+			<div class="mainContent">
+				<div class="content">
+					<div class="content_tp">
+						<a href="studyPlanDetails.html" class="content_tp_a">
+							<p class="list_title">六年级古诗词鉴赏</p>
+							<div class="list_tag"><b>八年级</b><b>数学</b><b>12课时</b></div>
+							<div class="lsit_info"><b class="icon_time">2017-07-22</b></div>
+						</a>
+						<div class="content_tp_b">
+							<h5>计划简介</h5>
+							<ul class="plan_lists">
+								<li class="_list">古诗词鉴赏基础第一节古诗词鉴赏基础第一节</li>
+								<li class="_list">古诗词鉴赏基础第二节</li>
+								<li class="_list">古诗词鉴赏基础第三节</li>
+								<li class="_list">古诗词鉴赏基础第四节古诗词鉴赏基础第一节</li>
+								<li class="_list">古诗词鉴赏基础第五节</li>
+								<li class="_list">古诗词鉴赏基础第六节</li>
+								<li class="_list">古诗词鉴赏基础第七节古诗词鉴赏基础第一节</li>
+							</ul>
+							<div class="showMore"><span class="showMoreBtn"><em>查看更多</em><i class="btnIcon"></i></span></div>
+						</div>
+					</div>
+					<div class="content_bt">
+						<h5>课程目录</h5>
+						<dl class="mulu_lists">
+							<dd>
+								<p class="list_head"><span>三元一次方程组概念</span><a href="coursesDetails.html">观看</a></p>
+								<ol class="list_cont">
+									<li><label>考试分数：</label><span>92分</span></li>
+									<li><label>积分：</label><span>9.0分</span></li>
+								</ol>
+							</dd>
+							<dd>
+								<p class="list_head"><span>三元一次方程组概念三元一次方程组概念</span><a href="coursesDetails.html">观看</a></p>
+							</dd>
+							<dd>
+								<p class="list_head"><span>三元一次方程组概念</span><a href="coursesDetails.html">观看</a></p>
+							</dd>
+							<dd>
+								<p class="list_head"><span>三元一次方程组概念</span><a href="coursesDetails.html">观看</a></p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="nav_bottom" id="nav_bottom"></div>
+		</div>
+		
+		<script type="text/javascript" src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script type="text/javascript" src="../../../static/comm/plugins/mui/js/mui.min.js"></script>
+		<script src="../../../static/custom/familySchoolCommunication/js/commModelApp.js"></script>
+		<script>
+			(function($){
+				$(function(){
+					//start
+					var showMoreFn=function(){
+				    	if ($(".plan_lists li").length>3) {
+				    		$(".showMore").show();
+				    		$(".showMoreBtn").click(function(){
+					    		var $li_length=$(".plan_lists li").length,
+					    		    $li_H=$(".plan_lists li").height(),
+					    		    $ul_H=$li_length*$li_H;
+					    		//console.log($ul_H)
+					    		if ($(".btnIcon").hasClass('Rotate_180')) {
+					    			$(".btnIcon").removeClass('Rotate_180');
+					    			$(".plan_lists").animate({height: "90px"}, 500 );
+					    			$(this).find("em").html("查看更多");
+					    		}else{
+					    			$(".btnIcon").addClass('Rotate_180');
+					    			$(".plan_lists").animate({height: $ul_H+"px"}, 500 );
+					    			$(this).find("em").html("收起");
+					    		}
+					    	});
+				    	}
+				    }
+				    showMoreFn();
+				    //end    
+			    })
+			})(jQuery);
+			
+					
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalabel=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenterPh.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPh_safe_pwdProtect">
+			<div class="header_phone">
+				<a href="userCenterPh_safe.html"><i class="iconfont icon-left"></i></a>
+				<span>密保设置</span>
+			</div>
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<ol class="MainCenter">
+					<form class="question_pwd" action="" method="post">
+						<div class="question_box">
+							<dl class='question_list'>
+								<dt><label>问题1：</label><input type='text' id='question1' placeholder='请填写问题' /></dt>
+								<dd><label>答案：</label><input type='text' id='answer1' /></dd>
+							</dl>
+						</div>
+						<div class="span_warp"><span class="addQuestionBtn">新增问题<i class="iconfont icon-xinzeng"></i></span><em class="tips">最多可设置3个问题</em></div>
+						<div class="button_warp"><button type="submit" class="sureBtn">保存</button></div>
+					</form>
+					<div class="pwdProtect_tips">
+						<ul>
+							<li>
+								<p>设置了安全保护问题有什么好处？</p>
+								<p>答：当您忘记密码的时候，可以通过安全保护问题来重置密码。</p>
+							</li>
+							<li>
+								<p>忘记了安全保护问题答案，怎么办？</p>
+								<p>答：如果您忘记了自己的密保答案，请联系管理员帮您处理。</p>
+							</li>
+							<li>
+								<p>怎样设置安全保护问题会更安全？</p>
+								<p>答：安全保护问题一定要个性化设置，不要很容易被人猜出答案，只有这样设置您的安全保护问题才会更加安全。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/userCenterPh.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			        var Question={
+			        	init:function(questionWarp,addBtn){
+			        		this.addQuestion(questionWarp,addBtn);
+			        	},
+			        	addQuestion:function(questionWarp,addBtn){
+			        		$(addBtn).click(function(){
+			        			var questionNums=$(".question_list").length*1
+			        		    var Nums=questionNums+1;
+			        		    var questionList=$("<dl class='question_list'><dt><label>问题"+Nums+"：</label><input type='text' id='question"+Nums+"' placeholder='请填写问题' /></dt><dd><label>答案：</label><input type='text' id='answer"+Nums+"' /></dd></dl>");
+			        			//console.log(questionNums);
+			        			if (questionNums<3) {
+			        				$(questionWarp).append(questionList);
+			        			}else{
+			        				$(".tips").show();
+			        			}
+			        		});
+			        		
+			        	}
+			        }
+			        Question.init(".question_box",".addQuestionBtn");
+			
+			    })
+			})(jQuery);
+		</script>
+	</body>
+</html>

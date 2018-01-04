@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../common/Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/modelindex.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">张三丰</span>
+							<img class="user_photo" src="img/touxiang.png"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<!--临时引用-->
+			<div class="SourceAmendDialog">
+				<iframe src="sourceAmendDialog.html" class="Dialog" id="Dialog"></iframe>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu">
+							<div class="Asidecontent">
+								<div class="Aside_show_btn">
+									<p class="AsideBtn_tp"><img class="AsideShowBtnImg" src="img/sidebar_icon/caidan.png"/></p>
+									<p class="AsideBtn_bt"></p>
+								</div>
+								
+								<ul class="Aside_list">
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_1"></span>
+											</div>
+											<div class="list_name_right">
+												<span>平台资源</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_2"></span>
+											</div>
+											<div class="list_name_right">
+												<span>校本资源</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_3"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的资源</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_4"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源分享</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_5"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源审批</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									
+								</ul>
+								
+							</div>
+						</div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox mySource">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的桌面</span>
+									<span class="span_2"></span>
+									<span class="span_text">资源管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">我的资源</span>
+								</div>
+								<div class="contentCenter">
+									<div class="select_area">
+										<span>资源类型</span>
+										<ul class="select_box">
+											<li class="activeLi"><a href="javascript:;">全部</a></li>
+											<li><a href="javascript:;">教材</a></li>
+											<li><a href="javascript:;">学习工具</a></li>
+											<li><a href="javascript:;">课程</a></li>
+											<li><a href="javascript:;">作业</a></li>
+											<li><a href="javascript:;">试卷</a></li>
+											<li><a href="javascript:;">试题</a></li>
+											<li><a href="javascript:;">微课</a></li>
+										</ul>
+									</div>
+									
+									<div class="search_box">
+										<span>关键词</span>
+										<input type="search" id="" />
+										<button type="button">搜索</button>
+										<a class="addNewList" href="javascript:;">新增</a>
+									</div>
+									
+									<div class="Common_table">
+										<!--<button class="addNewList" type="button"><a href="javascript:;">新增</a></button>-->
+										<div class="">
+											<table class="CommonShowTable">
+												<tr class="table_nav">
+													<th>名称</th>
+													<th class="FixedWidth3">类型</th>
+													<th>描述</th>
+													<th class="FixedWidth3">发布者</th>
+													<th class="FixedWidth3">创建时间</th>
+													<th class="FixedWidth3">操作</th>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>转码服务-------------000000001110000000011100000000111</td>
+													<td class="FixedWidth3">学习工具</td>
+													<td>video-0001video-0001video-0001video-0001video-0001video-0001video-0001</td>
+													<td class="FixedWidth3">superadmin</td>
+													<td class="FixedWidth3">2017-07-28</td>
+													<td class="hand_box FixedWidth3">
+														<span class="modificationBtn"></span><span class="RemoveBtn"></span><span class="issueBtn"></span>
+														<div class="issue_file">
+															<em class="sanjiao_img"><b></b></em>
+															<a href="javascript:;">平台资源</a>
+															<a href="javascript:;">校本资源</a>
+														</div>
+													</td>
+												</tr>
+												
+												
+											</table>
+										    <!--分页-->
+											<div class="page_box">
+												<!--<div class="page_box_tips">共<b>100</b>条记录,当前是第<span class="pageNum">1</span>页,每页10条</div>-->
+												<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+											</div>
+										</div>
+									</div>
+								    
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer">
+					    <img class="footerImg" src='img/logo_sm.png'/>
+					    <p>Copyright 2017 Enable-ETS Corporation. All Rights Reserved.</p>
+					</div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../component_module/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+        <script src="../../component_module/paging/page.js"></script>
+        <script src="../common/modelCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    var paging = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+			        
+			    //表格操作的所有功能
+			    var table_fn=function(){
+			    	//发布按钮的功能
+				    $(".issueBtn").each(function(){
+				    	$(this).mouseenter(function(){
+					    	$(this).parent().find('.issue_file').show();
+					    }).mouseleave(function(){
+					    	$(this).parent().find('.issue_file').hide();
+					    });
+				    })
+				    
+				    $(".issue_file").each(function(){
+				    	$(this).mouseenter(function(){
+					    	$(this).show();
+					    }).mouseleave(function(){
+					    	$(this).hide();
+					    });
+				    });
+			    }
+			    table_fn();
+			    
+			    
+			    //要删除的代码
+			    $(".addNewList").click(function(){
+			    	$(".SourceAmendDialog").show();
+			    })
+			    
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

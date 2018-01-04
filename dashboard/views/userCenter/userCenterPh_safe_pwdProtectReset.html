@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalabel=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../component_module/weui/weui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../component_module/tipsdiaogphone/tipsdialogphone.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenterPh.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPh_safe_pwdProtectReset">
+			<div class="header_phone">
+				<a href="userCenterPh_safe.html"><i class="iconfont icon-left"></i></a>
+				<span>清除密保</span>
+			</div>
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<form class="question_pwd">
+						<div class="cleartips">您已经设置了密保问题，若要修改密保问题，请先回答旧的密保问题。</div>
+						<div class="question_box">
+							<!--密保问题放置-->
+						</div>
+						<div class="button_warp"><span class="sureBtn">提交</span></div>
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="../../component_module/weui/weui.min.js"></script>
+		<script src="../../component_module/tipsdiaogphone/tipsdialogphone.js"></script>
+		<script src="js/userCenterPh.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			    	//上一页判断如果密保已经设置就跳到此页面否则跳到密保设置页面
+			    	//渲染密保问题列表
+			    	function questionAjax(){
+			    		$.ajax({
+		                 	type:"get",
+		                 	url:"js/questionList.json",
+		                 	async:true,
+		                 	success:function(data){
+		                 		//console.log(data.length);
+		                 		if (data.length>0) {
+		                 			for (var i=0;i<data.length;i++) {
+		                 				var questionNums=$(".question_list").length*1
+				        		        var Nums=questionNums+1;
+		                 				var questionList=$("<dl class='question_list'><dt><label>问题"+Nums+"：</label><input type='text' readonly id='question"+Nums+"' value='"+data[i].question+"' /></dt><dd><label>答案：</label><input type='text' class='answer' id='answer"+Nums+"' /></dd></dl>");
+				        			    $(".question_box").append(questionList);
+		                 			}
+		                 		}
+		                 		//回答密保问题点击提交
+						    	$(".sureBtn").bind('click',function(){
+						    		var listSure=0;
+						    		var listFalse=[];
+						    		var question=$(".question_list .answer");
+						    		for (var i=0;i<question.length;i++) {
+						    			if (question.eq(i).val()==data[i].answer) {
+						    				listSure=listSure+1;
+						    			}else{
+						    				switch (i){
+						    					case 0:
+						    					    listFalse.push('请填写我是谁！'); 
+						    						break;
+						    					case 1:
+						    					    listFalse.push('请填写手机号！') 
+						    						break;
+						    					case 2:
+						    					    listFalse.push('请填写邮箱！') 
+						    						break;	
+						    					default:
+						    						break;
+						    				}
+						    			}
+						    		}
+						    		if (listSure==question.length) {
+						    			//执行清除密保问题的函数
+						    			
+						    			
+						    			//密保清除成功后的提示以及跳转到设置密保页面
+						    			tipsDialog('清除密保成功',function(){
+						    				location.href='userCenterPh_safe_pwdProtect.html';
+						    			});
+						    		}else{
+						    			var TipsText='';
+						    			for (var i in listFalse) {
+						    				TipsText=TipsText+listFalse[i]+'<br />';
+						    			}
+						    			tipsDialog(TipsText);
+						    		}
+						    		
+						    	})
+		                 	}
+		                });
+			    	}
+			    	questionAjax();
+			    	
+			    })
+			})(jQuery);
+		</script>
+	</body>
+</html>

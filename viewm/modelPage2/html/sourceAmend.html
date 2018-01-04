@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>资源库模板</title>
+		<link rel="stylesheet" type="text/css" href="../../../component_module/Swiper/swiper-3.4.2.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../common/RL_Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../css/modelPage2.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header3" id="header3"></div>
+			<div class="Con_Main sourceAmend">
+				<!--<div class="contentNav">
+					<span class="span_1"></span>
+					<span class="span_text">个人资源</span>
+					<span class="span_2"></span>
+					<span class="span_text">我的资源</span>
+				</div>-->
+				<div class="contentCenter">
+					<ul class="AmendBox">
+						<li class="Amend_list_1">
+							<span class="list_Title"><em>*</em><b>文件</b></span>
+							<div class="file_box_warp">
+								<div class="add_box">
+									<span class="addfileBtn">新增</span>
+									<em class="tips">最多上传五个文件，文件小于100M</em>
+								</div>
+								<!--没有添加文件之前，把file_box隐藏起来，添加以后显示，我的里面是隐藏的，这里写的行内样式是为了看效果，使用时把行内样式去掉-->
+								<ul class="file_box" style="display: block;">
+									<li><a href='javascript:;'>video-0111.mp4<span class="removefileBtn"></span></a></li>
+									<li><a href='javascript:;'>video-0111.mp4<span class="removefileBtn"></span></a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="Amend_list_2">
+							<span class="list_Title"><em>*</em><b>资源名称</b></span>
+							<div class="list_content"><input type="text" class="file_name" id="" value="" /></div>
+						</li>
+						<li class="Amend_list_2">
+							<span class="list_Title"><em>*</em><b>资源类型</b></span>
+							<div class="list_content file_class_box">
+								<div class="file_class_bg">
+									<select class="file_class" name="">
+										<option value="学习工具1">学习工具1</option>
+										<option value="学习工具2">学习工具2</option>
+										<option value="学习工具3">学习工具3</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li class="Amend_list_2">
+							<span class="list_Title"><em class="opacity0">*</em><b>学段/年级/科目</b></span>
+							<div class="list_content">
+								<div class="file_subject_box">
+									<div class="file_subject_list">
+										<select class="file_class" name="">
+											<option value="小学">小学</option>
+											<option value="初中">初中</option>
+											<option value="高中">高中</option>
+										</select>
+									</div>
+									<div class="file_subject_list">
+										<select class="file_class" name="">
+											<option value="">一年级</option>
+											<option value="">二年级</option>
+											<option value="">三年级</option>
+										</select>
+									</div>
+									<div class="file_subject_list">
+										<select class="file_class" name="">
+											<option value="">语文</option>
+											<option value="">数学</option>
+											<option value="">英语</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="Amend_list_2 Amend_list_4">
+							<span class="list_Title"><em class="opacity0">*</em><b>知识点</b></span>
+							<div class="list_content">
+								<div class="file_knowledge_box">
+									<div class="file_knowledge">
+										<div class="box_auto">
+											<ul class="list_box">
+												<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶王艳瑶王艳瑶<span class="removeliBtn"></span></a></li>
+												<li><a class="listcontent" href="javascript:;">王艳瑶<span class="removeliBtn"></span></a></li>
+												
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--<input type="text" class="file_knowledge" id="" value="" />-->
+								<span class="knowledgeSelectBtn">选择</span>
+							</div>	
+						</li>
+						<li class="Amend_list_3">
+							<span class="list_Title"><em class="opacity0">*</em><b>资源描述</b></span>
+							<div class="list_content">
+								<textarea class="file_desc"></textarea>
+							</div>
+						</li>
+						<li class="Amend_list_3">
+							<span class="list_Title"><em class="opacity0">*</em><b>标签</b></span>
+							<div class="list_content">
+								<textarea class="file_desc"></textarea>
+							</div>
+						</li>
+						
+						<li class="Amend_list_1">
+							<span class="list_Title"></span>
+							<div class="Btn_box list_content">
+								<button class="shareBtn" type="button">保存</button>
+								<button class="pagecloseBtn" type="button">返回</button>
+							</div>
+						</li>
+					</ul>
+									
+				</div>
+								
+			</div>		
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../../component_module/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../common/RL_Common.js"></script>
+		<script>
+			$(function() {
+				
+			})
+		</script>
+	</body>
+</html>

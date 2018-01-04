@@ -1,0 +1,193 @@
+@import "../../common/Common.less";           
+
+/*自定义类名*/  
+.padding_0{ padding: 0;}
+.text_center{ text-align: center;} 
+
+
+/*公共样式*/
+.main_content{ z-index: 1; width: 96%; .round(6px);
+    .main_head{ background: #f8f8f8; border-bottom: 1px solid #e2e2e2;
+         margin-bottom: 0.3rem;
+    }
+    .table_item,.table_all{
+        tr th td{ .text_center;}
+    }
+    .echarts,.echarts_one{ margin: 0.1rem 0; height: 300px; .box-sizing;}
+}
+
+/*图表公共样式*/ 
+.echarts_list_contont{ margin-bottom: 0.2rem; .round(5px); overflow: hidden; 
+    .tubiao_title{ width: 100%; overflow: hidden; .bgcolor3d_2; color: white; font-size: 0.4rem; font-weight: bold; padding: 0.2rem 0.3rem;
+       span{ margin-right: 0.2rem; float: left;}   
+      i{ font-size: 0.4rem; float: right;}
+    }
+    .sortable{  width: 100%; background: white;
+        padding: 0; overflow: hidden;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;     
+        &>li{ height: 330px; padding: 0 0.08rem; background: white;
+            .box-sizing; overflow: hidden; .cursor;
+           .changes{ text-indent: 8px; height: 30px; color: white; font-size: 0.2rem; line-height: 30px; background: #068FDF;}
+           .changes_nav{/* .bgcolor3d_3; background: #E2E2E2;*/ width: 100%; padding: 0 0.2rem; overflow: hidden; .box-sizing; height: 30px; line-height: 30px;
+                    border: 1px solid #E1E1E1; border-bottom: 0; .box-sizing;
+               .changes_nav_one,.changes_nav_two{ font-size: 0.25rem; float: left; display: inline-block; color: #000; font-size: 0.2rem;}
+               .changes_nav_one{ width: 12%;
+                  a{ color: #555;}                    
+                  a:hover{ color: black;}
+               }
+               .changes_nav_two{ width: 88%; text-align: right;
+                  span{ padding: 2px 5px; .round(2px); font-weight: bold; margin-left: 0.3rem;
+                    &.spactive{ background: #f2572d; color: white;}
+                  }
+               }
+           }
+           .echartsList{ width: 100%; background: white; height: 300px; .box-sizing; border: 1px solid #E1E1E1;}
+           .table_item{ max-height: 300px;
+              tr,td,th{ font-size: 0.18rem; height: 30px; .box-sizing; overflow: hidden; padding: 4px;}
+              tr{ border-bottom: 1px solid #E5E5E5;}
+              tr:last-child{ border: 0;}
+              tr:nth-child(2n+1){ background-color: #f9f9f9;}
+           }
+        } 
+    }
+    
+}
+ 
+/*单个学校页面的样式*/
+.single_school{ 
+    .school_total{ .round(0px);width: 96%; overflow: hidden; .box-sizing; margin: 0 auto 0rem; padding: 0 0.08rem; font-size: 0.38rem;
+       p{/* .bgcolor3d_2;*/ width: 100%; padding: 0.1rem 0.3rem; .box-sizing; vertical-align: middle; color: #404040; overflow: hidden;
+             border: 1px solid #E1E1E1; border-bottom: 0; .box-sizing;
+           i:first-child{ font-size: 0.5rem; margin-right: 0.2rem;}
+           /*i:last-child{ font-size: 0.4rem; float: right; margin-top: 0.05rem;}*/
+           .school_name{ font-weight: bold; font-size: 0.48rem; margin-right: 0.2rem;}
+       }
+       ol{ overflow: hidden; margin: 0; .box-sizing; border: 1px solid #E1E1E1; padding-top: 0.2rem;
+          li{ .round(0px); color: white; padding: 0.25rem 0; margin-bottom: 0.2rem; overflow: hidden;
+             span,b{ display: inline-block; text-align: center; height: 0.8rem; float: left;}
+             span{ width: 40%; text-align: right;
+                i{ color: #111; font-size: 0.7rem;}
+             }
+             b{ width: 60%; font-size: 0.3rem; line-height: 1rem;
+                em{ font-weight: bold; font-size: 0.5rem; margin-right: 0.3rem;}
+             }
+          }
+          li:nth-of-type(1){ background: #269abc;}
+          li:nth-of-type(2){ background: #4cae4c;}
+          li:nth-of-type(3){ background: orange;}
+       }
+    }
+    .main_head{
+       .nav_item{ padding: 0.22rem 0; .text_center; font-size: 0.4rem;
+         a{ color: black;}
+         &.active{ background: #E7E7E7;}
+       }
+    }
+    .select_content{
+      div{ padding: 0.2rem 0.4rem; .box-sizing; overflow: hidden;}
+      div:nth-of-type(1),div:nth-of-type(2){
+          label,input{ float: left; height: 0.9rem; line-height: 0.9rem;}
+          label{ width: 35%; .text_center; color: #333;}
+          input{ width: 65%; outline: none;}
+          .input_jiantou_hide;
+          
+      }
+      div:nth-of-type(3){ padding: 0.25rem 0.4rem;
+          button{ height: 0.8rem; line-height: 0.4rem; display: inline-block; width: 20%; margin-left: 10%; .text_center;}
+      }
+    }
+} 
+
+/*包含所有学校页面样式*/
+.all_school{
+    .school_phase{ .round(6px); .box-sizing; width: 96%; margin: 0.1rem auto; padding: 0.2rem 0; background: #E3E3E3; overflow: hidden;
+       .row{ width: 100%; margin: 0 auto;}
+       a{ padding: 0; .round(3px); color: #333; height: 0.7rem; font-weight: bold; text-align: center; line-height: 0.7rem; font-size: 0.4rem; margin-left: 2.75%;
+         &.active{ background: white; font-weight: normal;}
+       }
+    }
+    .all_school_total{ .round(6px);width: 96%; overflow: hidden; .box-sizing; margin: 0.2rem auto; padding: 0; font-size: 0.38rem;
+       p{ width: 100%; text-indent: 0.2rem; color: black; background: #E8E8E8; padding: 0.1rem 0;
+           i:first-child{ font-size: 0.45rem; margin-right: 0.2rem;}
+           i:last-child{ font-size: 0.4rem; color: black;}
+           .school_name{ font-weight: bold; font-size: 0.4rem; margin-right: 0.2rem;}
+       }
+       ol{ overflow: hidden; margin: 0; .box-sizing; background: #EEEEEE; padding-top: 0.2rem;
+          li{color: white; padding: 0 0.5rem; margin-bottom: 0.2rem; overflow: hidden;
+             p{ .round(4px); overflow: hidden; width: 100%;
+                 span,b{ display: inline-block; text-align: center; height: 0.8rem; line-height: 0.8rem; float: left;}
+                 span{ width: 40%; text-align: right;
+                    i:first-child,i:nth-of-type(2){ color: #111; font-size: 0.6rem;}
+                 }
+                 b{ width: 60%; font-size: 0.3rem; line-height: 1rem;
+                    em{ font-weight: bold; font-size: 0.5rem; margin-right: 0.3rem;}
+                 }
+             }
+          }
+          li:nth-of-type(1) p{ background: #CE8483;}
+          li:nth-of-type(2) p{ background: #269abc;}
+          li:nth-of-type(3) p{ background: #4cae4c;}
+          li:nth-of-type(4) p{ background: orange;}
+       }
+    }
+    .main_content{
+        .select_content{ border-bottom: 1px solid #E2E2E2;
+          div{ padding: 0.2rem 0.4rem; .box-sizing; overflow: hidden;}
+          div:nth-of-type(1),div:nth-of-type(2),div:nth-of-type(3),div:nth-of-type(4){
+              label,input,select{ float: left; height: 0.9rem; line-height: 0.9rem;}
+              label{ width: 35%; .text_center; color: #333;}
+              input,select{ width: 65%; outline: none;}
+              select{ direction: initial;}
+              .input_jiantou_hide;
+              
+          }
+          div:nth-of-type(5){ padding: 0.25rem 0.4rem;
+              button{ height: 0.8rem; line-height: 0.4rem; display: inline-block; width: 20%; margin-left: 10%; .text_center;}
+          }
+        }
+        .all_table_content{ margin-top: 0.2rem;
+          dl{ background: #E8E8E8; padding: 0 0.3rem; .box-sizing; margin-bottom: 0.1rem; overflow: hidden;
+             dt,dd{ font-size: 0.4rem; display: inline-block; height: 1rem; line-height: 1rem;
+               i{ margin-left: 0.1rem; font-size: 0.45rem; color: #333;}
+               a{ color: #428bca; font-size: 0.4rem;}
+             }
+             dt{ float: left;}
+             dd{ float: right;}
+          }
+        }
+    }
+}
+
+
+/*展示所有学校信息的表格页面*/
+.all_school_table{ overflow-x: hidden; overflow-y: auto;
+    .table_title{ text-align: center; padding: 0.2rem 0; font-size: 0.45rem; font-weight: bold; color: #333;
+           span{ font-size: 0.35rem; color: #999; font-weight: normal;}
+    }
+    .table-box{ padding-bottom: 0.5rem; border: 0;}
+    .table_all{ color: #333;}
+    .click_more{ background: white; width: 100%; z-index: 8; display: none; .text_center;
+        span{ display: inline-block; padding: 0.2rem 0.5rem 0.3rem; color: black; .round(5px);}
+        &.active{ position: absolute; left: 0; bottom: 0;}
+    }
+}
+
+/*如果是移动端所跳转的设置页面*/
+.PersonalSet{ width: 100%;
+   .Con_Main{ padding-top: 0;}
+   header{ height: 1.1rem; line-height: 1.1rem; text-align: center; background: #E2E2E2; font-size: 0.5rem;}
+   .shezhiUl{ width: 100%; padding: 0.2rem; .box-sizing;
+      li{ border-bottom: 1px dotted #E7E7E7; overflow: hidden; padding: 0.2rem; .box-sizing;
+        a{ color: #444; font-size: 0.45rem;
+            i{ font-size: 0.5rem;}
+            i:first-child,span{ margin-right: 0.3rem; float: left;}
+            i:last-child{ float: right;}
+        }
+      }
+   }
+}

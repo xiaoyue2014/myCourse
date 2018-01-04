@@ -1,0 +1,45 @@
+@import 'index_ba.less';
+
+/*媒体查询*/ 
+@media screen and (min-width:641px){html{font-size:86px;}}
+.re(640px);
+.re(600px);
+.re(568px);
+.re(533px);
+.re(435px);
+.re(414px);
+.re(411px);
+.re(384px);
+.re(375px);
+.re(360px);
+.re(320px);
+
+.coomW{ width: 100%; max-width: 640px;}
+.ScollCssZero{ position: absolute; top: 0; left: 0;bottom: 0; right: 0; width: 100%; height: 100%;
+              box-sizing: border-box; -webkit-overflow-scrolling: touch; overflow-y: auto; overflow-x: hidden;}
+html,body{ height: 100%;.coomW; overflow: hidden; margin: 0 auto; font-family: "Microsoft Yahei"; position: relative;}
+
+.bg_white{ background: white;}
+
+.Container{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; .wh(100%,100%); overflow: hidden;
+    .header{ background: black;.coomW; .Position_t_l(absolute,0,0);
+        .mui-title{ font-size: 0.38rem; color: white;}
+        .mui-action-back{ color: white; font-size: 0.32rem;}
+    }
+    
+    .mainContent{ padding: 40px 0 51px 0; .ScollCssZero; font-size: 0.32rem; color: #111; background: #efeff4; .box-sizing;}
+    .nav_bottom{ position: absolute; left: 0; bottom: 0; right: 0; border-top: 1px solid #e1e1e1; .wh(100%,51px); overflow: hidden;}
+    .nav_bottom .mui-bar-tab{ .box-sizing;.coomW; position: inherit;
+        .mui-tab-item{ font-size: 11px; color: #111;
+            &:nth-of-type(1)>.mui-icon{ .bg_all('../img/nav_bottom/icon_bNav1.png');}
+            &:nth-of-type(2)>.mui-icon{ .bg_all('../img/nav_bottom/icon_bNav2.png');}
+            &:nth-of-type(3)>.mui-icon{ .bg_all('../img/nav_bottom/icon_bNav3.png');}
+            
+        }
+        .mui-active{color: #ffc000;
+            &:nth-of-type(1)>.mui-icon{ .bg_all('../img/nav_bottom/icon_bNav1_on.png');}
+            &:nth-of-type(2)>.mui-icon{ .bg_all('../img/nav_bottom/icon_bNav2_on.png');}
+            &:nth-of-type(3)>.mui-icon{ .bg_all('../img/nav_bottom/icon_bNav3_on.png');}
+        }
+    }
+}

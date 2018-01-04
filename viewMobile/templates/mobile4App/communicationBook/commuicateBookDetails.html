@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创App</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/comm/plugins/mui/css/mui.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../../static/comm/css/comm_app.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/familySchoolCommunication/css/mobile4App.css"/>
+	</head>
+	<body>
+		<div class="Container pageDetails">
+			<header id="header" class="mui-bar mui-bar-nav header">
+				<h1 class="mui-title">作业详情</h1>
+				<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
+			</header>
+			<div class="mainContent">
+				<div class="detailBox">
+					<dl class="teacher_info">
+		                <dt>
+		                    <img src="../../../static/custom/familySchoolCommunication/img/listImg2.jpg" alt="照片">
+		                </dt>
+		                <dd>
+		                    <p class="teacher_name">王老师</p>
+		                    <p class="date_box"><span class="date_ymd">2017-11-22</span><span class="date_hms">15:20:35</span></p>
+		                </dd>
+		            </dl>
+		            
+		            <dl class="detail_info">
+		            	<dt>秋季运动会通知</dt>
+		            	<dd>
+		            		<p>慢跑也是一项很理想的秋季运动项目,能增强血液循环,改善心功能;改善脑的血液</p>
+		            		<!--<span>如有问题请及时与老师联系，谢谢！</span>-->
+		            	</dd>
+		            </dl>
+				</div>
+				
+				<div class="content_model">
+					<h5>附件</h5>
+			        <ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<img src="../../../static/custom/familySchoolCommunication/img/icon_shijuan.png">
+								<p>习题第二节</p>
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<img src="../../../static/custom/familySchoolCommunication/img/icon_video.png">
+								<p>习题第二节</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="content_model">
+					<h5>签名</h5>
+					<div class="signature_box">
+						<div class="signatureArea" id="signatureArea"></div>
+						<!--<textarea class="messageBox"></textarea>-->
+						<span class="removeSignature" id="removeSignature">清空签名</span>
+					</div>
+					
+					<div class="BtnBox"><span class="submitBtn" id="submitBtn" href="javascript:;">签名确认</span></div>
+					
+				</div>
+				
+			</div>
+			<div class="nav_bottom" id="nav_bottom"></div>
+		</div>
+		
+		<script type="text/javascript" src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script type="text/javascript" src="../../../static/comm/plugins/mui/js/mui.min.js"></script>
+		<script src="../../../static/comm/plugins/jSignature/jSignature.min.noconflict.js"></script>
+		<script src="../../../static/custom/familySchoolCommunication/js/commModelApp.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+						var $signatureFn=function(){
+							/*初始化插件*/
+							var $signature = $("#signatureArea").jSignature({
+				                width: "100%", //签名画布的宽
+				                height: "220px",//签名画布的高
+				                color:'black', //签名颜色
+				                signatureLine: true,
+				                lineWidth:'2' ,//签名字的粗细
+				                underLine: false //签名下划线是否存在；false不存在
+				            });
+				     		/*重置插件*/
+				        	$signature.jSignature('reset')
+				        	
+				        	/*清空签名*/
+				        	$("#removeSignature").bind('click',function(){
+							 	$signature.jSignature('reset');
+							});
+							
+							/*提交签名的路径*/
+							var Img = new Image();
+							$("#submitBtn").bind('click',function(){
+								//datapair 
+								var datapair = $signature.jSignature('getData', 'image');    
+								console.log(datapair);
+								//图片展示
+				                Img.src = "data:" + datapair[0] + "," + datapair[1];
+				                //将数据显示页面上演示，（此步只是看效果）
+				                $(Img).appendTo($(".mainContent")); 
+							});
+						}
+				        
+				      	$(document).ready(function(){
+				      		$signatureFn();
+				      	});
+				    //end    
+			    })
+			})(jQuery);	
+		</script>
+	</body>
+</html>

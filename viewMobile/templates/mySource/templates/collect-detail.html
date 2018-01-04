@@ -1,0 +1,54 @@
+<ion-view view-title="资源详情" class="bgwhite">
+  <ion-content class="padding">
+    <div class="content detail">
+      <div class="list data">
+        <p>2018中考语文总复习（安徽专版）名师课件：1.4 专题四 语文综合应用 （共122张PPT）</p>
+        <p class="time"><img src="../../../static/custom/mySource/img/time-icon.svg"> 2017-12-26 17:21</p>
+        <p class="collection"><img src="../../../static/custom/mySource/img/tag.svg"> <a class="tags" href="">收藏</a> <a class="tags" href="">语文试卷</a></p>
+      </div>
+      <h4 class="download-h4 bdb"><img src="../../../static/custom/mySource/img/resource.svg"> 资源</h4>
+      <div class="list download">
+        <a class="item item-icon-right" href="#">
+          2018年中考语文18道应用题的一题多解
+          <i class="icon"><img src="../../../static/custom/mySource/img/download.svg"></i>
+        </a>
+        <a class="item item-icon-right" href="#">
+          2018年中考语文18道应用题的一题多解
+          <i class="icon"><img src="../../../static/custom/mySource/img/download.svg"></i>
+        </a>
+      </div>
+      <h4 class="download-h4"><img src="../../../static/custom/mySource/img/comment.svg"> 评论</h4>
+       <label class="item item-input textareaLabel">
+        <textarea name="" id="" cols="" rows="5" class="comment" placeholder="很好，不错！非常好！"></textarea>
+      </label>
+      <div class="item item-input-inset">
+        <label class="col col-75">
+        </label>
+        <button class="button button-small searchBtn col">
+          提交
+        </button>
+      </div>
+      <div class="list">
+        <p class="comment-person"><img src="../../../static/custom/mySource/img/student.svg"> 张小米</p>
+        <p class="time comment-time">2017-12-26 17:21</p>
+        <p class="collection comment-content">这个挺不错的！</p>
+      </div>
+      <div class="collecting" ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+          <div ng-show="isGroupShown(group)">
+            <p>
+              <img src="../../../static/custom/mySource/img/collect.svg">
+            </p>
+            <p>收藏</p>
+          </div>
+         <div ng-show="!isGroupShown(group)">
+           <p>
+            <img src="../../../static/custom/mySource/img/collected.svg">
+          </p>
+          <p>已收藏</p>
+         </div>   
+        
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

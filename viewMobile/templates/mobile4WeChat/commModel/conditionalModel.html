@@ -1,0 +1,70 @@
+<div class="weui-flex headerContent_tp">
+    <div class="weui-flex__item head_calendar">
+    	<i class="icon_rili"></i>
+    	<span id="start_date">2017-11-26</span>
+    	<i class="icon_jiantou"></i>
+    	<span id="end_date">2017-11-28</span>
+    </div>
+    <div class="head_sort"><i id="icon_sort" class="i_tp"></i></div>
+</div>
+
+<script type="text/javascript">
+	(function($){
+		$(function(){
+			//start
+			
+			//排序功能
+			sortFn(function(nums){
+				switch(nums)
+				{
+					case 0:
+						if (!$("#icon_sort").hasClass('i_tp')) {
+							$("#icon_sort").addClass('i_tp').removeClass('i_bt');
+						}
+						console.log('升序');
+						break;
+					case 1:
+						if (!$("#icon_sort").hasClass('i_bt')) {
+							$("#icon_sort").addClass('i_bt').removeClass('i_tp');
+						}
+						console.log('降序');
+						break;
+					default:
+						break;
+					
+				}
+			});
+			
+			
+			//时间选择
+			//开始日期
+			$("#start_date").bind('click',function(){
+				var $start_date=$("#end_date").html();
+				var defaultValue=new Array();
+				defaultValue[0]=$start_date.split('-')[0]*1;
+				defaultValue[1]=$start_date.split('-')[1]*1;
+				defaultValue[2]=$start_date.split('-')[2]*1-1;
+				dateSelect($(this),defaultValue,function(){
+					//选择日期以后函数
+					console.log("开始日期");
+				});
+			});
+			//结束日期
+			$("#end_date").bind('click',function(){
+				var $start_date=$("#start_date").html();
+				var defaultValue=new Array();
+				defaultValue[0]=$start_date.split('-')[0]*1;
+				defaultValue[1]=$start_date.split('-')[1]*1;
+				defaultValue[2]=$start_date.split('-')[2]*1+1;
+				dateSelect($(this),defaultValue,function(){
+					//选择日期以后函数
+					console.log("结束日期");
+				});
+			});
+			
+		    
+		    
+		    //end    
+	    })
+	})(jQuery);		
+</script>

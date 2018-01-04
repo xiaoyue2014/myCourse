@@ -1,0 +1,280 @@
+@import "index_ba.less";         
+
+.Rotate_180{ .rotate(180deg); display: inline-block;}      
+.Rotate_90{ .rotate(-90deg); display: inline-block;}
+.Rotate_45{ .rotate(45deg); display: inline-block;}
+.Rotate_45_{ .rotate(-45deg); display: inline-block;}
+.Commonpadding{ padding: 0px; .box-sizing;}
+.Commonpadding2{ padding: 0 14px; .box-sizing;}
+.maxWidthCommon{ width: 100%; height: 100%; max-width: 1200px;overflow: hidden; margin: 0 auto; min-width: 1000px; position: relative;}
+a{ text-decoration: none !important;}  
+html,body{ .wh(100%,100%); color: white; overflow-x: hidden; font-family: "微软雅黑"; overflow-y: auto;}   
+.mouseCSS{ width: 100%; height: 100%; -webkit-overflow-scrolling: touch; overflow-y: scroll; overflow-x: hidden;}
+
+.ContainerWarp2{ max-width: auto;}
+.ContainerWarp{ font-size: 14px; color: #333; width: 100%; height: 100%; margin: 0 auto; background: white;
+    .header{ overflow: hidden; width: 100%; height: 120px;
+        .header_tp{ .wh(100%,30px); overflow: hidden; border-bottom: 1px solid #e2e2e2;.Commonpadding;background: #f7f7f7;
+            &>.maxWidthCommon>.header_tp_list{ display: inline-block; text-decoration: none; float: right; padding: 0 20px;
+                 border-right: 1px solid #888;height: 16px; line-height: 16px; margin-top: 7px; position: relative;
+                &.differentColor{a{ color: #00a1e9;}}  
+                &.listMessage,&.listNews,&>.system_out{ display: none;}
+                &.listtips_y:after{ position: absolute; top: -8px; left: 66%; content: '·'; color: red; font-weight: bold;}
+                &>a{ font-size: 12px; color: #666;} 
+                &:last-child{ border-left: 1px solid #888;}
+                
+            }
+        }
+        .header_bt{ background: white; overflow: hidden;.Commonpadding; width: 100%; height: 90px;
+            .header_bt_logo{ float: left; overflow: hidden; display: block;
+                &>img{ height: 54px; margin-top: 16px;}
+            }
+            .header_bt_nav{ float: right; overflow: hidden; width: 70%;
+                &>.nav_ul{ overflow: hidden; float: right; margin-top: 10px; height: 70px;
+                    &>li{ float: left; margin: 0 35px 0 15px; .wh(62px,70px); text-align: center; .box-sizing;
+                        &:hover{
+                            &>a{ color: #3781C6;} 
+                        }
+                        &>a{ font-size: 14px;  .wh(62px,70px); padding-top:48px; .box-sizing; color: #333; display: block;
+                            &>span{ display: block; .wh(62px,22px);}
+                        }
+                        &:nth-of-type(1)>a{ .bg_all('../img/icon_headernav/nav0.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(1):hover>a,&.active_li1>a{ .bg_all('../img/icon_headernav/nav0_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(2)>a{ .bg_all('../img/icon_headernav/nav1.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(2):hover>a,&.active_li2>a{ .bg_all('../img/icon_headernav/nav1_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(3)>a{ .bg_all('../img/icon_headernav/nav3.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(3):hover>a,&.active_li4>a{ .bg_all('../img/icon_headernav/nav3_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(4)>a{ .bg_all('../img/icon_headernav/nav2.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(5):hover>a,&.active_li3>a{ .bg_all('../img/icon_headernav/nav2_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(5)>a{ .bg_all('../img/icon_headernav/nav4.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(5):hover>a,&.active_li5>a{ .bg_all('../img/icon_headernav/nav4_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(6)>a{ .bg_all('../img/icon_headernav/nav5.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(6):hover>a,&.active_li6>a{ .bg_all('../img/icon_headernav/nav5_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(7)>a{ .bg_all('../img/icon_headernav/nav6.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(7):hover>a,&.active_li7>a{ .bg_all('../img/icon_headernav/nav6_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(8)>a{ .bg_all('../img/icon_headernav/nav7.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                        &:nth-of-type(8):hover>a,&.active_li8>a{ .bg_all('../img/icon_headernav/nav7_on.png',@x:7px,@y:0,@w:48px,@h:48px);}
+                    }
+                }
+            }
+        }
+        .header_bt2{ background: white; overflow: hidden;.Commonpadding; width: 100%; height: 90px; position: relative;
+            .header_bt_logo{ overflow: hidden; display: block; .wh(182px,90px); .Position_t_l(absolute,0,10px); z-index: 5;
+                &>img{ height: 39px; width: 162px; margin-top: 26px;}
+            }
+            .header_bt_nav{ overflow: hidden; width: 100%; height: 100%; padding: 0 190px 0 210px; .box-sizing;
+                &>.nav_ul{ overflow: hidden; float: left; width: 100%; margin-top: 31px; height: 28px;
+                    &>li{ float: left; .wh_lh(auto,28px); padding: 0 22px; border-right: 1px solid #cccccc; .box-sizing;
+                        &:last-child{ border-right:0;}
+                        &.active_li,&:hover{.bg_all('../img/nav_on.png',@x:8px,@y:center,@w:6px,@h:6px);
+                            &>a{ color: #00A1E9;} 
+                        }
+                        &>a{ font-size: 15px; color: #333; display: inline-block;}
+                    }
+                }
+                &>.platform_lists{position: absolute; top: 0; right: 0px; .wh(190px,100%);
+                    &>a{ display: block; float: right; .wh_lh(87px,40px); margin-top: 25px;.round(4px); .box-sizing; text-align: center;  
+                        &:last-child{ border: 1px solid #2fbfff; color: #2fbfff;}
+                        &:first-child{ border: 1px solid #fd8731; color: #fd8731; margin-left: 13px;}
+                    }
+                }
+            }
+        }
+    }
+    /*header3的样式*/
+    .header3{ width: 100%; height: 150px;
+        .header_tp{ .wh(100%,30px); overflow: hidden; border-bottom: 1px solid #e2e2e2;.Commonpadding;background: #f7f7f7;
+            &>.maxWidthCommon>a{ display: inline-block; text-decoration: none; float: right; font-size: 12px; color: #666; padding: 0 20px;
+                 border-right: 1px solid #888;height: 16px; line-height: 16px; margin-top: 7px;
+                &:last-child{ border-left: 1px solid #888;}
+                &.system_out{ display: none;}
+            }
+        }
+        .header_ct3{ background: white; overflow: hidden;.Commonpadding; width: 100%; height: 80px; position: relative;
+            .header_bt_logo{ float: left; overflow: hidden; display: block; .wh(170px,80px);
+                &>img{ height: 39px; width: 162px; margin-top: 20px;}
+            }
+            .header_bt_logo_small{ float: left; overflow: hidden; display: block; .wh(auto,80px);
+                &>img{ height: 29px; margin-top: 21px;}
+            }
+        }
+        .header_bt3{ .wh(100%,40px); background: #00a2e8;
+            .nav_list_ul{.maxWidthCommon; padding: 0 20px; .box-sizing; height: 40px; overflow: visible;
+                &>li{ float: left; position: relative; .wh(110px,40px); 
+                    &:hover,&.active_li{ background: #35bdff;}
+                    &:hover .nav_list_child{ display: block;}
+                    a{ display: inline-block; text-align: center; font-size: 16px; color: white;}
+                    &>a{ .wh_lh(100%,40px);} 
+                    &>.nav_list_child{.Position_t_l(absolute,40px,0); .box-sizing; display: none; z-index: 10; overflow: hidden;
+                        &>dd{ .wh_lh(110px,40px); .box-sizing; padding-left: 20px; overflow: hidden; background: #35bdff; position: relative;
+                                border-top: 1px solid #7cd6ff;
+                            &:before{ content: '·'; color: white; text-align: center; .wh_lh(20px,40px); .Position_t_l(absolute,0,0); z-index: 6;}    
+                            &:hover{ background: #0180b9;}
+                            &>a{ font-size: 16px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Con_Main{ width: 100%; overflow: hidden;
+        .asideNav_banner_box{ overflow: hidden; width: 100%;
+            .banner_AsideNav_content{ position: relative; overflow: hidden; width: 100%;
+                .banner_box{ width: 100%; overflow: hidden;}
+                .AsideNav_box{ display: none;}
+            }
+        }
+        .MainContent{.maxWidthCommon;}
+    }
+    .footer{ width: 100%; .Commonpadding; height: 100px; .box-sizing; padding-top: 30px; overflow: hidden; background: #f5f6f8;
+        .footer_lt{ float: left; width: 38%; text-align: right;height: 40px;overflow: hidden; padding-right: 13px; .box-sizing;
+            &>a{ display: inline-block; height: 100%;
+                &>img{ height: 100%;}
+            }
+        }
+        .footer_rt{ float: right; width: 62%; padding-left: 13px; .box-sizing;
+            &>p{ font-size: 12px; text-align: left; color: #666; display: block; height: 20px; line-height: 20px;}
+        }
+    }
+    .footer2{ width: 100%; height: 100px; .box-sizing; padding-top: 22px; overflow: hidden;
+        &>p{.maxWidthCommon;font-size: 12px; text-align: center; color: #666; display: block; height: 40px; line-height: 40px;}
+    }
+}
+
+
+/*自定义样式*/
+.border_tp{ border-top: 1px solid #E1E1E1;}
+.border_rt{ border-right: 1px solid #E1E1E1;} 
+.border_bt{ border-bottom: 1px solid #E1E1E1;} 
+.border_lt{ border-left: 1px solid #E1E1E1;}  
+.Commonpadding2{ padding: 0 14px; .box-sizing;}
+.colorfs1{ color: #404040; font-size: 14px;}
+.border_all{ border: 1px solid #E1E1E1; .box-sizing; margin: 10px 0;}
+.bg_white{ background: white;}
+.button1{ margin-right: 10px; background: #3781c6; font-size: 14px; color: white; padding: 5px 15px; outline: none; border: none;}
+.overflowellipsis{overflow:hidden;text-overflow:ellipsis; -o-text-overflow:ellipsis;
+     white-space:nowrap;}
+
+/*小导航栏*/
+.ContainerWarp .Con_Main{ height: auto; overflow: hidden;
+    .contentNav{.maxWidthCommon; overflow: hidden; .wh_lh(100%,40px);.border_tp; border-bottom: 1px solid #E1E1E1; padding: 0 10px; .box-sizing;
+        span,a{ display: inline-block; float: left;}
+        .span_1,.span_2{ margin-right: 6px; background-size: 100% 100%;}
+        .span_1{ background: url(../img/icon_1.png)  no-repeat; margin-top: 12px; .wh(16px,16px);}
+        .span_2{ background: url(../img/arrow.png) no-repeat; background-size: 100% 100%; margin-top: 16px; .wh(5px,7px); margin-left: 8px; margin-right: 8px;}
+        .span_text{ font-size: 14px; color: #868686;}
+        .span_text:last-child{ color: #404040;}
+    }
+    
+    .contentCenter{.maxWidthCommon;}
+}
+
+/*下拉框右侧三角的样式*/  
+.bg_after(@top:6px,@right:8px,@url:'../img/icon_6.png'){
+    &:after{//通过样式选择器添加伪元素
+        content: '';//有content，伪元素才会显示出来
+        background: url(@url) 0 0 no-repeat;//通过伪元素的背景添加图片路径 ，no-repeat->不重复 center->居中表示
+        display: block;    //也可以是inline-bolck但是主要是block的特性才能设置宽高
+        width: 16px;    //宽
+        height: 16px;  //高
+        background-size: 16px 16px;//通过这个属性来设置图片的宽高
+        position: absolute; top: @top; right: @right;
+        z-index: 2;
+    } 
+}
+
+/*公共button样式*/
+/*大按钮样式，比如保存取消*/
+.button_box{
+     &>button{ margin-right: 10px; background: #3781c6; font-size: 14px; color: white; padding: 5px 15px; outline: none; border: none;}
+     &>button:last-child{ margin-right: 0;}
+     &>button:hover{ background: #4c9dd6;}
+     &>.bg_color{ background: #509734;
+        &:hover{ background: #71b43e;}
+     }
+     .shareBtn,.pagecloseBtn{}
+}
+/*按钮的统一颜色*/
+.Btn_box{
+    &>button{ background: #3781c6;}
+    &>button:hover{ background: #4c9dd6;}  
+}
+
+/*分页start*/
+.page_box{ overflow: hidden; padding-bottom: 10px; margin-top: 16px;
+   .page_box_tips{ position: absolute; top: 0; left: 0; font-size: 14px;height: 29px; line-height: 29px;
+     //b{ color: #5bc0de; font-size: 12px;}
+   } 
+   .pageOne{ width: 100%; text-align: right; overflow: hidden; display: inline-block; /*float: right;*/
+    list-style: none;
+    }
+    .pageOne>li{
+        display: inline-block;
+        width: 32px;
+        height: 29px;
+        line-height: 29px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;;
+    }
+    .pageOne{
+        li:nth-of-type(1),li:nth-of-type(2),li:nth-last-child(1),li:nth-last-child(2){ width: auto; padding: 0 12px;}
+    }
+    .pageOne .pageItem{
+        border: 1px solid #8e8e8e;
+        margin: 4px; 
+         color: #404040;
+    }
+    .pageOne .pageItemActive{
+        border: 1px solid #8e8e8e;
+        margin: 4px;
+        background-color: #3781c6;
+        color:white;
+    }
+    .pageOne .pageItemActive:hover{
+        background-color: #4c9dd6;
+    }
+    .pageOne .pageItem:hover{
+        border: 1px solid #8e8e8e;
+        background-color: #4c9dd6;
+        color:white;
+    }
+    .pageOne .pageItemDisable{
+        border: 1px solid #8e8e8e;
+        margin: 4px;
+        background-color: #DDDDDD;
+    }  
+}
+
+
+/*表格的公共样式 */    
+.CommonShowTable{ border-collapse: collapse; border: 1px solid #c2c2c2; width: 100%; .box-sizing;table-layout:fixed;
+    tr{ border-bottom: 1px solid #c2c2c2; width: 100%; .box-sizing;
+        th,td{ padding: 8px 10px; .colorfs1;}
+        th,td{ border-right: 1px solid #c2c2c2; .box-sizing; font-weight: normal;}
+        td{
+            &>a{.colorfs1; text-decoration: none;}
+        }
+        th:last-child,td:last-child{ border-right: 0;}
+        td:last-child>b,td:last-child>a{ display: inline-block; .wh(16px,16px); margin-top: 7px; margin-right: 8px;
+            &:last-child{ margin-right: 0;}
+        }
+        .FixedWidth1{ width: 70px !important;}
+        .FixedWidth2{ width: 90px !important;}
+        .FixedWidth3{ width: 110px !important;}
+    }
+    /*tr:nth-child(2n+1){ background: #f3f3f4;}*/
+    tr:first-child{ background: #f3f3f4;}
+    tr:not(.table_nav):hover{ background: #eaf2fa;}
+    tr:last-child{ border-bottom: 0;}
+}
+
+/*弹窗页面的公共样式*/
+.CommonDialogPage{ width: 100%; overflow: hidden; height: 100%;
+    .Common_head{ padding: 0 20px; overflow: hidden; .box-sizing; .wh_lh(100%,44px); border-bottom: 1px solid #e0e1e1;
+        .head_title{ font-size: 16px; color: #404040;}
+        .closeBtn{ float: right; display: inline-block; .wh(16px,16px); background: url(../img/close1.png) no-repeat;
+         background-size: 100% 100%; margin-top: 14px;}
+    }
+    .Common_content{ width: 100%; overflow: hidden; color: #404040; font-size: 14px; padding: 0 20px 0px 20px; .box-sizing;}
+}

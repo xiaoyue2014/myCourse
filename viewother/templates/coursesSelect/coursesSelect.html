@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>选课弹窗</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/coursesSelect/css/coursesSelect.css"/>
+	</head>
+	<body>
+		<div class="coursesSelectDialog">
+			<div class="coursesSelect">
+				<div class="content">
+					<div class="content_head">
+						<div class="selectVersionsBox">
+							<label>教材版本</label>
+							<div class="selectVersions"><span>人教版</span><b></b></div>
+							<ul class="select_lists">
+								<li>人教版</li>
+								<li>人教版2</li>
+								<li>人教版3</li>
+							</ul>
+						</div>
+						<div class="searchBox">
+							<span class="box_title">搜索</span>
+							<input type="text" />
+							<i class="searchBtn"></i>
+						</div>
+						
+						<div class="closeBOX"><i></i></div>
+					</div>
+					<div class="content_main">
+						<ul class="selected_lists">
+							<li>语文<i></i></li>
+							<li>语文<i></i></li>
+							<li>语文<i></i></li>
+							<li>语文<i></i></li>
+						</ul>
+						<div class="treeBox">
+							<div class="box_auto">
+								<div>1</div>
+								<div>2</div>
+								<div>3</div>
+								<div>4</div>
+								<div>5</div>
+								<div>6</div>
+								<div>7</div>
+								<div>8</div>
+								<div>9</div>
+								<div>10</div>
+								<div>11</div>
+								<div>12</div>
+								<div>13</div>
+								<div>14</div>
+								<div>15</div>
+								<div>16</div>
+								<div>17</div>
+								<div>18</div>
+								<div>19</div>
+								<div>20</div>
+							</div>
+						</div>
+						
+						<div class="bigBtnBox">
+							<a href="javascript:;">确定</a>
+							<a href="javascript:;">取消</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".selectVersions").bind('click',function(){
+					if ($(this).find('b').hasClass('Rotate_18')) {
+						$(this).find('b').removeClass('Rotate_18');
+						$(".select_lists").slideUp();
+					} else{
+						$(this).find('b').addClass('Rotate_18');
+						$(".select_lists").slideDown();
+					}
+				});
+				
+				$(".select_lists").each(function(){
+					$(this).bind('click',function(){
+						var $html=$(this).html();
+						$('.selectVersions').find('b').removeClass('Rotate_180');
+						$('.selectVersions').find('span').html($html);
+						$(".select_lists").slideUp();
+					});
+				})
+				
+			});
+		</script>
+	</body>
+</html>

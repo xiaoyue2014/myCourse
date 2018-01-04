@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../static/comm/css/comm.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../static/custom/resource/css/mobileMyCourses.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/comm/plugins/dropload/load.css"/>
+		<style type="text/css">
+			.inner{
+			    -webkit-box-flex: 1;
+			    -webkit-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    background-color: #fff;
+			    overflow-y: scroll;
+			    -webkit-overflow-scrolling: touch;
+			}
+			.coursesListbox .item{ display: block;
+			   width: 100%; border-bottom: 1px solid #e1e1e1; height: 60px; overflow: hidden; padding: 10px; box-sizing:border-box; position: relative;
+			}
+			.coursesListbox .item img{ position: absolute; left: 10px; top: 10px;
+			    display: block;
+			    width: 40px;
+			    height: 40px;
+			    border:1px solid #ddd;
+			}
+			.coursesListbox .item h3{
+			    position: absolute;
+			    left: 60px;
+			    top: 10px;
+			    width: 50%;
+			    height: 40px;
+			    overflow: hidden;
+			    font-size: 0.22rem;
+			}
+			.coursesListbox .item .date{
+			    display: block;
+			    position: absolute;
+			    top: 20px;
+			    right: 10px;
+			    height: 20px;
+			    width: 80px;
+			    line-height: 20px;
+			    font-size: 0.2rem;
+			    color: #999;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header" id="header">
+				<div class="headerContent">
+					<div class="headerContent_tp">我的课程</div>
+					<!--<div class="headerContent_bt"></div>-->
+				</div>
+			</div>
+			<div class="mainContent mainContent3">
+				<div class="coursesListbox">
+					<div class='courses_List'>
+						<dl class='courses_List_tp'>
+							<dt><img src='../../static/custom/resource/img/coursesFm.jpg'/></dt>
+							<dd><p>短期班小学四年级英语辅音音标与发音技巧</p></dd>
+						</dl>
+						<div class='courses_List_ct list_enter'>
+							<p class='info1'>
+								<span>小学</span><span>四年级</span><span>英语</span>
+							</p>
+							<p class='info2'><i class="iconfont icon-huiyijiangshi"></i><span>王德明</span></p>
+							<p class='info2'><i class="iconfont icon-shijian"></i><span>2017-11-1至2017-11-21</span></p>
+						</div>
+						<div class='commButton_box courses_List_bt'>
+							<a class='clickBtn' href='javascript:;'>开始学习</a>
+							<span>已有<b>252</b>人报名</span>
+						</div>
+					</div>
+					<div class='courses_List'>
+						<dl class='courses_List_tp'>
+							<dt><img src='../../static/custom/resource/img/coursesFm.jpg'/></dt>
+							<dd><p>短期班小学四年级英语辅音音标与发音技巧</p></dd>
+						</dl>
+						<div class='courses_List_ct list_enter'>
+							<p class='info1'>
+								<span>小学</span><span>四年级</span><span>英语</span>
+							</p>
+							<p class='info2'><i class="iconfont icon-huiyijiangshi"></i><span>王德明</span></p>
+							<p class='info2'><i class="iconfont icon-shijian"></i><span>2017-11-22至2017-11-24</span></p>
+						</div>
+						<div class='commButton_box courses_List_bt'>
+							<a class='clickBtn' href='javascript:;'>开始学习</a>
+							<span>已有<b>252</b>人报名</span>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!--<div class="footer" id="footer"></div>-->
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../static/comm/js/mobileComm.js"></script>
+		<script src="../../static/comm/plugins/dropload/dropload.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+				    var dropload = $('.mainContent').dropload({
+					    domUp : {
+					        domClass   : 'dropload-up',
+					        domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
+					        domUpdate  : '<div class="dropload-update">↑释放更新</div>',
+					        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+					    },
+					    domDown : {
+					        domClass   : 'dropload-down',
+					        domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
+					        domUpdate  : '<div class="dropload-update">↓释放加载</div>',
+					        domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+					    },
+					    loadUpFn : function(me){
+					        $.ajax({
+					            type: 'GET',
+					            url: '../../static/custom/resource/js/update.json',
+					            dataType: 'json',
+					            success: function(data){
+					                var result = '';
+					                for(var i = 0; i < data.lists.length; i++){
+					                    result +=   '<a class="item opacity">'
+					                                    +'<img src="'+data.lists[i].pic+'" alt="">'
+					                                    +'<h3 href="'+data.lists[i].link+'" >'+data.lists[i].title+'</h3>'
+					                                    +'<span class="date">'+data.lists[i].date+'</span>'
+					                                +'</a>';
+					                }
+					                // 为了测试，延迟1秒加载
+					                setTimeout(function(){
+					                    $('.coursesListbox').html('');
+					                    $('.coursesListbox').prepend(result);
+					                    me.resetload();
+					                },1000);
+					            },
+					            error: function(xhr, type){
+					                alert('Ajax error!');
+					                me.resetload();
+					            }
+					        });
+					    },
+					    loadDownFn : function(me){
+					        $.ajax({
+					            type: 'GET',
+					            url: '../../static/custom/resource/js/more.json',
+					            dataType: 'json',
+					            success: function(data){
+					                var result = '';
+					                for(var i = 0; i < data.lists.length; i++){
+					                    result +=   '<a class="item opacity">'
+					                                    +'<img src="'+data.lists[i].pic+'" alt="">'
+					                                    +'<h3 href="'+data.lists[i].link+'" >'+data.lists[i].title+'</h3>'
+					                                    +'<span class="date">'+data.lists[i].date+'</span>'
+					                                +'</a>';
+					                }
+					                // 为了测试，延迟1秒加载
+					                setTimeout(function(){
+					                    $('.coursesListbox').append(result);
+					                    me.resetload();
+					                },1000);
+					            },
+					            error: function(xhr, type){
+					                alert('Ajax error!');
+					                me.resetload();
+					            }
+					        });
+					    }
+					});	
+				    //end    
+			    })
+			})(jQuery);		
+		</script>
+		
+	</body>
+</html>

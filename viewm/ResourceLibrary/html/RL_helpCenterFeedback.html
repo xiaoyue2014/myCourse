@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>资源库模板</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../common/RL_Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../css/ResourceLibrary.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header" id="header1"></div>
+			<div class="Con_Main RL_helpCenter RL_helpCenterFeedback">
+				<div class="MainContent">
+					<div class="MainContent_lt">
+						<ul class="asideNav_ul">
+							<li>
+								<a href="RL_helpCenter.html">常见问题</a>
+								<div class="asideNavchild_lists">
+									<a href="javascript:;">我是学生</a>
+									<a class="active_a" href="javascript:;">我是老师</a>
+									<a href="javascript:;">我是家长</a>
+									<a href="javascript:;">我是学校管理员</a>
+								</div>
+							</li>
+							<li class="activeli"><a href="RL_helpCenterFeedback.html">意见反馈</a></li>
+							<li><a href="RL_helpCenterContactUs.html">联系我们</a></li>
+						</ul>
+					</div>
+					<div class="MainContent_rt">
+						<div class="MainContent_center">
+							<div class="MainContent_center_tp">
+								<div class="center_tp_lt">我是老师</div>
+								<div class="center_tp_rt">
+									<!--<input class="searchinput"  placeholder="请输入关键字" type="text" id="" value="" />
+									<span class="search_Btn">搜索</span>-->
+								</div>
+							</div>
+							<div class="MainContent_center_bt">
+								<form>
+									<ol class="quesition_ol">
+										<li>
+											<label class="list_title">标题</label>
+											<div class="_list_rt">
+												<div class="_list_cont"><input type="text" /></div>
+											</div>
+										</li>
+										<li>
+											<label class="list_title">姓名</label>
+											<div class="_list_rt">
+												<div class="_list_cont"><input type="text" /></div>
+											</div>
+										</li>
+										<li>
+											<label class="list_title">电话</label>
+											<div class="_list_rt">
+												<div class="_list_cont"><input type="text" /></div>
+											</div>
+										</li>
+										<li>
+											<label class="list_title">邮箱</label>
+											<div class="_list_rt">
+												<div class="_list_cont"><input type="text" /></div>
+											</div>
+										</li>
+										<li>
+											<label class="list_title">反馈类型</label>
+											<div class="_list_rt">
+												<div class="_list_cont" id="problemTypes">
+													<a class="active_xz" href="javascript:;">建议</a>
+													<a href="javascript:;">纠错</a>
+													<a href="javascript:;">提问</a>
+													<a href="javascript:;">其他</a>
+												</div>
+											</div>
+										</li>
+										<li class="list_other">
+											<label class="list_title">留言内容</label>
+											<div class="_list_rt">
+												<div class="_list_cont"><textarea></textarea></div>
+											</div>
+										</li>
+										<li>
+											<label class="list_title"></label>
+											<div class="_list_rt">
+												<div class="button_box">
+													<button class="submitBtn" type="button">提交</button>
+													<button class="emptyBtn empty_bg" type="reset">清除</button>
+												</div>
+											</div>
+										</li>
+									</ol>
+																		
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../../component_module/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../common/RL_Common.js"></script>
+		<script>
+			 $(function(){
+			 	//问题类型的选择
+			 	$("#problemTypes>a").each(function(){
+			 		$(this).on('click',function(){
+			 			if (!$(this).hasClass('active_xz')) {
+			 				$(this).addClass("active_xz").siblings('a').removeClass('active_xz');
+			 			}
+			 		})
+			 	})
+			 	
+			 	
+			 })
+		</script>
+	</body>
+</html>

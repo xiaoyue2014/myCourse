@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>资源库模板</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../common/RL_Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../css/myCourses.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<div class="header3" id="header3"></div>
+			
+			<div class="Con_Main coursesTeachDirectory">
+				<div class="contentNav">
+					<span class="span_1"></span>
+					<span class="span_text">我的课程</span>
+					<span class="span_2"></span>
+					<span class="span_text">教材目录</span>
+				</div>
+				<div class="contentCenter">
+					<div class="search_area">
+						<ul class="search_criteria">
+							<li class="list_Subjectdiscipline">
+								<label>学段/年级/学科</label>
+								<div class="_li_rt">
+									<div class="list_cont">
+										<select class="small_select">
+											<option value="">小学</option>
+										</select>
+									</div>
+									<div class="list_cont">
+										<select class="small_select">
+											<option value="">一年级</option>
+										</select>
+									</div>
+									<div class="list_cont">
+										<select class="small_select">
+											<option value="">思想品德（社会）</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li><label>教材名称</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+							<li><label>出版社</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+						</ul>
+						<div class="button_box">
+							<button class="bg_color" type="button">搜索</button>
+							<a href="coursesTeachMaterial.html">新建</a>
+						</div>
+					</div>
+					<div class="contentCenter_main">
+						<table class="CommonShowTable">
+							<tr>
+								<th>封面图</th>
+								<th>教材名称</th><th>出版社</th>
+								<th>学段</th><th>年级</th>
+								<th>学科</th><th>操作</th>
+							</tr>
+							<tr>
+								<td><img src="../img/mycourses/fm_table_img.png" alt="教材封面图" /></td>
+								<td>人教版语文教科书</td><td>人民邮电出版社</td>
+								<td>小学</td><td>一年级</td>
+								<td>语文</td><td><a></a><a></a><a></a></td>
+							</tr>
+							<tr>
+								<td><img src="../img/mycourses/fm_table_img.png" alt="教材封面图" /></td>
+								<td>人教版语文教科书</td><td>人民邮电出版社</td>
+								<td>小学</td><td>一年级</td>
+								<td>语文</td><td><a></a><a></a><a></a></td>
+							</tr>
+							<tr>
+								<td><img src="../img/mycourses/fm_table_img.png" alt="教材封面图" /></td>
+								<td>人教版语文教科书</td><td>人民邮电出版社</td>
+								<td>小学</td><td>一年级</td>
+								<td>语文</td><td><a></a><a></a><a></a></td>
+							</tr>
+							<tr>
+								<td><img src="../img/mycourses/fm_table_img.png" alt="教材封面图" /></td>
+								<td>人教版语文教科书</td><td>人民邮电出版社</td>
+								<td>小学</td><td>一年级</td>
+								<td>语文</td><td><a></a><a></a><a></a></td>
+							</tr>
+							<tr>
+								<td><img src="../img/mycourses/fm_table_img.png" alt="教材封面图" /></td>
+								<td>人教版语文教科书</td><td>人民邮电出版社</td>
+								<td>小学</td><td>一年级</td>
+								<td>语文</td><td><a></a><a></a><a></a></td>
+							</tr>
+						</table>
+						<!--分页-->
+						<div class="page_box">
+							<!--<div class="page_box_tips">共<b>100</b>条记录,当前是第<span class="pageNum">1</span>页,每页10条</div>-->
+							<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+						</div>
+					</div>	
+				</div>
+								
+			</div>		
+			<div class="footer" id="footer"></div>
+		</div>
+		
+		<script src="../../../component_module/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../../component_module/paging/page.js"></script>
+		<script src="../../common/RL_Common.js"></script>
+		<script>
+			$(function() {
+				//do anything
+			    var paging = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+			        
+			    //表格操作的所有功能
+			});
+			
+		</script>
+	</body>
+</html>

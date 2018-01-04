@@ -1,0 +1,168 @@
+@import "../../../comm/css/Common.less"; 
+
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@blue1:#337ab7;
+@white:#fff;
+@gray:#e1e1e1;
+@fs14:14px;
+@fs15:15px;
+@fs16:16px;
+@fs18:18px;
+.fscolor{ font-size: @fs14; color: @black6;}
+
+.interfacesInfo .contentCenter{ padding: 10px; .box-sizing;
+    .info_list{ margin-bottom: 15px;
+        &:last-child{ margin-bottom: 0;} 
+        &:extend(.fscolor);
+        .info_list_tp{ background: @blue1; padding: 5px 20px; display: inline-block; font-size: @fs15; font-weight: normal; color: @white;}
+        .info_list_bt{ width: 100%; .box-sizing; padding: 10px; border: 1px solid @gray; overflow: hidden;
+            &>li{ width: 50%; float: left; overflow: hidden; .box-sizing; padding: 4px 0;
+                &:last-child{ width: 100%; position: relative; padding-left: 70px; .box-sizing;
+                    &>label{ .Position_t_l(absolute,4px,0); width: 70px;}
+                    &>._li_rt{ display: inline-block; width: 100%;
+                        p{ width: 70%;.hideellipsis;}
+                        &>.li_img{ overflow: hidden; width: 100%;
+                            &>img{ max-width: 200px; margin: 8px 10px 0 0;}
+                        }
+                    }
+                }
+                &>label,&>span{ float: left;}
+            }
+            .CommonShowTable{ margin-bottom: 10px;
+                &:last-child{ margin-bottom: 0;}
+                &>caption{ text-align: left; font-size: @fs15;
+                    &>span{ margin-left: 5px; padding: 0 5px; border-left: 1px solid #ccc;}
+                }
+                tr>td>a{ .wh(auto,auto); color: @blue1;}
+                tr:first-child th{ font-weight: bold;}
+            }
+            /*.parameter tr{
+                th:nth-of-type(1){ width: 25% !important;}
+                th:nth-of-type(2){ width: 35% !important;}
+                th:nth-of-type(3),th:nth-of-type(4){ width: 20% !important;}
+            }*/
+            /*.backParameter tr{
+                th:nth-of-type(1){ width: 25% !important;}
+                th:nth-of-type(2){ width: 75% !important;}
+            }*/
+        }
+    }
+}
+
+.interfaceCreact .contentCenter{ padding: 10px; .box-sizing;
+    .creactInfoList{ margin-bottom: 15px;
+        &:last-child{ margin-bottom: 0;}  
+        &:extend(.fscolor);
+        .creactInfoList_tp{ background: @blue1; padding: 5px 20px; display: inline-block; font-size: @fs15; font-weight: normal; color: @white;}
+        .creactInfoList_bt{ width: 100%; .box-sizing; padding: 10px; border: 1px solid @gray; overflow: hidden;
+            @h32:32px;
+            .baseInfo{
+                &>li{ width: 48%; overflow: hidden; height: @h32; margin-bottom: 10px; position: relative; padding-left: 80px; .box-sizing;
+                    &:nth-child(2n+1){ float: left;}
+                    &:nth-child(2n+2){ float: right;}
+                    &.li_diffrent{ padding-left: 160px;
+                        &>label{ width: 160px; padding-right: 5px; .box-sizing; text-align: right;}
+                    }
+                    &>label{ .wh_lh(80px,@h32); .Position_t_l(absolute,0,0);}
+                    &>._li_rt{ .wh(100%,@h32);
+                        &>.selectcont{position: relative;.bg_after(@top:8px); .wh(100%,@h32);}    
+                        &>.selectcont>select,&>input{ border: 1px solid @gray; .box-sizing; outline: none;}
+                        &>input{ .wh_lh(100%,@h32); padding: 0 8px;}
+                        &>.selectcont>select{ .wh(100%,@h32); padding: 0 8px; background: rgba(0,0,0,0); .select_jiantou_hide; .Position_t_l(absolute,0,0); z-index: 5;}
+                    }
+                }
+                &>.last_list{ width: 100%; height: auto; overflow: hidden;
+                    &>._li_rt{ height: auto;
+                        &>textarea{ .wh(60%,100px); outline: none; resize: none; border: 1px solid @gray; padding: 10px; .box-sizing;}
+                        &>.uploadImg{ position: relative; width: 100%; margin-top: 10px; padding-left: 90px; .box-sizing;
+                            &>.unloadBtn{ display: inline-block; .wh(86px,76px); position: absolute; top: 0; left: 0; .bg_all('../img/add_img.png');
+                                &:hover{ .bg_all('../img/add_img_on.png');}
+                            }
+                            &>.loadedImg{ .wh(100%,76px); overflow: hidden;
+                                &>li{ height: 100%; margin-left: 10px; display: inline-block;
+                                    &>img{ height: 100%;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .lists_nav{ .wh_lh(100%,@h32); overflow: hidden;
+                &>span{ display: inline-block; text-align: left; float: left; color: #337ab7; margin-right: 15px;
+                    &:last-child{ margin-right: 0;}
+                }
+            }
+            .Info_ul,.Info_ul_child .Info_ul_child_list{
+                &>.info_li{ width: 100%; overflow: hidden; margin-bottom: 10px;
+                    &:first-child .removeParamsBtn{ display: none;}
+                    &:last-child{ margin-bottom: 0;}
+                    &>input,&>b,&>i,&>span,&>.list_select{ float: left;}
+                    &>input{ .wh_lh(100px,@h32);}
+                    &>b{ display: inline-block; width: 15px; overflow: hidden;}
+                    &>input,&>.list_select>.select_box>select{ border: 1px solid @gray; .box-sizing; padding: 0 5px;color: @black9;}
+                    &>input,&>.list_select{margin-right: 15px;}
+                    &>.list_select{&:first-child{ margin-right: 0;}}
+                    &>.list_select{ display: inline-block; overflow: hidden;
+                        &>.select_box{ display: inline-block; position: relative;.bg_after(@top:8px); .wh_lh(100%,@h32); overflow: hidden;
+                            &>select{ .select_jiantou_hide; .wh(100%,100%); .Position_t_l(absolute,0,0); padding: 0 20px 0 5px; z-index: 4; background: rgba(0,0,0,0);}
+                        }
+                        &>.select_result{ display: none; border: 1px solid @gray; width: 100%; min-height: @h32; padding: 4.5px 30px 4.5px 5px; .box-sizing; position: relative;
+                            &:after{ content: ''; display: inline-block; .wh(16px,16px); position: absolute; top: 8px; right: 4px;
+                                .bg_all('../img/icon_xiangpi.png');
+                            }
+                        }
+                    }
+                    &>b{ font-weight: normal;}
+                    &>i{ .wh(16px,16px); display: inline-block; margin: 8px 0 0 15px; float: left;
+                        &.addParamsBtn{ .bg_all('../img/icon_add.png');
+                            &:hover{ .bg_all('../img/icon_add_on.png');}
+                        }
+                        &.removeParamsBtn{ .bg_all('../img/icon_remove.png');
+                            &:hover{ .bg_all('../img/icon_remove_on.png');}
+                        }
+                        &.jt_top{ .bg_all('../img/icon_jt_top.png');}
+                        &.jt_bottom{ .bg_all('../img/icon_jt_bottom.png');}
+                    } 
+                    &>.tips{ font-size: 12px; color: red; display: inline-block; .wh_lh(auto,@h32); margin-left: 15px;}
+                }
+            }
+            .Info_ul_child .Info_ul_child_title{ margin-top: 15px; .wh_lh(auto,36px); padding: 0 10px; display: inline-block;}
+        }    
+    }
+    .HeadersInfo .creactInfoList_bt{
+        .lists_nav{
+            &>span{ width: 300px;}
+        }
+        .Info_ul .info_li{
+            &>input{ width: 300px;}
+        }
+    }
+    .portParameter .creactInfoList_bt{
+        .lists_nav{
+            &>span{ width: 180px;
+                &:nth-last-of-type(2){ width: 100px;}
+            }
+        }
+        .Info_ul .info_li,.Info_ul_child .Info_ul_child_list .info_li{
+            &>input{ width: 180px;}
+            &>.list_select{
+                &:nth-of-type(1){ width: 100px;}
+                &:nth-of-type(2){ width: 180px;}
+            }
+        }
+    }
+    .backParameter .creactInfoList_bt{
+        .lists_nav{
+            &>span{ width: 180px;}
+        }
+        .Info_ul .info_li,.Info_ul_child .Info_ul_child_list .info_li{
+            &>input{ width: 180px;}
+            &>.list_select{ width: 180px;
+                &:nth-of-type(1)>.select_box{ width: 100%;}
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userCenterPh.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain userCenterPh_info">
+			<div class="header_phone">
+				<a href="userCenterPh.html"><i class="iconfont icon-left"></i></a>
+				<span>个人信息</span>
+			</div>
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<ol class="user_info_list">
+						<li><i class="iconfont icon-mimaxiugai iColor"></i><a href="userCenterPh_safe_pwd.html">修改密码<i class="iconfont icon-youjiantou"></i></a></li>
+						<li><i class="iconfont icon-mimabaohu iColor"></i><a class="pwdProtectBtn" href="javascript:;">设置密保<i class="iconfont icon-youjiantou"></i></a></li>
+						<li><i class="iconfont icon-zhanghaobangding iColor"></i><a href="userCenterPh_safe_otherID.html">绑定账号<i class="iconfont icon-youjiantou"></i></a></li>
+						<li><i class="iconfont icon-rizhi iColor"></i><a href="userCenterPh_safe_loginrecord.html">登录日志<i class="iconfont icon-youjiantou"></i></a></li>
+						<li><i class="iconfont icon-shouquanzhuanhuan iColor"></i><a href="userCenterPh_safe_impower.html">管理授权<i class="iconfont icon-youjiantou"></i></a></li>
+					</ol>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="js/userCenterPh.js"></script>
+		<script>
+			(function($){
+			    $(function(){
+			         //判断是否有密保
+			         var pwdProtect=true;//假设true有密保,false无密保
+			         $(".pwdProtectBtn").bind('click',function(){
+			         	 if (pwdProtect) {
+			         	 	location.href='userCenterPh_safe_pwdProtectReset.html';
+			         	 }else{
+			         	 	location.href='userCenterPh_safe_pwdProtect.html';
+			         	 }
+			         });
+			
+			    })
+			})(jQuery);
+		</script>
+	</body>
+</html>

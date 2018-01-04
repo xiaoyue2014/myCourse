@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<!--<link rel="stylesheet" type="text/css" href="../../static/comm/css/comm.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../static/custom/resource/css/mobileMyCourses.css"/>
+	</head>
+	<body>
+		<div class="container coursesPacks">
+			<div class="header" id="header">
+				<div class="headerContent">
+					<div class="headerContent_tp">课程包</div>
+					<!--<div class="headerContent_bt"></div>-->
+				</div>
+			</div>
+			<div class="mainContent mainContent3">
+				<div class="content">
+					<div class="content_tp">
+						<video controls>
+						    <source src="../../static/custom/resource/video/123456.mp4" type="video/mp4">
+						    <source src="movie.ogg" type="video/ogg">
+						</video>
+					</div>
+					<div class="content_bt">
+						<dl class="tab_head">
+							<dd><a class="active_a" href="javascript:;">考卷</a></dd>
+							<dd><a href="javascript:;">教学大纲</a></dd>
+						</dl>
+						<ol class="tab_cont">
+							<li class="active_li">
+								<div class="li_list"><b>1</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+								<div class="li_list"><b>2</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+								<div class="li_list"><b>3</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+							</li>
+							<li>
+								<div class="li_list"><b>1</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+								<div class="li_list"><b>2</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+								<div class="li_list"><b>3</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+								<div class="li_list"><b>4</b><span>课程考卷</span><em>251kb</em><a href="javascript:;"><i class="iconfont icon-xiazai"></i></a></div>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<!--<div class="footer" id="footer"></div>-->
+		</div>
+		
+		<script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+		<script src="../../static/comm/js/mobileComm.js"></script>
+		<script type="text/javascript">
+			(function($){
+				$(function(){
+					//start
+				    var packsTabFn=function(){
+				    	$(".tab_head dd a").each(function(){
+				    		$(this).bind('click',function(){
+				    			var $thisIndex=$(this).parent().index();
+				    			if ($(this).hasClass('active_a')==false) {
+				    				$(this).addClass('active_a').parent('dd').siblings('dd').find('a').removeClass('active_a');
+				    				$(".tab_cont li").eq($thisIndex).show().siblings('li').hide();
+				    			}
+				    		});
+				    	})
+				    }
+				    packsTabFn();
+				    //end    
+			    })
+			})(jQuery);		
+		</script>
+		
+	</body>
+</html>

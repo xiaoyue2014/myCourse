@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../common/Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/modelindex.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">张三丰</span>
+							<img class="user_photo" src="img/touxiang.png"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu">
+							<div class="Asidecontent">
+								<div class="Aside_show_btn">
+									<p class="AsideBtn_tp"><img class="AsideShowBtnImg" src="img/sidebar_icon/caidan.png"/></p>
+									<p class="AsideBtn_bt"></p>
+								</div>
+								
+								<ul class="Aside_list">
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_1"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的首页</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_2"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的资源管理</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_3"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源分享</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_4"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源审批</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									
+								</ul>
+								
+							</div>
+						</div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox sourcesharelist">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的桌面</span>
+									<span class="span_2"></span>
+									<span class="span_text">资源管理</span>
+									<span class="span_2"></span>
+									<span class="span_text">分享列表</span>
+								</div>
+								<div class="contentCenter">
+									<div class="showList_box">
+										<div class="share_type">
+											<a class="Aacitve" href="javascript:;">我的分享</a>
+											<a href="javascript:;">分享给我</a>
+										</div>
+										<ul class="share_content">
+											<li class="share_list activeshow">
+												<table class="CommonShowTable shareForOther">
+													<tr>
+														<th>名称</th>
+														<th>分享类别</th>
+														<th>分享对象</th>
+														<th>分享时间</th>
+														<th>失效时间</th>
+													</tr>
+													<tr>
+														<td><a href="javascript:;">语文教材</a></td>
+														<td>个人</td>
+														<td>杨博文，王妙，时婷婷，刘书睿，付栩萌</td>
+														<td>2016-02-25</td>
+														<td>2016-04-25</td>
+													</tr>
+													<tr>
+														<td><a href="javascript:;">生物测试题</a></td>
+														<td>群组</td>
+														<td>学创教育武汉群</td>
+														<td>2017-02-25</td>
+														<td>2016-04-25</td>
+													</tr>
+													<tr>
+														<td><a href="javascript:;">数学重点知识整理</a></td>
+														<td>个人</td>
+														<td>四川中学</td>
+														<td>2017-08-25</td>
+														<td>2016-04-25</td>
+													</tr>
+												</table>
+												<!--分页-->
+												<div class="page_box">
+													<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+												</div>
+											</li>
+											<li class="share_list">
+												<table class="CommonShowTable shareForme">
+													<tr>
+														<th>名称</th>
+														<th>分享者</th>
+														<th>分享时间</th>
+														<th>失效时间</th>
+													</tr>
+													<tr>
+														<td><a href="javascript:;">语文教材</a></td>
+														<td>时婷婷</td>
+														<td>2016-02-25</td>
+														<td>2016-04-25</td>
+													</tr>
+													<tr>
+														<td><a href="javascript:;">生物测试题</a></td>
+														<td>刘书睿</td>
+														<td>2017-02-25</td>
+														<td>2016-04-25</td>
+													</tr>
+													<tr>
+														<td><a href="javascript:;">数学重点知识整理</a></td>
+														<td>付栩萌</td>
+														<td>2017-08-25</td>
+														<td>2016-04-25</td>
+													</tr>
+												</table>
+												<!--分页-->
+												<div class="page_box">
+													<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageTwo"></ul>
+												</div>
+											</li>
+										</ul>
+
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer">
+					    <img class="footerImg" src='img/logo_sm.png'/>
+					    <p>Copyright 2017 Enable-ETS Corporation. All Rights Reserved.</p>
+					</div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../component_module/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+        <script src="../../component_module/paging/page.js"></script>
+        <script src="../common/modelCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    var tableNav=function(){
+		        	$(".share_type a").bind('click',function(){
+		        		var $Index=$(this).index();
+		        		$(this).addClass('Aacitve').siblings().removeClass('Aacitve');
+		        		$(".share_content .share_list").eq($Index).addClass('activeshow').siblings().removeClass('activeshow');
+		        	})
+		        }
+		        tableNav();
+		        
+		        var paging1 = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging1.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+			    
+			    var paging2 = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageTwo").initPage(100,1,paging2.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+			    
+			    
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+@import "../../../comm/css/Common.less";
+
+@black1:#111;
+@black3:#333;
+@black6:#666;
+@black9:#999;
+@blue1:#337ab7;
+@white:#fff;
+@gray:#e1e1e1;
+@fs14:14px;
+@fs15:15px;
+@fs16:16px;
+@fs18:18px;
+.fscolor{ font-size: @fs14; color: @black6;}
+
+.projectShow .contentCenter{  
+    .search_area .search_criteria{
+        &>li{ width: 30%; margin-right: 5%;
+            &:nth-child(3n+3){ margin-right: 0;}
+            &>label{ width: 70px;}
+            &>._li_rt{ padding-left: 70px;}
+        }
+    }
+    .contentCenter_bt{ padding: 20px; .box-sizing;
+        .CommonShowTable tr{   
+            td:nth-last-child(2){ color: @blue1;}
+            td:last-child{ 
+                &>i{ margin-right: 8px;
+                    &:last-child{ margin-right: 0;}
+                }
+            }
+        }
+    }
+}
+
+
+.projectAmend .contentCenter{
+    .contentCenter_tp{ position: relative; 
+        .addproject{ position: absolute; color: @white; z-index: 10; font-size: 14px; top: 0px; .round_lb_rb(5px); right: 2%;
+                   padding: 0 10px; overflow: hidden; height: 16px; 
+            &.bg_blue{ background: @blue1;}      
+            &>b{ font-weight: normal; float: left;}
+            &>i{ display: inline-block; .wh(16px,16px);
+                &.i_shouqi{ .bg_all('../../../comm/img/icon_shouqi.png');.Rotate_90_;}
+                &.i_zhankai{ .bg_all('../../../comm/img/icon_open.png');.Rotate_90_;}
+            }
+        }
+    }
+    .search_area .search_criteria{
+        &>li{ width: 60%;
+            &>label{ width: 75px;}
+            &>._li_rt{ padding-left: 80px;}
+            &.list_h_diffrent ._li_rt .list_cont{ height: 100px;}
+        }
+    }
+    .contentCenter_bt{ position: relative; .box-sizing; padding-left: 320px;
+        .asideopen{ display: none; .Position_t_l(absolute,20px,0); padding: 10px 0px; background: @blue1;.round_tr_br(5px); z-index: 10px;
+            &>i{ display: inline-block; .wh(16px,16px); .bg_all('../../../comm/img/icon_open.png');}
+        }
+        .contentCenter_bt_lt{.Position_t_l(absolute,20px,20px); width: 300px; z-index: 5; overflow: hidden;
+            &>h4{ .wh_lh(100%,40px); padding: 0 36px; position: relative; .box-sizing; font-size: @fs14; font-weight: normal; border: 1px solid @gray;
+                &>i{ .wh(16px,16px); display: inline-block;}
+                &>.icon_mulu{ .Position_t_l(absolute,12px,10px);.mulu_icon3;}
+                &>.contAsideBtn{ position: absolute; right: 10px; top: 12px; .bg_all('../../../comm/img/icon_shouqi.png');}
+            }
+            .tree_box{.box_overHide(@h:360px,@w2:104.5%,@style:auto); font-size: 14px; border: 1px solid @gray; border-top: 0;}
+        }
+        .contentCenter_bt_rt{ padding: 20px; .box-sizing; min-height: 440px;
+            &>h4{ display: inline-block; text-align: center; .wh_lh(200px,40px); font-weight: normal; height: auto; background: @blue1; color: @white; font-size: @fs16;}
+            .CommonShowTable{
+                tr{ 
+                    th:first-child{ width: 200px !important;}  
+                    td:nth-last-child(2){ color: @blue1;}
+                    td:last-child{ 
+                        &>i{ margin-right: 8px;
+                            &:last-child{ margin-right: 0;}
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}

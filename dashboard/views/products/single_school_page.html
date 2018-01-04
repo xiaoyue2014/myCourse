@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/products.css"/>
+	</head>
+	<body>
+		<div class="ContainerMain single_school">
+			<!--头部-->
+			<div class="header">
+				<a href="all_school.html" class="header_logo"><img class="logo_img" src="img/logo.png"/></a>
+			    <!--<ul class="header_nav">
+			    	<li><a href="javascript:;">首页</a></li>
+			    	<li class="resourcesLi"><a href="javascript:;"><span>资源</span><i class="iconfont icon-xiangxia"></i></a></li>
+			    	<li><a href="javascript:;">我的空间</a></li>
+			    </ul>-->
+                <div class="header_user_box">
+                	<div class="system_out"><i class="iconfont icon-tuichuxitong1"></i></div>
+                	<div class="user_box">
+            			<div class="user_top">
+            				<a class="is_iphone" href="javascript:;">
+            					<img class="touxiang" src='img/touxiang.png' />
+		                		<span class="user_names"></span>
+		                		<span class="span_icon_pc"><i class="iconfont icon-xiangxia1"></i></span>
+		                		<span class="span_icon_iphone"><i class="iconfont icon-gengduo"></i></span>
+            				</a>
+            			</div>
+                		<!--<ul class="shezhiNav">
+                			<div class="user_box_triangle"></div>
+                			<li><i class="iconfont icon-guanli"></i><a href="javascript:;">个人设置</a></li>
+                			<li><i class="iconfont icon-zhanghaoanquan"></i><a href="javascript:;">账号安全</a></li>
+                			<li><i class="iconfont icon-tuichuxitong1"></i><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+                		</ul>-->
+                	</div>
+                </div>
+			</div>
+			
+			<!--侧边栏部分-->
+			<!--<div class="Aside">
+				<div class="aside_btn"><i class="iconfont icon-youjiantou"></i></div>
+				<ul class="aside_list">
+					<li>1你哈都是对的所所</li>
+					<li>2都是对的所</li>
+					<li>3都是对的所</li>
+					<li>4都是对的所都是对的所</li>
+					<li>5都是对的所都是对的所</li>
+				</ul>
+			</div>-->
+			
+			<!--主内容模块-->
+			<div class="Con_Main">
+				<div class="MainCenter">
+					<!--展现学校班级教师学生状况-->
+					<div class="container school_total">
+						<p><i class="iconfont icon-xuexiao"></i><span class="school_name">四川二中综合仪表板</span><!--<i class="iconfont icon-xiangxia ol_hide"></i>--></p>
+						<ol class="row school_qk_list">
+							<li class="col-sm-12 col-xs-12 col-md-2 col-lg-2 col-md-offset-1"><span><i class="iconfont icon-banji"></i>&emsp;</span><b class="school_grade"><em>60</em>班级</b></li>
+							<li class="col-sm-12 col-xs-12 col-md-2 col-lg-2 col-md-offset-2"><span><i class="iconfont icon-laoshi"></i><i class="iconfont icon-laoshitubiao"></i></span><b class="school_teacher"><em>200</em>老师</b></li>
+							<li class="col-sm-12 col-xs-12 col-md-2 col-lg-2 col-md-offset-2"><span><i class="iconfont icon-student"></i><i class="iconfont icon-nansheng"></i></span><b class="school_student"><em>4000</em>学生</b></li>
+						</ol>
+					</div>
+					
+					<!--内容区域-->
+					<div class="container container-fluid main_content">
+						<!--图表部分列表-->
+						<div class="row echarts_list_contont">
+							<!--<p class="tubiao_title"><span>教学</span><i class="iconfont icon-xiangxia"></i></p>-->
+							<ul class="sortable">
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="teach_echarts_one"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="teach_echarts_two"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="teach_echarts_three"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="teach_echarts_four"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="teach_echarts_five"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="teach_echarts_six"></div>
+								</li>
+								
+								
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="health_echarts_one"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="health_echarts_two"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="airQuality_echarts_one"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="security_echarts_one"></div>
+								</li>
+								
+								
+							</ul>
+						</div>
+						
+						
+						<!--<div class="row echarts_list_contont">
+							<p class="tubiao_title"><span>健康</span><i class="iconfont icon-xiangxia"></i></p>
+							<ul class="sortable">
+								
+							</ul>
+						</div>-->
+						
+						
+						<!--<div class="row echarts_list_contont">
+							<p class="tubiao_title"><span>空气品质/安防</span><i class="iconfont icon-xiangxia"></i></p>
+							<ul class="sortable">
+								
+								
+							</ul>
+						</div>-->
+						
+						
+						<!--<div class="row echarts_list_contont">
+							<p class="tubiao_title"><span>绿能及警告</span><i class="iconfont icon-xiangxia"></i></p>
+							<ul class="sortable">
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="Natergy_echarts_one"></div>
+								</li>
+								
+								<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 echarts">
+									<div class="changes_nav">
+										<div class="changes_nav_one"><a href="javascript:;">查看</a></div>
+										<div class="changes_nav_two"><span>一天</span><span>一周</span><span>一个月</span><span>一个学期</span></div>
+									</div>
+									<div class="echartsList" id="Natergy_echarts_one"></div>
+								</li>
+								
+							</ul>
+						</div>
+						-->
+							
+						
+					</div>
+				    
+				</div>
+			    <!--底部-->
+				<!--<div class="footer">
+					<p>Copyright © 2017 Enable-ETS Corporation. All Rights Reserved.&emsp;&emsp;&emsp;建议浏览器：IE9+、Google Chrome、Firefox</p>
+			    </div>-->
+			    <div id="footer" class="footer2"></div>
+			</div>
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="../../component_module/echarts/AllEcharts.min.js"></script>
+		<script src="../../component_module/jquery/jqSortable.js"></script>
+		<script src="../../components/common.js"></script>
+		<script src="js/single_school_page.js"></script>
+		<script>
+			$("#footer").load('footer.html');
+   
+			setMinHeigiht(66);
+			
+			//设置随着屏幕大小变化
+			window.addEventListener("resize",function(){
+				setMinHeigiht(66);
+			});
+		</script>
+	</body>
+</html>

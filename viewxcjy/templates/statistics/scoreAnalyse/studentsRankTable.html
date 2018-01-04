@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../../static/custom/dashboard/css/statistics.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--临时引用-->
+			<div class="SourceAmendDialog">
+				<div class="Dialog" id="Dialog"></div>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox studentsRankTable">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">成绩分析</span>
+									<span class="span_2"></span>
+									<span class="span_text">班级排名表</span>
+									<span class="span_2"></span>
+									<span class="span_text">学生排名表</span>
+								</div>
+								<div class="contentCenter">
+									<div class="contentCenter_bt">
+										<table class="CommonShowTable studentRank" id="studentRank">
+											<caption>2017下学期期末考试七（1）班学生排名</caption>
+											<tr>
+												<th>姓名</th><th>语文</th>
+												<th>数学</th><th>英语</th>
+												<th>物理</th><th>化学</th>
+												<th>生物</th><th>政治</th>
+												<th>历史</th><th>地理</th>
+												<th>总分</th><th>班级排名<b class="paixuBtn"></b></th>
+												<th>年级排名<b class="paixuBtn"></b></th>
+											</tr>
+											<tr>
+												<td><a>罗天</a></td><td>98</td>
+												<td>88</td><td>85</td>
+												<td>99</td><td>72</td>
+												<td>81</td><td>91</td>
+												<td>74</td><td>89</td>
+												<td>600</td><td>8</td>
+												<td>6</td>
+											</tr>
+											<tr>
+												<td><a>杨国</a></td><td>98</td>
+												<td>88</td><td>85</td>
+												<td>99</td><td>72</td>
+												<td>81</td><td>91</td>
+												<td>74</td><td>89</td>
+												<td>600</td><td>9</td>
+												<td>7</td>
+											</tr>
+											<tr>
+												<td><a>刘鹗</a></td><td>98</td>
+												<td>88</td><td>85</td>
+												<td>99</td><td>72</td>
+												<td>81</td><td>91</td>
+												<td>74</td><td>89</td>
+												<td>600</td><td>5</td>
+												<td>11</td>
+											</tr>
+											<tr>
+												<td><a>赵山</a></td><td>98</td>
+												<td>88</td><td>85</td>
+												<td>99</td><td>72</td>
+												<td>81</td><td>91</td>
+												<td>74</td><td>89</td>
+												<td>600</td><td>3</td>
+												<td>5</td>
+											</tr>
+											<tr>
+												<td><a>李林</a></td><td>98</td>
+												<td>88</td><td>85</td>
+												<td>99</td><td>72</td>
+												<td>81</td><td>91</td>
+												<td>74</td><td>89</td>
+												<td>600</td><td>10</td>
+												<td>8</td>
+											</tr>
+											
+										</table>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../../static/comm/js/modelCommon.js"></script>
+        <script src="../../../static/custom/dashboard/js/statisticsCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			   	//给每个人加一个超链接
+			   	$("#studentRank tr td:first-child>a").each(function(){
+			   		var $ahtml=$(this).html();
+			   		var $href='./personRank.html?studentName='+$ahtml;
+			   		$(this).attr('href',$href);
+			   	})
+			   
+			   //表格排序按钮点击排序
+			    tableSort();//表格哪里排序，就调用该函数，动态加载函数以后执行该函数，td里面直接放内容，或者a标签包裹内容
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

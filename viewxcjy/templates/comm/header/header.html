@@ -1,0 +1,55 @@
+<div class="header_lt">
+	<img src="../../../static/comm/img/logo.png"/>
+</div>
+<div class="header_rt">
+	<div class="system_out">
+		<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+		<span class="syetemCloseImg"></span>
+	</div>
+	<div class="user_box">
+		<div class="user_box_tp">
+			<img class="nav_status" src="../../../static/comm/img/icon_ZhanKai.png"/>
+			<span class="user_name" id="user_name">慕容欣欣</span>
+			<img class="user_photo" src="../../../static/comm/img/touxiang.png"/>
+		</div>
+		<div class="user_box_bt">
+			<ul class="shezhiNav">
+				<div class="user_box_triangle"></div>
+    			<li><img src="../../../static/comm/img/icon_set.png"/><a href="javascript:;">个人设置</a></li>
+    			<li><img src="../../../static/comm/img/icon_safety.png"/><a href="javascript:;">账号安全</a></li>
+    			<li><img src="../../../static/comm/img/icon_systemout.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+    		</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	var userHeader={
+		init:function(){
+			this.system_out();
+			this.shezhiNav();
+			this.shezhiNavLi();
+		},
+		system_out:function(){
+			$(".system_out .syetemCloseImg").on('click',function(){
+				
+			});
+		},
+		shezhiNav:function(){
+			$(".user_box").mouseenter(function(){
+				$(".user_box_bt").show();
+			}).mouseleave(function(){
+				$(".user_box_bt").hide();
+			})
+		},
+		shezhiNavLi:function(){
+			$(".shezhiNav li").each(function(){
+				$(this).bind('click',function(){
+					$(".user_box_bt").hide();
+				})
+			});
+		}
+	}
+	userHeader.init();
+</script>
+				

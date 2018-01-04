@@ -1,0 +1,40 @@
+<ion-view view-title="我的联系人" class="bgwhite">
+  <ion-content>
+  	<div class="top">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper search col col-75">
+          <input type="text" placeholder="">
+        </label>
+        <button class="button button-small searchBtn col">
+          搜索
+        </button>
+      </div>      
+    </div>
+    <ion-list class="listGroup head-icons">
+    	<ion-item class="accordion-head">
+            &nbsp;
+           <img ng-src="../../../static/custom/mySource/img/class.svg"> 二年级一班
+          </ion-item>
+          <ion-item class="item-accordion sub"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable accordion"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              
+            &nbsp;
+           <img ng-src="{{group.face}}"> {{group.name}}({{group.num}})
+           <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+          </ion-item>
+          <ion-item class="item-accordion" id="sub"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
+  </ion-content>
+</ion-view>

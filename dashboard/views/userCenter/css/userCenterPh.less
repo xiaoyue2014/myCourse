@@ -1,0 +1,241 @@
+@import "../../common/Common.less";   
+
+html,body{ max-width: 768px !important; margin: 0 auto;}
+/*个人中心子页面的公共头部*/
+.header_phone{ width: 100%; .box-sizing; padding: 0 0.15rem; background: #0072CC;
+        left: 0; overflow: hidden;  text-align: center; 
+     height: 1.2rem; line-height: 1.2rem; position: absolute; top: 0;
+   a{ position: absolute; left: 0.2rem; top: 0rem;
+       i{ font-size: 0.65rem; color: white;}
+   }
+   span{ font-size: 0.5rem; color: white;}
+}
+
+.userCenterPh{ max-width: 768px; margin: 0 auto;
+    .Con_Main{ padding-top: 0;}
+    .MainCenter_top{ background-image: url(../img/bg_phone.png); background-size: 100% 100%; padding: 0.8rem 0.5rem 0.5rem; .box-sizing;
+                border-bottom: 1.5px solid white;
+        dt{ text-align: center;
+            .user_photo{ .wh(2.5rem,2.5rem); border: 2px solid white; .round(50%); margin-bottom: 0.5rem;} 
+        }
+        dd{  width: 52%; padding-left: 0.45rem; font-size: 0.45rem; margin: 0 auto; color: white; margin-top: 0.2rem; .box-sizing;}        
+        /*dd:nth-of-type(1){ color: #00abd8;}
+        dd:nth-of-type(2){ color: #f2572d;}*/
+    }
+    .MainCenter_bottom{ padding: 0.15rem; .box-sizing;
+        li{ padding: 0.2rem 0.15rem; .box-sizing; overflow: hidden;
+           i{ font-size: 0.6rem; color: black;}
+           a{ overflow: hidden; padding: 0.12rem 0; display: inline-block; color: black; font-size: 0.45rem; border-bottom: 1px solid #E2E2E2; width: 90%; float: right;
+              i{ color: #777; float: right; font-size: 0.4rem;}
+              em{ color: #777; float: right; font-style: normal; font-size: 0.45rem;}
+           }
+        }
+        li:nth-of-type(1){
+             .iColor{ color: #f2572d;}
+        }
+        li:nth-of-type(2){
+            .iColor{ color: #0092c7;}
+        }
+        li:nth-of-type(3){
+            .iColor{ color: #efc028;}
+        }
+        li:nth-of-type(4){
+            .iColor{ color: red;}
+        }
+        li:nth-of-type(5){
+            .iColor{ color: #008972;}
+        }
+    }
+}
+
+
+//个人信息页面
+.userCenterPh_info{
+    .Con_Main{ padding-top: 1.21rem; background: url(../img/bg_photo.jpg);
+                 background-size: 100% 100%;}
+    .user_info_list{ padding: 0.15rem; 
+        li{ padding: 0.2rem 0.15rem; .box-sizing; overflow: hidden;
+           i{ font-size: 0.63rem; color: black;}
+           a{ overflow: hidden; padding: 0.12rem 0; display: inline-block; color: black; font-size: 0.45rem; 
+                 border-bottom: 1px dotted #E2E2E2; width: 90%; float: right;
+              i{ color: #777; float: right; font-size: 0.4rem;}
+           }
+        }
+        li:nth-of-type(1){
+             .iColor{ color: #f2572d;}
+        }
+        li:nth-of-type(2){
+            .iColor{ color: #0092c7;}
+        }
+        li:nth-of-type(3){
+            .iColor{ color: #efc028;}
+        }
+        li:nth-of-type(4){
+            .iColor{ color: #2996E5;}
+        }
+        li:nth-of-type(5){
+            .iColor{ color: #29E537;}
+        }
+        
+    }
+}
+
+.userCenterPh_info_photo{
+    .Con_Main{ padding-top: 1.21rem; background: url(../img/bg_photo.jpg);
+                 background-size: 100% 100%;} 
+    .photo_set{ width: 100%; height: 100%; 
+        p{ text-align: center; margin-top: 0.8rem;
+            .userPhoto{ .wh(3rem,3rem); .round(50%);}
+        }
+        .set_Btn{ margin-top: 0.8rem; text-align: center;
+            button{ color: white; padding: 0.2rem 0.3rem; outline: none; border: 0;}
+            button:nth-of-type(1){ background: #0092C7; margin-right: 0.3rem;}
+            button:nth-of-type(2){ background: #31B0D5;}
+        }
+        .system_photo{ width: 96%; padding:0.09rem; .box-sizing; margin: 0.5rem auto 0; overflow: hidden; border: 2px solid white;
+           li{ width: 25%; float: left; overflow: hidden;
+              padding: 0.18rem; .box-sizing;
+              img{ width: 100%; height: 100%; .box-sizing; border: 1.5px solid white;}
+           }
+        }
+    }
+}
+/*个人基本信息*/
+/*修改密码页面*/
+.userCenterPh_info_mes,.userCenterPh_safe_pwd{
+    .Con_Main{ padding-top: 1.21rem; background: url(../img/bg_photo.jpg);
+                 background-size: 100% 100%;} 
+    .mes_set{ padding: 0 0.3rem; margin-top: 0.4rem; .box-sizing;
+        ul li{ padding: 0.15rem 0; overflow: hidden; font-size: 0.45rem;
+            label:nth-of-type(1){ color: #222; line-height: 1rem; height: 1rem; text-align: center; float: left; width: 20%}
+            input,.sex_radio,textarea{ height: 1rem; line-height: 1rem; float: left; width: 79%;}
+            input{ text-indent: 0.1rem; outline: none;}
+            .sex_radio{ overflow: hidden;
+                input{ width: auto; float: none;}
+                em{ display: inline-block; font-style: normal;}
+                input,em{ line-height: 1rem; float: left; height: 1rem;}
+                input:nth-of-type(1){ margin-left: 0.4rem;}
+                em:nth-of-type(1){ margin-right: 0.4rem;}
+            }
+            textarea{ min-height: 1.5rem; outline: none;}
+            button{ outline: none; border: none; color: white; padding: 0.15rem 0.4rem;}
+            button:nth-of-type(1){ margin-left: 20%; background: #008972;}
+            button:nth-of-type(2){ margin-left: 0.2rem; background: #5BC0DE;}
+        }
+        ul li:last-child{ padding-top: 0.5rem; border-top: 1px solid #E2E2E2; margin-top: 0.5rem;}
+    }
+}
+.userCenterPh_safe_pwd .mes_set{
+    ul li{
+        label:nth-of-type(1){ width: 25%;}
+        input{ width: 75%;}
+        button:nth-of-type(1){ width: 80%; padding: 0.25rem 0; margin-left: 0;}
+    }
+    ul li:last-child{ text-align: center; border-top: 0;}
+}
+
+
+/*教材版本信息*/
+/*新增或修改教材版本信息*/
+/*第三方绑定*/
+/*登录日志*/
+/*管理授权*/
+.userCenterPh_info_bookVs,.userCenterPh_safe_otherID,
+.userCenterPh_safe_loginrecord,.userCenterPh_safe_impower{
+    .Con_Main{ padding-top: 1.21rem; background: url(../img/bg_photo.jpg);
+                 background-size: 100% 100%;} 
+    .MainCenter{ padding: 0.2rem; .box-sizing;}
+    .add_Box{ overflow: hidden; margin: 0.2rem 0;
+         h4,a{ display: inline-block; height: 0.9rem; line-height: 0.9rem;}
+         a{ float: right; background: #24a560; outline: none; color: white; border: 0;
+                padding: 0rem 0.3rem; font-size: 0.45rem;
+             i{ font-size: 0.4rem; margin-left: 0.2rem;}
+         }
+         h4{ margin-left: 0.15rem; font-weight: bold; float: left; font-size: 0.48rem;}
+    }
+    .book_info_list{/*.box-shadow-round; background: #ffffff;*/.round(4px); border: 2px solid white; }
+    .book_info_list,.book_info_add{ overflow: hidden; padding: 0.3rem; margin-top: 0.3rem; .box-sizing;
+        dd{ font-size: 0.45rem; color: black; overflow: hidden; margin-bottom: 0.12rem;
+          b,span{ display: inline-block;}
+          b{ width: 30%; font-weight: normal; float: left; text-align: left;}
+          span{ color: #333; width: 70%; float: right;
+             input{ text-indent: 0.15rem; outline: none; width: 100%; height: 100%;}
+          }
+          a,button{ .wh_lh(1.6rem,0.7rem); font-size: 0.4rem; color: white; text-align: center;
+             display: inline-block; outline: none; border: 0;
+          }
+          a{ width: auto; padding: 0 0.3rem;}
+          a:first-child,button:first-child{ background: #337ab7;}
+          a:last-child,button:last-child{ background: #5bc0de; margin-left: 0.2rem;}
+        }
+        dd:last-child{ padding-top: 0.2rem; margin-top: 0.2rem; border-top: 1px solid #E2E2E2; margin-bottom: 0; width: 100%;}
+    }
+    .book_info_add{
+        dd{ margin-bottom: 0.35rem;
+           b{ font-size: 0.48rem;}
+           b,span{ height: 0.9rem; line-height: 0.9rem;}
+           span{ border: 1px solid #999; .box-sizing;
+               input{ border: none; color: #333; background: rgba(255,255,255,0);}
+           } 
+        }
+        dd:last-child{ text-align: center; padding-top: 0.4rem; margin-top: 0.4rem;
+           button{ .wh_lh(1.8rem,0.9rem);}  
+        } 
+    }             
+}
+/*登录日志*/
+.userCenterPh_safe_loginrecord{
+    .book_info_list{
+        dd:last-child{ padding-top: 0rem; margin-top: 0rem; border-top: none; margin-bottom: 0; width: 100%;}
+    }
+}
+
+/*设置密保页*/
+/*清除密保页*/
+.userCenterPh_safe_pwdProtect,.userCenterPh_safe_pwdProtectReset{
+    .Con_Main{ padding-top: 1.21rem; background: url(../img/bg_photo.jpg);
+                 background-size: 100% 100%;}
+    .question_pwd{ padding: 0 0.3rem;
+        .question_box{ padding-top: 0.5rem;
+            .question_list{ border-bottom: 1px solid white; padding-top: 0.3rem;
+                dt,dd{ margin-bottom: 0.3rem; overflow: hidden;
+                    label,input{ font-weight: normal; height: 0.9rem; line-height: 0.9rem;}
+                    label{ font-size: 0.48rem; float: left; width: 20%; color: black;}
+                    input{ font-size: 0.44rem; float: right; width: 80%; color: #333; outline: none; text-indent: 0.15rem;}
+                }
+            }
+            .question_list:last-child{ border-bottom: 0;}
+        }
+        .sureBtn,.addQuestionBtn{ display: inline-block; font-size: 0.45rem; outline: none; border: none;}
+        .addQuestionBtn{ color: #0072CC; float: left; display: inline-block; .wh_lh(3rem,0.7rem);
+           i{ margin-left: 0.15rem; font-size: 0.45rem;}
+        }
+        .sureBtn{ .wh_lh(80%,1rem); color: white; background: #008972;}
+        .span_warp{ margin-top: 0.2rem; overflow: hidden;
+           .tips{ display: none; font-size: 0.4rem; color: red; float: right; font-style: normal;}
+        }
+        .button_warp{ text-align: center; margin-top: 0.8rem;}
+    }
+    .pwdProtect_tips{ padding: 0.8rem 0.3rem 0.3rem; width: 100%; .box-sizing;
+        ul{ border: 2px solid #FFFFFF; padding: 0.2rem;
+            li{ list-style: circle; list-style-position: inside; margin-top: 0.2rem;
+               p{ display: inline-block; color: #000;}
+               p:last-child{ color: #333;} 
+            }
+        }
+    }             
+}
+
+/*清除密保页*/
+.userCenterPh_safe_pwdProtectReset .question_pwd{
+    .question_box{
+        .question_list{
+            dt input{
+                background-color: rgba(255,255,255,0); border: none;
+            }
+        }
+        .question_list:first-child{ border-top: 1px solid white;}
+    }
+    .cleartips{ color: #5bc0de; margin-top: 0.3rem; font-size: 0.4rem; text-indent: 0.6rem;}
+}
+

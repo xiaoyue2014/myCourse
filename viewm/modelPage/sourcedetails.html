@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../common/Common.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/modelindex.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header">
+				<div class="header_lt">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="header_rt">
+					<div class="system_out">
+						<!--<img class="syetemCloseImg" src="img/icon_2.png"/>-->
+						<span class="syetemCloseImg"></span>
+					</div>
+					<div class="user_box">
+						<div class="user_box_tp">
+							<img class="nav_status" src="img/icon_6.png"/>
+							<span class="user_name" id="user_name">张三丰</span>
+							<img class="user_photo" src="img/touxiang.png"/>
+						</div>
+						<div class="user_box_bt">
+							<ul class="shezhiNav">
+								<div class="user_box_triangle"></div>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">个人设置</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;">账号安全</a></li>
+	                			<li><img src="img/icon_2.png"/><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+	                		</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--头部end-->
+			
+			<!--暂时引入分享页-->
+			<div class="sourcedetailsharebox">
+				<div class="sourcedetailshare" id="sourcedetailshare"></div>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu">
+							<div class="Asidecontent">
+								<div class="Aside_show_btn">
+									<p class="AsideBtn_tp"><img class="AsideShowBtnImg" src="img/sidebar_icon/caidan.png"/></p>
+									<p class="AsideBtn_bt"></p>
+								</div>
+								
+								<ul class="Aside_list">
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_1"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的首页</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_2"></span>
+											</div>
+											<div class="list_name_right">
+												<span>我的资源管理</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_3"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源分享</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									<li class="Aside_list_li">
+										<a class="list_parent" href="javascript:;">
+											<div class="list_icon">
+												<span class="bg_4"></span>
+											</div>
+											<div class="list_name_right">
+												<span>资源审批</span>
+											    <div class="triangle"></div>
+											</div>
+										</a>
+										<div class="Aside_list_child">
+											<dl>
+												<dd><a href="javascript:;">我的首页子页</a></dd>
+												<dd><a href="javascript:;">我的首页1</a></dd>
+											</dl>
+										</div>
+									</li>
+									
+									
+								</ul>
+								
+							</div>
+						</div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox sourcedetails">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的桌面</span>
+									<span class="span_2"></span>
+									<span class="span_text">资源库</span>
+									<span class="span_2"></span>
+									<span class="span_text">我的资源</span>
+								</div>
+								<div class="contentCenter">
+									<div class="sourcedetails_head">
+										<div class="sourcedetails_head_lt">
+											<span class="small_title">一年级语文《我多想去看看》教案设计</span>
+											<span class="small_tag">小学</span>
+											<span class="small_tag">一年级</span>
+											<span class="small_tag">语文</span>
+										</div>
+										<ul class="sourcedetails_head_rt">
+											<li><a class="shareshowBtn" href="javascript:;"><span></span><em>分享</em></a></li>
+											<li><a href="javascript:;"><span></span><em>收藏</em></a></li>
+											<li><a href="javascript:;"><span></span><em>点赞</em></a></li>
+										</ul>
+									</div>
+									<div class="sourcedetails_content">
+										<ol class="content_tag">
+											<!-- 上传者 -->
+											<li>资源类型：<span>课程</span></li>
+											<!-- 上传者 -->
+											<li>上传者：<span>superadmin</span></li>
+											<!-- 上传时间 -->
+											<li>上传时间：<span>2017-08-31</span></li>
+											<!-- 浏览次数 -->
+											<li>浏览次数：<span>6</span></li>
+											<!-- 下载次数 -->
+											<li>下载次数：<span>2</span></li>
+											<!-- 点赞次数 -->
+											<li>点赞次数：<span>4</span></li>
+											<!-- 收藏次数 -->
+											<li>收藏次数：<span>5</span></li>
+										</ol>
+										
+										<dl class="content_desc">
+											<dt>资源描述：</dt>
+											<dd>本课是一首诗歌。作者采用第一人称，以一个山村的小孩子的口吻，通过“我”与妈妈的对话，表达了自己非常想去北京天安门广场看看升旗仪式的强烈愿望，感情真挚。本课是一首诗歌。作者采用第一人称，以一个山村的小孩子的口吻，通过“我”与妈妈的对话，表达了自己非常想去北京天安门广场看看升旗仪式的强烈愿望，感情真挚。</dd>
+										</dl>
+										
+										<ul class="detail_list_box">
+											<li><span class="list_iconbg"></span><span class="list_titles">一年级语文《日月明》优秀教案设计.docx</span><span class="list_download"><em>下载次数：5</em><a href="javascript:;"></a></span></li>
+											<li><span class="list_iconbg"></span><span class="list_titles">一年级语文《日月明》优秀教案设计.docx</span><span class="list_download"><em>下载次数：500</em><a href="javascript:;"></a></span></li>
+											<li><span class="list_iconbg"></span><span class="list_titles">一年级语文《日月明》优秀教案设计.docx</span><span class="list_download"><em>下载次数：5</em><a href="javascript:;"></a></span></li>
+											<li><span class="list_iconbg"></span><span class="list_titles">一年级语文《日月明》优秀教案设计.docx</span><span class="list_download"><em>下载次数：50000</em><a href="javascript:;"></a></span></li>
+										</ul>
+										
+										<div class="sourcedetails_content_foot">
+											<div class="sourcedetails_foot_tp">
+												<h6>评论</h6>
+												<div class="commentaries_star">
+													<a href="javascript:;">资源星级</a>
+													<span id="setStar" class="setStar" data-score="0"></span>
+												</div>
+												<textarea class="commentaries_desc" maxlength="200"></textarea>
+												<div class="hand_box">
+													<input type="button" class="commentariesBtn" id="commentariesBtn" value="评论" />
+													<span class="Alphanumeric">还可以输入<b>200</b>字</span>
+												</div>
+											</div>
+											<div class="sourcedetails_foot_bt">
+												<div class="no_discuss">
+													<img src="img/details/empty_discuss.png"/>
+												</div>
+												<div class="discuss_box" id="discuss_box">
+													<!--<dl class='discuss_list'>
+														<dt><img src='img/details/discuss_user.png'/></dt>
+														<dd>
+															<div class='dd_tp'>
+																<a href='javascript:;'>superadmin</a>
+																<span class='starshow'><img src="../img/details/star1.png"/></span>
+																<em>2017-01-20</em>
+															</div>
+															<div class='dd_bt'>
+																<span class="sanjiao_bt"></span>
+																<p>战国时期，这里是滇族部落的生息之地。云南即“彩云之南”“七彩云南”，另一说法是因位于“云岭之南”而得名。面积39万平方千米，占全国面积4.11%，在全国各省级行政区中面积排名第8。总人口4596万（2010年），占全国人口3.35%，人口排名为第12名。下辖8个市、8个少数民族自治州。</p>
+															</div>
+														</dd>
+													</dl>-->
+													<!--分页-->
+													<div class="page_box">
+														<!--<div class="page_box_tips">共<b>100</b>条记录,当前是第<span class="pageNum">1</span>页,每页10条</div>-->
+														<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer">
+					    <img class="footerImg" src='img/logo_sm.png'/>
+					    <p>Copyright 2017 Enable-ETS Corporation. All Rights Reserved.</p>
+					</div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../component_module/jQuery/jquery-3.0.0.js"></script>
+        <script src="../../component_module/paging/page.js"></script>
+        <script src="../../component_module/jqStar/jquery.raty.js"></script>
+        <script src="../common/modelCommon.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    //暂时引入分享页
+			    $(".sourcedetailsharebox").hide();
+			    $("#sourcedetailshare").load('sourcedetailshare.html');
+			    $(".shareshowBtn").click(function(){
+			    	 $(".sourcedetailsharebox").show();
+			    })
+			    
+			    //评论级部分
+				var setStarfn=function(){
+					//加载评论区域
+					function ajaxdiscuss(){
+						$.ajax({
+							type:"get",
+							url:"js/discuss.json",
+							async:true,
+							success:function(result){
+								console.log(result.length);
+								if (result.length>0) {
+									$(".no_discuss").hide();
+									for (var i in result) {
+										var userid=result[i].user_id;
+										var userImg=result[i].user_Img;
+							    		var login_userName=result[i].user_name;
+							    		var setStarNum=result[i].star_nums;
+							    		var presentTime=result[i].discuss_time;
+							    		var discussdesc=result[i].discuss_desc;
+							    		creactdiscuss(userid,userImg,login_userName,setStarNum,presentTime,discussdesc);
+									}
+									$("#pageOne").show();
+								}
+							},
+							error:function(){
+								alert("网络异常，请稍后重试");
+								
+								//如果没有评论就显示无评论状态
+								if ($(".discuss_list").exist()==false) {
+					    			$(".no_discuss").show();
+					    		}
+							}
+						});
+					}
+					ajaxdiscuss();
+					
+					//评星级部分
+					//图片地址的前缀
+					$.fn.raty.defaults.path ='http://og42u3hva.bkt.clouddn.com/jqStar/img/';
+					$('#setStar').raty({
+				        click: function(score, evt) {
+						    $(this).attr('data-score',score);
+					  	}
+				    });
+				    
+				    //计算评论字数
+				    var $maxlength=$('.commentaries_desc').attr('maxlength');
+				    $(".commentaries_desc").on('keyup',function(){
+				    	var textlength=$(this).val().length;
+				    	var Canwritexlength=$maxlength-textlength;
+				    	$(".Alphanumeric>b").html(Canwritexlength);
+				    });
+				    
+				    //产生新评论
+				    function creactdiscuss(presentTime2,userImg,login_userName,setStarNum,presentTime,discussdesc){
+				    	var $discuss_list =$("<dl class='discuss_list' id='discuss_list"+presentTime2+"'><dt></dt><dd><div class='dd_tp'></div><div class='dd_bt'><span class='sanjiao_bt'></span></div></dd></dl>");
+			    		$("#discuss_box").prepend($discuss_list);
+			    		
+			    		var $userImg_=$("<img src='"+userImg+"'/>");
+			    		var $login_userName_=$("<a href='javascript:;'>"+login_userName+"</a>");
+			    		var $starshowimg_=$("<span class='starshow'><img src='http://og42u3hva.bkt.clouddn.com/jqStar/img/star"+setStarNum+".png' /></span>")
+			    		var $presentTime_=$("<em>"+presentTime+"</em>");
+			    		var $discuss_desc_=$("<p>"+discussdesc+"</p>");
+			    		console.log(presentTime2)
+			    		
+			    		var $id='#discuss_list'+presentTime2;
+			    		$($id).find("dt").append($userImg_);
+			    		$($id).find("dd>.dd_tp").append($login_userName_);
+			    		$($id).find("dd>.dd_tp").append($starshowimg_);
+			    		$($id).find("dd>.dd_tp").append($presentTime_);
+			    		$($id).find("dd>.dd_bt").append($discuss_desc_);
+			    		
+				    }
+				    
+				    //点击评论
+				    $("#commentariesBtn").on('click',function(){
+				    	var textlength=$('.commentaries_desc').val().length;
+				    	if(textlength!=0){
+				    		var userImg='http://og42u3hva.bkt.clouddn.com/discuss_user.png';
+				    		var login_userName=$("#user_name").html();
+				    		var setStarNum=$("#setStar").attr('data-score');
+				    		var myDate = new Date();
+				    		var presentTime=  myDate.getFullYear() +"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+				    		var presentTime2=  myDate.getFullYear()+""+(myDate.getMonth()+1)+""+myDate.getDate()+""+myDate.getHours()+""+myDate.getMinutes()+""+myDate.getSeconds();
+				    		var discussdesc=$('.commentaries_desc').val();
+				    		
+							//先提交到后台提交成功就执行
+							//提交到后台,
+							
+							
+							
+							//提交成功以后执行以下
+							creactdiscuss(presentTime2,userImg,login_userName,setStarNum,presentTime,discussdesc);
+							//隐藏无评论状态
+							$(".no_discuss").hide();
+							//显示页码
+							$("#pageOne").show();
+				    		//清空评论部分
+				    		$('.commentaries_desc').val('');
+				    		$(".Alphanumeric>b").html($maxlength);
+				    	}
+				    })
+				}
+				setStarfn();
+				
+				//do anything
+			    var paging = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>

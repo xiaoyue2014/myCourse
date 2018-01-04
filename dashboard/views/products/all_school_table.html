@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>学创教育</title>
+		<link rel="stylesheet" type="text/css" href="../../component_module/bootstrap/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/products.css"/>
+		
+	</head>
+	<body>
+		<div class="ContainerMain all_school_table">
+			<!--头部-->
+			<div class="header">
+				<a href="all_school.html" class="header_logo"><img class="logo_img" src="img/logo.png"/></a>
+			    <!--<ul class="header_nav">
+			    	<li><a href="javascript:;">首页</a></li>
+			    	<li class="resourcesLi"><a href="javascript:;"><span>资源</span><i class="iconfont icon-xiangxia"></i></a></li>
+			    	<li><a href="javascript:;">我的空间</a></li>
+			    </ul>-->
+                <div class="header_user_box">
+                	<div class="system_out"><i class="iconfont icon-tuichuxitong1"></i></div>
+                	<div class="user_box">
+            			<div class="user_top">
+            				<a class="is_iphone" href="javascript:;">
+            					<img class="touxiang" src='img/touxaing.jpg' />
+		                		<span class="user_names"></span>
+		                		<span class="span_icon_pc"><i class="iconfont icon-xiangxia1"></i></span>
+		                		<span class="span_icon_iphone"><i class="iconfont icon-gengduo"></i></span>
+            				</a>
+            			</div>
+                		<ul class="shezhiNav">
+                			<div class="user_box_triangle"></div>
+                			<li><i class="iconfont icon-guanli"></i><a href="javascript:;">个人设置</a></li>
+                			<li><i class="iconfont icon-zhanghaoanquan"></i><a href="javascript:;">账号安全</a></li>
+                			<li><i class="iconfont icon-tuichuxitong1"></i><a href="javascript:;" class="user_outBtn">退出系统</a></li>
+                		</ul>
+                	</div>
+                </div>
+			</div>
+			
+			<!--主内容模块-->
+			<div class="container Con_Main innerPage">
+				
+				<!--统计总表表格部分-->
+				<div class="table_title">全部学校信息展示<span>(课时次排名)</span></div>
+				<div class="table-responsive text_center table-box">
+					<table class="table table-striped table_all">
+					   <tr>
+					   	 <th>学校</th>
+					   	 <th>课时次</th>
+					   	 <th>班次/学生次</th>
+					   	 <th>上课教师数</th>
+					   	 <th>资源数</th>
+					   	 <th>学科分布</th>
+					   	 <th>测验数/学生次</th>
+					   </tr>
+					   <tr>
+					   	 <td>昆山市葛江中学</td>
+					   	 <td>125</td>
+					   	 <td>125/1267</td>
+					   	 <td>25</td>
+					   	 <td>13/13</td>
+					   	 <td>14</td>
+					   	 <td>162/310</td>
+					   </tr>
+					   <tr>
+					   	 <td>昆山市葛江中学</td>
+					   	 <td>125</td>
+					   	 <td>125/1267</td>
+					   	 <td>25</td>
+					   	 <td>13/13</td>
+					   	 <td>14</td>
+					   	 <td>162/310</td>
+					   </tr>
+					   <tr>
+					   	 <td>昆山市葛江中学</td>
+					   	 <td>125</td>
+					   	 <td>125/1267</td>
+					   	 <td>25</td>
+					   	 <td>13/13</td>
+					   	 <td>14</td>
+					   	 <td>162/310</td>
+					   </tr>
+					   <tr>
+					   	 <td>昆山市葛江中学</td>
+					   	 <td>125</td>
+					   	 <td>125/1267</td>
+					   	 <td>25</td>
+					   	 <td>13/13</td>
+					   	 <td>14</td>
+					   	 <td>162/310</td>
+					   </tr>
+					</table>
+				</div>
+				
+				<div class="click_more"><span>点击加载更多</span></div>
+			</div>
+			
+		</div>
+		
+		<script src="../../component_module/jquery/jquery-3.0.0.js"></script>
+		<script src="../../component_module/bootstrap/bootstrap.min.js"></script>
+		<script src="../../component_module/echarts/AllEcharts.min.js"></script>
+		<script src="../../component_module/jquery/jqSortable.js"></script>
+		<script src="../../component_module/jquery/jquerySwipe.js"></script>	
+		<script src="../../component_module/jquery/dropload.min.js"></script>	
+		<script src="../../components/common.js"></script>
+		<script type="text/javascript">
+			var ShowTableData={
+				LocalStorage:'ssAllSchoolData',
+				init:function(LocalStorageName,Url,TableClass,BtnClass){
+					this.showData(LocalStorageName,Url,TableClass);
+					if (IsPC()) {
+						$(BtnClass).show();
+						this.clickMore(LocalStorageName,TableClass,BtnClass);
+					} else{
+						$(BtnClass).addClass('active');
+					    this.swipeLoad(LocalStorageName,TableClass,BtnClass);
+					    //this.YdLoading(LocalStorageName,TableClass,BtnClass);
+					}
+					this.windowsClose(LocalStorageName);
+					var a="'"+LocalStorageName+"'";
+					console.log(a);
+				},
+				windowsClose:function(LocalStorageName){
+					window.onbeforeunload=function(LocalStorageName){
+						localStorage.removeItem("ssAllSchoolData");
+					}
+				},
+				AjaxLocalStorage:function(LocalStorageName,Url){
+					var that=this;
+					$.ajax({
+						type:"get",
+						url:Url,
+						async:true,
+						success:function(data){
+						   if(data&&window.localStorage){
+						   	  data=JSON.stringify(data);
+						   	  localStorage.setItem(LocalStorageName,data);
+						   	  console.log(localStorage.getItem(LocalStorageName));
+						   }
+						}
+					});
+				},
+				showData:function(LocalStorageName,Url,TableClass){
+					if (!localStorage.getItem(LocalStorageName)) {
+						this.AjaxLocalStorage(LocalStorageName,Url);
+						//console.log("no");
+					}
+					this.showDataViews(LocalStorageName,TableClass)     
+				},
+				showDataViews:function(LocalStorageName,TableClass){
+					var datas_a=JSON.parse(localStorage.getItem(LocalStorageName));
+					for (var i=0;i<10;i++) {
+						var tr="<tr>"
+						     +"<td>"+1+"</td>"
+						     +"<td>"+2+"</td>"
+						     +"<td>"+3+"</td>"
+						     +"<td>"+4+"</td>"
+						     +"<td>"+5+"</td>"
+						     +"<td>"+6+"</td>"
+						     +"<td>"+7+"</td>"
+						     +"</tr>";
+						$(TableClass).append(tr);
+					}
+				},
+				swipeLoad:function(LocalStorageName,TableClass,BtnClass){
+					var that=this;
+					$('html').swipe({
+						left: function(){},
+						right: function(){},
+						up: function(){
+							$(BtnClass).show().html('loading...');
+							var Times = setTimeout(function(){
+								that.showDataViews(LocalStorageName,TableClass);
+								$(BtnClass).hide().html('点击加载更多');
+							},1500);
+						},
+						down: function(){
+							that.showDataViews(LocalStorageName,TableClass);
+						}
+					});
+				},
+				YdLoading:function(LocalStorageName,TableClass,BtnClass){
+					var that=this;
+					var dropload = $('.innerPage').dropload({
+					    domUp : {
+					        domClass   : 'dropload-up',
+					        domRefresh : '<div class="dropload-refresh text_center">↓下拉刷新</div>',
+					        domUpdate  : '<div class="dropload-update text_center">↑释放更新</div>',
+					        domLoad    : '<div class="dropload-load text_center"><span class="loading"></span>加载中...</div>'
+					    },
+					    domDown : {
+					        domClass   : 'dropload-down',
+					        domRefresh : '<div class="dropload-refresh text_center">↑上拉加载更多</div>',
+					        domUpdate  : '<div class="dropload-update text_center">↓释放加载</div>',
+					        domLoad    : '<div class="dropload-load text_center"><span class="loading"></span>加载中...</div>'
+					    },
+					    loadUpFn : function(me){
+					        console.log('top')
+					    },
+					    loadDownFn : function(me){
+					        console.log('bot')
+					        setTimeout(function(){
+					        	that.showDataViews(LocalStorageName,TableClass);
+					            me.resetload();
+					        },1500)
+					    }
+					});
+				},
+				clickMore:function(LocalStorageName,TableClass,BtnClass){
+					var that=this;
+					$(BtnClass).on('click',function(){
+						that.showDataViews(LocalStorageName,TableClass);
+					});
+				}
+			}
+			ShowTableData.init('ssAllSchoolData','js/datas.json',".table_all",".click_more");
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

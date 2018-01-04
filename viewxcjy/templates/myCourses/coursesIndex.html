@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=yes" name="format-detection">
+		<meta content="email=yes" name="format-detection">
+		<title>模板demo</title>
+		<link rel="stylesheet" type="text/css" href="../../static/custom/resource/css/myCourses.css"/>
+	</head>
+	<body>
+		<div class="ContainerWarp">
+			<!--头部start-->
+			<div class="header" id="header"></div>
+			<!--头部end-->
+			
+			<!--临时引用-->
+			<div class="SourceAmendDialog">
+				<div class="Dialog" id="Dialog"></div>
+			</div>
+			
+			<!--主体部分start-->
+			<div class="ConMain">
+				<div class="MainAuto">
+					<div class="MainBox">
+						<!--侧边菜单栏start-->
+						<div class="AsideMenu" id="AsideMenu"></div>
+						<!--侧边菜单栏end-->
+						
+						<!--主体部分中间内容区start-->
+						<div class="MainContent">
+							<div class="ContentBox coursesIndex">
+								<div class="contentNav">
+									<span class="span_1"></span>
+									<span class="span_text">我的课程</span>
+								</div>
+								<div class="contentCenter">
+									<div class="search_area">
+										<ul class="search_criteria">
+											<li>
+												<label>学年学期</label>
+												<div class="_li_rt">
+													<div class="list_cont bg_afterBox">
+														<select class="small_select">
+															<option value="">上学期</option>
+															<option value="">下学期</option>
+														</select>
+													</div>
+												</div>
+											</li>
+											<li class="list_Subjectdiscipline">
+												<label>学段/年级/学科</label>
+												<div class="_li_rt">
+													<div class="list_cont">
+														<select class="small_select">
+															<option value="">小学</option>
+														</select>
+													</div>
+													<div class="list_cont">
+														<select class="small_select">
+															<option value="">一年级</option>
+														</select>
+													</div>
+													<div class="list_cont">
+														<select class="small_select">
+															<option value="">思想品德（社会）</option>
+														</select>
+													</div>
+												</div>
+											</li>
+											<li><label>课程名称</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+											<li><label>课程编码</label><div class="_li_rt"><div class="list_cont"><input type="text" /></div></div></li>
+										</ul>
+										<div class="button_box">
+											<button class="bg_color" type="button">搜索</button>
+											<a href="javascript:;">新建</a>
+										</div>
+									</div>
+									<div class="courses_content">
+										<div class="table_div">
+											<div class="tr_div_th">
+												<span></span><span>学年学期</span>
+												<span>课程名称</span><span>课程简称</span>
+												<span>课程编码</span><span>学科</span>
+												<span>创建时间</span><span>操作</span>
+											</div>
+											
+											<div class="tr_div_td">
+												<div class="tr_div_td_tp">
+													<span><b class="Rotate_45_ showDetailBtn"></b></span><span>2018-2019下学期</span>
+													<span>新生数学2.1章第一节新生数学2.1章第一节</span><span>新数2.1.1</span>
+													<span>2017019</span><span>数学</span>
+													<span>2017-09-07</span><span><b class="icon_book selectBookBtn"></b></span>
+												</div>
+												<div class="tr_div_td_bt">
+													<table class="CommonShowTable">
+														<tr class="first_tr">
+															<th>教材名称</th><th>学段</th>
+															<th>年级</th><th>学科</th>
+															<th>出版社</th><th>操作</th>
+														</tr>
+														<tr>
+															<td>人教版第三版</td><td>小学</td>
+															<td>三年级</td><td>语文</td>
+															<td>人民教育出版社</td><td><b class="icon_hand1"></b><b class="icon_yulan"></b><b class="icon_remove"></b></td>
+														</tr>
+														<tr>
+															<td>人教版第三版</td><td>小学</td>
+															<td>三年级</td><td>语文</td>
+															<td>人民教育出版社</td><td><b class="icon_hand1"></b><b class="icon_yulan"></b><b class="icon_remove"></b></td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div class="tr_div_td">
+												<div class="tr_div_td_tp">
+													<span><b class="Rotate_45_ showDetailBtn"></b></span><span>2018-2019下学期</span>
+													<span>新生数学2.1章第一节新生数学2.1章第一节</span><span>新数2.1.1</span>
+													<span>2017019</span><span>数学</span>
+													<span>2017-09-07</span><span><b class="icon_book selectBookBtn"></b></span>
+												</div>
+												<div class="tr_div_td_bt">
+													<table class="CommonShowTable">
+														<tr class="first_tr">
+															<th>教材名称</th><th>学段</th>
+															<th>年级</th><th>学科</th>
+															<th>出版社</th><th>操作</th>
+														</tr>
+														<tr>
+															<td>人教版第三版</td><td>小学</td>
+															<td>三年级</td><td>语文</td>
+															<td>人民教育出版社</td><td><b class="icon_hand1"></b><b class="icon_yulan"></b><b class="icon_remove"></b></td>
+														</tr>
+														<tr>
+															<td>人教版第三版</td><td>小学</td>
+															<td>三年级</td><td>语文</td>
+															<td>人民教育出版社</td><td><b class="icon_hand1"></b><b class="icon_yulan"></b><b class="icon_remove"></b></td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											
+										</div>
+										<!--分页-->
+										<div class="page_box">
+											<!--<div class="page_box_tips">共<b>100</b>条记录,当前是第<span class="pageNum">1</span>页,每页10条</div>-->
+											<ul class="pageOne" maxshowpageitem="5" pagelistcount="10"  id="pageOne"></ul>
+										</div>
+									</div>	
+								</div>
+				
+							</div>
+						</div>
+						<!--主体部分中间内容区end-->
+						
+					</div>
+					<!--底部start-->
+					<div class="footer" id="footer"></div>
+					<!--底部end-->
+					
+				</div>
+			</div>
+			<!--主体部分end-->
+		</div>
+        
+        <script src="../../static/comm/plugins/jQuery/jquery-3.0.0.js"></script>
+       	<script src="../../static/comm/plugins/paging/page.js"></script>
+        <script src="../../static/comm/js/modelCommon.js"></script>
+        <script src="../../static/custom/resource/js/myCoursesCommom.js"></script>
+        <script>        
+		(function($){
+			$(function(){
+			    //do anything
+			    var paging = {
+			        "pageData":function(pageNum){
+			            console.log(pageNum)
+			            //$(".pageNum").html(pageNum);
+			            //所执行的函数
+			        }
+			    }
+			    $("#pageOne").initPage(100,1,paging.pageData);//1、所有数据条数（自动每页十条）2、初次加载显示的页数 3、所执行函数
+			        
+			    //表格操作的所有功能
+			    //表格展开
+				$(".tr_div_td_tp .showDetailBtn").each(function(){
+					$(this).on('click',function(){
+						if ($(this).hasClass('Rotate_45_')) {
+							$(this).removeClass('Rotate_45_');
+							$(this).parents('.tr_div_td_tp').siblings('.tr_div_td_bt').slideDown();
+							$(this).parent('span').css({"border-bottom":'0'});
+						} else{
+							$(this).addClass('Rotate_45_');
+							$(this).parents('.tr_div_td_tp').siblings('.tr_div_td_bt').slideUp();
+							$(this).parent('span').css({"border-bottom":'1px solid #e1e1e1'});
+						}
+					});
+				})
+				
+				//临时加载弹窗代码
+				$(".selectBookBtn").each(function(){
+					$(this).on('click',function(){
+						$(".SourceAmendDialog").show();
+						$(".SourceAmendDialog #Dialog").load('dailogPage/sourceBookSelect.html')
+					})
+				})
+			        
+		    })
+		})(jQuery);		
+		</script>
+	</body>
+</html>
